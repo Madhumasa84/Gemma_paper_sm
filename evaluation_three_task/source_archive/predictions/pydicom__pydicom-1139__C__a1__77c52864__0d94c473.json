@@ -1,5 +1,0 @@
-{
-  "model_name_or_path": "google/gemma-4-E4B-it",
-  "instance_id": "pydicom__pydicom-1139",
-  "model_patch": "--- a/pydicom/dataelem.py\n+++ b/pydicom/dataelem.py\n@@ -154,6 +154,10 @@\n                  value,\n                  file_value_tell=None,\n                  is_undefined_length=False,\n                  already_converted=False):\n         \"\"\"Create a new :class:`DataElement`.\n \n         Parameters\n         ----------\n         tag : tuple or str\n@@ -161,6 +165,10 @@\n         \"\"\"\n+        if self.VR == 'PN' and isinstance(value, str):\n+            # Allow string representation of PersonName3 to be iterable if needed,\n+            # although typically it's treated as a single string value.\n+            # For compatibility with string methods, we keep it as string.\n+            pass\n         self.tag = tag\n         self.VR = VR\n         self.value = value\n```\n"
-}

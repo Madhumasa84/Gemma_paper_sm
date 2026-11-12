@@ -11,9 +11,9 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT = SCRIPT_DIR.parent
-E = ROOT / "paper_v1" / "evidence"
-C = E / "01_comparison_study"
-N = E / "02_native_evaluation"
+E = ROOT / "evidence"
+C = E / "fresh"
+N = E / "native"
 DATA_DIR = SCRIPT_DIR / "data"
 TABLES_DIR = SCRIPT_DIR / "tables"
 DATA_DIR.mkdir(parents=True, exist_ok=True)
@@ -46,13 +46,13 @@ def tex_table(name, headers, rows, alignment):
     (TABLES_DIR / name).write_text(s, encoding="utf-8")
 
 # 1. Verification of manifest hashes
-manifest_data = read(E / "manifest.json")
-claim("archive.manifest_files", len(manifest_data), "all listed files", [E / "manifest.json"],
-      "entries; verified bytes against sha256",
+manifest_data = read(E / "provenance" / "original_archive_manifest.json")
+claim("archive.manifest_files", len(manifest_data), "all listed files", [E / "provenance" / "original_archive_manifest.json"],
+      "original archive entry count; historical provenance",
       "An internal manifest proves byte consistency, not independent authenticity; no external digest for outer evidence ZIP.")
 
 # 2. Native evaluation controls audit
-tests = {r["instance_id"]: r for r in read(ROOT / "paper_v1" / "data" / "required_tests.json")["tasks"]}
+tests = {r["instance_id"]: r for r in read(N / "required_tests.json")["tasks"]}
 tm = read(C / "task_manifest.json")
 tasks = [t["instance_id"] for t in tm["tasks"]]
 
@@ -62,7 +62,7 @@ def parse_log(path):
 
 controls = []
 test_rows = []
-native_results = {r["instance_id"]: r for r in read(N / "native_evaluation_results.json")}
+native_results = {r["instance_id"]: r for r in read(N / "results.json")}
 
 for task in tasks:
     t = tests[task]
@@ -98,19 +98,19 @@ for task in tasks:
     ))
     for metric in list(controls[-1].keys())[1:]:
         claim(f"controls.{task}.{metric}", controls[-1][metric], "required IDs",
-              [ROOT / "paper_v1" / "data" / "required_tests.json", base_log, ref_log],
+              [N / "required_tests.json", base_log, ref_log],
               "exact pytest summary IDs",
               "SKIPPED aggregate summaries do not identify each test; unmatched IDs remain unconfirmed.")
 
 control_map = {r["instance_id"]: r for r in controls}
-inv = {(r["task"], r["condition"]): r for r in csv.DictReader((E / "inventory.csv").open(encoding="utf-8"))}
+inv = {(r["task"], r["condition"]): r for r in csv.DictReader((C / "inventory.csv").open(encoding="utf-8"))}
 
 # 3. Fresh Rows Audit
 fresh = []
 for task in tasks:
     for cond in ["W", "A", "B", "C"]:
         ck_path = C / "checkpoints" / f"{task}__{cond}__checkpoint.json"
-        pkt_path = C / "evidence_packets" / f"{task}__{cond}__packet.json"
+        pkt_path = C / "packets" / f"{task}__{cond}__packet.json"
         inv_row = inv.get((task, cond), {})
         status = inv_row.get("generation_status", "UNSTARTED")
         
@@ -194,10 +194,10 @@ for task in tasks:
                 hit_token_cap="",
                 apply_error=""
             ))
-            claim(f"fresh.{task}.{cond}.completed", False, 1, [E / "inventory.csv"], "inventory status record", "Attempt was not completed in recovered archive.")
+            claim(f"fresh.{task}.{cond}.completed", False, 1, [C / "inventory.csv"], "inventory status record", "Attempt was not completed in recovered archive.")
 
 # 4. Pilot Rows Audit
-pilot_data = read(ROOT / "combined_results.json")
+pilot_data = read(E / "pilot" / "attempts.json")
 prows = []
 for r in pilot_data["rows"]:
     audit = ROOT / r["processing_audit_path"]
@@ -376,9 +376,8 @@ savecsv(DATA_DIR / "native_controls.csv", controls)
 savecsv(DATA_DIR / "required_test_status.csv", test_rows)
 (DATA_DIR / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
 
-# Write updated evidence ledger to paper_v2 and root
+# Write the single canonical evidence ledger
 savecsv(SCRIPT_DIR / "evidence_ledger.csv", ledger)
-savecsv(ROOT / "evidence_ledger.csv", ledger)
 
 print(f"Rebuilt tables in {TABLES_DIR}")
 print(f"Exported updated evidence ledger: {len(ledger)} entries.")

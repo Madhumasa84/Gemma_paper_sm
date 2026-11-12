@@ -23,14 +23,14 @@ make reproduce
 
 The steps are ordered because tables depend on reference coverage and figures depend on the newly rebuilt tables/data:
 
-1. `scripts/verify_artifacts.py` checks the original 311-entry archive manifest, the additional release input manifest, and the main paper counts.
+1. `scripts/verify_artifacts.py` checks the 247 retained evidence files against `evidence/manifest.json`, validates current ledger source hashes, and checks the main paper counts.
 2. `scripts/fetch_dataset.py` downloads the pinned development Parquet file from Hugging Face and checks its SHA-256. A cached file must pass the same check. The file is evaluator-only and ignored by Git. For offline work, copy that exact file to `data/swebench_lite_dev.parquet` beforehand.
 3. `paper_v2/build_reference_coverage.py` compares the 40 archived evidence packets to developer reference edits. It writes `reference_coverage.csv` and the coverage table. Target entity identities/ranges are manually recorded in the script; line visibility is computed from packet rendering and reference diffs.
 4. `paper_v2/build_tables.py` audits required test IDs in raw logs and rebuilds cohort/condition/control tables, result CSVs, `summary.json`, and the evidence ledger.
 5. `paper_v2/build_plots.py` renders PDF/PNG figures from the current `paper_v2/data` outputs.
 6. The verifier checks the resulting principal counts and coverage totals again.
 
-The retrieval-rank and oracle-fit table in `build_tables.py` contains manually transcribed diagnostic values. That table is rendered from those values rather than independently recomputed by this workflow. The archive preserves the corresponding top-ten ranking records. Do not interpret rendering that table as a new tokenization or ranking experiment.
+The retrieval-rank and oracle-fit table in `build_tables.py` contains manually transcribed diagnostic values. That table is rendered from those values rather than independently recomputed by this workflow. The `evidence/fresh/packets/` directory preserves the corresponding top-ten ranking records. Do not interpret rendering that table as a new tokenization or ranking experiment.
 
 The CPU dependency versions are those used to validate the release locally on Python 3.10.16. GitHub Actions is configured for Python 3.11. They are separate from historical inference environments; installing them does not recreate the original GPU stack. Figure/PDF bytes can vary with fonts, plotting libraries, TeX versions, and timestamps. The expected scientific result is agreement of the numeric records and evidence hashes, not byte-identical rebuilt PDFs.
 
@@ -42,22 +42,22 @@ make paper
 
 This runs `latexmk` in `paper_v2/`. The existing PDF, figures, and generated tables are included so the manuscript can also be read or compiled without rerunning the analysis. Building requires the LaTeX packages declared in `main.tex`, including `geometry`, `booktabs`, `enumitem`, `multirow`, `hyperref`, and `microtype`.
 
-## Original generation and evaluation
+## Research source and retained evidence
 
-The archive contains the original workflow code and environment records:
+The repository exposes one supported analysis workflow: `make reproduce`. Historical transfer scripts, repeated evaluation runners, ZIP bundles, and resumption notebooks are excluded.
 
-- `gemma_paper/retrieval.py` and `packet_runner.py`: original BM25/AST retrieval and W/A/B/C packaging implementation, extracted from `04_prior_three_task_pilot/gemma_paper_handoff.zip` without editing.
-- `paper_v1/evidence/01_comparison_study/`: packet builder, frozen prompts, comparison runner, 22 completed checkpoints, all 40 packets, raw outputs, predictions, and resumption notebook/script.
-- `paper_v1/evidence/02_native_evaluation/`: native evaluation runners, dependency audits, reference/base controls, and model test logs.
-- `paper_v1/evidence/03_development_run_marshmallow_1359/`: instrumented notebook and saved package/device/tensor provenance for a development case excluded from comparison denominators.
-- `paper_v1/evidence/04_prior_three_task_pilot/`: pilot notebooks and original handoff bundles.
-- `evaluation_three_task/`, `evaluation/`, `pilot_audit/`, and `logs/`: historical processing, Docker evaluation, and audit records used by the pilot analysis.
+- `gemma_paper/`: original retrieval, AST/BM25 ranking, packaging, dataset preparation, model-loading, and repair modules. These preserve the study implementation; GPU-specific modules require the historical CUDA/inference stack and are not invoked by the CPU workflow.
+- `evidence/fresh/`: all 40 frozen packets, top-ten rankings, 22 completed checkpoints, model outputs and predictions, task selection manifest, and completion inventory.
+- `evidence/native/`: required test IDs, native evaluation records, dependency audits, and raw base/reference/model test logs.
+- `evidence/pilot/`: one copy of the pilot checkpoints, processing audits, available test output, shared harness reports, and 12 evidence packets. `attempts.json` maps each task/condition to its canonical sources; identical report bytes are stored once.
+- `evidence/development/`: instrumented marshmallow-1359 generation inputs, output tensors, package/device records, prompt and configuration provenance. This case is excluded from comparison denominators.
+- `evidence/provenance/`: original archive manifest and handoff-reconciliation note. These describe the original archive, not the number of files retained in this cleaned repository.
 
-These files are historical execution artifacts, not a portable one-command GPU runner. They use paths such as `/content/comparison_study` and mounted Google Drive directories. Inspect their notebook setup cells and environment records before adapting them to a fresh CUDA runtime. Model access may require accepting Google's model terms and authenticating through platform secrets. No model weights or credentials are included.
+`evidence/manifest.json` records each retained input's size, SHA-256, and original source paths. The pilot index is a derived path mapping; outcomes are unchanged. The verifier also checks every source path/digest in the rebuilt evidence ledger.
 
-The original scripts prepare or reset task checkouts. Use disposable benchmark workspaces. Keep evaluator-only reference patches and test data out of model inputs. To extend the experiment, write new outputs separately and retain the submitted snapshot; the resumption script explicitly schedules the remaining 18 pairs.
+Model access may require accepting Google's model terms and authenticating through platform secrets. Model weights and credentials are excluded. Keep evaluator-only reference information out of solver inputs. Any future generation or benchmark rerun must use a separate output location to preserve the submitted snapshot.
 
-The pilot used SWE-bench 4.1.0 with Docker and task-specific compatibility images recorded in `combined_results.json`. Fresh evaluation used isolated native Python 3.9 environments. These environments are not asserted to be equivalent.
+The pilot used SWE-bench 4.1.0 with Docker and task-specific compatibility images. Fresh evaluation used isolated native Python 3.9 environments. These environments are not asserted to be equivalent.
 
 ## Limitations and interpretation
 
@@ -71,4 +71,4 @@ The pilot used SWE-bench 4.1.0 with Docker and task-specific compatibility image
 - The internal manifest authenticates byte consistency, not external provenance. No independent outer-archive signature was supplied.
 - Entity coverage uses manually identified reference entities; this is a diagnostic, not a learned or oracle-assisted retrieval policy. Oracle information must not feed back into solver inputs.
 
-The archived `paper_v1/evidence/README.md` and protocol are preserved verbatim for hash integrity. Where they describe all ten native controls as verified, an interruption cause as established, or compact excerpt lengths differently, the audited `paper_v2` manuscript and current result CSVs take precedence.
+The original archive is preserved in the author’s research workspace. This repository retains the evidence required for the submitted analysis; the audited `paper_v2` manuscript and current result CSVs govern interpretation.

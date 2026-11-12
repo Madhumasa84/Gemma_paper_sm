@@ -1,0 +1,3 @@
+# Preserve exact bytes used by evidence and ledger digests on every platform.
+evidence/** -text
+*.csv -text

@@ -1,25 +1,25 @@
 # Artifact provenance
 
-This release is curated from the author's local research workspace. The submission is `paper_v2/main.tex`; previous manuscript drafts, local environments, dataset/model caches, cloned benchmark repositories, and operating-system metadata are excluded.
+The submission manuscript is `paper_v2/main.tex`. This repository contains the working CPU analysis, core research implementation, and one canonical set of supporting evidence. The author's original research workspace is retained separately.
 
-## Preserved inputs
+## Evidence ownership
 
-The complete `paper_v1/evidence/` archive is copied byte-for-byte, including its original manifest and historical scripts/notebooks. All 311 listed entries are checked by `scripts/verify_artifacts.py`.
+`evidence/manifest.json` is the single integrity manifest for the retained inputs. Each entry records the repository path, byte size, SHA-256, and original source paths. Identical source bytes are stored once, with all retained aliases recorded as provenance. The pilot `attempts.json` index maps task/condition identities to their canonical checkpoints, processing audits, and reports.
 
-Pilot source checkpoints, processing audits, and harness reports retain the paths referenced by `combined_results.json` and the generated evidence ledger. `gemma_paper/` and `evaluator/` are extracted from the original pilot handoff ZIP so reviewers can inspect the implementation directly.
+The original 311-entry archive manifest is preserved in `evidence/provenance/original_archive_manifest.json` as historical metadata. It describes the original archive, not this curated release. Verification checks the 247 retained inputs and all current ledger source digests. A digest establishes byte consistency, not independent authenticity.
 
-`artifact_manifest.json` records SHA-256 and byte size for additional frozen inputs outside the original evidence archive. Rebuildable analysis outputs and release documentation are not part of that input manifest. Git history provides versioning for release code and documentation after publication.
+## Cleanup
 
-## Release preparation changes
+Repeated ZIP/handoff bundles, duplicate pilot exports, old platform-specific runners, superseded summaries, generated-file copies, and local build/cache artifacts are excluded. Their removal does not alter frozen model outputs, reference inputs, recorded outcomes, or manuscript prose. The core retrieval, packaging, dataset, model-loading, and repair implementation remains in `gemma_paper/`.
 
-Only the submission copy of the following analysis code is adapted:
+Analysis scripts now read the consolidated `evidence/` paths. Reference coverage is written only to `paper_v2/data/reference_coverage.csv`; the evidence ledger is written only to `paper_v2/evidence_ledger.csv`. Rebuilding does not recreate removed duplicates.
 
-- Reference coverage reads the pinned dataset from a repository-relative `data/` path and uses PyArrow directly, removing a local absolute path and an unnecessary pandas conversion.
-- Plotting reads the freshly generated `paper_v2/data` results instead of older `paper_v1/data` outputs.
-- The resolution audit explicitly requires zero unconfirmed preservation tests, in addition to the existing regression/control checks. This strengthens the documented success invariant and leaves the observed zero-resolution counts unchanged.
+## Analysis safeguards
 
-Portable setup, dataset authentication, input verification, documentation, citation metadata, and a GitHub Actions CPU reproduction workflow are added. Original model outputs, reference inputs, historical execution scripts, and manuscript prose are not rewritten.
+Reference coverage uses a repository-relative pinned dataset and PyArrow directly. Figures read the freshly rebuilt `paper_v2/data` records. Resolution requires confirmed passage of every required regression and preservation test with verified controls; unconfirmed preservation tests cannot establish success.
+
+The historical archive count in the evidence ledger remains 311 because it describes the original archive. The retained-input count is separately reported by the verifier. File locations and ledger hashes change with consolidation; scientific outcomes do not.
 
 ## Snapshot policy
 
-The included PDF is the author's submitted-manuscript candidate. Rebuilding analysis does not run inference. Completing missing attempts, changing generation settings, or repeating evaluation produces a new experiment and should be recorded separately from this frozen release.
+Rebuilding analysis does not run inference. Completing missing attempts, changing generation settings, or repeating evaluation creates a new experiment and must use a separate output location.

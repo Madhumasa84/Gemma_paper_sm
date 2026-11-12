@@ -30,9 +30,8 @@ def read_csv(path):
 
 
 def main():
-    evidence = ROOT / "paper_v1/evidence"
-    count = verify_manifest(evidence, evidence / "manifest.json")
-    count += verify_manifest(ROOT, ROOT / "artifact_manifest.json")
+    evidence = ROOT / "evidence"
+    count = verify_manifest(ROOT, evidence / "manifest.json")
     summary = json.loads((ROOT / "paper_v2/data/summary.json").read_text())
     require(summary["pilot"] == {"completed": 12, "applied": 7, "tested": 7, "resolved": 0}, "Pilot summary changed")
     expected = dict(planned=40, completed=22, strict=2, recount=10, tested=10,
@@ -50,6 +49,16 @@ def main():
         counts = tuple(sum(r[key] == "True" for r in subset) for key in
                        ("any_file_overlap", "any_entity_overlap", "any_line_overlap"))
         require(len(subset) == 10 and counts == expected_counts, f"Coverage changed: {policy}: {counts}")
+    ledger = read_csv(ROOT / "paper_v2/evidence_ledger.csv")
+    for claim in ledger:
+        paths = claim["source_paths"].split(";")
+        hashes = claim["source_sha256"].split(";")
+        require(len(paths) == len(hashes), "Ledger paths/digests differ in length")
+        for name, expected_hash in zip(paths, hashes):
+            source = ROOT / name
+            require(source.is_file(), f"Missing ledger source: {name}")
+            require(hashlib.sha256(source.read_bytes()).hexdigest() == expected_hash,
+                    f"Ledger source digest changed: {name}")
     print(f"Verified {count} manifest entries; paper denominators and coverage agree.")
 
 

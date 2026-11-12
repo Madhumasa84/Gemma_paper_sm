@@ -1,5 +1,0 @@
-{
-  "model_name_or_path": "google/gemma-4-E4B-it",
-  "instance_id": "marshmallow-code__marshmallow-1343",
-  "model_patch": "--- a/src/marshmallow/schema.py\n+++ b/src/marshmallow/schema.py\n@@ -889,7 +889,7 @@\n             except KeyError:\n                 if field_name in self.declared_fields:\n                     continue\n-                raise ValueError('\"{0}\" field does not exist.'.format(field_name))\n+                raise ValueError(f'\"{field_name}\" field does not exist.')\n \n             if many:\n                 for idx, item in enumerate(data):\n```\n"
-}

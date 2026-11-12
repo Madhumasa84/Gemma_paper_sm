@@ -1,5 +1,0 @@
-{
-  "model_name_or_path": "google/gemma-4-E4B-it",
-  "instance_id": "pvlib__pvlib-python-1072",
-  "model_patch": "--- a/pvlib/temperature.py\n+++ b/pvlib/temperature.py\n@@ -579,7 +579,10 @@\n \n     # Calculate time differences in hours\n-    timedelta_hours = np.diff(poa_global.index).astype(float) / 1e9 / 60 / 60\n+    if poa_global.index.tz is not None:\n+        # If tz-aware, np.diff returns Timedelta objects, which need special handling\n+        timedelta_hours = np.diff(poa_global.index).total_seconds() / 3600.0\n+    else:\n+        timedelta_hours = np.diff(poa_global.index).astype(float) / 1e9 / 60 / 60\n \n     # Calculate the temperature of the module\n     t_mod = (\n```\n"
-}

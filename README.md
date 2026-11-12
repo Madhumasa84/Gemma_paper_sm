@@ -10,7 +10,7 @@
 [![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11-3776AB.svg)](requirements.txt)
 [![Benchmark](https://img.shields.io/badge/Benchmark-SWE--bench_Lite_Dev-555555.svg)](https://huggingface.co/datasets/princeton-nlp/SWE-bench_Lite)
 
-**[Read the paper](paper_v2/main.pdf) · [Reproduction guide](docs/REPRODUCIBILITY.md) · [Experimental evidence](paper_v1/evidence/) · [Citation](#citation)**
+**[Read the paper](paper_v2/main.pdf) · [Reproduction guide](docs/REPRODUCIBILITY.md) · [Experimental evidence](evidence/) · [Citation](#citation)**
 
 </div>
 
@@ -116,7 +116,7 @@ The verifier uses only Python's standard library and requires no download:
 python3 scripts/verify_artifacts.py
 ```
 
-It checks **311 original archive entries and 150 additional release inputs** against their recorded byte sizes and SHA-256 digests, together with the principal result denominators and coverage totals.
+It checks **247 retained evidence files** against their recorded byte sizes and SHA-256 digests, together with the principal result denominators and coverage totals.
 
 ### Build the paper
 
@@ -134,23 +134,19 @@ The compiled manuscript is written to `paper_v2/main.pdf`. A PDF and generated f
 | --- | --- |
 | [`paper_v2/`](paper_v2/) | Submission manuscript, bibliography, analysis scripts, audited data, tables, and figures |
 | [`gemma_paper/`](gemma_paper/) | Original retrieval, evidence packaging, prompting, and generation implementation |
-| [`evaluator/`](evaluator/) | Original pilot evaluator helpers |
-| [`paper_v1/evidence/`](paper_v1/evidence/) | Frozen packets, checkpoints, raw outputs, native test logs, notebooks, and historical execution scripts |
-| [`paper_v1/data/required_tests.json`](paper_v1/data/required_tests.json) | Required benchmark test identifiers used by the analysis |
-| [`evaluation_three_task/`](evaluation_three_task/) | Pilot prediction processing and source checkpoints |
-| [`evaluation/`](evaluation/) and [`logs/`](logs/) | Historical evaluation scripts and pilot harness records |
+| [`evidence/`](evidence/) | One canonical copy of fresh packets, checkpoints, outputs, predictions, native test logs, pilot records, and development provenance |
 | [`scripts/`](scripts/) | Portable dataset retrieval and artifact verification |
 | [`docs/`](docs/) | Reproduction instructions, provenance, validation, and third-party notices |
 
-The `paper_v1` directory is retained to preserve paths recorded in manifests and evidence ledgers. **The submission manuscript is `paper_v2/main.tex`.**
+**The submission manuscript is `paper_v2/main.tex`.** Rebuilt outputs have one canonical location: tables in `paper_v2/tables/`, result records in `paper_v2/data/`, and the evidence ledger in `paper_v2/evidence_ledger.csv`.
 
 ## Reproducibility and provenance
 
-The supported local workflow rebuilds the submitted analysis from recorded experiments. Historical GPU generation and native/Docker evaluation scripts are also included; adapting them requires their original runtime setup, dependencies, and workspace paths. Repeating generation or completing unfinished attempts produces a new experimental record.
+The supported local workflow rebuilds the submitted analysis from recorded experiments. The original retrieval, packaging, model-loading, and repair modules remain in `gemma_paper/` for inspection. GPU inference requires the historical CUDA/model dependencies; it is not part of the CPU reproduction workflow and was not repeated during repository preparation.
 
-The release preserves the original evidence archive byte for byte. Dataset and model revisions are pinned, and evidence-ledger entries identify source paths and hashes. The internal manifests establish byte consistency; they do not constitute independent authentication of the original experiments.
+The evidence directory contains a curated subset of the research archive. Retained source bytes are unchanged and recorded in one manifest, alongside their original paths. Redundant transfer archives, duplicate pilot exports, obsolete platform-specific scripts, and repeated generated files have been removed. The original 311-entry archive manifest remains as historical provenance; the verifier checks the 247 retained evidence files and every source digest in the current evidence ledger.
 
-Some diagnostic table values are manually transcribed, including retrieval ranks and oracle-fit token estimates. The [reproduction guide](docs/REPRODUCIBILITY.md#cpu-analysis-workflow) identifies these values and distinguishes rendering them from independently recomputing them. Original prompt/configuration gaps and incomplete native controls are documented alongside the results.
+Some diagnostic table values are manually transcribed, including retrieval ranks and oracle-fit token estimates. The [reproduction guide](docs/REPRODUCIBILITY.md#cpu-analysis-workflow) identifies these values and distinguishes rendering them from independently recomputing them. Original prompt/configuration gaps and incomplete native controls remain documented.
 
 For details, consult [provenance](docs/PROVENANCE.md), [release validation](docs/VALIDATION.md), and the [full reproduction guide](docs/REPRODUCIBILITY.md).
 

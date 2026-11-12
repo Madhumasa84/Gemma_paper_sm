@@ -1,0 +1,121 @@
+{
+  "rows": [
+    {
+      "instance_id": "marshmallow-code__marshmallow-1343",
+      "condition": "W",
+      "tested": true,
+      "source_checkpoint": "evidence/pilot/marshmallow-code__marshmallow-1343__W__checkpoint.json",
+      "processing_audit_path": "evidence/pilot/marshmallow-code__marshmallow-1343__W__audit.json",
+      "paths": {
+        "report": "evidence/pilot/marshmallow-code__marshmallow-1343__W__report.json",
+        "test_output": "evidence/pilot/marshmallow-code__marshmallow-1343__W__tests.txt"
+      }
+    },
+    {
+      "instance_id": "marshmallow-code__marshmallow-1343",
+      "condition": "A",
+      "tested": true,
+      "source_checkpoint": "evidence/pilot/marshmallow-code__marshmallow-1343__A__checkpoint.json",
+      "processing_audit_path": "evidence/pilot/marshmallow-code__marshmallow-1343__A__audit.json",
+      "paths": {
+        "report": "evidence/pilot/marshmallow-code__marshmallow-1343__W__report.json",
+        "test_output": "evidence/pilot/marshmallow-code__marshmallow-1343__A__tests.txt"
+      }
+    },
+    {
+      "instance_id": "marshmallow-code__marshmallow-1343",
+      "condition": "B",
+      "tested": true,
+      "source_checkpoint": "evidence/pilot/marshmallow-code__marshmallow-1343__B__checkpoint.json",
+      "processing_audit_path": "evidence/pilot/marshmallow-code__marshmallow-1343__B__audit.json",
+      "paths": {
+        "report": "evidence/pilot/marshmallow-code__marshmallow-1343__W__report.json",
+        "test_output": "evidence/pilot/marshmallow-code__marshmallow-1343__B__tests.txt"
+      }
+    },
+    {
+      "instance_id": "marshmallow-code__marshmallow-1343",
+      "condition": "C",
+      "tested": false,
+      "source_checkpoint": "evidence/pilot/marshmallow-code__marshmallow-1343__C__checkpoint.json",
+      "processing_audit_path": "evidence/pilot/marshmallow-code__marshmallow-1343__C__audit.json",
+      "paths": {}
+    },
+    {
+      "instance_id": "pvlib__pvlib-python-1072",
+      "condition": "W",
+      "tested": false,
+      "source_checkpoint": "evidence/pilot/pvlib__pvlib-python-1072__W__checkpoint.json",
+      "processing_audit_path": "evidence/pilot/pvlib__pvlib-python-1072__W__audit.json",
+      "paths": {}
+    },
+    {
+      "instance_id": "pvlib__pvlib-python-1072",
+      "condition": "A",
+      "tested": true,
+      "source_checkpoint": "evidence/pilot/pvlib__pvlib-python-1072__A__checkpoint.json",
+      "processing_audit_path": "evidence/pilot/pvlib__pvlib-python-1072__A__audit.json",
+      "paths": {
+        "report": "evidence/pilot/pvlib__pvlib-python-1072__A__report.json",
+        "test_output": "evidence/pilot/pvlib__pvlib-python-1072__A__tests.txt"
+      }
+    },
+    {
+      "instance_id": "pvlib__pvlib-python-1072",
+      "condition": "B",
+      "tested": false,
+      "source_checkpoint": "evidence/pilot/pvlib__pvlib-python-1072__B__checkpoint.json",
+      "processing_audit_path": "evidence/pilot/pvlib__pvlib-python-1072__B__audit.json",
+      "paths": {}
+    },
+    {
+      "instance_id": "pvlib__pvlib-python-1072",
+      "condition": "C",
+      "tested": true,
+      "source_checkpoint": "evidence/pilot/pvlib__pvlib-python-1072__C__checkpoint.json",
+      "processing_audit_path": "evidence/pilot/pvlib__pvlib-python-1072__C__audit.json",
+      "paths": {
+        "report": "evidence/pilot/pvlib__pvlib-python-1072__A__report.json",
+        "test_output": "evidence/pilot/pvlib__pvlib-python-1072__C__tests.txt"
+      }
+    },
+    {
+      "instance_id": "pydicom__pydicom-1139",
+      "condition": "W",
+      "tested": true,
+      "source_checkpoint": "evidence/pilot/pydicom__pydicom-1139__W__checkpoint.json",
+      "processing_audit_path": "evidence/pilot/pydicom__pydicom-1139__W__audit.json",
+      "paths": {
+        "report": "evidence/pilot/pydicom__pydicom-1139__W__report.json",
+        "test_output": "evidence/pilot/pydicom__pydicom-1139__W__tests.txt"
+      }
+    },
+    {
+      "instance_id": "pydicom__pydicom-1139",
+      "condition": "A",
+      "tested": false,
+      "source_checkpoint": "evidence/pilot/pydicom__pydicom-1139__A__checkpoint.json",
+      "processing_audit_path": "evidence/pilot/pydicom__pydicom-1139__A__audit.json",
+      "paths": {}
+    },
+    {
+      "instance_id": "pydicom__pydicom-1139",
+      "condition": "B",
+      "tested": true,
+      "source_checkpoint": "evidence/pilot/pydicom__pydicom-1139__B__checkpoint.json",
+      "processing_audit_path": "evidence/pilot/pydicom__pydicom-1139__B__audit.json",
+      "paths": {
+        "report": "evidence/pilot/pydicom__pydicom-1139__W__report.json",
+        "test_output": "evidence/pilot/pydicom__pydicom-1139__B__tests.txt"
+      }
+    },
+    {
+      "instance_id": "pydicom__pydicom-1139",
+      "condition": "C",
+      "tested": false,
+      "source_checkpoint": "evidence/pilot/pydicom__pydicom-1139__C__checkpoint.json",
+      "processing_audit_path": "evidence/pilot/pydicom__pydicom-1139__C__audit.json",
+      "paths": {}
+    }
+  ]
+}

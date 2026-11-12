@@ -1,0 +1,1982 @@
+[
+  {
+    "path": "evidence/development/actual_generation_input_manifest.json",
+    "bytes": 624,
+    "sha256": "77ba991fb139c7dcb37a15a7fbd6fdf3ba7a9449913754c64c88bcc3c83ed8c6",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/actual_generation_input_manifest.json"
+    ]
+  },
+  {
+    "path": "evidence/development/actual_generation_inputs.pt",
+    "bytes": 116602,
+    "sha256": "16e692f13f997528ff878d70e20a3a4e0ac0847063d9837495eb18b38d51f76c",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/actual_generation_inputs.pt"
+    ]
+  },
+  {
+    "path": "evidence/development/base_commands.json",
+    "bytes": 1323,
+    "sha256": "042045ccf3a64ab154173564b97272febe2fa2bca9082d8c91601a64b60f47bf",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/base_commands.json"
+    ]
+  },
+  {
+    "path": "evidence/development/chat_template.jinja",
+    "bytes": 18569,
+    "sha256": "0a2c8073c878ab1da004bee933a998606537bbb62016310352c7285c3f01c5b5",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/chat_template.jinja"
+    ]
+  },
+  {
+    "path": "evidence/development/checkpoint.json",
+    "bytes": 1082,
+    "sha256": "17f80278e1fede225cba72fec479368ed3ddf363da93cffbc596ce72b342bb4f",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/development/effective_generation_config.json",
+    "bytes": 2043,
+    "sha256": "3dbb8549268b32d0b0b6708374e10b8ae05b7036bce46eb0f89290b5c007f116",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/effective_generation_config.json"
+    ]
+  },
+  {
+    "path": "evidence/development/evidence.txt",
+    "bytes": 15367,
+    "sha256": "739b3ee069de9b9d484423fe11c4d62f1ffd9c749483b2eee1fd45a8de65f3d7",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/evidence.txt"
+    ]
+  },
+  {
+    "path": "evidence/development/frozen_packet.json",
+    "bytes": 21285,
+    "sha256": "82973ee640f516d2faf22bde6e318d4fdaa6c27666e529c8022729469218a087",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/frozen_packet.json"
+    ]
+  },
+  {
+    "path": "evidence/development/generation_call.json",
+    "bytes": 347,
+    "sha256": "1fd5f20dd2d624c8c4d27a63587f62de0a8c0d951b759776096e52d88d8a4eaa",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/generation_call.json"
+    ]
+  },
+  {
+    "path": "evidence/development/generation_started.json",
+    "bytes": 81,
+    "sha256": "d3426fa9b75c945f4f7cc802ea3157393ee3962983cbb126816787523f88fb60",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/generation_started.json"
+    ]
+  },
+  {
+    "path": "evidence/development/input_ids.json",
+    "bytes": 49881,
+    "sha256": "78f69a9178309d0a944951347a7b2520f5db7ae748eae68783629c459be92580",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/input_ids.json"
+    ]
+  },
+  {
+    "path": "evidence/development/issue.txt",
+    "bytes": 1748,
+    "sha256": "e4caac19c9afeacc3d0660b41106012bca605a2f90ebb4756e7cc3be9b15b062",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/issue.txt"
+    ]
+  },
+  {
+    "path": "evidence/development/loaded_model_config.json",
+    "bytes": 6734,
+    "sha256": "3527e84a5a63e639c4f03cb8c4e98d6106a4ea3003d84319c330fc8e7bc484d9",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/loaded_model_config.json"
+    ]
+  },
+  {
+    "path": "evidence/development/loaded_snapshot.json",
+    "bytes": 604,
+    "sha256": "ee134c8c956858505caaa95ac877768c0afd603d85b5d3af7ead90dd3d133016",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/loaded_snapshot.json"
+    ]
+  },
+  {
+    "path": "evidence/development/memory_after_generation.json",
+    "bytes": 264,
+    "sha256": "0285d26cd37075bebe58db9e190c6e86b70a9752200a18df781e745359d6a26b",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/memory_after_generation.json"
+    ]
+  },
+  {
+    "path": "evidence/development/memory_after_model_load.json",
+    "bytes": 264,
+    "sha256": "24127a5b92e8850ab31ecc01b7b5d3dcbe78b6fd33c11469b0ba8fd988898604",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/memory_after_model_load.json"
+    ]
+  },
+  {
+    "path": "evidence/development/memory_before_generation.json",
+    "bytes": 264,
+    "sha256": "95f89dd09f93ab7dc3a676c74729d0c49712cbce72816c79ce15555966bf6a36",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/memory_before_generation.json"
+    ]
+  },
+  {
+    "path": "evidence/development/memory_before_model_load.json",
+    "bytes": 225,
+    "sha256": "d706142e2bb30f80bec344fb7a2399bcef8fdad2dde24d288b74a4536474a9b8",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/memory_before_model_load.json"
+    ]
+  },
+  {
+    "path": "evidence/development/messages.json",
+    "bytes": 18521,
+    "sha256": "30b16bca1f0130a8d7dcc27b07d5cec5341a0ad015bd3e8e2fae670fd717bfe2",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/messages.json"
+    ]
+  },
+  {
+    "path": "evidence/development/model_load_settings.json",
+    "bytes": 701,
+    "sha256": "551381608d8f4a6f5eec24e0e52bab3bdbd9f4fa6fff3fb7ef62973a4d38af67",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/model_load_settings.json"
+    ]
+  },
+  {
+    "path": "evidence/development/output_sequences.pt",
+    "bytes": 45352,
+    "sha256": "9f472905af69269789a7ee69477ce0e7873f0130e8ebc57425a4918037015857",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/output_sequences.pt"
+    ]
+  },
+  {
+    "path": "evidence/development/output_token_ids.json",
+    "bytes": 5996,
+    "sha256": "0453495f9a3eadd93b98f6a260704bfa28c6efa967b222fbbe4f682577f779f0",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/output_token_ids.json"
+    ]
+  },
+  {
+    "path": "evidence/development/package_versions.json",
+    "bytes": 18948,
+    "sha256": "8a882a1dae2ac6b32c75f3cae4d8ff10a003ef77caa2b312546a7f315d0a41a8",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/package_versions.json"
+    ]
+  },
+  {
+    "path": "evidence/development/processor_inputs.pt",
+    "bytes": 116466,
+    "sha256": "940f972ba2322ddbc6dc9a75b9a8a5efab1097ee88a0a8f3830cae5d8a6dbb9c",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/processor_inputs.pt"
+    ]
+  },
+  {
+    "path": "evidence/development/prompt.txt",
+    "bytes": 17853,
+    "sha256": "12baf5b17100bb56053e889fa056fa356f8a1a4c12776c55032650698e0f6530",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/prompt.txt"
+    ]
+  },
+  {
+    "path": "evidence/development/protocol_v2_manifest.json",
+    "bytes": 752,
+    "sha256": "31ce9301c24a7734d99da8974a836597456e7f0b1e0fa7461606d1f85abca603",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/protocol_v2_manifest.json"
+    ]
+  },
+  {
+    "path": "evidence/development/quantization_and_placement.json",
+    "bytes": 538140,
+    "sha256": "a787ca1959f94a6c1330b2cc80c79cf86eccbde45e5c5095c3b6e3987e9b1592",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/quantization_and_placement.json"
+    ]
+  },
+  {
+    "path": "evidence/development/raw_output.txt",
+    "bytes": 2408,
+    "sha256": "352fd80dc2a1b6f80ab698c2b97cf2948345d011fec1016115dfb2eeff08e368",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/raw_output.txt"
+    ]
+  },
+  {
+    "path": "evidence/development/raw_output_with_special_tokens.txt",
+    "bytes": 2415,
+    "sha256": "dc363ca537639d7e8c5c540df8b66d1efdfa33e4a6095be54e197e6413cd05b5",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/raw_output_with_special_tokens.txt"
+    ]
+  },
+  {
+    "path": "evidence/development/rendered_prompt.txt",
+    "bytes": 17890,
+    "sha256": "7c337695c1fde31799c5d87c628d5d85f1644a8cba1887d6899815d16e02ea94",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/rendered_prompt.txt"
+    ]
+  },
+  {
+    "path": "evidence/development/rendered_with_thinking_true_control.txt",
+    "bytes": 17922,
+    "sha256": "1e1dd5168af75ca0290932ded543c3190f0ca695710a467eefb490409607390e",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/rendered_with_thinking_true_control.txt"
+    ]
+  },
+  {
+    "path": "evidence/development/run_state.json",
+    "bytes": 97,
+    "sha256": "5e46d678b2d034eed7dcff3a6d03d6e69209ab3001bd29f749f27caf3e6e016b",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/run_state.json"
+    ]
+  },
+  {
+    "path": "evidence/development/runtime.json",
+    "bytes": 282,
+    "sha256": "a20f9fba51db6bb22b027d5cdee347a82cd134cf99762c64df4c3a16c331d3b8",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/runtime.json"
+    ]
+  },
+  {
+    "path": "evidence/development/selection.json",
+    "bytes": 3067,
+    "sha256": "8dfca0d478a6e956ff5692174ff9e3a800aae36d41112ba0e429fd31285e2d59",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/selection.json"
+    ]
+  },
+  {
+    "path": "evidence/development/source_validation.json",
+    "bytes": 1748,
+    "sha256": "a7bca11599760107559cb23edd8f49b782d642a11e64a16a70502ad8cecb5933",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/source_validation.json"
+    ]
+  },
+  {
+    "path": "evidence/development/template_and_inputs.json",
+    "bytes": 1411,
+    "sha256": "da4b12495ba148dd9575dd1c9ddc43132b1d15722cf1a223833f94e07b140cd2",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/template_and_inputs.json"
+    ]
+  },
+  {
+    "path": "evidence/development/validation_passed.json",
+    "bytes": 284,
+    "sha256": "1a8fe86f3881452452346568ea960109112d758ad63003b1053fc0120d7eb645",
+    "source_paths": [
+      "paper_v1/evidence/03_development_run_marshmallow_1359/unpacked_execution_bundle/validation_passed.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pvlib__pvlib-python-1154__A__checkpoint.json",
+    "bytes": 964,
+    "sha256": "94079bea073e184704f17d38481ecc6cda99d3fd4268772317e447063d25970c",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pvlib__pvlib-python-1154__A__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pvlib__pvlib-python-1154__B__checkpoint.json",
+    "bytes": 1061,
+    "sha256": "d7f5bcf65959747e298005a5384d96a5bc3ac9a4085a2b28e2fe1fbf307b0ec2",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pvlib__pvlib-python-1154__B__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pvlib__pvlib-python-1154__C__checkpoint.json",
+    "bytes": 959,
+    "sha256": "1330a5aa9a1c98d0af56227c6f6a773c6cf2382794982e614e970fb503971869",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pvlib__pvlib-python-1154__C__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pvlib__pvlib-python-1154__W__checkpoint.json",
+    "bytes": 962,
+    "sha256": "b48f357f167fbb3c58084f41085d0bc03493626e44efc9728de495fe40521deb",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pvlib__pvlib-python-1154__W__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pvlib__pvlib-python-1606__A__checkpoint.json",
+    "bytes": 961,
+    "sha256": "e387116b399b58d8fd71498457f74d976ce085160e71f3328d5ad83c14860748",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pvlib__pvlib-python-1606__A__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pvlib__pvlib-python-1606__B__checkpoint.json",
+    "bytes": 1050,
+    "sha256": "e12d392de3e5fb8191e065e3f1f5ef645fe0e57ba684fb21a614a068e1af9f36",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pvlib__pvlib-python-1606__B__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pvlib__pvlib-python-1606__C__checkpoint.json",
+    "bytes": 1050,
+    "sha256": "6e951139bfe230c81bec41b279ad0d05f36b896fe46a8453f11d5f9a2193a63f",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pvlib__pvlib-python-1606__C__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pvlib__pvlib-python-1606__W__checkpoint.json",
+    "bytes": 1048,
+    "sha256": "3f8a5c1425e9fa21eee5db1ed93978a2fd1974daefe2ef36901f004317d966ef",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pvlib__pvlib-python-1606__W__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pvlib__pvlib-python-1707__A__checkpoint.json",
+    "bytes": 962,
+    "sha256": "00afdcfa05da52fd53de11b814f552611b6bf537be50ad0f75b98e5e55c3adc6",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pvlib__pvlib-python-1707__A__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pvlib__pvlib-python-1707__B__checkpoint.json",
+    "bytes": 1044,
+    "sha256": "c494c4305428c329b3eb3aa358293fe022bd28af54cb6df9bed1ba8c6a44a6ef",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pvlib__pvlib-python-1707__B__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pvlib__pvlib-python-1707__C__checkpoint.json",
+    "bytes": 964,
+    "sha256": "71b4167af9242c6a860d272122cb63eb925d075f7f748dad20ea2a06999bbba5",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pvlib__pvlib-python-1707__C__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pvlib__pvlib-python-1707__W__checkpoint.json",
+    "bytes": 1043,
+    "sha256": "c8047f054a5de97e915b8aeeac28365c58349c78318e5c45fc5b5a78a3aa44e9",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pvlib__pvlib-python-1707__W__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pvlib__pvlib-python-1854__A__checkpoint.json",
+    "bytes": 962,
+    "sha256": "501f76925d65ad9f7a1a5a80b704a46eef1a177819ddbd8acf402fa3c73a1291",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pvlib__pvlib-python-1854__A__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pvlib__pvlib-python-1854__B__checkpoint.json",
+    "bytes": 1055,
+    "sha256": "7abfa46c4202477316fc112e5bc500b8095f5eb6b02168615401ea021a1d67bd",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pvlib__pvlib-python-1854__B__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pvlib__pvlib-python-1854__C__checkpoint.json",
+    "bytes": 963,
+    "sha256": "a18d97d78f04a18068a58ca6c91b6bac03321b1b48a07176b91d48292c0b9328",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pvlib__pvlib-python-1854__C__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pvlib__pvlib-python-1854__W__checkpoint.json",
+    "bytes": 1054,
+    "sha256": "68b945779e680d8de5ce8fa3b53aef1cf0cd166170e5e24fecf6aab4e5bf20b5",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pvlib__pvlib-python-1854__W__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pydicom__pydicom-1256__A__checkpoint.json",
+    "bytes": 991,
+    "sha256": "07974d2da1c665fe7a98a8b1dd49fff445f14cd0c1b37edfcde9a84995874ff0",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pydicom__pydicom-1256__A__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pydicom__pydicom-1256__B__checkpoint.json",
+    "bytes": 962,
+    "sha256": "5405b9a0ef0c8ba8ce99acf4b4bf742632f2321a225c9abda5e47e249c9aefc1",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pydicom__pydicom-1256__B__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pydicom__pydicom-1256__C__checkpoint.json",
+    "bytes": 1064,
+    "sha256": "8587389738c838a2f37c3a38ef5acb2626147e0a3fcfee5f592f323b079870bb",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pydicom__pydicom-1256__C__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pydicom__pydicom-1256__W__checkpoint.json",
+    "bytes": 961,
+    "sha256": "190a22c8778acd72968be38f278e7131cf4daa2c55568e65f3531621cd88ea01",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pydicom__pydicom-1256__W__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pydicom__pydicom-1413__A__checkpoint.json",
+    "bytes": 1001,
+    "sha256": "9be72fb724227ca259e0ccf08d641f1401481d40afc72ab72905f550578ade12",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pydicom__pydicom-1413__A__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/checkpoints/pydicom__pydicom-1413__B__checkpoint.json",
+    "bytes": 992,
+    "sha256": "2e07f8e9fe5084146ff45dec66854b93e14bdd263d0745af42389cdf7fb843f0",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/checkpoints/pydicom__pydicom-1413__B__checkpoint.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/inventory.csv",
+    "bytes": 13501,
+    "sha256": "d54a3f4d5c9d78b1adaa7f536b8ed312df9e5ff547d1f2493d8d0b79e216edd4",
+    "source_paths": [
+      "paper_v1/evidence/inventory.csv"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pvlib__pvlib-python-1154__A__raw.txt",
+    "bytes": 4278,
+    "sha256": "f7d721e90aac3ffe19a4a332f9c1efac5c031b78a227b7b25f49e18a37693bd1",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pvlib__pvlib-python-1154__A__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pvlib__pvlib-python-1154__B__raw.txt",
+    "bytes": 6384,
+    "sha256": "cd2575649eac6ea7b09df5fbee337a431019daf2e83bd9a18459ecb5c55c656e",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pvlib__pvlib-python-1154__B__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pvlib__pvlib-python-1154__C__raw.txt",
+    "bytes": 1923,
+    "sha256": "9e67bc5728981a841d47361ff691289d91edf762fe9fe7eb174377dca5b503db",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pvlib__pvlib-python-1154__C__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pvlib__pvlib-python-1154__W__raw.txt",
+    "bytes": 658,
+    "sha256": "5eee605022e3b7a0260b28e2ea01a0c890f06b952a04aa36f491ee748202bdb1",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pvlib__pvlib-python-1154__W__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pvlib__pvlib-python-1606__A__raw.txt",
+    "bytes": 998,
+    "sha256": "afb1acc2e0faa50c4bf58a510c6ca6a2ed3bdc38af67360f1db8074092557605",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pvlib__pvlib-python-1606__A__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pvlib__pvlib-python-1606__B__raw.txt",
+    "bytes": 2072,
+    "sha256": "3b9b5dad402e6dbf17c2918680701b88637223e1a3f2d54954a6b7979e81593e",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pvlib__pvlib-python-1606__B__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pvlib__pvlib-python-1606__C__raw.txt",
+    "bytes": 761,
+    "sha256": "a8fc3b79917ed10cc0bc9b8790d3499032b4250f587a2547903bb96c0ed6c3c0",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pvlib__pvlib-python-1606__C__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pvlib__pvlib-python-1606__W__raw.txt",
+    "bytes": 565,
+    "sha256": "5b555c1b4f4ea6ac9a5f41d6e3de428b98ab2e0c09676f8a70d056a5b07772ec",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pvlib__pvlib-python-1606__W__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pvlib__pvlib-python-1707__A__raw.txt",
+    "bytes": 286,
+    "sha256": "189188716bcba2dac8a00d968a00f670ab2b99c651234777c50ef36987e46e3a",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pvlib__pvlib-python-1707__A__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pvlib__pvlib-python-1707__B__raw.txt",
+    "bytes": 328,
+    "sha256": "9a7872fb673e9cd15978814daf2ece2ac10eb4cd1fa406dc423139843320dc93",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pvlib__pvlib-python-1707__B__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pvlib__pvlib-python-1707__C__raw.txt",
+    "bytes": 268,
+    "sha256": "578c4dadd60f9ee2367a52f13f3e612079c8271a6b8a64e67925125b82a75f31",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pvlib__pvlib-python-1707__C__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pvlib__pvlib-python-1707__W__raw.txt",
+    "bytes": 5367,
+    "sha256": "7964c42550376edd0e396779b582a67fc05101e5b26276d09a6b7404a34726f0",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pvlib__pvlib-python-1707__W__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pvlib__pvlib-python-1854__A__raw.txt",
+    "bytes": 930,
+    "sha256": "4ecf2cd3d25d5e6742ae957445921502ddc10c64dbe60258aca7969d474a7451",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pvlib__pvlib-python-1854__A__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pvlib__pvlib-python-1854__B__raw.txt",
+    "bytes": 454,
+    "sha256": "b0c8f86495d1753a47f16ea35683b4010ba8dbedf0ebae41687c6ba6073aff62",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pvlib__pvlib-python-1854__B__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pvlib__pvlib-python-1854__C__raw.txt",
+    "bytes": 696,
+    "sha256": "f13be8d07862f57c073ff7589e7a17419feeae5d8c17906a13ee7da8dcd563e4",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pvlib__pvlib-python-1854__C__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pvlib__pvlib-python-1854__W__raw.txt",
+    "bytes": 700,
+    "sha256": "96a6ace44662fa24a1b3789a01e3e31aa310e0e5c5cb60199f59df7f316625fd",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pvlib__pvlib-python-1854__W__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pydicom__pydicom-1256__A__raw.txt",
+    "bytes": 8303,
+    "sha256": "5bfff89297061897a5c4752e5bee4209777722595cd143457b57d0985b457d53",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pydicom__pydicom-1256__A__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pydicom__pydicom-1256__B__raw.txt",
+    "bytes": 368,
+    "sha256": "a35d3b3b84f31ddcb6fc3d60eb4b22b97a2adf04d990982c0d6541f3f36eb840",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pydicom__pydicom-1256__B__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pydicom__pydicom-1256__C__raw.txt",
+    "bytes": 8074,
+    "sha256": "12a3d652f083525c604fe45ff7c22955eba34b8a2fbcdd2771009101997b938a",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pydicom__pydicom-1256__C__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pydicom__pydicom-1256__W__raw.txt",
+    "bytes": 7298,
+    "sha256": "abc26a16b01a5b7f76c7521fa475ddfb369ba4f7561b1e7e38d2933a83bbafa7",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pydicom__pydicom-1256__W__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pydicom__pydicom-1413__A__raw.txt",
+    "bytes": 7914,
+    "sha256": "42f84299faf92f11902124c82fbebde23d763bf1fc30bff583ec3df17b45ba20",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pydicom__pydicom-1413__A__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/outputs/pydicom__pydicom-1413__B__raw.txt",
+    "bytes": 8033,
+    "sha256": "ea5b85c47a3951d47e7859f9bc10689af55c0e34d605ea1d25963a85ebb4054c",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/raw_outputs/pydicom__pydicom-1413__B__raw.txt"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/all_packets_manifest.json",
+    "bytes": 6370,
+    "sha256": "8be1fdc1ff6cc12f01a0b7c3039ad95235320d81d1d40fd72b98e0654d4df836",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/all_packets_manifest.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pvlib__pvlib-python-1154__A__packet.json",
+    "bytes": 42698,
+    "sha256": "312e9e23300f59ae27455ed451fe4d2386add95d10d94210e4eed18c96715dfa",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pvlib__pvlib-python-1154__A__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pvlib__pvlib-python-1154__B__packet.json",
+    "bytes": 50121,
+    "sha256": "75eb8ba5e82c6d0fb6030516ddcf1878f8b0baacac20402e2927ca8589f06a89",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pvlib__pvlib-python-1154__B__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pvlib__pvlib-python-1154__C__packet.json",
+    "bytes": 43667,
+    "sha256": "667da4658a6648a055f2e84bce7ee008de9d1a5e8b18f2901bd142ee20888dc9",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pvlib__pvlib-python-1154__C__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pvlib__pvlib-python-1154__W__packet.json",
+    "bytes": 41759,
+    "sha256": "3f50a8972bdc5710843266a8fbff6e02ec8d5286b935a90445c9efa78aefd5ff",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pvlib__pvlib-python-1154__W__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pvlib__pvlib-python-1154_ranking.json",
+    "bytes": 1179,
+    "sha256": "c50284ee6904afb3e37262b2a516f434fa07801790ffbdfd864a953f5f101a06",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pvlib__pvlib-python-1154_ranking.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pvlib__pvlib-python-1606__A__packet.json",
+    "bytes": 56865,
+    "sha256": "8138f27a6d7602644d4a7be84c9a225d54c5cc59e3f6335d00ce2175ad25cfd8",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pvlib__pvlib-python-1606__A__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pvlib__pvlib-python-1606__B__packet.json",
+    "bytes": 62095,
+    "sha256": "7897deb6842d430765a6c7e5045f2bb7554973592ed604e80757e3eab6aecd2d",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pvlib__pvlib-python-1606__B__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pvlib__pvlib-python-1606__C__packet.json",
+    "bytes": 58931,
+    "sha256": "cde2acadb17c0f32ff8b6f3f6e856135a4999f94ffe19dd46eb0afb884330e19",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pvlib__pvlib-python-1606__C__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pvlib__pvlib-python-1606__W__packet.json",
+    "bytes": 59391,
+    "sha256": "4b9d78a1b55efc4dcf653c01c23793e883ec39ffeae205a493cc3779fe2ac9be",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pvlib__pvlib-python-1606__W__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pvlib__pvlib-python-1606_ranking.json",
+    "bytes": 1226,
+    "sha256": "8af8e044da656b1de6c43bdbd68184647ada133e8d024ef096b79c3eb26d4b99",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pvlib__pvlib-python-1606_ranking.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pvlib__pvlib-python-1707__A__packet.json",
+    "bytes": 45304,
+    "sha256": "92a158e33f51b329ab2ba8cd399135305b4041c5344b610ee12314d67a0a6e99",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pvlib__pvlib-python-1707__A__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pvlib__pvlib-python-1707__B__packet.json",
+    "bytes": 50140,
+    "sha256": "7eaa517970e62f1376e32e9ec3d1c90ab5557ab454bb51db29cc5253989e8920",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pvlib__pvlib-python-1707__B__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pvlib__pvlib-python-1707__C__packet.json",
+    "bytes": 46118,
+    "sha256": "80c8a62ed2105f949ea70d6658e08cc9a1eb99ec576f1b4715e9215d3ec76224",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pvlib__pvlib-python-1707__C__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pvlib__pvlib-python-1707__W__packet.json",
+    "bytes": 41604,
+    "sha256": "2bb86028c93bec3700d0bf98086640062d5223cfc97513d05d777697c244ce77",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pvlib__pvlib-python-1707__W__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pvlib__pvlib-python-1707_ranking.json",
+    "bytes": 1151,
+    "sha256": "67e9cf66fb0aa9511a57f9a79bd8ac4ad05eb2c109c5e3f7f6c148948bfa662e",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pvlib__pvlib-python-1707_ranking.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pvlib__pvlib-python-1854__A__packet.json",
+    "bytes": 52073,
+    "sha256": "613816ce8dead81b65424b2fc36304c4826b54b413f5d3564cd2733ede86ef61",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pvlib__pvlib-python-1854__A__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pvlib__pvlib-python-1854__B__packet.json",
+    "bytes": 53856,
+    "sha256": "fff375967a3534aff37cebe8b7e809cb505ce1523ec939b86ec3c86b4e257b92",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pvlib__pvlib-python-1854__B__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pvlib__pvlib-python-1854__C__packet.json",
+    "bytes": 51899,
+    "sha256": "68c35ca6cf4bbef2f0003b6ef3c08af66a92cb5dc644543dc5b895ee03181e0e",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pvlib__pvlib-python-1854__C__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pvlib__pvlib-python-1854__W__packet.json",
+    "bytes": 48191,
+    "sha256": "b10c9835d579f23b336c9be678dbb8bb31aaa990ee7e82180aac952300b30ee1",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pvlib__pvlib-python-1854__W__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pvlib__pvlib-python-1854_ranking.json",
+    "bytes": 1172,
+    "sha256": "c50f7d8ea603188cd49edc6ff4715efcae6521a0713e27cf663dfe0efc094f3c",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pvlib__pvlib-python-1854_ranking.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pydicom__pydicom-1256__A__packet.json",
+    "bytes": 48810,
+    "sha256": "9ca24ff3a96b0604bb5c4614da1120b09a39e73606e561a27a7859386b7e58ae",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pydicom__pydicom-1256__A__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pydicom__pydicom-1256__B__packet.json",
+    "bytes": 46444,
+    "sha256": "3e369819c153ed3a02b5f2c286296caffe59969fb16987e62ea23f2dd90e29f1",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pydicom__pydicom-1256__B__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pydicom__pydicom-1256__C__packet.json",
+    "bytes": 46344,
+    "sha256": "7d898be4f0f4adad85211edc62fbfdd31b07bf86d0a2d55038c100973fc5fb69",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pydicom__pydicom-1256__C__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pydicom__pydicom-1256__W__packet.json",
+    "bytes": 47306,
+    "sha256": "f029b8f51b50163d67264f4d508496599e4f66cf342be0ee57e023d1ce5c473c",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pydicom__pydicom-1256__W__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pydicom__pydicom-1256_ranking.json",
+    "bytes": 1375,
+    "sha256": "6a3954e6a8a8333c5ccf3e1a84a770273afdb61bf4b3bb72e3183b736fb5db65",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pydicom__pydicom-1256_ranking.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pydicom__pydicom-1413__A__packet.json",
+    "bytes": 42397,
+    "sha256": "4dd3fb934a5f978e88f95dbd609977edafca272dd70d0356ffc58088511d65bd",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pydicom__pydicom-1413__A__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pydicom__pydicom-1413__B__packet.json",
+    "bytes": 46244,
+    "sha256": "e52fa83c3f7e59facb5d558f417441b58b08acadee44add4c239a3fbf0e390d5",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pydicom__pydicom-1413__B__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pydicom__pydicom-1413__C__packet.json",
+    "bytes": 45436,
+    "sha256": "ddd0abedf1259899ae04a0468c8eb027d62f0b9fb3effd64f1d20d32a63543b9",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pydicom__pydicom-1413__C__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pydicom__pydicom-1413__W__packet.json",
+    "bytes": 49497,
+    "sha256": "3bb6d0c36b4fb2d2a0843b61fe8afd51298323a849ebb8bdc95691382f7328d3",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pydicom__pydicom-1413__W__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pydicom__pydicom-1413_ranking.json",
+    "bytes": 1284,
+    "sha256": "a1f0425d20babe638b25084aa270e7b52b205d557d0883920bf99010dfadc97e",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pydicom__pydicom-1413_ranking.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pydicom__pydicom-1694__A__packet.json",
+    "bytes": 48906,
+    "sha256": "e8ca1861eec7c3f474bcbff0568bb654185a82a0e374ebb569715daa3f1b3d1d",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pydicom__pydicom-1694__A__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pydicom__pydicom-1694__B__packet.json",
+    "bytes": 49791,
+    "sha256": "1acfebaaaa077cd5e7178a51614b791f36a7f0af400c9fa8d8fb648da064ea1d",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pydicom__pydicom-1694__B__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pydicom__pydicom-1694__C__packet.json",
+    "bytes": 46916,
+    "sha256": "5a1258f00920512ca126cb2d5070fe7c16a8507ebe5a750d6603b53b9ba9755c",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pydicom__pydicom-1694__C__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pydicom__pydicom-1694__W__packet.json",
+    "bytes": 52034,
+    "sha256": "024c6b8b9e2b935d6f5eaf93994e112c35b2ea946d1c9f5c670b4ecafac99b67",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pydicom__pydicom-1694__W__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pydicom__pydicom-1694_ranking.json",
+    "bytes": 1225,
+    "sha256": "51bcdd2fa564eef16884b011dacc9ec3a931d1e8191d0f03af34219e8bc6839a",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pydicom__pydicom-1694_ranking.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pydicom__pydicom-901__A__packet.json",
+    "bytes": 51959,
+    "sha256": "97a54a3cf23eaf1f6ca5adec819fa740883a27909949986bca357d6dd88d1bcb",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pydicom__pydicom-901__A__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pydicom__pydicom-901__B__packet.json",
+    "bytes": 50613,
+    "sha256": "d5a08877dd2c30340ec7988b2f80f5f9dee9432b4969f16c06cc2c4ace09b92f",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pydicom__pydicom-901__B__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pydicom__pydicom-901__C__packet.json",
+    "bytes": 49069,
+    "sha256": "cc9823dfd2e8e8a8d69933cb13bd3320c52835fcdf3f5e32fca8e6d3ac5b5b3b",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pydicom__pydicom-901__C__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pydicom__pydicom-901__W__packet.json",
+    "bytes": 48536,
+    "sha256": "40ab8db77a28ae114816bb9172c626c369a0da19935b8e0b114c0df75b560930",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pydicom__pydicom-901__W__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pydicom__pydicom-901_ranking.json",
+    "bytes": 1469,
+    "sha256": "701f544748ea4203c7645e78fc894ee50f860dcd048143027a0aef471cdfc148",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pydicom__pydicom-901_ranking.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pylint-dev__astroid-1196__A__packet.json",
+    "bytes": 57815,
+    "sha256": "604eb610bb493ad2a11f35c5b937caef133eff412829794638f92cf1a713c9bf",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pylint-dev__astroid-1196__A__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pylint-dev__astroid-1196__B__packet.json",
+    "bytes": 49166,
+    "sha256": "22c21e741fb3283c4f7f65fa634d85a9475e51fbd7b217b8eadf487f4435be27",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pylint-dev__astroid-1196__B__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pylint-dev__astroid-1196__C__packet.json",
+    "bytes": 55670,
+    "sha256": "d53a1ea5bee9348ef3c199f9489d1a73d5597d51a731098f0ef6e7c2eb35d78b",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pylint-dev__astroid-1196__C__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pylint-dev__astroid-1196__W__packet.json",
+    "bytes": 57346,
+    "sha256": "b14ff4ae28292a4c636c28458d3deee9568a9757adf47986954d7a341bfc61d2",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pylint-dev__astroid-1196__W__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pylint-dev__astroid-1196_ranking.json",
+    "bytes": 1296,
+    "sha256": "d73cc26057fa0e3b66b35ef553fb623788e8f7aeda3ca3f3c9b9d3414b7e5ba5",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pylint-dev__astroid-1196_ranking.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pylint-dev__astroid-1268__A__packet.json",
+    "bytes": 53459,
+    "sha256": "6dc6e5f9a6a7ce04f496e5e80648b03eb2bebe99834f619e71b63b051d276efc",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pylint-dev__astroid-1268__A__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pylint-dev__astroid-1268__B__packet.json",
+    "bytes": 48953,
+    "sha256": "0631ed43924ac9f40344446ad474180aab4bcc6748cd65f1b30266ae35a22add",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pylint-dev__astroid-1268__B__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pylint-dev__astroid-1268__C__packet.json",
+    "bytes": 46764,
+    "sha256": "2a458315a6dbe0ab2ee9faa86f565c4a56e8d606ea596e0e020786194fb70f35",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pylint-dev__astroid-1268__C__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pylint-dev__astroid-1268__W__packet.json",
+    "bytes": 45881,
+    "sha256": "8781fc63788a495f20420b8e2b1efd75325751a0bd1eea07509581158ece6b0d",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pylint-dev__astroid-1268__W__packet.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/packets/pylint-dev__astroid-1268_ranking.json",
+    "bytes": 1306,
+    "sha256": "f08f7f1f626b99642dd6b606955802f2ea8e0ed1d992d13f95c7731f32340b73",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evidence_packets/pylint-dev__astroid-1268_ranking.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pvlib__pvlib-python-1154__A__pred.json",
+    "bytes": 1051,
+    "sha256": "29a41380f1b21263aa690d344433d709637059de26b46907b402f366bd07c056",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pvlib__pvlib-python-1154__A__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pvlib__pvlib-python-1154__B__pred.json",
+    "bytes": 6668,
+    "sha256": "ff041f3c369bad09725e5eab3619b8d99e21b30e8669bf42eb7de20c951d5cc1",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pvlib__pvlib-python-1154__B__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pvlib__pvlib-python-1154__C__pred.json",
+    "bytes": 1912,
+    "sha256": "54981feeff1b20be3ea76766598b4366d1731a48d935d6c5de3b5b6cde220549",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pvlib__pvlib-python-1154__C__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pvlib__pvlib-python-1154__W__pred.json",
+    "bytes": 930,
+    "sha256": "d242c2695f84d4f766c6d1b50acaf9cb533eef693d69309490463c3f008b4154",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pvlib__pvlib-python-1154__W__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pvlib__pvlib-python-1606__A__pred.json",
+    "bytes": 605,
+    "sha256": "fe83667466b197328b82eced128335c1a5c470a98746db43bb3a212cd5d26aba",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pvlib__pvlib-python-1606__A__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pvlib__pvlib-python-1606__B__pred.json",
+    "bytes": 2280,
+    "sha256": "28f5ef1e914393f12e309e636192b6f97c27b6e0c595893ff5059d4316156e31",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pvlib__pvlib-python-1606__B__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pvlib__pvlib-python-1606__C__pred.json",
+    "bytes": 925,
+    "sha256": "9fcd62253adc4514d72ee7674f9ba57722391d3bd8a95d423ca9c578f23e15af",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pvlib__pvlib-python-1606__C__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pvlib__pvlib-python-1606__W__pred.json",
+    "bytes": 710,
+    "sha256": "bc39a67042095191c14e0053e8443e0bcb0f2198710cf2f824295112a66a1df8",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pvlib__pvlib-python-1606__W__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pvlib__pvlib-python-1707__A__pred.json",
+    "bytes": 555,
+    "sha256": "3c4e288b866637bb90f3ae590878f3989e339123d62add3a4ca1e97a2b86a2db",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pvlib__pvlib-python-1707__A__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pvlib__pvlib-python-1707__B__pred.json",
+    "bytes": 471,
+    "sha256": "a98c15e5a34e56efe793e3eab44534c91487e8cc56eddf38e30b94a02ab6163b",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pvlib__pvlib-python-1707__B__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pvlib__pvlib-python-1707__C__pred.json",
+    "bytes": 537,
+    "sha256": "a91269df45418b3096b461edbed67b7ce8ab4caa8dc2bd62d7cf6a8912dd7ae1",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pvlib__pvlib-python-1707__C__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pvlib__pvlib-python-1707__W__pred.json",
+    "bytes": 409,
+    "sha256": "9fed6af46cb9451d641c28e932fa86f4dc84ca1f0b67c4a518a19dab7af65247",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pvlib__pvlib-python-1707__W__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pvlib__pvlib-python-1854__A__pred.json",
+    "bytes": 1194,
+    "sha256": "db0505c0c6922d3d10681ca472fd6745fbae000e31567d037b561c2dd045ab52",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pvlib__pvlib-python-1854__A__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pvlib__pvlib-python-1854__B__pred.json",
+    "bytes": 599,
+    "sha256": "5d6dbd591607fb8e065a5bd2b0240a4ab34f7f1eedfd54091af79043f30cd8fb",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pvlib__pvlib-python-1854__B__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pvlib__pvlib-python-1854__C__pred.json",
+    "bytes": 952,
+    "sha256": "842abaceb3ca4a1bf72bbe71e247aeec890043474add479e29214ea7797d7622",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pvlib__pvlib-python-1854__C__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pvlib__pvlib-python-1854__W__pred.json",
+    "bytes": 854,
+    "sha256": "0c5416838e2e4c07076943dd842c0191f99437d0f8e7d112b391f5ce52479ba4",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pvlib__pvlib-python-1854__W__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pydicom__pydicom-1256__A__pred.json",
+    "bytes": 139,
+    "sha256": "f77e2d62f254ce42699c693a95498149896227c407ae6d996d89564e79a14d47",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pydicom__pydicom-1256__A__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pydicom__pydicom-1256__B__pred.json",
+    "bytes": 657,
+    "sha256": "0ceda0337c162ef4e1861d5e12036a7aff05f1bbe861a54cd1c8394750880d0b",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pydicom__pydicom-1256__B__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pydicom__pydicom-1256__C__pred.json",
+    "bytes": 938,
+    "sha256": "2ca425f3478495eedd65d9d7e0a65a8ffb998fef4e4aae2fffcb55e963a3ad7a",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pydicom__pydicom-1256__C__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pydicom__pydicom-1256__W__pred.json",
+    "bytes": 139,
+    "sha256": "39116bc32ad90b1713a15bf90e665fe2be222ca9839ec1e9ece935381e83fbcc",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pydicom__pydicom-1256__W__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pydicom__pydicom-1413__A__pred.json",
+    "bytes": 433,
+    "sha256": "8af09c4fb9979e709631d8cdab011bedef878f19d63203e78d2f0493a4cdbcbc",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pydicom__pydicom-1413__A__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/predictions/pydicom__pydicom-1413__B__pred.json",
+    "bytes": 139,
+    "sha256": "c73fa5ec1e70b0f31bf396092fb6b847f0e7ac6d9b4c09d66c864c1341155330",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/predictions/pydicom__pydicom-1413__B__pred.json"
+    ]
+  },
+  {
+    "path": "evidence/fresh/task_manifest.json",
+    "bytes": 21778,
+    "sha256": "d60de4a9d9c388d54c3561a90304dd38894d1042ff50c2e6bb2c12aa55c90a98",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/task_manifest.json"
+    ]
+  },
+  {
+    "path": "evidence/native/env_audits/pvlib__pvlib-python-1154__audit.json",
+    "bytes": 488,
+    "sha256": "ba9e61666fd9de68705fe6f3258c43bf69c854782008cb58a65d832c17bb3c12",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/env_audits/pvlib__pvlib-python-1154__audit.json"
+    ]
+  },
+  {
+    "path": "evidence/native/env_audits/pvlib__pvlib-python-1606__audit.json",
+    "bytes": 488,
+    "sha256": "b0b0ed0222adbac7275b9d8621c128ed797b89497a5b30cff6c9701990c0d361",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/env_audits/pvlib__pvlib-python-1606__audit.json"
+    ]
+  },
+  {
+    "path": "evidence/native/env_audits/pvlib__pvlib-python-1707__audit.json",
+    "bytes": 488,
+    "sha256": "ce83da3fc4c90a79c779202873cfe187be43984cfbf2c59935f02744495af42e",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/env_audits/pvlib__pvlib-python-1707__audit.json"
+    ]
+  },
+  {
+    "path": "evidence/native/env_audits/pvlib__pvlib-python-1854__audit.json",
+    "bytes": 488,
+    "sha256": "e2c813ba2f16841e6f75a7f3319b86562f7bf9297fa5a93ab95b3ee87217629c",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/env_audits/pvlib__pvlib-python-1854__audit.json"
+    ]
+  },
+  {
+    "path": "evidence/native/env_audits/pydicom__pydicom-1256__audit.json",
+    "bytes": 482,
+    "sha256": "8662f09193c817dcdf90ab1a9ce644684feb6e1dfbe7f8eeb9026e8bb152571c",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/env_audits/pydicom__pydicom-1256__audit.json"
+    ]
+  },
+  {
+    "path": "evidence/native/env_audits/pydicom__pydicom-1413__audit.json",
+    "bytes": 482,
+    "sha256": "a272d9075ad7cda9aeb2f8d131e6703d7d096fa670028456feece993eb788e14",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/env_audits/pydicom__pydicom-1413__audit.json"
+    ]
+  },
+  {
+    "path": "evidence/native/env_audits/pydicom__pydicom-1694__audit.json",
+    "bytes": 482,
+    "sha256": "1576351eb254ec8a56690e777a0aedf5331f88018177803d161143835fb56da2",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/env_audits/pydicom__pydicom-1694__audit.json"
+    ]
+  },
+  {
+    "path": "evidence/native/env_audits/pydicom__pydicom-901__audit.json",
+    "bytes": 481,
+    "sha256": "330b7c9a7e79b7d07123d246d73e138d4b787fa09a3685c221081d3b9225a44a",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/env_audits/pydicom__pydicom-901__audit.json"
+    ]
+  },
+  {
+    "path": "evidence/native/env_audits/pylint-dev__astroid-1196__audit.json",
+    "bytes": 488,
+    "sha256": "e25864923734b194f759cf2351e662c11cc6bb2ad2cc0cc3ac3495659fe84651",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/env_audits/pylint-dev__astroid-1196__audit.json"
+    ]
+  },
+  {
+    "path": "evidence/native/env_audits/pylint-dev__astroid-1268__audit.json",
+    "bytes": 488,
+    "sha256": "45114d4ebb1b2c61f19148a6262a3475fd377407d886e1a5354298a525bc3246",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/env_audits/pylint-dev__astroid-1268__audit.json"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pvlib__pvlib-python-1154__A__eval.log",
+    "bytes": 19591,
+    "sha256": "a86c90c9b01d4d0a397a2d404bfd0e6266489bd2060f0a49f47e19bed29bddcf",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pvlib__pvlib-python-1154__A__eval.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pvlib__pvlib-python-1154__C__eval.log",
+    "bytes": 11649,
+    "sha256": "804cba7fc0229b369ecba6072761e53add22513c708661283c3737241ca02bf5",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pvlib__pvlib-python-1154__C__eval.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pvlib__pvlib-python-1154__W__eval.log",
+    "bytes": 11649,
+    "sha256": "dae36b86be6e42bf76ca483560cb3f8b4fa6d418973085c949ad36ffefa70902",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pvlib__pvlib-python-1154__W__eval.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pvlib__pvlib-python-1154__base_control.log",
+    "bytes": 11649,
+    "sha256": "5575bd71e979359f52f38e3b5c279be031253c1863b4f7e9c802f4b72ffa9a44",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pvlib__pvlib-python-1154__base_control.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pvlib__pvlib-python-1154__ref_control.log",
+    "bytes": 9629,
+    "sha256": "3275973ac6868815b03b30b3873ac2171f661fde6568a0014062cd61de4aff4e",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pvlib__pvlib-python-1154__ref_control.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pvlib__pvlib-python-1606__A__eval.log",
+    "bytes": 4282,
+    "sha256": "34cd576fb39db28a7cd536222a0823a4574f3c088102daa914fae49354f04d5c",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pvlib__pvlib-python-1606__A__eval.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pvlib__pvlib-python-1606__base_control.log",
+    "bytes": 7124,
+    "sha256": "e991e063af1bc7957ca0d16a1f40120fdbb82ea0aef76c15e0699dc33d9be68c",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pvlib__pvlib-python-1606__base_control.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pvlib__pvlib-python-1606__ref_control.log",
+    "bytes": 2075,
+    "sha256": "bd8b3f303c136637651013479457585adb0df240c302c11ce9420ec121f84114",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pvlib__pvlib-python-1606__ref_control.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pvlib__pvlib-python-1707__A__eval.log",
+    "bytes": 6332,
+    "sha256": "9779d0d5bdcbf3404b2c1f178293a7f9017dd00c01c2ea807cae631b5f2023e4",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pvlib__pvlib-python-1707__A__eval.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pvlib__pvlib-python-1707__C__eval.log",
+    "bytes": 7682,
+    "sha256": "68172405032c2ff5393d9af84414af9e201bccf3f79cc56009c39283c387b58f",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pvlib__pvlib-python-1707__C__eval.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pvlib__pvlib-python-1707__base_control.log",
+    "bytes": 6332,
+    "sha256": "a1cdf4d01a39b7cc3df0a6ecc79a2f63fe094f52b01709aaf2180df9b7352f06",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pvlib__pvlib-python-1707__base_control.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pvlib__pvlib-python-1707__ref_control.log",
+    "bytes": 4110,
+    "sha256": "f18d1f2f07c4cd432d8ff5ffe016805ee896248dbc0adb2a4fb3aa194888e11d",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pvlib__pvlib-python-1707__ref_control.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pvlib__pvlib-python-1854__A__eval.log",
+    "bytes": 75529,
+    "sha256": "65fb486e83726ea73ade1a79587d6fdb8348d0f7c70890ebad119dc127133d14",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pvlib__pvlib-python-1854__A__eval.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pvlib__pvlib-python-1854__C__eval.log",
+    "bytes": 75529,
+    "sha256": "d2e2ce197a96e597d81e90ff92b3057134cb83c903de05ced1d2b88d7a754eec",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pvlib__pvlib-python-1854__C__eval.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pvlib__pvlib-python-1854__base_control.log",
+    "bytes": 75529,
+    "sha256": "3843cbaf2788f195346a01e719a7f733dbbefec81d7c2cfdbb85680d1f5a280f",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pvlib__pvlib-python-1854__base_control.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pvlib__pvlib-python-1854__ref_control.log",
+    "bytes": 73030,
+    "sha256": "923ccf0ed5d665921995c1100123e1ba015b0d5d2ffda37ce3287fa83be0fc34",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pvlib__pvlib-python-1854__ref_control.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pydicom__pydicom-1256__B__eval.log",
+    "bytes": 4151,
+    "sha256": "4465836f6c10672265f2ac830bba679e3d38516c5bb22d2b6a4924e740a68fc9",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pydicom__pydicom-1256__B__eval.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pydicom__pydicom-1256__W__eval.log",
+    "bytes": 4151,
+    "sha256": "54f8cc437d6d3ea0e235f2f1d76ce30ecca5d1633c3ffe83c26577000eac3517",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pydicom__pydicom-1256__W__eval.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pydicom__pydicom-1256__base_control.log",
+    "bytes": 4151,
+    "sha256": "1ce9c6af308060bd3e56980dcba7b215f66cfbf93a228521032690576ad05704",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pydicom__pydicom-1256__base_control.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pydicom__pydicom-1256__ref_control.log",
+    "bytes": 2814,
+    "sha256": "e586dabb31010c7d485a3c120bbdad50362e0674bac4a610751b3db08531079a",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pydicom__pydicom-1256__ref_control.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pydicom__pydicom-1413__base_control.log",
+    "bytes": 30670,
+    "sha256": "b425c8e904dfe9cee4a17f39d35ae530eed7b103ff155c4ac1fd648f7f88d993",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pydicom__pydicom-1413__base_control.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pydicom__pydicom-1413__ref_control.log",
+    "bytes": 27790,
+    "sha256": "c567fd8ddb884c5ed5fb2e88a24d13233521c48231e5f1895cf8499b37c135d5",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pydicom__pydicom-1413__ref_control.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pydicom__pydicom-1694__base_control.log",
+    "bytes": 6228,
+    "sha256": "352127b9f5a8ca8781598d75a7a1cdb85411ae586a2104d090d0121e95191152",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pydicom__pydicom-1694__base_control.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pydicom__pydicom-1694__ref_control.log",
+    "bytes": 3698,
+    "sha256": "b50c388cf0229cf90207371fe9d67623accf75939ebeeda44926988c2fd22505",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pydicom__pydicom-1694__ref_control.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pydicom__pydicom-901__base_control.log",
+    "bytes": 3559,
+    "sha256": "beca7bece5886ade7f67c56c51ec3aa894f1063e7b5dc1089465e94c7d0c448b",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pydicom__pydicom-901__base_control.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pydicom__pydicom-901__ref_control.log",
+    "bytes": 157606,
+    "sha256": "cfacabe5420c7e2fc970b440683c30c6247b95f40977a8961cc142f3e473b826",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pydicom__pydicom-901__ref_control.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pylint-dev__astroid-1196__base_control.log",
+    "bytes": 5366,
+    "sha256": "29c53116f29f05898e328254ec1b01eda0352d70343534add96130875bc71032",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pylint-dev__astroid-1196__base_control.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pylint-dev__astroid-1196__ref_control.log",
+    "bytes": 2466,
+    "sha256": "a5c039c3148b9000c1d525ddd4462e9be38f78821717a7e45e8cfcaf20e6333b",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pylint-dev__astroid-1196__ref_control.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pylint-dev__astroid-1268__base_control.log",
+    "bytes": 8818,
+    "sha256": "645376ef51034ce0d70d0a6f7c85141d2202b386b41f512ed2a6e9ce722b70bf",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pylint-dev__astroid-1268__base_control.log"
+    ]
+  },
+  {
+    "path": "evidence/native/logs/pylint-dev__astroid-1268__ref_control.log",
+    "bytes": 7728,
+    "sha256": "b4feeff6f44e807b7294befff9a20d020cf20ffecb4c3453b21ca094d8d391c7",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/logs/pylint-dev__astroid-1268__ref_control.log"
+    ]
+  },
+  {
+    "path": "evidence/native/required_tests.json",
+    "bytes": 125553,
+    "sha256": "cbc8dcd5e903e344db546ab8e79afb188d84309a23ddd0ba70767279e596fac5",
+    "source_paths": [
+      "paper_v1/data/required_tests.json"
+    ]
+  },
+  {
+    "path": "evidence/native/results.json",
+    "bytes": 10156,
+    "sha256": "1be99ccfbc22716ae5d159ca83993a29fcc7e947e8868b9e3c40d9e0ff8e8719",
+    "source_paths": [
+      "paper_v1/evidence/02_native_evaluation/native_evaluation_results.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/attempts.json",
+    "bytes": 4957,
+    "sha256": "dcc3f619a285311123052569442e49747216c1dcfb8d9cb0e94496a3f92aec69",
+    "source_paths": [
+      "derived from combined_results.json; paths consolidated without changing outcomes"
+    ]
+  },
+  {
+    "path": "evidence/pilot/marshmallow-code__marshmallow-1343__A__audit.json",
+    "bytes": 681,
+    "sha256": "0e8e9319f0a63f7910d3bdfcbe5482fe726c7e7c0f70d9aad05ab39d1b88cceb",
+    "source_paths": [
+      "marshmallow_evaluation_bundle/original_results/processing_audit_v3/A.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/marshmallow-code__marshmallow-1343__A__checkpoint.json",
+    "bytes": 1891,
+    "sha256": "89e56540ce51cff561d787285487cd6d8a834d7907f92825cb54bbe004df05b1",
+    "source_paths": [
+      "evaluation_three_task/source_archive/checkpoints/marshmallow-code__marshmallow-1343__A__a1__25e8db93__0d94c473.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/marshmallow-code__marshmallow-1343__A__tests.txt",
+    "bytes": 23857,
+    "sha256": "17c3c4d27097dddcd2f72ac4f36f6e9f810e61550df433e772d134582831c76a",
+    "source_paths": [
+      "logs/run_evaluation/gemma_pilot_A_585e64ea6b265e86/google__gemma-4-E4B-it/marshmallow-code__marshmallow-1343/test_output.txt"
+    ]
+  },
+  {
+    "path": "evidence/pilot/marshmallow-code__marshmallow-1343__B__audit.json",
+    "bytes": 770,
+    "sha256": "465f43eed4f2189cb23bb20048f0b72047236581669bec22840c3a365d321b35",
+    "source_paths": [
+      "marshmallow_evaluation_bundle/original_results/processing_audit_v3/B.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/marshmallow-code__marshmallow-1343__B__checkpoint.json",
+    "bytes": 2034,
+    "sha256": "d77b4d6c1c8d0d619b7616991b083aae8c6a2fd74cf7c88d6dd29eeb1ac5c195",
+    "source_paths": [
+      "evaluation_three_task/source_archive/checkpoints/marshmallow-code__marshmallow-1343__B__a1__3f933535__0d94c473.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/marshmallow-code__marshmallow-1343__B__tests.txt",
+    "bytes": 23869,
+    "sha256": "7604c44acb14d1631249317a5f435af1eb4bd2c4af9a7ef95489b62d7570f801",
+    "source_paths": [
+      "logs/run_evaluation/gemma_pilot_B_242a56b1fdf5ea53/google__gemma-4-E4B-it/marshmallow-code__marshmallow-1343/test_output.txt"
+    ]
+  },
+  {
+    "path": "evidence/pilot/marshmallow-code__marshmallow-1343__C__audit.json",
+    "bytes": 836,
+    "sha256": "e8b8045ac26b3868ee0be3be4c0cda0175e0a1b4f6282efe755f7a93e189e985",
+    "source_paths": [
+      "marshmallow_evaluation_bundle/original_results/processing_audit_v3/C.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/marshmallow-code__marshmallow-1343__C__checkpoint.json",
+    "bytes": 9517,
+    "sha256": "336b3a4b2511b4a7167261e869366d47d402d28563de56cc36a3c3c3cde28e47",
+    "source_paths": [
+      "evaluation_three_task/source_archive/checkpoints/marshmallow-code__marshmallow-1343__C__a1__fe45737d__0d94c473.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/marshmallow-code__marshmallow-1343__W__audit.json",
+    "bytes": 1578,
+    "sha256": "be7acbffc91755331de892a80b2e0fd17793ac46b308b7e1df5e8dd8f27f6207",
+    "source_paths": [
+      "marshmallow_evaluation_bundle/original_results/processing_audit_v3/W.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/marshmallow-code__marshmallow-1343__W__checkpoint.json",
+    "bytes": 3722,
+    "sha256": "c8b38c20eaf3fb7e1aca0be9cdaa02fa9340573c68badd1cac8598f162ba5e9c",
+    "source_paths": [
+      "evaluation_three_task/source_archive/checkpoints/marshmallow-code__marshmallow-1343__W__a1__aa52258f__0d94c473.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/marshmallow-code__marshmallow-1343__W__report.json",
+    "bytes": 3257,
+    "sha256": "394708f5bdfd6486c6620ed10063be9eeacfc726975a1c8796241e663bed4a07",
+    "source_paths": [
+      "logs/run_evaluation/gemma_pilot_W_de99f2cb2f6c47e6/google__gemma-4-E4B-it/marshmallow-code__marshmallow-1343/report.json",
+      "logs/run_evaluation/gemma_pilot_A_585e64ea6b265e86/google__gemma-4-E4B-it/marshmallow-code__marshmallow-1343/report.json",
+      "logs/run_evaluation/gemma_pilot_B_242a56b1fdf5ea53/google__gemma-4-E4B-it/marshmallow-code__marshmallow-1343/report.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/marshmallow-code__marshmallow-1343__W__tests.txt",
+    "bytes": 24706,
+    "sha256": "cd035e260ae393011a9b0c96292a10f44baedff74c5838f0d75c1fce99e68a69",
+    "source_paths": [
+      "logs/run_evaluation/gemma_pilot_W_de99f2cb2f6c47e6/google__gemma-4-E4B-it/marshmallow-code__marshmallow-1343/test_output.txt"
+    ]
+  },
+  {
+    "path": "evidence/pilot/packets/marshmallow-code__marshmallow-1343__A.json",
+    "bytes": 20523,
+    "sha256": "0d112acadf7f8e7ce1be90a7a903653b674cf262a0be9125f3a9a5fa66b37a61",
+    "source_paths": [
+      "paper_v1/evidence/04_prior_three_task_pilot/gemma_paper_handoff.zip!/evidence_packets/marshmallow-code__marshmallow-1343__A.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/packets/marshmallow-code__marshmallow-1343__B.json",
+    "bytes": 19112,
+    "sha256": "3ee63547be72120029ec3c220e23560acb6a8f626bb0ecef6e5823b80d886631",
+    "source_paths": [
+      "paper_v1/evidence/04_prior_three_task_pilot/gemma_paper_handoff.zip!/evidence_packets/marshmallow-code__marshmallow-1343__B.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/packets/marshmallow-code__marshmallow-1343__C.json",
+    "bytes": 18343,
+    "sha256": "d19681e22b2074fb664a50b176e7dfc260b1267e733452868fcec176b04ef850",
+    "source_paths": [
+      "paper_v1/evidence/04_prior_three_task_pilot/gemma_paper_handoff.zip!/evidence_packets/marshmallow-code__marshmallow-1343__C.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/packets/marshmallow-code__marshmallow-1343__W.json",
+    "bytes": 19118,
+    "sha256": "ba3b436a1a31be31f4f588c75c597c4c8bd888ad13ea2cdf9f4e77d0e29376c4",
+    "source_paths": [
+      "paper_v1/evidence/04_prior_three_task_pilot/gemma_paper_handoff.zip!/evidence_packets/marshmallow-code__marshmallow-1343__W.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/packets/pvlib__pvlib-python-1072__A.json",
+    "bytes": 16237,
+    "sha256": "83aecf94a41d45d3f6b87becc9914cec945113484249f45b76dc8dc63cdecc84",
+    "source_paths": [
+      "paper_v1/evidence/04_prior_three_task_pilot/gemma_paper_handoff.zip!/evidence_packets/pvlib__pvlib-python-1072__A.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/packets/pvlib__pvlib-python-1072__B.json",
+    "bytes": 18892,
+    "sha256": "7ac7ba3cdb84ea4373a3435472e4eba97513b491a14c82c908d019b924adcbb3",
+    "source_paths": [
+      "paper_v1/evidence/04_prior_three_task_pilot/gemma_paper_handoff.zip!/evidence_packets/pvlib__pvlib-python-1072__B.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/packets/pvlib__pvlib-python-1072__C.json",
+    "bytes": 16619,
+    "sha256": "bdd4b41fade979008dcb333e12f5f22c7a498659527d4bed80643ac81c4f97d5",
+    "source_paths": [
+      "paper_v1/evidence/04_prior_three_task_pilot/gemma_paper_handoff.zip!/evidence_packets/pvlib__pvlib-python-1072__C.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/packets/pvlib__pvlib-python-1072__W.json",
+    "bytes": 16552,
+    "sha256": "e178a02a5057cf95e7a39a987ad43861ceabd2d21ccc9ca1a9ecfd123fc5c955",
+    "source_paths": [
+      "paper_v1/evidence/04_prior_three_task_pilot/gemma_paper_handoff.zip!/evidence_packets/pvlib__pvlib-python-1072__W.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/packets/pydicom__pydicom-1139__A.json",
+    "bytes": 16764,
+    "sha256": "0390dec9e12a97cf1841f53fc70713b2bd889080ae91a562eaeecc31416411b5",
+    "source_paths": [
+      "paper_v1/evidence/04_prior_three_task_pilot/gemma_paper_handoff.zip!/evidence_packets/pydicom__pydicom-1139__A.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/packets/pydicom__pydicom-1139__B.json",
+    "bytes": 16682,
+    "sha256": "f3055234a3b86ff2c45194542996f0210c496aee436c89acd6d6ce7441fe408e",
+    "source_paths": [
+      "paper_v1/evidence/04_prior_three_task_pilot/gemma_paper_handoff.zip!/evidence_packets/pydicom__pydicom-1139__B.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/packets/pydicom__pydicom-1139__C.json",
+    "bytes": 15933,
+    "sha256": "00ffa4fe83bbd0335fd3e4b651bc32f9dd835081adb00b5db0fa126827b69788",
+    "source_paths": [
+      "paper_v1/evidence/04_prior_three_task_pilot/gemma_paper_handoff.zip!/evidence_packets/pydicom__pydicom-1139__C.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/packets/pydicom__pydicom-1139__W.json",
+    "bytes": 16479,
+    "sha256": "d4bfda5b0285fe62b129c1e5c674010adadf64e7fb15a4fa6059337a7d677197",
+    "source_paths": [
+      "paper_v1/evidence/04_prior_three_task_pilot/gemma_paper_handoff.zip!/evidence_packets/pydicom__pydicom-1139__W.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pvlib__pvlib-python-1072__A__audit.json",
+    "bytes": 1692,
+    "sha256": "20be330b444e0f96d6a224a171524446b5d3933ef1ee2b991d08c38558b0492d",
+    "source_paths": [
+      "evaluation_three_task/processed/pvlib__pvlib-python-1072/A/audit.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pvlib__pvlib-python-1072__A__checkpoint.json",
+    "bytes": 2890,
+    "sha256": "890a416f2c36adb4ac8294ae23dea7eb7b4839e1976c31684a82946d7f8e340d",
+    "source_paths": [
+      "evaluation_three_task/source_archive/checkpoints/pvlib__pvlib-python-1072__A__a1__7d8940ea__0d94c473.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pvlib__pvlib-python-1072__A__report.json",
+    "bytes": 2198,
+    "sha256": "824b35eb80ffc8467399ba3c833d719d9a2af7eddf23ab12180a4b33df945c2d",
+    "source_paths": [
+      "logs/run_evaluation/pilot2_pvlib__pvlib-python-1072_A_2699eb2d01d06d35_enve6a6a28ecea3/google__gemma-4-E4B-it/pvlib__pvlib-python-1072/report.json",
+      "logs/run_evaluation/pilot2_pvlib__pvlib-python-1072_C_5f2f5b655335b57f_enve6a6a28ecea3/google__gemma-4-E4B-it/pvlib__pvlib-python-1072/report.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pvlib__pvlib-python-1072__A__tests.txt",
+    "bytes": 37250,
+    "sha256": "262f866265472a9e12116f38bce69fca235ed3f4350c702bce3c2df68460d0e0",
+    "source_paths": [
+      "logs/run_evaluation/pilot2_pvlib__pvlib-python-1072_A_2699eb2d01d06d35_enve6a6a28ecea3/google__gemma-4-E4B-it/pvlib__pvlib-python-1072/test_output.txt"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pvlib__pvlib-python-1072__B__audit.json",
+    "bytes": 1820,
+    "sha256": "27dbe6d7c02f197eb9b534aee23b78787b31148cf60b2d5e36f5f3b7e5925cf8",
+    "source_paths": [
+      "evaluation_three_task/processed/pvlib__pvlib-python-1072/B/audit.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pvlib__pvlib-python-1072__B__checkpoint.json",
+    "bytes": 6400,
+    "sha256": "9294fce657c0ec4576b1006afb933c7eb3af5cebf16eec3ceb2ba9c931a80e17",
+    "source_paths": [
+      "evaluation_three_task/source_archive/checkpoints/pvlib__pvlib-python-1072__B__a1__4a106365__0d94c473.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pvlib__pvlib-python-1072__C__audit.json",
+    "bytes": 1692,
+    "sha256": "76d3e32d9e967fae9d06186da633aa34005ba28d12a088de3cf7f0eb1d80231b",
+    "source_paths": [
+      "evaluation_three_task/processed/pvlib__pvlib-python-1072/C/audit.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pvlib__pvlib-python-1072__C__checkpoint.json",
+    "bytes": 2825,
+    "sha256": "03ce3132f0907edad042c64113b7a8508c7125f52b54ef633fcb1155d0962056",
+    "source_paths": [
+      "evaluation_three_task/source_archive/checkpoints/pvlib__pvlib-python-1072__C__a1__00e324d9__0d94c473.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pvlib__pvlib-python-1072__C__tests.txt",
+    "bytes": 37285,
+    "sha256": "ae3c0f162e0ad8b1b3245677dff35d383a186f687030b4afb814085581ff47ae",
+    "source_paths": [
+      "logs/run_evaluation/pilot2_pvlib__pvlib-python-1072_C_5f2f5b655335b57f_enve6a6a28ecea3/google__gemma-4-E4B-it/pvlib__pvlib-python-1072/test_output.txt"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pvlib__pvlib-python-1072__W__audit.json",
+    "bytes": 1820,
+    "sha256": "04562f10607a87b7fffb0fb8ad51dd18a3fef80076c32e9f476fe8f2ce4ba143",
+    "source_paths": [
+      "evaluation_three_task/processed/pvlib__pvlib-python-1072/W/audit.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pvlib__pvlib-python-1072__W__checkpoint.json",
+    "bytes": 2306,
+    "sha256": "a38681ad04043293f74848ec48d38a7605d0c6af7fa4987bf25537ad2dc09628",
+    "source_paths": [
+      "evaluation_three_task/source_archive/checkpoints/pvlib__pvlib-python-1072__W__a1__eb5e55b8__0d94c473.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pydicom__pydicom-1139__A__audit.json",
+    "bytes": 1804,
+    "sha256": "6407a6f5a449b6239275208ab2de327466feed4ff3fb6f0c2582bc00bbaab5da",
+    "source_paths": [
+      "evaluation_three_task/processed/pydicom__pydicom-1139/A/audit.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pydicom__pydicom-1139__A__checkpoint.json",
+    "bytes": 2172,
+    "sha256": "cd4f1e45fc8e3343ada915c440ef95e2563bb05701e7868d709a0e71b8e52604",
+    "source_paths": [
+      "evaluation_three_task/source_archive/checkpoints/pydicom__pydicom-1139__A__a1__e2c04977__0d94c473.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pydicom__pydicom-1139__B__audit.json",
+    "bytes": 1680,
+    "sha256": "c49808e6fbe32ba93084b4c9c5d2f6a720033224aaf1bdaff0278a8b1039676f",
+    "source_paths": [
+      "evaluation_three_task/processed/pydicom__pydicom-1139/B/audit.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pydicom__pydicom-1139__B__checkpoint.json",
+    "bytes": 2202,
+    "sha256": "49a320fca62384100d2c0f44cd41945a1893fa5c60a7977b01a4c160513ed171",
+    "source_paths": [
+      "evaluation_three_task/source_archive/checkpoints/pydicom__pydicom-1139__B__a1__7ba62b02__0d94c473.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pydicom__pydicom-1139__B__tests.txt",
+    "bytes": 27782,
+    "sha256": "498edffc1e718523f859573cd03a4c4f6dffe439cec00a3b1b560b1c34202970",
+    "source_paths": [
+      "logs/run_evaluation/pilot2_pydicom__pydicom-1139_B_0edcc03554b22010_enva24eb46eb81d/google__gemma-4-E4B-it/pydicom__pydicom-1139/test_output.txt"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pydicom__pydicom-1139__C__audit.json",
+    "bytes": 1806,
+    "sha256": "50f4b23ed28b0a2ec7fa33a787c93d421418b37248cbd23138696e1d30cd3034",
+    "source_paths": [
+      "evaluation_three_task/processed/pydicom__pydicom-1139/C/audit.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pydicom__pydicom-1139__C__checkpoint.json",
+    "bytes": 2719,
+    "sha256": "10d98928db278c8310f47f2f47adc5ad252c5d91260c1cfdc4713ee666bb0b1d",
+    "source_paths": [
+      "evaluation_three_task/source_archive/checkpoints/pydicom__pydicom-1139__C__a1__77c52864__0d94c473.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pydicom__pydicom-1139__W__audit.json",
+    "bytes": 1680,
+    "sha256": "30282d2df397153905aa4ed9268bbf3e07fd8b89ae5b3a5c0b4d343998eda136",
+    "source_paths": [
+      "evaluation_three_task/processed/pydicom__pydicom-1139/W/audit.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pydicom__pydicom-1139__W__checkpoint.json",
+    "bytes": 1818,
+    "sha256": "bb2676eb8da7619d6bfca2235c69304dbaac62ce74e80e9e2a38fdd5b45d2a6c",
+    "source_paths": [
+      "evaluation_three_task/source_archive/checkpoints/pydicom__pydicom-1139__W__a1__47d8388e__0d94c473.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pydicom__pydicom-1139__W__report.json",
+    "bytes": 4217,
+    "sha256": "d7be378010ee80d857a0aa707104aa1ad9e7586300f23bb91f66813bc1aae158",
+    "source_paths": [
+      "logs/run_evaluation/pilot2_pydicom__pydicom-1139_W_24233f43636f3dd0_enva24eb46eb81d/google__gemma-4-E4B-it/pydicom__pydicom-1139/report.json",
+      "logs/run_evaluation/pilot2_pydicom__pydicom-1139_B_0edcc03554b22010_enva24eb46eb81d/google__gemma-4-E4B-it/pydicom__pydicom-1139/report.json"
+    ]
+  },
+  {
+    "path": "evidence/pilot/pydicom__pydicom-1139__W__tests.txt",
+    "bytes": 27608,
+    "sha256": "76bb28a4cfc3a4f45ffa1342bcc2b94987d73f67642ad2e9114c9b94f1c2e6f0",
+    "source_paths": [
+      "logs/run_evaluation/pilot2_pydicom__pydicom-1139_W_24233f43636f3dd0_enva24eb46eb81d/google__gemma-4-E4B-it/pydicom__pydicom-1139/test_output.txt"
+    ]
+  },
+  {
+    "path": "evidence/provenance/handoff_reconciliation.md",
+    "bytes": 1088,
+    "sha256": "db14395e008ac9908287e4fdde2bbab4482eb9874b223249656c644a4ded161f",
+    "source_paths": [
+      "paper_v1/evidence/01_comparison_study/evaluator_handoff_discrepancy.md"
+    ]
+  },
+  {
+    "path": "evidence/provenance/original_archive_manifest.json",
+    "bytes": 61701,
+    "sha256": "f43b23756e9b582ce427222898eaa42c1dacd3c16ed2c540642fea338a2c4e71",
+    "source_paths": [
+      "paper_v1/evidence/manifest.json"
+    ]
+  }
+]

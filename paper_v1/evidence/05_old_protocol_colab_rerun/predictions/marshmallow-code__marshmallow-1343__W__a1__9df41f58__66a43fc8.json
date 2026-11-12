@@ -1,5 +1,0 @@
-{
-  "model_name_or_path": "google/gemma-4-E4B-it",
-  "instance_id": "marshmallow-code__marshmallow-1343",
-  "model_patch": "--- a/src/marshmallow/marshalling.py\n+++ b/src/marshmallow/marshalling.py\n@@ -65,7 +65,7 @@\n             errors = self.get_errors(index=index)\n             # Warning: Mutation!\n             if isinstance(err.messages, dict):\n                 errors[field_name] = err.messages\n             elif isinstance(errors.get(field_name), dict):\n                 errors[field_name].setdefault(FIELD, []).extend(err.messages)\n             else:\n                 errors.setdefault(field_name, []).extend(err.messages)\n             # When a Nested field fails validation, the marshalled data is stored\n             # on the ValidationError's data attribute\n-            value = err.data or missing\n+            value = err.data if err.data is not None else {}\n         return value\n \n \n```"
-}

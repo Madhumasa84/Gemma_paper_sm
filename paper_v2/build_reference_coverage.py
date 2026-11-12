@@ -14,7 +14,7 @@ import pyarrow.parquet as pq
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_DIR = SCRIPT_DIR.parent
-EVIDENCE_DIR = PROJECT_DIR / "paper_v1" / "evidence" / "01_comparison_study" / "evidence_packets"
+EVIDENCE_DIR = PROJECT_DIR / "evidence" / "fresh" / "packets"
 DATA_DIR = SCRIPT_DIR / "data"
 TABLES_DIR = SCRIPT_DIR / "tables"
 DATA_DIR.mkdir(parents=True, exist_ok=True)
@@ -249,14 +249,6 @@ def main():
         for r in rows:
             f.write(",".join(str(r[h]) for h in headers) + "\n")
     print(f"Wrote {len(rows)} rows to {csv_out}")
-
-    # Also write to paper_v2 root
-    root_csv = SCRIPT_DIR / "reference_coverage.csv"
-    with open(root_csv, "w", encoding="utf-8") as f:
-        headers = list(rows[0].keys())
-        f.write(",".join(headers) + "\n")
-        for r in rows:
-            f.write(",".join(str(r[h]) for h in headers) + "\n")
 
     # Generate summary table for LaTeX
     print("\n" + "=" * 80)
