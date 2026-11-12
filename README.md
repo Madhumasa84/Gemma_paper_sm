@@ -1,85 +1,174 @@
+<div align="center">
+
 # Reference-Code Visibility and Patch Applicability in Budgeted Code Repair
 
-**A Gemma Pilot Study · Madhusudhanan G**
+### A Gemma Pilot Study
 
-Research code, archived experimental evidence, and analysis accompanying the paper **“Reference-Code Visibility and Patch Applicability in Budgeted Code Repair: A Gemma Pilot Study.”**
+**Madhusudhanan G · Independent Researcher**
 
-**[Read the paper](paper_v2/main.pdf)** · [Manuscript source](paper_v2/main.tex) · [Reproduction guide](docs/REPRODUCIBILITY.md) · [Evidence ledger](paper_v2/evidence_ledger.csv) · [Citation](CITATION.cff)
+[![License: MIT](https://img.shields.io/badge/Original_code-MIT-blue.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11-3776AB.svg)](requirements.txt)
+[![Benchmark](https://img.shields.io/badge/Benchmark-SWE--bench_Lite_Dev-555555.svg)](https://huggingface.co/datasets/princeton-nlp/SWE-bench_Lite)
 
-## Research question
+**[Read the paper](paper_v2/main.pdf) · [Reproduction guide](docs/REPRODUCIBILITY.md) · [Experimental evidence](paper_v1/evidence/) · [Citation](#citation)**
 
-Under a fixed **4,000-token evidence budget**, which reference-modified code remains visible to a repair model, and where do the observed repair attempts fail?
+</div>
 
-The study audits frozen `google/gemma-4-E4B-it` runs on the **SWE-bench Lite development split**, comparing four deterministic ways to package retrieved Python source:
+---
 
-| Policy | Evidence representation |
+This repository accompanies the manuscript **“Reference-Code Visibility and Patch Applicability in Budgeted Code Repair: A Gemma Pilot Study.”** It provides the research implementation, frozen experimental records, and analysis needed to trace the reported results back to source artifacts.
+
+The study asks: **under a 4,000-token evidence budget, which reference-modified code remains visible to a repair model, and where do the observed repair attempts fail?** Using archived Gemma runs on SWE-bench Lite development tasks, it examines evidence visibility, patch application, and execution-based correctness.
+
+> **Study status.** This is a pilot study with an interim fresh comparison: 22 of 40 planned fresh attempts completed. No issue resolution is demonstrated in either comparison cohort. The results characterize failure boundaries and do not establish a winning packaging policy.
+
+## Start here
+
+| To… | Open… |
 | --- | --- |
-| W | Whole files; skip files that exceed the remaining budget |
-| A | Complete functions and classes with source line ranges |
-| B | Signatures, bounded docstrings, and 14-line opening excerpts |
-| C | One complete primary entity with 9-line supporting excerpts |
+| Read the manuscript | [Paper PDF](paper_v2/main.pdf) or [LaTeX source](paper_v2/main.tex) |
+| Inspect the reported results | [Summary](paper_v2/data/summary.json), [attempt records](paper_v2/data/fresh_rows.csv), and [reference coverage](paper_v2/data/reference_coverage.csv) |
+| Trace claims to experimental records | [Evidence ledger](paper_v2/evidence_ledger.csv) and [artifact provenance](docs/PROVENANCE.md) |
+| Rebuild the analysis | [Quick start](#quick-start) and [detailed reproduction guide](docs/REPRODUCIBILITY.md) |
+| Review verification and limitations | [Release validation](docs/VALIDATION.md) and [limitations](docs/REPRODUCIBILITY.md#limitations-and-interpretation) |
 
-Reference patches are used **only for the offline evaluator diagnostic**. They are not supplied to the repair model or used to select its evidence.
+## Experimental design
 
-## Results at a glance
+Four deterministic policies package retrieved Python code under the same evidence-token ceiling:
 
-| Cohort | Completed / planned | Applicable patches | Tested | Demonstrated resolutions |
-| --- | ---: | ---: | ---: | ---: |
+| Policy | Representation | Packing rule |
+| :---: | --- | --- |
+| **W** | Whole files | Include complete files in retrieval order; skip files that exceed the remaining budget. |
+| **A** | Complete entities | Include complete function and class bodies with source line ranges. |
+| **B** | Compact excerpts | Include signatures, bounded docstrings, and 14-line opening excerpts. |
+| **C** | Hybrid | Render the highest-ranked entity in full, with 9-line supporting excerpts for subsequent entities. |
+
+The implementation uses AST-based entity extraction and BM25 retrieval. Developer reference patches enter only the offline evaluator diagnostic; they are excluded from the repair model's inputs and evidence selection.
+
+| Setting | Specification |
+| --- | --- |
+| Model | `google/gemma-4-E4B-it` |
+| Model revision | `4ecc2ba63bcac23ba4a767fc87025b1450f84c9c` |
+| Benchmark | SWE-bench Lite, development split |
+| Dataset revision | `6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2` |
+| Evidence ceiling | 4,000 tokens |
+| Fresh output cap | 2,048 tokens |
+| Fresh generation protocol | Greedy decoding, batch size 1, thinking disabled, 8-bit weights |
+
+The [reproduction guide](docs/REPRODUCIBILITY.md) documents cohort boundaries and differences between historical inference and evaluation environments.
+
+## Principal findings
+
+### Evidence visibility
+
+Across the 40 frozen fresh packets—10 tasks under each of four policies—the presence of a reference file often fails to translate into visibility of the actual edit site.
+
+| Policy | Reference file visible | Reference entity visible | Edit site visible |
+| :---: | ---: | ---: | ---: |
+| **W** | 2 / 10 | 2 / 10 | 2 / 10 |
+| **A** | 8 / 10 | 3 / 10 | 3 / 10 |
+| **B** | 10 / 10 | 7 / 10 | 2 / 10 |
+| **C** | 10 / 10 | 7 / 10 | 1 / 10 |
+
+Whole-file packaging omits eight of ten reference files. Compact policies expose all reference files, but their excerpts miss the edit site in eight or nine tasks. Every policy misses the developer edit site in at least seven of ten tasks.
+
+![Reference-code visibility across the four packaging policies](paper_v2/figures/fig_reference_coverage.png)
+
+*Offline diagnostic computed from frozen evidence packets and evaluator-only reference patches. Source: [reference coverage records](paper_v2/data/reference_coverage.csv).*
+
+### Patch application and correctness
+
+| Cohort | Completed / planned | Applicable patches | Tested patches | Demonstrated resolutions |
+| --- | ---: | --- | ---: | ---: |
 | Development pilot | 12 / 12 | 7 recount-assisted | 7 | 0 |
-| Fresh comparison, interim | 22 / 40 | 2 strict; 10 recount-assisted total | 10 | 0 |
+| Fresh comparison, interim | 22 / 40 | 2 strict; 10 recount-assisted in total | 10 | 0 |
 
-Across the 40 frozen fresh packets, whole-file packaging omits 8 of 10 reference files. Compact policies B and C expose all 10 reference files, but miss the edit site in 8 and 9 tasks respectively. Policy A exposes edit lines in 3 of 10 tasks. These observations describe visibility and application failure boundaries; the sample does not establish a winning repair policy.
+For the fresh comparison, strict application succeeds in **2/22 attempts (9.1%)**. Hunk recounting recovers eight additional patches, yielding **10/22 applicable patches (45.5%)** in total. Applicability alone does not establish behavioral correctness.
 
-The unfinished 18 fresh attempts are **17 unstarted and 1 reported interrupted**, not observed failures. Five tasks have complete four-policy generation sets. Only six of ten native evaluation tasks have fully verified controls under the manuscript's stricter audit. See the [limitations](docs/REPRODUCIBILITY.md#limitations-and-interpretation).
+Five fresh tasks have complete four-policy generation sets. The remaining 18 planned attempts comprise 17 unstarted attempts and one reported interruption; their outcomes are unknown. Six of ten native evaluation tasks have fully verified controls under the manuscript's audit. See the [limitations and interpretation](docs/REPRODUCIBILITY.md#limitations-and-interpretation) before comparing policies or aggregating outcomes.
 
-## Quick start: reproduce the analysis
+## Quick start
 
-Requires Python 3.10 or 3.11, `make`, and internet access for one small pinned dataset download. No GPU, model weights, or API key is needed.
+### Reproduce the analysis
+
+**Requirements:** Python 3.10 or 3.11, `make`, and internet access to install dependencies and retrieve the pinned development dataset. The analysis requires no GPU, model weights, or API key.
 
 ```bash
+git clone https://github.com/Madhumasa84/Gemma_paper_sm.git
+cd Gemma_paper_sm
+
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
+
 make reproduce
 ```
 
-This verifies archived input hashes, downloads and authenticates the pinned development dataset, then regenerates reference coverage, tables, the evidence ledger, and figures. The paper's principal counts are checked again after rebuilding. Generated CSV/LaTeX results are retained in `paper_v2/`; the dataset download is ignored by Git.
+The workflow verifies frozen input hashes, authenticates the pinned dataset download, and regenerates reference coverage, tables, result summaries, the evidence ledger, and all eight figure pairs. It then checks the paper's principal counts against the rebuilt outputs.
 
-To verify the included evidence without installing analysis dependencies or downloading data:
+Generated analysis outputs are written to `paper_v2/`. The downloaded dataset is stored in `data/` and excluded from Git. For an offline run, supply the exact pinned dataset file as described in the [reproduction guide](docs/REPRODUCIBILITY.md#cpu-analysis-workflow).
+
+### Verify the archived evidence
+
+The verifier uses only Python's standard library and requires no download:
 
 ```bash
 python3 scripts/verify_artifacts.py
 ```
 
-To compile the manuscript with a TeX Live installation containing `latexmk` and the packages used in `main.tex`:
+It checks **311 original archive entries and 150 additional release inputs** against their recorded byte sizes and SHA-256 digests, together with the principal result denominators and coverage totals.
+
+### Build the paper
+
+With TeX Live, `latexmk`, and the packages declared in `paper_v2/main.tex` installed:
 
 ```bash
 make paper
 ```
 
-## Repository guide
+The compiled manuscript is written to `paper_v2/main.pdf`. A PDF and generated figures/tables are included for direct reading. The [GitHub Actions workflow](.github/workflows/reproduce.yml) is configured to verify and reproduce the CPU analysis on pushes and pull requests.
 
-| Path | Purpose |
+## Repository structure
+
+| Path | Contents |
 | --- | --- |
-| [`paper_v2/`](paper_v2/) | Submission manuscript, bibliography, PDF, analysis scripts, tables, figures, and audited results |
-| [`gemma_paper/`](gemma_paper/) | Original retrieval, BM25 ranking, evidence packaging, prompting, and generation modules recovered from the pilot handoff |
+| [`paper_v2/`](paper_v2/) | Submission manuscript, bibliography, analysis scripts, audited data, tables, and figures |
+| [`gemma_paper/`](gemma_paper/) | Original retrieval, evidence packaging, prompting, and generation implementation |
 | [`evaluator/`](evaluator/) | Original pilot evaluator helpers |
-| [`paper_v1/evidence/`](paper_v1/evidence/) | Frozen evidence archive: fresh runs, native test logs, instrumented case, pilot notebooks, and original execution scripts |
-| [`paper_v1/data/required_tests.json`](paper_v1/data/required_tests.json) | Required benchmark test identifiers used by the current audit |
-| [`evaluation_three_task/`](evaluation_three_task/) | Pilot prediction processing code and source checkpoints |
-| [`evaluation/`](evaluation/) and [`pilot_audit/`](pilot_audit/) | Historical evaluation and audit scripts |
-| [`logs/`](logs/) | Pilot harness reports and test output referenced by the evidence ledger |
-| [`scripts/`](scripts/) | Portable dataset download and artifact verification |
-| [`docs/`](docs/) | Reproduction details, provenance, and rights information |
+| [`paper_v1/evidence/`](paper_v1/evidence/) | Frozen packets, checkpoints, raw outputs, native test logs, notebooks, and historical execution scripts |
+| [`paper_v1/data/required_tests.json`](paper_v1/data/required_tests.json) | Required benchmark test identifiers used by the analysis |
+| [`evaluation_three_task/`](evaluation_three_task/) | Pilot prediction processing and source checkpoints |
+| [`evaluation/`](evaluation/) and [`logs/`](logs/) | Historical evaluation scripts and pilot harness records |
+| [`scripts/`](scripts/) | Portable dataset retrieval and artifact verification |
+| [`docs/`](docs/) | Reproduction instructions, provenance, validation, and third-party notices |
 
-`paper_v1` is retained as an **evidence path**, because manifests and ledger records refer to it. The submission manuscript is `paper_v2/main.tex`.
+The `paper_v1` directory is retained to preserve paths recorded in manifests and evidence ledgers. **The submission manuscript is `paper_v2/main.tex`.**
 
-## Reproduction scope
+## Reproducibility and provenance
 
-The supported local workflow rebuilds the analysis from recorded evidence. Original GPU and native/Docker execution scripts are included for inspection and adaptation; their Colab/Drive paths and historical dependencies require the environments described in the [reproduction guide](docs/REPRODUCIBILITY.md#original-generation-and-evaluation). Running them creates a new experiment and is not required to reproduce the submitted analysis.
+The supported local workflow rebuilds the submitted analysis from recorded experiments. Historical GPU generation and native/Docker evaluation scripts are also included; adapting them requires their original runtime setup, dependencies, and workspace paths. Repeating generation or completing unfinished attempts produces a new experimental record.
 
-## Citation and reuse
+The release preserves the original evidence archive byte for byte. Dataset and model revisions are pinned, and evidence-ledger entries identify source paths and hashes. The internal manifests establish byte consistency; they do not constitute independent authentication of the original experiments.
 
-Use the repository's **Cite this repository** metadata or cite the accompanying manuscript. No publication venue, DOI, or acceptance status is claimed.
+Some diagnostic table values are manually transcribed, including retrieval ranks and oracle-fit token estimates. The [reproduction guide](docs/REPRODUCIBILITY.md#cpu-analysis-workflow) identifies these values and distinguishes rendering them from independently recomputing them. Original prompt/configuration gaps and incomplete native controls are documented alongside the results.
 
-The author's original code is released under the [MIT License](LICENSE). Third-party code, benchmark excerpts, and archived evidence retain their applicable terms; see [rights and third-party notices](docs/RIGHTS_AND_NOTICES.md).
+For details, consult [provenance](docs/PROVENANCE.md), [release validation](docs/VALIDATION.md), and the [full reproduction guide](docs/REPRODUCIBILITY.md).
+
+## Citation
+
+If you use this code or evidence, please cite the accompanying manuscript. GitHub's **Cite this repository** feature reads the included [CITATION.cff](CITATION.cff). The following entry identifies the repository artifact:
+
+```bibtex
+@misc{madhusudhanan2026referencecode,
+  author       = {{Madhusudhanan G}},
+  title        = {Reference-Code Visibility and Patch Applicability in
+                  Budgeted Code Repair: A Gemma Pilot Study},
+  year         = {2026},
+  howpublished = {Research code and experimental artifacts},
+  url          = {https://github.com/Madhumasa84/Gemma_paper_sm}
+}
+```
+
+## License
+
+The author's original research code and repository documentation are released under the [MIT License](LICENSE). The manuscript, third-party source excerpts, benchmark content, reference patches, and archived model outputs retain their applicable terms; see [rights and third-party notices](docs/RIGHTS_AND_NOTICES.md).
