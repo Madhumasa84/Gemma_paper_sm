@@ -1,0 +1,15 @@
+diff --git a/pvlib/tools.py b/pvlib/tools.py
+index 991568f..323753c 100644
+--- a/pvlib/tools.py
++++ b/pvlib/tools.py
+@@ -345,6 +345,10 @@ def _golden_sect_DataFrame(params, lower, upper, func, atol=1e-8):
+     phim1 = (np.sqrt(5) - 1) / 2
+ 
+     df = params
++    if np.all(lower == upper):
++        # If bounds are equal, return the single point immediately
++        return func(params, 'V1'), lower
++
+     df['VH'] = upper
+     df['VL'] = lower
+ 

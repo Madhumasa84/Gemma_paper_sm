@@ -1,0 +1,54 @@
+{
+  "record_type": "NEW_EXECUTION_RECORD",
+  "model_id": "google/gemma-4-E4B-it",
+  "requested_revision": "4ecc2ba63bcac23ba4a767fc87025b1450f84c9c",
+  "resolved_revision": "4ecc2ba63bcac23ba4a767fc87025b1450f84c9c",
+  "template_settings": {
+    "tokenize": false,
+    "add_generation_prompt": true,
+    "enable_thinking": false
+  },
+  "processor_kwargs": {
+    "add_special_tokens": false,
+    "return_tensors": "pt",
+    "return_attention_mask": true,
+    "return_mm_token_type_ids": true
+  },
+  "prompt_sha256": "12baf5b17100bb56053e889fa056fa356f8a1a4c12776c55032650698e0f6530",
+  "rendered_sha256": "7c337695c1fde31799c5d87c628d5d85f1644a8cba1887d6899815d16e02ea94",
+  "template_sha256": "0a2c8073c878ab1da004bee933a998606537bbb62016310352c7285c3f01c5b5",
+  "evidence_tokens": 3998,
+  "input_tokens": 4762,
+  "processor_keys": [
+    "input_ids",
+    "attention_mask",
+    "mm_token_type_ids"
+  ],
+  "inputs": {
+    "input_ids": {
+      "shape": [
+        1,
+        4762
+      ],
+      "dtype": "torch.int64",
+      "device": "cpu"
+    },
+    "attention_mask": {
+      "shape": [
+        1,
+        4762
+      ],
+      "dtype": "torch.int64",
+      "device": "cpu"
+    },
+    "mm_token_type_ids": {
+      "shape": [
+        1,
+        4762
+      ],
+      "dtype": "torch.int64",
+      "device": "cpu"
+    }
+  },
+  "prompt_protocol": "NEW instrumented patch-only suffix; not recovered historical v2 bytes"
+}

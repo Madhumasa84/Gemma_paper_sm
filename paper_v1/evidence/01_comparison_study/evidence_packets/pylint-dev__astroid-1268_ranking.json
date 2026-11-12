@@ -1,0 +1,57 @@
+{
+  "task_id": "pylint-dev__astroid-1268",
+  "indexed_file_count": 92,
+  "ranked_entities_count": 1676,
+  "top_10": [
+    {
+      "name": "accept",
+      "file_path": "astroid/nodes/node_ng.py",
+      "type": "function"
+    },
+    {
+      "name": "astroid/brain/brain_gi.py",
+      "file_path": "astroid/brain/brain_gi.py",
+      "type": "file"
+    },
+    {
+      "name": "astroid/builder.py",
+      "file_path": "astroid/builder.py",
+      "type": "file"
+    },
+    {
+      "name": "astroid/raw_building.py",
+      "file_path": "astroid/raw_building.py",
+      "type": "file"
+    },
+    {
+      "name": "__call__",
+      "file_path": "astroid/nodes/as_string.py",
+      "type": "function"
+    },
+    {
+      "name": "astroid/brain/brain_six.py",
+      "file_path": "astroid/brain/brain_six.py",
+      "type": "file"
+    },
+    {
+      "name": "astroid/__init__.py",
+      "file_path": "astroid/__init__.py",
+      "type": "file"
+    },
+    {
+      "name": "script/test_bump_changelog.py",
+      "file_path": "script/test_bump_changelog.py",
+      "type": "file"
+    },
+    {
+      "name": "astroid/util.py",
+      "file_path": "astroid/util.py",
+      "type": "file"
+    },
+    {
+      "name": "astroid/nodes/as_string.py",
+      "file_path": "astroid/nodes/as_string.py",
+      "type": "file"
+    }
+  ]
+}

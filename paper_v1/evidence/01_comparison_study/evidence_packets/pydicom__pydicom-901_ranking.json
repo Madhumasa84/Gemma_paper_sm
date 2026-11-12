@@ -1,0 +1,57 @@
+{
+  "task_id": "pydicom__pydicom-901",
+  "indexed_file_count": 76,
+  "ranked_entities_count": 659,
+  "top_10": [
+    {
+      "name": "pydicom/config.py",
+      "file_path": "pydicom/config.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/pixel_data_handlers/pillow_handler.py",
+      "file_path": "pydicom/pixel_data_handlers/pillow_handler.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/filereader.py",
+      "file_path": "pydicom/filereader.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/pixel_data_handlers/jpeg_ls_handler.py",
+      "file_path": "pydicom/pixel_data_handlers/jpeg_ls_handler.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/dicomdir.py",
+      "file_path": "pydicom/dicomdir.py",
+      "type": "file"
+    },
+    {
+      "name": "get_pixeldata",
+      "file_path": "pydicom/pixel_data_handlers/pillow_handler.py",
+      "type": "function"
+    },
+    {
+      "name": "pydicom/charset.py",
+      "file_path": "pydicom/charset.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/pixel_data_handlers/rle_handler.py",
+      "file_path": "pydicom/pixel_data_handlers/rle_handler.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/pixel_data_handlers/gdcm_handler.py",
+      "file_path": "pydicom/pixel_data_handlers/gdcm_handler.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/dataelem.py",
+      "file_path": "pydicom/dataelem.py",
+      "type": "file"
+    }
+  ]
+}

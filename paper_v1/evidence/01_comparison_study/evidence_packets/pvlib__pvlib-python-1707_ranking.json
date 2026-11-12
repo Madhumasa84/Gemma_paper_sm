@@ -1,0 +1,57 @@
+{
+  "task_id": "pvlib__pvlib-python-1707",
+  "indexed_file_count": 60,
+  "ranked_entities_count": 740,
+  "top_10": [
+    {
+      "name": "schlick",
+      "file_path": "pvlib/iam.py",
+      "type": "function"
+    },
+    {
+      "name": "pvlib/iam.py",
+      "file_path": "pvlib/iam.py",
+      "type": "file"
+    },
+    {
+      "name": "pvlib/iotools/psm3.py",
+      "file_path": "pvlib/iotools/psm3.py",
+      "type": "file"
+    },
+    {
+      "name": "get_psm3",
+      "file_path": "pvlib/iotools/psm3.py",
+      "type": "function"
+    },
+    {
+      "name": "ashrae",
+      "file_path": "pvlib/iam.py",
+      "type": "function"
+    },
+    {
+      "name": "marion_integrate",
+      "file_path": "pvlib/iam.py",
+      "type": "function"
+    },
+    {
+      "name": "setup.py",
+      "file_path": "setup.py",
+      "type": "file"
+    },
+    {
+      "name": "physical",
+      "file_path": "pvlib/iam.py",
+      "type": "function"
+    },
+    {
+      "name": "interp",
+      "file_path": "pvlib/iam.py",
+      "type": "function"
+    },
+    {
+      "name": "pvlib/_deprecation.py",
+      "file_path": "pvlib/_deprecation.py",
+      "type": "file"
+    }
+  ]
+}

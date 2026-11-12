@@ -1,0 +1,23 @@
+{
+  "model_class": "AutoModelForImageTextToText",
+  "revision": "4ecc2ba63bcac23ba4a767fc87025b1450f84c9c",
+  "local_files_only": true,
+  "quantization_config": {
+    "quant_method": "bitsandbytes",
+    "_load_in_8bit": true,
+    "_load_in_4bit": false,
+    "llm_int8_threshold": 6.0,
+    "llm_int8_skip_modules": null,
+    "llm_int8_enable_fp32_cpu_offload": false,
+    "llm_int8_has_fp16_weight": false,
+    "bnb_4bit_quant_type": "fp4",
+    "bnb_4bit_use_double_quant": false,
+    "bnb_4bit_compute_dtype": "float32",
+    "bnb_4bit_quant_storage": "uint8",
+    "load_in_4bit": false,
+    "load_in_8bit": true
+  },
+  "dtype": "torch.float16",
+  "device_map": "auto",
+  "cpu_offload_allowed": false
+}

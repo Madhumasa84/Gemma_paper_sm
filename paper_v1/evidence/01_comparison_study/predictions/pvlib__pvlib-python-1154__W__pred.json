@@ -1,0 +1,6 @@
+{
+  "model_name_or_path": "google/gemma-4-E4B-it_int8",
+  "instance_id": "pvlib__pvlib-python-1154",
+  "condition": "W",
+  "model_patch": "diff --git a/pvlib/shading.py b/pvlib/shading.py\nindex 9479eb1..fdbb86b 100644\n--- a/pvlib/shading.py\n+++ b/pvlib/shading.py\n@@ -132,7 +132,10 @@ def masking_angle_passias(surface_tilt, gcr):\n     beta = np.radians(np.array(surface_tilt))\n     sin_b = np.sin(beta)\n     cos_b = np.cos(beta)\n-    X = 1/gcr\n+    # Handle gcr=0 case to prevent division by zero when calculating X\n+    # If gcr is zero, X is effectively infinite, which should lead to 0 diffuse\n+    # as the masking angle approaches 0 (or the limit of the formula).\n+    X = np.divide(1.0, gcr, out=np.full_like(gcr, np.inf, dtype=float), where=gcr!=0)\n \n     with np.errstate(divide='ignore', invalid='ignore'):  # ignore beta=0\n         term1 = -X * sin_b * np.log(np.abs(2 * X * cos_b - (X**2 + 1))) / 2\n"
+}

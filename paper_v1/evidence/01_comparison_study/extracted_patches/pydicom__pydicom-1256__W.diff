@@ -1,0 +1,10 @@
+--- a/pydicom/env_info.py
++++ b/pydicom/env_info.py
+@@ -18,7 +18,7 @@
+ 
+     for module in ("pydicom", "gdcm", "jpeg_ls", "numpy", "PIL"):
+         try:
+             m = importlib.import_module(module)
+         except ImportError:
+             version = "_module not found_"
+         else:

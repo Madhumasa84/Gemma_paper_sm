@@ -1,0 +1,133 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.23, pytest-8.4.1, pluggy-1.6.0
+rootdir: /content/native_evaluation/eval_repos/pvlib__pvlib-python-1707
+configfile: pyproject.toml
+collected 31 items
+
+pvlib/tests/test_iam.py ...F...........E.............F.                  [100%]
+
+==================================== ERRORS ====================================
+_________________ ERROR at setup of test_marion_diffuse_model __________________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1707/pvlib/tests/test_iam.py, line 244
+  def test_marion_diffuse_model(mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, golden, golden_mst, monkeypatch, pvsyst_module_params, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1707/pvlib/tests/test_iam.py:244
+=================================== FAILURES ===================================
+_____________________________ test_physical_n1_L0 ______________________________
+
+    def test_physical_n1_L0():
+        aoi = np.array([0, 22.5, 45, 67.5, 90, 100, np.nan])
+        expected = np.array([1, 1, 1, 1, 0, 0, np.nan])
+        iam = _iam.physical(aoi, n=1, L=0)
+>       assert_allclose(iam, expected, equal_nan=True)
+
+pvlib/tests/test_iam.py:58: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<function assert_allclose.<locals>.compare at 0x79011c9e73a0>, array([ 1.,  1.,  1.,  1., nan, nan, nan]), array([ 1.,  1.,  1.,  1.,  0.,  0., nan]))
+kwds = {'equal_nan': True, 'err_msg': '', 'header': 'Not equal to tolerance rtol=1e-07, atol=0', 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Not equal to tolerance rtol=1e-07, atol=0
+E           
+E           x and y nan location mismatch:
+E            x: array([ 1.,  1.,  1.,  1., nan, nan, nan])
+E            y: array([ 1.,  1.,  1.,  1.,  0.,  0., nan])
+
+/content/py39_eval_env/lib/python3.9/contextlib.py:79: AssertionError
+_________________________________ test_schlick _________________________________
+
+    def test_schlick():
+        idx = pd.date_range('2019-01-01', freq='h', periods=9)
+        aoi = pd.Series([-180, -135, -90, -45, 0, 45, 90, 135, 180], idx)
+        expected = pd.Series([0, 0, 0, 0.99784451, 1.0, 0.99784451, 0, 0, 0], idx)
+    
+        # scalars
+        for aoi_scalar, expected_scalar in zip(aoi, expected):
+            actual = _iam.schlick(aoi_scalar)
+>           assert_allclose(expected_scalar, actual)
+
+pvlib/tests/test_iam.py:363: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<function assert_allclose.<locals>.compare at 0x79011c9abe50>, array(0.), array(5.55111512e-16))
+kwds = {'equal_nan': True, 'err_msg': '', 'header': 'Not equal to tolerance rtol=1e-07, atol=0', 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Not equal to tolerance rtol=1e-07, atol=0
+E           
+E           Mismatched elements: 1 / 1 (100%)
+E           Max absolute difference: 5.55111512e-16
+E           Max relative difference: 1.
+E            x: array(0.)
+E            y: array(5.551115e-16)
+
+/content/py39_eval_env/lib/python3.9/contextlib.py:79: AssertionError
+=============================== warnings summary ===============================
+pvlib/tests/conftest.py:7
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1707/pvlib/tests/conftest.py:7: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+    from pkg_resources import parse_version
+
+pvlib/tests/test_iam.py::test_physical_n1_L0
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1707/pvlib/iam.py:178: RuntimeWarning: invalid value encountered in divide
+    rho12_s = ((n1costheta1 - n2costheta2) / (n1costheta1 + n2costheta2)) ** 2
+
+pvlib/tests/test_iam.py::test_physical_n1_L0
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1707/pvlib/iam.py:179: RuntimeWarning: invalid value encountered in divide
+    rho12_p = ((n1costheta2 - n2costheta1) / (n1costheta2 + n2costheta1)) ** 2
+
+pvlib/tests/test_iam.py::test_physical_n1_L0
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1707/pvlib/iam.py:211: RuntimeWarning: invalid value encountered in divide
+    tau_s *= np.exp(-K * L / costheta)
+
+pvlib/tests/test_iam.py::test_physical_n1_L0
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1707/pvlib/iam.py:212: RuntimeWarning: invalid value encountered in divide
+    tau_p *= np.exp(-K * L / costheta)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED pvlib/tests/test_iam.py::test_ashrae
+PASSED pvlib/tests/test_iam.py::test_ashrae_scalar
+PASSED pvlib/tests/test_iam.py::test_physical
+PASSED pvlib/tests/test_iam.py::test_physical_ar
+PASSED pvlib/tests/test_iam.py::test_physical_noar
+PASSED pvlib/tests/test_iam.py::test_physical_scalar
+PASSED pvlib/tests/test_iam.py::test_martin_ruiz
+PASSED pvlib/tests/test_iam.py::test_martin_ruiz_exception
+PASSED pvlib/tests/test_iam.py::test_martin_ruiz_diffuse
+PASSED pvlib/tests/test_iam.py::test_iam_interp
+PASSED pvlib/tests/test_iam.py::test_sapm[45-0.9975036250000002]
+PASSED pvlib/tests/test_iam.py::test_sapm[aoi1-expected1]
+PASSED pvlib/tests/test_iam.py::test_sapm[aoi2-expected2]
+PASSED pvlib/tests/test_iam.py::test_sapm_limits
+PASSED pvlib/tests/test_iam.py::test_marion_diffuse_kwargs
+PASSED pvlib/tests/test_iam.py::test_marion_diffuse_invalid
+PASSED pvlib/tests/test_iam.py::test_marion_integrate_scalar[sky-180-0.9596085829811408]
+PASSED pvlib/tests/test_iam.py::test_marion_integrate_scalar[horizon-1800-0.8329070417832541]
+PASSED pvlib/tests/test_iam.py::test_marion_integrate_scalar[ground-180-0.719823559106309]
+PASSED pvlib/tests/test_iam.py::test_marion_integrate_list[sky-180-expected0]
+PASSED pvlib/tests/test_iam.py::test_marion_integrate_list[horizon-1800-expected1]
+PASSED pvlib/tests/test_iam.py::test_marion_integrate_list[ground-180-expected2]
+PASSED pvlib/tests/test_iam.py::test_marion_integrate_series[sky-180-expected0]
+PASSED pvlib/tests/test_iam.py::test_marion_integrate_series[horizon-1800-expected1]
+PASSED pvlib/tests/test_iam.py::test_marion_integrate_series[ground-180-expected2]
+PASSED pvlib/tests/test_iam.py::test_marion_integrate_ground_flat
+PASSED pvlib/tests/test_iam.py::test_marion_integrate_invalid
+PASSED pvlib/tests/test_iam.py::test_schlick_diffuse
+ERROR pvlib/tests/test_iam.py::test_marion_diffuse_model
+FAILED pvlib/tests/test_iam.py::test_physical_n1_L0 - AssertionError: 
+FAILED pvlib/tests/test_iam.py::test_schlick - AssertionError: 
+============== 2 failed, 28 passed, 5 warnings, 1 error in 0.58s ===============
+

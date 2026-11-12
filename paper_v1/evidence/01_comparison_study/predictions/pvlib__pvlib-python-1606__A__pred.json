@@ -1,0 +1,6 @@
+{
+  "model_name_or_path": "google/gemma-4-E4B-it_int8",
+  "instance_id": "pvlib__pvlib-python-1606",
+  "condition": "A",
+  "model_patch": "diff --git a/pvlib/tools.py b/pvlib/tools.py\nindex 991568f..323753c 100644\n--- a/pvlib/tools.py\n+++ b/pvlib/tools.py\n@@ -345,6 +345,10 @@ def _golden_sect_DataFrame(params, lower, upper, func, atol=1e-8):\n     phim1 = (np.sqrt(5) - 1) / 2\n \n     df = params\n+    if np.all(lower == upper):\n+        # If bounds are equal, return the single point immediately\n+        return func(params, 'V1'), lower\n+\n     df['VH'] = upper\n     df['VL'] = lower\n \n"
+}

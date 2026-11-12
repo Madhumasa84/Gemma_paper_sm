@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+*:Zone.Identifier
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+data/*.parquet
+.cache/
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+paper_v2/*.log
+# Archived evaluator logs and generated paper assets are intentionally tracked.

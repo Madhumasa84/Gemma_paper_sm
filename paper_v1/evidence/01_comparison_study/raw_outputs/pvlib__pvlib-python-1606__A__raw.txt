@@ -1,0 +1,21 @@
+The issue arises because the golden section search in `pvlib/tools.py` fails when the lower and upper bounds are equal, leading to division by zero or issues in the convergence check, which manifests as an "Iterations exceeded maximum" exception when GHI-DHI are zero.
+
+In `_golden_sect_DataFrame`, if `lower == upper`, then `df['VH'] - df['VL']` is zero, causing issues in the calculation of `iterlimit` and subsequent steps.
+
+We need to add a check at the beginning of `_golden_sect_DataFrame` to handle the case where `lower` and `upper` are equal. If they are equal, the search space is zero, and we should return the result immediately, likely using the single point provided.
+
+```diff
+--- a/pvlib/tools.py
++++ b/pvlib/tools.py
+@@ -23,6 +23,10 @@
+     phim1 = (np.sqrt(5) - 1) / 2
+ 
+     df = params
++    if np.all(lower == upper):
++        # If bounds are equal, return the single point immediately
++        return func(params, 'V1'), lower
++
+     df['VH'] = upper
+     df['VL'] = lower
+ 
+```

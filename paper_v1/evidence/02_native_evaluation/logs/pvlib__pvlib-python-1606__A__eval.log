@@ -1,0 +1,73 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.23, pytest-8.4.1, pluggy-1.6.0
+rootdir: /content/native_evaluation/eval_repos/pvlib__pvlib-python-1606
+configfile: pyproject.toml
+collected 11 items
+
+pvlib/tests/test_tools.py ........F..                                    [100%]
+
+=================================== FAILURES ===================================
+______________________ test__golden_sect_DataFrame_vector ______________________
+
+    def test__golden_sect_DataFrame_vector():
+        params = {'c': np.array([1., 2.]), 'n': np.array([1., 1.])}
+        lower = np.array([0., 0.001])
+        upper = np.array([1.1, 1.2])
+        expected = np.array([0.5, 0.25])
+        v, x = tools._golden_sect_DataFrame(params, lower, upper,
+                                            _obj_test_golden_sect)
+        assert np.allclose(x, expected, atol=1e-8)
+        # some upper and lower bounds equal
+        params = {'c': np.array([1., 2., 1.]), 'n': np.array([1., 1., 1.])}
+        lower = np.array([0., 0.001, 1.])
+        upper = np.array([1., 1.2, 1.])
+        expected = np.array([0.5, 0.25, 1.0])  # x values for maxima
+        v, x = tools._golden_sect_DataFrame(params, lower, upper,
+                                            _obj_test_golden_sect)
+        assert np.allclose(x, expected, atol=1e-8)
+        # all upper and lower bounds equal, arrays of length 1
+        params = {'c': np.array([1.]), 'n': np.array([1.])}
+        lower = np.array([1.])
+        upper = np.array([1.])
+        expected = np.array([1.])  # x values for maxima
+>       v, x = tools._golden_sect_DataFrame(params, lower, upper,
+                                            _obj_test_golden_sect)
+
+pvlib/tests/test_tools.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+pvlib/tools.py:350: in _golden_sect_DataFrame
+    return func(params, 'V1'), lower
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+params = {'c': array([1.]), 'n': array([1.])}, loc = 'V1'
+
+    def _obj_test_golden_sect(params, loc):
+>       return params[loc] * (1. - params['c'] * params[loc]**params['n'])
+E       KeyError: 'V1'
+
+pvlib/tests/test_tools.py:19: KeyError
+=============================== warnings summary ===============================
+pvlib/tests/conftest.py:7
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1606/pvlib/tests/conftest.py:7: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+    from pkg_resources import parse_version
+
+pvlib/tests/test_tools.py::test__golden_sect_DataFrame_vector
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1606/pvlib/tools.py:363: RuntimeWarning: divide by zero encountered in divide
+    np.trunc(np.log(atol / (df['VH'] - df['VL'])) / np.log(phim1)))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED pvlib/tests/test_tools.py::test_build_kwargs[keys0-input_dict0-expected0]
+PASSED pvlib/tests/test_tools.py::test_build_kwargs[keys1-input_dict1-expected1]
+PASSED pvlib/tests/test_tools.py::test_build_kwargs[keys2-input_dict2-expected2]
+PASSED pvlib/tests/test_tools.py::test_build_kwargs[keys3-input_dict3-expected3]
+PASSED pvlib/tests/test_tools.py::test__golden_sect_DataFrame[params0-0.0-1.0-0.5-_obj_test_golden_sect]
+PASSED pvlib/tests/test_tools.py::test__golden_sect_DataFrame[params1-0.0-1.0-0.07230200263994839-_obj_test_golden_sect]
+PASSED pvlib/tests/test_tools.py::test__golden_sect_DataFrame[params2-0.0-100.0-89.14332727531685-_obj_test_golden_sect]
+PASSED pvlib/tests/test_tools.py::test__golden_sect_DataFrame_atol
+PASSED pvlib/tests/test_tools.py::test__golden_sect_DataFrame_nans
+PASSED pvlib/tests/test_tools.py::test_degrees_to_index_1
+FAILED pvlib/tests/test_tools.py::test__golden_sect_DataFrame_vector - KeyErr...
+=================== 1 failed, 10 passed, 2 warnings in 0.21s ===================
+

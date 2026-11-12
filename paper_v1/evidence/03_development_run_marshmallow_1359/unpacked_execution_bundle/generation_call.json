@@ -1,0 +1,14 @@
+{
+  "all_processor_keys_passed": [
+    "input_ids",
+    "attention_mask",
+    "mm_token_type_ids"
+  ],
+  "discarded_keys": [],
+  "generation_config": "effective_generation_config.json",
+  "return_dict_in_generate": true,
+  "output_scores": false,
+  "model_revision": "4ecc2ba63bcac23ba4a767fc87025b1450f84c9c",
+  "condition": "A",
+  "attempt": 1
+}

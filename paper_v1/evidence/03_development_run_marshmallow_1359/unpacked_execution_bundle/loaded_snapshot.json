@@ -1,0 +1,15 @@
+{
+  "model_id": "google/gemma-4-E4B-it",
+  "requested_revision": "4ecc2ba63bcac23ba4a767fc87025b1450f84c9c",
+  "resolved_revision": "4ecc2ba63bcac23ba4a767fc87025b1450f84c9c",
+  "snapshot_directory_name": "4ecc2ba63bcac23ba4a767fc87025b1450f84c9c",
+  "weights": [
+    {
+      "name": "model.safetensors",
+      "bytes": 15992595884,
+      "sha256": "cfbd3d2f1cd71bd471c37fe2bf8546d5028d41e5736f64e1ca6c6b8893125503"
+    }
+  ],
+  "config_sha256": "33b10c02df3c2e8536cf323d29d53262aaa2f4d11dbe19bc729373fbe90295d4",
+  "tokenizer_sha256": "91d9cf86906f78e197021fda88214d448e5c120665d0243a8e776e046986c6bc"
+}

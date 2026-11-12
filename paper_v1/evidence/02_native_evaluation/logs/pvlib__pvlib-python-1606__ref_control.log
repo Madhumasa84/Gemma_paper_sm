@@ -1,0 +1,29 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.23, pytest-8.4.1, pluggy-1.6.0
+rootdir: /content/native_evaluation/eval_repos/pvlib__pvlib-python-1606
+configfile: pyproject.toml
+collected 11 items
+
+pvlib/tests/test_tools.py ...........                                    [100%]
+
+=============================== warnings summary ===============================
+pvlib/tests/conftest.py:7
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1606/pvlib/tests/conftest.py:7: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+    from pkg_resources import parse_version
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED pvlib/tests/test_tools.py::test_build_kwargs[keys0-input_dict0-expected0]
+PASSED pvlib/tests/test_tools.py::test_build_kwargs[keys1-input_dict1-expected1]
+PASSED pvlib/tests/test_tools.py::test_build_kwargs[keys2-input_dict2-expected2]
+PASSED pvlib/tests/test_tools.py::test_build_kwargs[keys3-input_dict3-expected3]
+PASSED pvlib/tests/test_tools.py::test__golden_sect_DataFrame[params0-0.0-1.0-0.5-_obj_test_golden_sect]
+PASSED pvlib/tests/test_tools.py::test__golden_sect_DataFrame[params1-0.0-1.0-0.07230200263994839-_obj_test_golden_sect]
+PASSED pvlib/tests/test_tools.py::test__golden_sect_DataFrame[params2-0.0-100.0-89.14332727531685-_obj_test_golden_sect]
+PASSED pvlib/tests/test_tools.py::test__golden_sect_DataFrame_atol
+PASSED pvlib/tests/test_tools.py::test__golden_sect_DataFrame_vector
+PASSED pvlib/tests/test_tools.py::test__golden_sect_DataFrame_nans
+PASSED pvlib/tests/test_tools.py::test_degrees_to_index_1
+======================== 11 passed, 1 warning in 0.23s =========================
+

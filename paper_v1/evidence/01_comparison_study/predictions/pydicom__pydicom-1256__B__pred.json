@@ -1,0 +1,6 @@
+{
+  "model_name_or_path": "google/gemma-4-E4B-it_int8",
+  "instance_id": "pydicom__pydicom-1256",
+  "condition": "B",
+  "model_patch": "diff --git a/pydicom/dataset.py b/pydicom/dataset.py\nindex 5457ded..5ed6e8c 100644\n--- a/pydicom/dataset.py\n+++ b/pydicom/dataset.py\n@@ -2225,7 +2225,7 @@ class Dataset(Dict[BaseTag, _DatasetValue]):\n     def from_json(\n         cls: Type[_Dataset],\n         json_dataset: Union[Dict[str, bytes], str],\n-        bulk_data_uri_handler: Optional[\n+        bulk_data_uri_handler: Optional[ \n             Union[\n                 Callable[[BaseTag, str, str], object],\n                 Callable[[str], object]\n"
+}

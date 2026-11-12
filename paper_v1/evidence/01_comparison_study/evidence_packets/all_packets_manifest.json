@@ -1,0 +1,282 @@
+[
+  {
+    "instance_id": "pvlib__pvlib-python-1154",
+    "condition": "W",
+    "evidence_tokens": 3980,
+    "entities_included": 6,
+    "input_tokens": 4345
+  },
+  {
+    "instance_id": "pvlib__pvlib-python-1154",
+    "condition": "A",
+    "evidence_tokens": 3978,
+    "entities_included": 5,
+    "input_tokens": 4343
+  },
+  {
+    "instance_id": "pvlib__pvlib-python-1154",
+    "condition": "B",
+    "evidence_tokens": 3990,
+    "entities_included": 15,
+    "input_tokens": 4355
+  },
+  {
+    "instance_id": "pvlib__pvlib-python-1154",
+    "condition": "C",
+    "evidence_tokens": 3994,
+    "entities_included": 18,
+    "input_tokens": 4359
+  },
+  {
+    "instance_id": "pvlib__pvlib-python-1606",
+    "condition": "W",
+    "evidence_tokens": 3993,
+    "entities_included": 3,
+    "input_tokens": 6364
+  },
+  {
+    "instance_id": "pvlib__pvlib-python-1606",
+    "condition": "A",
+    "evidence_tokens": 3996,
+    "entities_included": 4,
+    "input_tokens": 6367
+  },
+  {
+    "instance_id": "pvlib__pvlib-python-1606",
+    "condition": "B",
+    "evidence_tokens": 4000,
+    "entities_included": 17,
+    "input_tokens": 6371
+  },
+  {
+    "instance_id": "pvlib__pvlib-python-1606",
+    "condition": "C",
+    "evidence_tokens": 3970,
+    "entities_included": 29,
+    "input_tokens": 6341
+  },
+  {
+    "instance_id": "pvlib__pvlib-python-1707",
+    "condition": "W",
+    "evidence_tokens": 3998,
+    "entities_included": 6,
+    "input_tokens": 4365
+  },
+  {
+    "instance_id": "pvlib__pvlib-python-1707",
+    "condition": "A",
+    "evidence_tokens": 3983,
+    "entities_included": 4,
+    "input_tokens": 4350
+  },
+  {
+    "instance_id": "pvlib__pvlib-python-1707",
+    "condition": "B",
+    "evidence_tokens": 3999,
+    "entities_included": 16,
+    "input_tokens": 4366
+  },
+  {
+    "instance_id": "pvlib__pvlib-python-1707",
+    "condition": "C",
+    "evidence_tokens": 3978,
+    "entities_included": 26,
+    "input_tokens": 4345
+  },
+  {
+    "instance_id": "pvlib__pvlib-python-1854",
+    "condition": "W",
+    "evidence_tokens": 3999,
+    "entities_included": 6,
+    "input_tokens": 4762
+  },
+  {
+    "instance_id": "pvlib__pvlib-python-1854",
+    "condition": "A",
+    "evidence_tokens": 4000,
+    "entities_included": 7,
+    "input_tokens": 4763
+  },
+  {
+    "instance_id": "pvlib__pvlib-python-1854",
+    "condition": "B",
+    "evidence_tokens": 4000,
+    "entities_included": 16,
+    "input_tokens": 4763
+  },
+  {
+    "instance_id": "pvlib__pvlib-python-1854",
+    "condition": "C",
+    "evidence_tokens": 3991,
+    "entities_included": 27,
+    "input_tokens": 4754
+  },
+  {
+    "instance_id": "pydicom__pydicom-1256",
+    "condition": "W",
+    "evidence_tokens": 3997,
+    "entities_included": 4,
+    "input_tokens": 4531
+  },
+  {
+    "instance_id": "pydicom__pydicom-1256",
+    "condition": "A",
+    "evidence_tokens": 3988,
+    "entities_included": 6,
+    "input_tokens": 4522
+  },
+  {
+    "instance_id": "pydicom__pydicom-1256",
+    "condition": "B",
+    "evidence_tokens": 3988,
+    "entities_included": 17,
+    "input_tokens": 4522
+  },
+  {
+    "instance_id": "pydicom__pydicom-1256",
+    "condition": "C",
+    "evidence_tokens": 3995,
+    "entities_included": 25,
+    "input_tokens": 4529
+  },
+  {
+    "instance_id": "pydicom__pydicom-1413",
+    "condition": "W",
+    "evidence_tokens": 3991,
+    "entities_included": 5,
+    "input_tokens": 4423
+  },
+  {
+    "instance_id": "pydicom__pydicom-1413",
+    "condition": "A",
+    "evidence_tokens": 3960,
+    "entities_included": 4,
+    "input_tokens": 4392
+  },
+  {
+    "instance_id": "pydicom__pydicom-1413",
+    "condition": "B",
+    "evidence_tokens": 3974,
+    "entities_included": 17,
+    "input_tokens": 4406
+  },
+  {
+    "instance_id": "pydicom__pydicom-1413",
+    "condition": "C",
+    "evidence_tokens": 3997,
+    "entities_included": 33,
+    "input_tokens": 4429
+  },
+  {
+    "instance_id": "pydicom__pydicom-1694",
+    "condition": "W",
+    "evidence_tokens": 3993,
+    "entities_included": 3,
+    "input_tokens": 4790
+  },
+  {
+    "instance_id": "pydicom__pydicom-1694",
+    "condition": "A",
+    "evidence_tokens": 3963,
+    "entities_included": 5,
+    "input_tokens": 4760
+  },
+  {
+    "instance_id": "pydicom__pydicom-1694",
+    "condition": "B",
+    "evidence_tokens": 3993,
+    "entities_included": 18,
+    "input_tokens": 4790
+  },
+  {
+    "instance_id": "pydicom__pydicom-1694",
+    "condition": "C",
+    "evidence_tokens": 3997,
+    "entities_included": 32,
+    "input_tokens": 4794
+  },
+  {
+    "instance_id": "pydicom__pydicom-901",
+    "condition": "W",
+    "evidence_tokens": 4000,
+    "entities_included": 7,
+    "input_tokens": 4422
+  },
+  {
+    "instance_id": "pydicom__pydicom-901",
+    "condition": "A",
+    "evidence_tokens": 3997,
+    "entities_included": 5,
+    "input_tokens": 4419
+  },
+  {
+    "instance_id": "pydicom__pydicom-901",
+    "condition": "B",
+    "evidence_tokens": 4000,
+    "entities_included": 19,
+    "input_tokens": 4422
+  },
+  {
+    "instance_id": "pydicom__pydicom-901",
+    "condition": "C",
+    "evidence_tokens": 3983,
+    "entities_included": 22,
+    "input_tokens": 4405
+  },
+  {
+    "instance_id": "pylint-dev__astroid-1196",
+    "condition": "W",
+    "evidence_tokens": 3999,
+    "entities_included": 4,
+    "input_tokens": 4716
+  },
+  {
+    "instance_id": "pylint-dev__astroid-1196",
+    "condition": "A",
+    "evidence_tokens": 3971,
+    "entities_included": 4,
+    "input_tokens": 4688
+  },
+  {
+    "instance_id": "pylint-dev__astroid-1196",
+    "condition": "B",
+    "evidence_tokens": 4000,
+    "entities_included": 17,
+    "input_tokens": 4717
+  },
+  {
+    "instance_id": "pylint-dev__astroid-1196",
+    "condition": "C",
+    "evidence_tokens": 3998,
+    "entities_included": 10,
+    "input_tokens": 4715
+  },
+  {
+    "instance_id": "pylint-dev__astroid-1268",
+    "condition": "W",
+    "evidence_tokens": 3977,
+    "entities_included": 6,
+    "input_tokens": 4483
+  },
+  {
+    "instance_id": "pylint-dev__astroid-1268",
+    "condition": "A",
+    "evidence_tokens": 3977,
+    "entities_included": 7,
+    "input_tokens": 4483
+  },
+  {
+    "instance_id": "pylint-dev__astroid-1268",
+    "condition": "B",
+    "evidence_tokens": 4000,
+    "entities_included": 21,
+    "input_tokens": 4506
+  },
+  {
+    "instance_id": "pylint-dev__astroid-1268",
+    "condition": "C",
+    "evidence_tokens": 3983,
+    "entities_included": 32,
+    "input_tokens": 4489
+  }
+]

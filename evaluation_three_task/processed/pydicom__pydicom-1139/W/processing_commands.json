@@ -1,0 +1,59 @@
+[
+  {
+    "argv": [
+      "git",
+      "-C",
+      "/tmp/pydicom__pydicom-1139-bxuzrg1p",
+      "apply",
+      "--recount",
+      "--check",
+      "/home/masa84/gemma-pilot-evaluation/evaluation_three_task/processed/pydicom__pydicom-1139/W/extracted.diff"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "/tmp/pydicom__pydicom-1139-bxuzrg1p",
+      "apply",
+      "--recount",
+      "/home/masa84/gemma-pilot-evaluation/evaluation_three_task/processed/pydicom__pydicom-1139/W/extracted.diff"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "/home/masa84/gemma-pilot-evaluation/evaluation_three_task/processed/pydicom__pydicom-1139/W/extracted.diff:8: trailing whitespace.\n    \nwarning: 1 line adds whitespace errors.\n"
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "/tmp/pydicom__pydicom-1139-bxuzrg1p",
+      "add",
+      "--all"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "/tmp/pydicom__pydicom-1139-bxuzrg1p",
+      "-c",
+      "core.abbrev=8",
+      "diff",
+      "--cached",
+      "--binary",
+      "--no-ext-diff",
+      "--no-color",
+      "--no-renames"
+    ],
+    "exit_code": 0,
+    "stdout": "diff --git a/pydicom/util/codify.py b/pydicom/util/codify.py\nindex 3557cf2d..38ea30f8 100644\n--- a/pydicom/util/codify.py\n+++ b/pydicom/util/codify.py\n@@ -152,7 +152,7 @@ def code_sequence(dataelem,\n     seq_name = dataelem.name\n     seq_item_name = seq_name.replace(' Sequence', '')\n     seq_keyword = dictionary_keyword(dataelem.tag)\n-\n+    \n     # Create comment line to document the start of Sequence\n     lines.append('')\n     lines.append(\"# \" + seq_name)\n",
+    "stderr": ""
+  }
+]

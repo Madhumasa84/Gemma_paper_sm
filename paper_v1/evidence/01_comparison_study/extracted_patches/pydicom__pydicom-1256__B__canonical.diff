@@ -1,0 +1,13 @@
+diff --git a/pydicom/dataset.py b/pydicom/dataset.py
+index 5457ded..5ed6e8c 100644
+--- a/pydicom/dataset.py
++++ b/pydicom/dataset.py
+@@ -2225,7 +2225,7 @@ class Dataset(Dict[BaseTag, _DatasetValue]):
+     def from_json(
+         cls: Type[_Dataset],
+         json_dataset: Union[Dict[str, bytes], str],
+-        bulk_data_uri_handler: Optional[
++        bulk_data_uri_handler: Optional[ 
+             Union[
+                 Callable[[BaseTag, str, str], object],
+                 Callable[[str], object]

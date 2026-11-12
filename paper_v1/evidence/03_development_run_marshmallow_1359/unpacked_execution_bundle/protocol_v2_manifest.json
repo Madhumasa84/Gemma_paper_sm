@@ -1,0 +1,23 @@
+{
+  "protocol_version": "v2_colab_native",
+  "base_protocol": "kaggle_fresh_development_instrumented_v1",
+  "authorized_environment_change": true,
+  "task_id": "marshmallow-code__marshmallow-1359",
+  "condition": "A",
+  "installed_pins": {
+    "torch": "2.14.1+cu130",
+    "torchvision": "0.29.1+cu130",
+    "transformers": "5.22.1",
+    "tokenizers": "0.23.3",
+    "bitsandbytes": "0.50.2",
+    "accelerate": "1.15.0",
+    "huggingface_hub": "1.33.0"
+  },
+  "version_differences": [
+    "torch: 2.11.0 -> 2.14.1+cu130 (CUDA 13.0 native build)",
+    "torchvision: 0.26.0 -> 0.29.1+cu130",
+    "transformers: 5.22.0 -> 5.22.1",
+    "tokenizers: 0.23.1 -> 0.23.3"
+  ],
+  "config_hash": "43486a931e1f7194ea9352ce754cc565298456617f940f018263e6bd90ce9cde"
+}

@@ -1,0 +1,6 @@
+{
+  "model_name_or_path": "google/gemma-4-E4B-it_int8",
+  "instance_id": "pvlib__pvlib-python-1854",
+  "condition": "B",
+  "model_patch": "--- a/pvlib/pvsystem.py\n+++ b/pvlib/pvsystem.py\n@@ -250,6 +250,10 @@\n         if arrays is None:\n             if losses_parameters is None:\n                 array_losses_parameters = {}\n+        elif isinstance(arrays, Array):\n+            arrays = [arrays]\n+        elif not hasattr(arrays, '__iter__'):\n+            raise TypeError(\"arrays must be iterable or an Array instance\")\n         else:\n             array_losses_parameters = arrays\n"
+}

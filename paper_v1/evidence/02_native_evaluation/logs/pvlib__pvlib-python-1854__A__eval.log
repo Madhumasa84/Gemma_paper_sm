@@ -1,0 +1,755 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.23, pytest-8.4.1, pluggy-1.6.0
+rootdir: /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854
+configfile: pyproject.toml
+collected 282 items
+
+pvlib/tests/test_pvsystem.py EEE.EE.E....E..E.EEE....E....EE.EEE........ [ 15%]
+..................................EE.................................... [ 40%]
+...................E.EE................................................. [ 66%]
+.........................E...............EEEEEEE...E........E........... [ 91%]
+.EE..E..F........E.E...                                                  [100%]
+
+==================================== ERRORS ====================================
+________ ERROR at setup of test_PVSystem_get_iam[ashrae-model_params0] _________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 28
+  @pytest.mark.parametrize('iam_model,model_params', [
+      ('ashrae', {'b': 0.05}),
+      ('physical', {'K': 4, 'L': 0.002, 'n': 1.526}),
+      ('martin_ruiz', {'a_r': 0.16}),
+  ])
+  def test_PVSystem_get_iam(mocker, iam_model, model_params):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:28
+_______ ERROR at setup of test_PVSystem_get_iam[physical-model_params1] ________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 28
+  @pytest.mark.parametrize('iam_model,model_params', [
+      ('ashrae', {'b': 0.05}),
+      ('physical', {'K': 4, 'L': 0.002, 'n': 1.526}),
+      ('martin_ruiz', {'a_r': 0.16}),
+  ])
+  def test_PVSystem_get_iam(mocker, iam_model, model_params):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:28
+______ ERROR at setup of test_PVSystem_get_iam[martin_ruiz-model_params2] ______
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 28
+  @pytest.mark.parametrize('iam_model,model_params', [
+      ('ashrae', {'b': 0.05}),
+      ('physical', {'K': 4, 'L': 0.002, 'n': 1.526}),
+      ('martin_ruiz', {'a_r': 0.16}),
+  ])
+  def test_PVSystem_get_iam(mocker, iam_model, model_params):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:28
+_________________ ERROR at setup of test_PVSystem_get_iam_sapm _________________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 58
+  def test_PVSystem_get_iam_sapm(sapm_module_params, mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:58
+________________ ERROR at setup of test_PVSystem_get_iam_interp ________________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 67
+  def test_PVSystem_get_iam_interp(mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:67
+_______________ ERROR at setup of test_PVSystem_get_iam_invalid ________________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 101
+  def test_PVSystem_get_iam_invalid(sapm_module_params, mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:101
+_____________________ ERROR at setup of test_PVSystem_sapm _____________________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 229
+  def test_PVSystem_sapm(sapm_module_params, mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:229
+______________ ERROR at setup of test_PVSystem_sapm_spectral_loss ______________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 271
+  def test_PVSystem_sapm_spectral_loss(sapm_module_params, mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:271
+_ ERROR at setup of test_PVSystem_first_solar_spectral_loss[module_parameters0-multisi-None] _
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 295
+  @pytest.mark.parametrize('module_parameters,module_type,coefficients', [
+      ({'Technology': 'mc-Si'}, 'multisi', None),
+      ({'Material': 'Multi-c-Si'}, 'multisi', None),
+      ({'first_solar_spectral_coefficients': (
+          0.84, -0.03, -0.008, 0.14, 0.04, -0.002)},
+       None,
+       (0.84, -0.03, -0.008, 0.14, 0.04, -0.002))
+      ])
+  def test_PVSystem_first_solar_spectral_loss(module_parameters, module_type,
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:295
+_ ERROR at setup of test_PVSystem_first_solar_spectral_loss[module_parameters1-multisi-None] _
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 295
+  @pytest.mark.parametrize('module_parameters,module_type,coefficients', [
+      ({'Technology': 'mc-Si'}, 'multisi', None),
+      ({'Material': 'Multi-c-Si'}, 'multisi', None),
+      ({'first_solar_spectral_coefficients': (
+          0.84, -0.03, -0.008, 0.14, 0.04, -0.002)},
+       None,
+       (0.84, -0.03, -0.008, 0.14, 0.04, -0.002))
+      ])
+  def test_PVSystem_first_solar_spectral_loss(module_parameters, module_type,
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:295
+_ ERROR at setup of test_PVSystem_first_solar_spectral_loss[module_parameters2-None-coefficients2] _
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 295
+  @pytest.mark.parametrize('module_parameters,module_type,coefficients', [
+      ({'Technology': 'mc-Si'}, 'multisi', None),
+      ({'Material': 'Multi-c-Si'}, 'multisi', None),
+      ({'first_solar_spectral_coefficients': (
+          0.84, -0.03, -0.008, 0.14, 0.04, -0.002)},
+       None,
+       (0.84, -0.03, -0.008, 0.14, 0.04, -0.002))
+      ])
+  def test_PVSystem_first_solar_spectral_loss(module_parameters, module_type,
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:295
+__________ ERROR at setup of test_PVSystem_sapm_effective_irradiance ___________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 354
+  def test_PVSystem_sapm_effective_irradiance(sapm_module_params, mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:354
+________________ ERROR at setup of test_PVSystem_sapm_celltemp _________________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 438
+  def test_PVSystem_sapm_celltemp(mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:438
+_____________ ERROR at setup of test_PVSystem_sapm_celltemp_kwargs _____________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 452
+  def test_PVSystem_sapm_celltemp_kwargs(mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:452
+_______________ ERROR at setup of test_PVSystem_pvsyst_celltemp ________________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 485
+  def test_PVSystem_pvsyst_celltemp(mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:485
+_______________ ERROR at setup of test_PVSystem_faiman_celltemp ________________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 508
+  def test_PVSystem_faiman_celltemp(mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:508
+________________ ERROR at setup of test_PVSystem_noct_celltemp _________________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 521
+  def test_PVSystem_noct_celltemp(mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:521
+_______________ ERROR at setup of test_PVSystem_fuentes_celltemp _______________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 685
+  def test_PVSystem_fuentes_celltemp(mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:685
+____________ ERROR at setup of test_PVSystem_fuentes_module_height _____________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 703
+  def test_PVSystem_fuentes_module_height(mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:703
+________ ERROR at setup of test_calcparams_cec_extra_params_propagation ________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 1000
+  def test_calcparams_cec_extra_params_propagation(cec_module_params, mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:1000
+______________ ERROR at setup of test_PVSystem_calcparams_desoto _______________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 1070
+  def test_PVSystem_calcparams_desoto(cec_module_params, mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:1070
+______________ ERROR at setup of test_PVSystem_calcparams_pvsyst _______________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 1100
+  def test_PVSystem_calcparams_pvsyst(pvsyst_module_params, mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:1100
+___________________ ERROR at setup of test_PVSystem_i_from_v ___________________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 1414
+  def test_PVSystem_i_from_v(mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:1414
+_________ ERROR at setup of test_PVSystem_scale_voltage_current_power __________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 1692
+  def test_PVSystem_scale_voltage_current_power(mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:1692
+______ ERROR at setup of test_PVSystem_multi_scale_voltage_current_power _______
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 1701
+  def test_PVSystem_multi_scale_voltage_current_power(mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:1701
+________________ ERROR at setup of test_PVSystem_get_ac_sandia _________________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 1723
+  def test_PVSystem_get_ac_sandia(cec_inverter_parameters, mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:1723
+_____________ ERROR at setup of test_PVSystem_get_ac_sandia_multi ______________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 1737
+  def test_PVSystem_get_ac_sandia_multi(cec_inverter_parameters, mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:1737
+________________ ERROR at setup of test_PVSystem_get_ac_pvwatts ________________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 1762
+  def test_PVSystem_get_ac_pvwatts(pvwatts_system_defaults, mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:1762
+____________ ERROR at setup of test_PVSystem_get_ac_pvwatts_kwargs _____________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 1771
+  def test_PVSystem_get_ac_pvwatts_kwargs(pvwatts_system_kwargs, mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:1771
+_____________ ERROR at setup of test_PVSystem_get_ac_pvwatts_multi _____________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 1780
+  def test_PVSystem_get_ac_pvwatts_multi(
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:1780
+__________________ ERROR at setup of test_PVSystem_get_ac_adr __________________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 1841
+  def test_PVSystem_get_ac_adr(adr_inverter_parameters, mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:1841
+_____________ ERROR at setup of test_PVSystem_get_irradiance_model _____________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 1961
+  def test_PVSystem_get_irradiance_model(mocker, solar_pos):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:1961
+__________________ ERROR at setup of test_PVSystem_pvwatts_dc __________________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 2257
+  def test_PVSystem_pvwatts_dc(pvwatts_system_defaults, mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:2257
+______________ ERROR at setup of test_PVSystem_pvwatts_dc_kwargs _______________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 2269
+  def test_PVSystem_pvwatts_dc_kwargs(pvwatts_system_kwargs, mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:2269
+________________ ERROR at setup of test_PVSystem_pvwatts_losses ________________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 2338
+  def test_PVSystem_pvwatts_losses(pvwatts_system_defaults, mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:2338
+_____________ ERROR at setup of test_PVSystem_dc_ohms_from_percent _____________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 2437
+  def test_PVSystem_dc_ohms_from_percent(mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:2437
+______________ ERROR at setup of test_Array_dc_ohms_from_percent _______________
+file /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py, line 2463
+  def test_Array_dc_ohms_from_percent(mocker):
+E       fixture 'mocker' not found
+>       available fixtures: adr_inverter_parameters, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, cec_inverter_parameters, cec_module_cs5p_220m, cec_module_fs_495, cec_module_params, cec_module_spr_e20_327, doctest_namespace, expected_solpos, fixed_mount, fixture_i_from_v, fixture_v_from_i, golden, golden_mst, monkeypatch, pvsyst_module_params, pvwatts_system_defaults, pvwatts_system_kwargs, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, sam_data, sapm_module_params, sapm_temperature_cs5p_220m, single_axis_tracker_mount, solar_pos, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, two_array_system
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+/content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:2463
+=================================== FAILURES ===================================
+__________________________ test_PVSystem_single_array __________________________
+
+    def test_PVSystem_single_array():
+        # GH 1831
+        single_array = pvsystem.Array(pvsystem.FixedMount())
+>       system = pvsystem.PVSystem(arrays=single_array)
+
+pvlib/tests/test_pvsystem.py:2366: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <[AttributeError("'PVSystem' object has no attribute 'name'") raised in repr()] PVSystem object at 0x7ff71435b880>
+arrays = Array:
+  name: None
+  mount: FixedMount(surface_tilt=0.0, surface_azimuth=180.0, racking_model=None, module_height=Non...module: None
+  albedo: 0.25
+  module_type: None
+  temperature_model_parameters: {}
+  strings: 1
+  modules_per_string: 1
+surface_tilt = 0, surface_azimuth = 180, albedo = None, surface_type = None
+module = None, module_type = None, module_parameters = None
+temperature_model_parameters = None, modules_per_string = 1
+strings_per_inverter = 1, inverter = None, inverter_parameters = None
+racking_model = None, losses_parameters = None, name = None
+
+    def __init__(self,
+                 arrays=None,
+                 surface_tilt=0, surface_azimuth=180,
+                 albedo=None, surface_type=None,
+                 module=None, module_type=None,
+                 module_parameters=None,
+                 temperature_model_parameters=None,
+                 modules_per_string=1, strings_per_inverter=1,
+                 inverter=None, inverter_parameters=None,
+                 racking_model=None, losses_parameters=None, name=None):
+    
+        if arrays is None:
+            if losses_parameters is None:
+                array_losses_parameters = {}
+            else:
+                array_losses_parameters = _build_kwargs(['dc_ohmic_percent'],
+                                                        losses_parameters)
+            self.arrays = (Array(
+                FixedMount(surface_tilt, surface_azimuth, racking_model),
+                albedo,
+                surface_type,
+                module,
+                module_type,
+                module_parameters,
+                temperature_model_parameters,
+                modules_per_string,
+                strings_per_inverter,
+                array_losses_parameters,
+            ),)
+>       elif len(arrays) == 0:
+E       TypeError: object of type 'Array' has no len()
+
+pvlib/pvsystem.py:223: TypeError
+=============================== warnings summary ===============================
+pvlib/tests/conftest.py:7
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/conftest.py:7: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+    from pkg_resources import parse_version
+
+pvlib/tests/test_pvsystem.py::test_sapm
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:187: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    times = pd.date_range(start='2015-01-01', periods=5, freq='12H')
+
+pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_functions[faiman]
+pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_functions[pvsyst]
+pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_functions[sapm]
+pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_functions[fuentes]
+pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_functions[noct_sam]
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:569: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    times = pd.date_range(start='2020-08-25 11:00', freq='H', periods=3)
+
+pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_multi_temp[faiman]
+pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_multi_temp[pvsyst]
+pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_multi_temp[sapm]
+pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_multi_temp[fuentes]
+pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_multi_temp[noct_sam]
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:583: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    times = pd.date_range(start='2020-08-25 11:00', freq='H', periods=3)
+
+pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_multi_wind[faiman]
+pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_multi_wind[pvsyst]
+pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_multi_wind[sapm]
+pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_multi_wind[fuentes]
+pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_multi_wind[noct_sam]
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:608: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    times = pd.date_range(start='2020-08-25 11:00', freq='H', periods=3)
+
+pvlib/tests/test_pvsystem.py::test_calcparams_desoto
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:936: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    times = pd.date_range(start='2015-01-01', periods=3, freq='12H')
+
+pvlib/tests/test_pvsystem.py::test_calcparams_cec
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:968: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    times = pd.date_range(start='2015-01-01', periods=3, freq='12H')
+
+pvlib/tests/test_pvsystem.py::test_calcparams_pvsyst
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:1038: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    times = pd.date_range(start='2015-01-01', periods=2, freq='12H')
+
+pvlib/tests/test_pvsystem.py::test_singlediode_series
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:1530: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    times = pd.date_range(start='2015-01-01', periods=2, freq='12H')
+
+pvlib/tests/test_pvsystem.py::test_singlediode_series_ivcurve
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:1620: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    times = pd.date_range(start='2015-06-01', periods=3, freq='6H')
+
+pvlib/tests/test_pvsystem.py::test_PVSystem_get_irradiance
+pvlib/tests/test_pvsystem.py::test_PVSystem_get_irradiance_albedo
+pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_get_irradiance
+pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_get_irradiance_multi_irrad
+pvlib/tests/test_pvsystem.py::test_Array_get_irradiance
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1854/pvlib/tests/test_pvsystem.py:1913: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    times = pd.date_range(start='20160101 1200-0700',
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_get_iam
+PASSED pvlib/tests/test_pvsystem.py::test__normalize_sam_product_names
+PASSED pvlib/tests/test_pvsystem.py::test_retrieve_sam_raise_no_parameters
+PASSED pvlib/tests/test_pvsystem.py::test_retrieve_sam_cecmod
+PASSED pvlib/tests/test_pvsystem.py::test_retrieve_sam_cecinverter
+PASSED pvlib/tests/test_pvsystem.py::test_sapm
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_sapm
+PASSED pvlib/tests/test_pvsystem.py::test_sapm_spectral_loss_deprecated
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_sapm_spectral_loss
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_first_solar_spectral_loss
+PASSED pvlib/tests/test_pvsystem.py::test_sapm_effective_irradiance[test_input0-1140.0510967821876]
+PASSED pvlib/tests/test_pvsystem.py::test_sapm_effective_irradiance[test_input1-expected1]
+PASSED pvlib/tests/test_pvsystem.py::test_sapm_effective_irradiance[test_input2-expected2]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_sapm_effective_irradiance
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_sapm_effective_irradiance_value_error[20-poa_diffuse0-aoi0]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_sapm_effective_irradiance_value_error[poa_direct1-poa_diffuse1-aoi1]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_sapm_effective_irradiance_value_error[poa_direct2-poa_diffuse2-20]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_sapm_celltemp_different_arrays
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_noct_celltemp_error
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_functions[faiman]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_functions[pvsyst]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_functions[sapm]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_functions[fuentes]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_functions[noct_sam]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_multi_temp[faiman]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_multi_temp[pvsyst]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_multi_temp[sapm]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_multi_temp[fuentes]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_multi_temp[noct_sam]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_multi_wind[faiman]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_multi_wind[pvsyst]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_multi_wind[sapm]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_multi_wind[fuentes]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_multi_wind[noct_sam]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_get_cell_temperature_invalid
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_temp_too_short[faiman]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_temp_too_short[pvsyst]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_temp_too_short[sapm]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_temp_too_short[fuentes]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_temp_too_short[noct_sam]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_temp_too_long[faiman]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_temp_too_long[pvsyst]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_temp_too_long[sapm]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_temp_too_long[fuentes]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_temp_too_long[noct_sam]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_wind_too_short[faiman]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_wind_too_short[pvsyst]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_wind_too_short[sapm]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_wind_too_short[fuentes]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_wind_too_short[noct_sam]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_wind_too_long[faiman]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_wind_too_long[pvsyst]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_wind_too_long[sapm]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_wind_too_long[fuentes]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_wind_too_long[noct_sam]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_poa_length_mismatch[faiman]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_poa_length_mismatch[pvsyst]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_poa_length_mismatch[sapm]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_poa_length_mismatch[fuentes]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_celltemp_poa_length_mismatch[noct_sam]
+PASSED pvlib/tests/test_pvsystem.py::test_Array__infer_temperature_model_params
+PASSED pvlib/tests/test_pvsystem.py::test_Array__infer_cell_type
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_desoto_returns_correct_Python_type[numeric_type_funcs0]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_desoto_returns_correct_Python_type[numeric_type_funcs1]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_desoto_returns_correct_Python_type[numeric_type_funcs2]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_desoto_returns_correct_Python_type[numeric_type_funcs3]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_desoto_returns_correct_Python_type[numeric_type_funcs4]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_desoto_returns_correct_Python_type[numeric_type_funcs5]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_desoto_returns_correct_Python_type[numeric_type_funcs6]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_desoto_returns_correct_Python_type[numeric_type_funcs7]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_desoto_returns_correct_Python_type[numeric_type_funcs8]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_desoto_returns_correct_Python_type[numeric_type_funcs9]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_desoto_returns_correct_Python_type[numeric_type_funcs10]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_desoto_returns_correct_Python_type[numeric_type_funcs11]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_desoto_returns_correct_Python_type[numeric_type_funcs12]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_desoto_returns_correct_Python_type[numeric_type_funcs13]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_desoto_returns_correct_Python_type[numeric_type_funcs14]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_desoto_returns_correct_Python_type[numeric_type_funcs15]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_cec_returns_correct_Python_type[numeric_type_funcs0]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_cec_returns_correct_Python_type[numeric_type_funcs1]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_cec_returns_correct_Python_type[numeric_type_funcs2]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_cec_returns_correct_Python_type[numeric_type_funcs3]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_cec_returns_correct_Python_type[numeric_type_funcs4]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_cec_returns_correct_Python_type[numeric_type_funcs5]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_cec_returns_correct_Python_type[numeric_type_funcs6]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_cec_returns_correct_Python_type[numeric_type_funcs7]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_cec_returns_correct_Python_type[numeric_type_funcs8]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_cec_returns_correct_Python_type[numeric_type_funcs9]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_cec_returns_correct_Python_type[numeric_type_funcs10]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_cec_returns_correct_Python_type[numeric_type_funcs11]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_cec_returns_correct_Python_type[numeric_type_funcs12]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_cec_returns_correct_Python_type[numeric_type_funcs13]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_cec_returns_correct_Python_type[numeric_type_funcs14]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_cec_returns_correct_Python_type[numeric_type_funcs15]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_pvsyst_returns_correct_Python_type[numeric_type_funcs0]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_pvsyst_returns_correct_Python_type[numeric_type_funcs1]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_pvsyst_returns_correct_Python_type[numeric_type_funcs2]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_pvsyst_returns_correct_Python_type[numeric_type_funcs3]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_pvsyst_returns_correct_Python_type[numeric_type_funcs4]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_pvsyst_returns_correct_Python_type[numeric_type_funcs5]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_pvsyst_returns_correct_Python_type[numeric_type_funcs6]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_pvsyst_returns_correct_Python_type[numeric_type_funcs7]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_pvsyst_returns_correct_Python_type[numeric_type_funcs8]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_pvsyst_returns_correct_Python_type[numeric_type_funcs9]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_pvsyst_returns_correct_Python_type[numeric_type_funcs10]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_pvsyst_returns_correct_Python_type[numeric_type_funcs11]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_pvsyst_returns_correct_Python_type[numeric_type_funcs12]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_pvsyst_returns_correct_Python_type[numeric_type_funcs13]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_pvsyst_returns_correct_Python_type[numeric_type_funcs14]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_pvsyst_returns_correct_Python_type[numeric_type_funcs15]
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_desoto_all_scalars
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_cec_all_scalars
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_pvsyst_all_scalars
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_desoto
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_cec
+PASSED pvlib/tests/test_pvsystem.py::test_calcparams_pvsyst
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_calcparams[calcparams_pvsyst]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_calcparams[calcparams_desoto]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_calcparams[calcparams_cec]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_calcparams_value_error[calcparams_desoto-1-celltemp0]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_calcparams_value_error[calcparams_desoto-irrad1-1]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_calcparams_value_error[calcparams_cec-1-celltemp2]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_calcparams_value_error[calcparams_cec-irrad3-1]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_calcparams_value_error[calcparams_pvsyst-1-celltemp4]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_calcparams_value_error[calcparams_pvsyst-irrad5-1]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i0-lambertw-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i0-brentq-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i0-newton-1e-08]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i1-lambertw-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i1-brentq-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i1-newton-1e-08]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i2-lambertw-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i2-brentq-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i2-newton-1e-08]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i3-lambertw-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i3-brentq-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i3-newton-1e-08]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i4-lambertw-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i4-brentq-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i4-newton-1e-08]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i5-lambertw-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i5-brentq-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i5-newton-1e-08]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i6-lambertw-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i6-brentq-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i6-newton-1e-08]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i7-lambertw-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i7-brentq-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i7-newton-1e-08]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i8-lambertw-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i8-brentq-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i8-newton-1e-08]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i9-lambertw-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i9-brentq-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i9-newton-1e-08]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i10-lambertw-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i10-brentq-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i[fixture_v_from_i10-newton-1e-08]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v_from_i[fixture_v_from_i0]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v_from_i[fixture_v_from_i1]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v_from_i[fixture_v_from_i2]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v_from_i[fixture_v_from_i3]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v_from_i[fixture_v_from_i4]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v_from_i[fixture_v_from_i5]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v_from_i[fixture_v_from_i6]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v_from_i[fixture_v_from_i7]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v_from_i[fixture_v_from_i8]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v_from_i[fixture_v_from_i9]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v_from_i[fixture_v_from_i10]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v0-lambertw-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v0-brentq-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v0-newton-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v1-lambertw-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v1-brentq-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v1-newton-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v2-lambertw-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v2-brentq-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v2-newton-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v3-lambertw-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v3-brentq-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v3-newton-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v4-lambertw-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v4-brentq-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v4-newton-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v5-lambertw-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v5-brentq-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v5-newton-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v6-lambertw-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v6-brentq-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v[fixture_i_from_v6-newton-1e-11]
+PASSED pvlib/tests/test_pvsystem.py::test_i_from_v_size
+PASSED pvlib/tests/test_pvsystem.py::test_v_from_i_size
+PASSED pvlib/tests/test_pvsystem.py::test_mpp_floats
+PASSED pvlib/tests/test_pvsystem.py::test_mpp_recombination
+PASSED pvlib/tests/test_pvsystem.py::test_mpp_array
+PASSED pvlib/tests/test_pvsystem.py::test_mpp_series
+PASSED pvlib/tests/test_pvsystem.py::test_singlediode_series
+PASSED pvlib/tests/test_pvsystem.py::test_singlediode_array
+PASSED pvlib/tests/test_pvsystem.py::test_singlediode_floats
+PASSED pvlib/tests/test_pvsystem.py::test_singlediode_floats_ivcurve
+PASSED pvlib/tests/test_pvsystem.py::test_singlediode_series_ivcurve
+PASSED pvlib/tests/test_pvsystem.py::test_singlediode_ivcurvepnts_deprecation_warning[lambertw]
+PASSED pvlib/tests/test_pvsystem.py::test_singlediode_ivcurvepnts_deprecation_warning[brentq]
+PASSED pvlib/tests/test_pvsystem.py::test_singlediode_ivcurvepnts_deprecation_warning[newton]
+PASSED pvlib/tests/test_pvsystem.py::test_scale_voltage_current_power
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_get_ac_single_array_tuple_input[sandia]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_get_ac_single_array_tuple_input[adr]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_get_ac_single_array_tuple_input[pvwatts]
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_get_ac_adr_multi
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_get_ac_invalid
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_creation
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multiple_array_creation
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_get_aoi
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multiple_array_get_aoi
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_get_irradiance
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_get_irradiance_albedo
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_get_irradiance
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array_get_irradiance_multi_irrad
+PASSED pvlib/tests/test_pvsystem.py::test_Array_get_irradiance
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem___repr__
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multi_array___repr__
+PASSED pvlib/tests/test_pvsystem.py::test_Array___repr__
+PASSED pvlib/tests/test_pvsystem.py::test_pvwatts_dc_scalars
+PASSED pvlib/tests/test_pvsystem.py::test_pvwatts_dc_arrays
+PASSED pvlib/tests/test_pvsystem.py::test_pvwatts_dc_series
+PASSED pvlib/tests/test_pvsystem.py::test_pvwatts_losses_default
+PASSED pvlib/tests/test_pvsystem.py::test_pvwatts_losses_arrays
+PASSED pvlib/tests/test_pvsystem.py::test_pvwatts_losses_series
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multiple_array_pvwatts_dc
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_multiple_array_pvwatts_dc_value_error
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_num_arrays
+PASSED pvlib/tests/test_pvsystem.py::test_PVSystem_at_least_one_array
+PASSED pvlib/tests/test_pvsystem.py::test_combine_loss_factors
+PASSED pvlib/tests/test_pvsystem.py::test_no_extra_kwargs
+PASSED pvlib/tests/test_pvsystem.py::test_AbstractMount_constructor
+PASSED pvlib/tests/test_pvsystem.py::test_FixedMount_constructor
+PASSED pvlib/tests/test_pvsystem.py::test_FixedMount_get_orientation
+PASSED pvlib/tests/test_pvsystem.py::test_SingleAxisTrackerMount_constructor
+PASSED pvlib/tests/test_pvsystem.py::test_SingleAxisTrackerMount_get_orientation
+PASSED pvlib/tests/test_pvsystem.py::test_dc_ohms_from_percent
+PASSED pvlib/tests/test_pvsystem.py::test_dc_ohmic_losses
+PASSED pvlib/tests/test_pvsystem.py::test_Array_temperature_missing_parameters[sapm-keys0]
+PASSED pvlib/tests/test_pvsystem.py::test_Array_temperature_missing_parameters[fuentes-keys1]
+PASSED pvlib/tests/test_pvsystem.py::test_Array_temperature_missing_parameters[noct_sam-keys2]
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_get_iam[ashrae-model_params0]
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_get_iam[physical-model_params1]
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_get_iam[martin_ruiz-model_params2]
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_get_iam_sapm
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_get_iam_interp
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_get_iam_invalid
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_sapm
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_sapm_spectral_loss
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_first_solar_spectral_loss[module_parameters0-multisi-None]
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_first_solar_spectral_loss[module_parameters1-multisi-None]
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_first_solar_spectral_loss[module_parameters2-None-coefficients2]
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_sapm_effective_irradiance
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_sapm_celltemp
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_sapm_celltemp_kwargs
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_pvsyst_celltemp
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_faiman_celltemp
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_noct_celltemp
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_fuentes_celltemp
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_fuentes_module_height
+ERROR pvlib/tests/test_pvsystem.py::test_calcparams_cec_extra_params_propagation
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_calcparams_desoto
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_calcparams_pvsyst
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_i_from_v
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_scale_voltage_current_power
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_multi_scale_voltage_current_power
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_get_ac_sandia
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_get_ac_sandia_multi
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_get_ac_pvwatts
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_get_ac_pvwatts_kwargs
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_get_ac_pvwatts_multi
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_get_ac_adr
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_get_irradiance_model
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_pvwatts_dc
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_pvwatts_dc_kwargs
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_pvwatts_losses
+ERROR pvlib/tests/test_pvsystem.py::test_PVSystem_dc_ohms_from_percent
+ERROR pvlib/tests/test_pvsystem.py::test_Array_dc_ohms_from_percent
+FAILED pvlib/tests/test_pvsystem.py::test_PVSystem_single_array - TypeError: ...
+============ 1 failed, 244 passed, 27 warnings, 37 errors in 2.75s =============
+

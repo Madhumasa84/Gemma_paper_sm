@@ -1,0 +1,115 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.23, pytest-8.4.1, pluggy-1.6.0
+rootdir: /content/native_evaluation/eval_repos/pydicom__pydicom-1694
+collected 27 items
+
+pydicom/tests/test_json.py ................F..........                   [100%]
+
+=================================== FAILURES ===================================
+_____ TestDataSetToJson.test_suppress_invalid_tags_with_failed_dataelement _____
+
+self = <pydicom.tests.test_json.TestDataSetToJson object at 0x7b1d05aba3d0>
+
+    def test_suppress_invalid_tags_with_failed_dataelement(self):
+        """Test tags that raise exceptions don't if suppress_invalid_tags True.
+        """
+        ds = Dataset()
+        # we have to add a RawDataElement as creating a DataElement would
+        # already raise an exception
+        ds[0x00082128] = RawDataElement(
+            Tag(0x00082128), 'IS', 4, b'5.25', 0, True, True)
+    
+        with pytest.raises(TypeError):
+            ds.to_json_dict()
+    
+>       ds_json = ds.to_json_dict(suppress_invalid_tags=True)
+
+pydicom/tests/test_json.py:301: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+pydicom/dataset.py:2495: in to_json_dict
+    data_element = self[key]
+pydicom/dataset.py:939: in __getitem__
+    self[tag] = DataElement_from_raw(elem, character_set, self)
+pydicom/dataelem.py:859: in DataElement_from_raw
+    value = convert_value(vr, raw, encoding)
+pydicom/values.py:773: in convert_value
+    return converter(byte_string, is_little_endian, num_format)
+pydicom/values.py:348: in convert_IS_string
+    return MultiString(num_string, valtype=pydicom.valuerep.IS)
+pydicom/valuerep.py:1366: in MultiString
+    return valtype(splitup[0])
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'pydicom.valuerep.IS'>, val = '5.25', validation_mode = 1
+
+    def __new__(  # type: ignore[misc]
+            cls: Type["IS"], val: Union[None, str, int, float, Decimal],
+            validation_mode: int = None
+    ) -> Optional[Union[str, "IS"]]:
+        """Create instance if new integer string"""
+        if val is None:
+            return val
+    
+        if validation_mode is None:
+            validation_mode = config.settings.reading_validation_mode
+    
+        if isinstance(val, str):
+            if val.strip() == '':
+                return val
+            validate_value("IS", val, validation_mode)
+    
+        try:
+            newval = super().__new__(cls, val)
+        except ValueError:
+            # accept float strings when no integer loss, e.g. "1.0"
+            newval = super().__new__(cls, float(val))
+    
+        # check if a float or Decimal passed in, then could have lost info,
+        # and will raise error. E.g. IS(Decimal('1')) is ok, but not IS(1.23)
+        #   IS('1.23') will raise ValueError
+        if isinstance(val, (float, Decimal, str)) and newval != float(val):
+>           raise TypeError("Could not convert value to integer without loss")
+E           TypeError: Could not convert value to integer without loss
+
+pydicom/valuerep.py:1284: TypeError
+=============================== warnings summary ===============================
+pydicom/tests/test_json.py::TestDataSetToJson::test_suppress_invalid_tags_with_failed_dataelement
+  /content/native_evaluation/eval_repos/pydicom__pydicom-1694/pydicom/valuerep.py:443: UserWarning: Invalid value for VR IS: '5.25'. Please see <https://dicom.nema.org/medical/dicom/current/output/html/part05.html#table_6.2-1> for allowed values for each VR.
+    warnings.warn(msg)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+_________________ TestDataSetToJson.test_suppress_invalid_tags _________________
+------------------------------ Captured log call -------------------------------
+ERROR    pydicom:dataset.py:2502 Error while processing tag 00100010
+ERROR    pydicom:dataset.py:2502 Error while processing tag 00100010
+=========================== short test summary info ============================
+PASSED pydicom/tests/test_json.py::TestPersonName::test_json_pn_from_file
+PASSED pydicom/tests/test_json.py::TestPersonName::test_pn_components_to_json
+PASSED pydicom/tests/test_json.py::TestPersonName::test_pn_components_from_json
+PASSED pydicom/tests/test_json.py::TestPersonName::test_empty_value
+PASSED pydicom/tests/test_json.py::TestPersonName::test_multi_value_to_json
+PASSED pydicom/tests/test_json.py::TestPersonName::test_dataelem_from_json
+PASSED pydicom/tests/test_json.py::TestAT::test_to_json
+PASSED pydicom/tests/test_json.py::TestAT::test_from_json
+PASSED pydicom/tests/test_json.py::TestAT::test_invalid_value_in_json
+PASSED pydicom/tests/test_json.py::TestAT::test_invalid_tag_in_json
+PASSED pydicom/tests/test_json.py::TestDataSetToJson::test_json_from_dicom_file
+PASSED pydicom/tests/test_json.py::TestDataSetToJson::test_roundtrip
+PASSED pydicom/tests/test_json.py::TestDataSetToJson::test_dataset_dumphandler
+PASSED pydicom/tests/test_json.py::TestDataSetToJson::test_dataelement_dumphandler
+PASSED pydicom/tests/test_json.py::TestDataSetToJson::test_sort_order
+PASSED pydicom/tests/test_json.py::TestDataSetToJson::test_suppress_invalid_tags
+PASSED pydicom/tests/test_json.py::TestSequence::test_nested_sequences
+PASSED pydicom/tests/test_json.py::TestBinary::test_inline_binary
+PASSED pydicom/tests/test_json.py::TestBinary::test_invalid_inline_binary
+PASSED pydicom/tests/test_json.py::TestBinary::test_valid_bulkdata_uri
+PASSED pydicom/tests/test_json.py::TestBinary::test_invalid_bulkdata_uri
+PASSED pydicom/tests/test_json.py::TestBinary::test_bulk_data_reader_is_called
+PASSED pydicom/tests/test_json.py::TestBinary::test_bulk_data_reader_is_called_2
+PASSED pydicom/tests/test_json.py::TestBinary::test_bulk_data_reader_is_called_within_SQ
+PASSED pydicom/tests/test_json.py::TestNumeric::test_numeric_values
+PASSED pydicom/tests/test_json.py::TestNumeric::test_numeric_types
+FAILED pydicom/tests/test_json.py::TestDataSetToJson::test_suppress_invalid_tags_with_failed_dataelement
+=================== 1 failed, 26 passed, 1 warning in 1.13s ====================
+

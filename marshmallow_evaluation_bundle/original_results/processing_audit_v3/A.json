@@ -1,0 +1,10 @@
+{
+  "condition": "A",
+  "source_checkpoint": "marshmallow-code__marshmallow-1343__A__a1__25e8db93__0d94c473.json",
+  "processing_rule": "last_labelled_diff_block_plus_recount_v3",
+  "diff_blocks_found": 1,
+  "extracted_patch": "--- a/src/marshmallow/schema.py\n+++ b/src/marshmallow/schema.py\n@@ -894,7 +894,7 @@\n             else:\n                 try:\n-                    value = data[field_obj.attribute or field_name]\n+                    value = data.get(field_obj.attribute or field_name)\n                 except KeyError:\n                     pass\n                 else:\n",
+  "recount_check_passed": true,
+  "git_stderr": "",
+  "test_resolution": "NOT_EVALUATED"
+}

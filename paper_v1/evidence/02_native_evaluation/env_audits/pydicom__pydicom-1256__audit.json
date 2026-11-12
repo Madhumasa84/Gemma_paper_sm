@@ -1,0 +1,18 @@
+{
+  "instance_id": "pydicom__pydicom-1256",
+  "repo": "pydicom/pydicom",
+  "docker_spec": {
+    "python": "3.9",
+    "test_cmd": "pytest -rA"
+  },
+  "native_colab_env": {
+    "python": "Python 3.9.23",
+    "pytest": "pytest 7.4.4"
+  },
+  "env_differences": [
+    "Native environment uses isolated conda-forge Python 3.9 virtual environment",
+    "Installed numpy==1.26.4 (NumPy 1.x) to preserve legacy API compatibility",
+    "pytest 8.4.1"
+  ],
+  "status": "ENVIRONMENT_VERIFIED"
+}

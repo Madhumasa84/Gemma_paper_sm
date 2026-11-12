@@ -1,0 +1,6 @@
+{
+  "model_name_or_path": "google/gemma-4-E4B-it_int8",
+  "instance_id": "pvlib__pvlib-python-1854",
+  "condition": "C",
+  "model_patch": "diff --git a/pvlib/pvsystem.py b/pvlib/pvsystem.py\nindex c277a77..fd22eac 100644\n--- a/pvlib/pvsystem.py\n+++ b/pvlib/pvsystem.py\n@@ -223,9 +223,9 @@ class PVSystem:\n         elif len(arrays) == 0:\n             raise ValueError(\"PVSystem must have at least one Array. \"\n                              \"If you want to create a PVSystem instance \"\n-                             \"with a single Array pass `arrays=None` and pass \"\n-                             \"values directly to PVSystem attributes, e.g., \"\n-                             \"`surface_tilt=30`\")\n+                             \"with a single Array, pass it as a list, e.g., `arrays=[array]`\")\n+        elif isinstance(arrays, Array):\n+            arrays = [arrays]\n         else:\n             self.arrays = tuple(arrays)\n \n"
+}

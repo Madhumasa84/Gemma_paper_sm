@@ -1,0 +1,74 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.23, pytest-7.4.4, pluggy-1.6.0
+rootdir: /content/native_evaluation/eval_repos/pydicom__pydicom-901
+collected 5 items
+
+pydicom/tests/test_config.py FFFFF                                       [100%]
+
+=================================== FAILURES ===================================
+____________________________ TestDebug.test_default ____________________________
+
+self = <pydicom.tests.test_config.TestDebug object at 0x7e8bd4cd8850>
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7e8bd4df0340>
+
+    def test_default(self, caplog):
+        """Test that the default logging handler is a NullHandler."""
+        assert 1 == len(self.logger.handlers)
+>       assert isinstance(self.logger.handlers[0], logging.NullHandler)
+E       AssertionError: assert False
+E        +  where False = isinstance(<StreamHandler <_io.FileIO name=8 mode='rb+' closefd=True> (NOTSET)>, <class 'logging.NullHandler'>)
+E        +    where <class 'logging.NullHandler'> = logging.NullHandler
+
+pydicom/tests/test_config.py:31: AssertionError
+_____________________ TestDebug.test_debug_on_handler_null _____________________
+
+self = <pydicom.tests.test_config.TestDebug object at 0x7e8bd4cd88b0>
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7e8bd4e0a6d0>
+
+    def test_debug_on_handler_null(self, caplog):
+        """Test debug(True, False)."""
+>       debug(True, False)
+E       TypeError: debug() takes from 0 to 1 positional arguments but 2 were given
+
+pydicom/tests/test_config.py:43: TypeError
+____________________ TestDebug.test_debug_off_handler_null _____________________
+
+self = <pydicom.tests.test_config.TestDebug object at 0x7e8bd4cd8a90>
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7e8bd4d922b0>
+
+    def test_debug_off_handler_null(self, caplog):
+        """Test debug(False, False)."""
+>       debug(False, False)
+E       TypeError: debug() takes from 0 to 1 positional arguments but 2 were given
+
+pydicom/tests/test_config.py:62: TypeError
+____________________ TestDebug.test_debug_on_handler_stream ____________________
+
+self = <pydicom.tests.test_config.TestDebug object at 0x7e8bd4cd8bb0>
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7e8bd4daffd0>
+
+    def test_debug_on_handler_stream(self, caplog):
+        """Test debug(True, True)."""
+>       debug(True, True)
+E       TypeError: debug() takes from 0 to 1 positional arguments but 2 were given
+
+pydicom/tests/test_config.py:76: TypeError
+___________________ TestDebug.test_debug_off_handler_stream ____________________
+
+self = <pydicom.tests.test_config.TestDebug object at 0x7e8bd4cd8d90>
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7e8bd4d963d0>
+
+    def test_debug_off_handler_stream(self, caplog):
+        """Test debug(False, True)."""
+>       debug(False, True)
+E       TypeError: debug() takes from 0 to 1 positional arguments but 2 were given
+
+pydicom/tests/test_config.py:96: TypeError
+=========================== short test summary info ============================
+FAILED pydicom/tests/test_config.py::TestDebug::test_default - AssertionError...
+FAILED pydicom/tests/test_config.py::TestDebug::test_debug_on_handler_null - ...
+FAILED pydicom/tests/test_config.py::TestDebug::test_debug_off_handler_null
+FAILED pydicom/tests/test_config.py::TestDebug::test_debug_on_handler_stream
+FAILED pydicom/tests/test_config.py::TestDebug::test_debug_off_handler_stream
+============================== 5 failed in 0.29s ===============================
+

@@ -1,0 +1,57 @@
+{
+  "task_id": "pylint-dev__astroid-1196",
+  "indexed_file_count": 99,
+  "ranked_entities_count": 1640,
+  "top_10": [
+    {
+      "name": "astroid/arguments.py",
+      "file_path": "astroid/arguments.py",
+      "type": "file"
+    },
+    {
+      "name": "astroid/builder.py",
+      "file_path": "astroid/builder.py",
+      "type": "file"
+    },
+    {
+      "name": "CallSite",
+      "file_path": "astroid/arguments.py",
+      "type": "class"
+    },
+    {
+      "name": "starred_assigned_stmts",
+      "file_path": "astroid/protocols.py",
+      "type": "function"
+    },
+    {
+      "name": "astroid/protocols.py",
+      "file_path": "astroid/protocols.py",
+      "type": "file"
+    },
+    {
+      "name": "astroid/nodes/scoped_nodes/scoped_nodes.py",
+      "file_path": "astroid/nodes/scoped_nodes/scoped_nodes.py",
+      "type": "file"
+    },
+    {
+      "name": "ClassDef",
+      "file_path": "astroid/nodes/scoped_nodes/scoped_nodes.py",
+      "type": "class"
+    },
+    {
+      "name": "doc/conf.py",
+      "file_path": "doc/conf.py",
+      "type": "file"
+    },
+    {
+      "name": "astroid/exceptions.py",
+      "file_path": "astroid/exceptions.py",
+      "type": "file"
+    },
+    {
+      "name": "extract_node",
+      "file_path": "astroid/builder.py",
+      "type": "function"
+    }
+  ]
+}

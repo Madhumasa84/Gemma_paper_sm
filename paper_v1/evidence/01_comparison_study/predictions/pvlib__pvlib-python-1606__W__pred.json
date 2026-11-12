@@ -1,0 +1,6 @@
+{
+  "model_name_or_path": "google/gemma-4-E4B-it_int8",
+  "instance_id": "pvlib__pvlib-python-1606",
+  "condition": "W",
+  "model_patch": "--- a/pvlib/tools.py\n+++ b/pvlib/tools.py\n@@ -161,6 +161,10 @@\n     df['f1'] = func(df, 'V1')\n     df['f2'] = func(df, 'V2')\n     df['SW_Flag'] = df['f1'] > df['f2']\n+    \n+    # Handle case where lower and upper bounds are equal, which causes division by zero\n+    # in the iteration limit calculation and subsequent steps.\n+    if (df['VH'] - df['VL']).all() == 0:\n+        return df['f1'].iloc[0], df['V1'].iloc[0]\n \n     df['VL'] = df['V2']*df['SW_Flag'] + df['VL']*(~df['SW_Flag'])\n     df['VH'] = df['V1']*~df['SW_Flag'] + df['VH']*(df['SW_Flag'])\n"
+}

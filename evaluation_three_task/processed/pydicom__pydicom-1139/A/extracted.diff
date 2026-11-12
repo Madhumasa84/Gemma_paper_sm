@@ -1,0 +1,14 @@
+--- a/pydicom/dataset.py
++++ b/pydicom/dataset.py
+@@ -101,7 +101,10 @@
+     def __contains__(self, item):
+         """Check if an item is present in the dataset."""
+         if isinstance(item, tuple):
+-            return item in self.keys()
++            # Allow checking for (tag, vr) or just tag
++            if len(item) == 2:
++                return item in self.keys()
++            return False
+         return item in self.keys()
+ 
+     def __iter__(self):

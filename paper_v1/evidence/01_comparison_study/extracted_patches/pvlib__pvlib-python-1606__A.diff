@@ -1,0 +1,13 @@
+--- a/pvlib/tools.py
++++ b/pvlib/tools.py
+@@ -23,6 +23,10 @@
+     phim1 = (np.sqrt(5) - 1) / 2
+ 
+     df = params
++    if np.all(lower == upper):
++        # If bounds are equal, return the single point immediately
++        return func(params, 'V1'), lower
++
+     df['VH'] = upper
+     df['VL'] = lower
+ 

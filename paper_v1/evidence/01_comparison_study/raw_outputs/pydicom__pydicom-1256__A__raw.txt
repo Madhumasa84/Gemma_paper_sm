@@ -1,0 +1,113 @@
+The issue states that `BulkDataURI`s in SQ data elements are not correctly converted back when using `from_json`. This conversion logic resides in `pydicom/dataset.py` within `from_json`, which delegates the actual data element creation to `DataElement.from_json`.
+
+The `from_json` function in `pydicom/dataset.py` calls:
+```python
+            data_element = DataElement.from_json(
+                cls, tag, vr, value, value_key, bulk_data_uri_handler
+            )
+```
+If `value` contains a `BulkDataURI`, `DataElement.from_json` should handle it using `bulk_data_uri_handler`.
+
+The problem description points to line 227 in `jsonrep.py`, which is `get_pn_element_value`. This suggests that the issue might be related to how complex types (like those in SQ elements) are handled when they contain URIs, or perhaps how `DataElement.from_json` interacts with the provided handler when the value is a complex structure that needs recursive processing, which is common in SQ elements.
+
+Since the bug specifically mentions SQ data elements, the structure being processed is likely a list or a dictionary representing the sequence items. When `from_json` iterates over `json_dataset.items()`, if an element is a sequence, `value` will be a list of dictionaries, and `DataElement.from_json` needs to handle this structure recursively or correctly interpret the URI within the sequence item's structure.
+
+The provided code for `from_json` seems to handle the top-level structure correctly by passing `bulk_data_uri_handler`. If the URI is inside a sequence item, the recursive call to `DataElement.from_json` (which is not shown, but implied) must be where the failure occurs, or the structure passed to it is not what it expects.
+
+Given the context that the issue is in `jsonrep.py` at line 227, and line 227 in `get_pn_element_value` is:
+```python
+            warnings.warn(
+                'value of data element "{}" with VR Person Name (PN) '
+                'is not formatted correctly'.format(self.tag)
+            )
+```
+This strongly suggests that when processing a complex element (like an SQ item), if the value is not a simple dictionary but perhaps a structure containing a URI that isn't handled by the specific logic in `get_pn_element_value`, it falls through or triggers this warning path incorrectly.
+
+However, the core issue is about `BulkDataURI` conversion back. This conversion should happen when `DataElement.from_json` encounters a value that is a URI string, and it should use `bulk_data_uri_handler`.
+
+If the value is a sequence, `value` in `from_json` is a list. `DataElement.from_json` must handle this list structure. If the list contains dictionaries, it processes them one by one.
+
+If the URI is present, it should be passed to `bulk_data_uri_handler`.
+
+Let's look at how `DataElement.from_json` likely handles values. If `value` is a string that looks like a URI, it should be passed to the handler. If `value` is a dictionary representing a complex type, it should be processed recursively.
+
+The fix likely involves ensuring that if `value` is a dictionary and it contains a URI representation, the handler is invoked, or if the value itself is a URI string, it is processed.
+
+Since the problem description points to `jsonrep.py` line 227, and that function is specific to `PN` VR, it suggests that when processing an SQ element, if one of its components happens to be a PN element that is incorrectly structured in JSON (perhaps containing a URI that isn't handled as a simple string), it hits this path.
+
+If we assume the issue is that `DataElement.from_json` needs to be aware of the handler when processing complex types, we might need to modify how `DataElement.from_json` is called or how it handles the value.
+
+Since I cannot see `DataElement.from_json`, I must assume the fix is related to how `from_json` passes context or how it handles the value when it's complex.
+
+If the URI is present, it should be handled by `bulk_data_uri_handler`. This handler is passed to `DataElement.from_json`.
+
+If the URI is inside an SQ element, the sequence item is a dictionary. If that dictionary contains a field whose value is a URI, that value should be passed to the handler.
+
+If the bug is that the handler is not being used for URIs inside sequences, we need to ensure that `DataElement.from_json` correctly identifies when a value needs URI resolution, even if it's nested.
+
+Given the constraint to fix the issue based on the provided code, and the strong hint pointing to `jsonrep.py` line 227, I suspect that when processing a sequence item, if a field's value is a URI, it might be incorrectly interpreted as a PN value that fails validation, leading to the warning.
+
+If we look at `from_json` again:
+```python
+            data_element = DataElement.from_json(
+                cls, tag, vr, value, value_key, bulk_data_uri_handler
+            )
+```
+If `value` is a list (sequence), `DataElement.from_json` must iterate over it. If it iterates, it calls itself recursively, passing the handler.
+
+If the issue is that the handler is not being used for URIs inside SQ elements, we need to ensure that `DataElement.from_json` handles the URI resolution for all value types, not just simple ones.
+
+A common pattern when dealing with complex structures and handlers is to check if the value is a dictionary and recursively process it, passing the handler down.
+
+Since I cannot modify `DataElement.from_json`, I will assume the fix is to ensure that if `value` is a dictionary, we recursively process it, passing the handler, which might resolve the URI correctly within the sequence item structure.
+
+However, the provided code for `from_json` seems to assume `value` is either a simple value or a dictionary containing the value under `value_key`. For sequences, `value` is a list of such dictionaries.
+
+If `value` is a list, `DataElement.from_json` must handle the list iteration. If it doesn't, the sequence elements are not being processed correctly, and the URI resolution is skipped.
+
+If we assume `DataElement.from_json` expects a single value or a dictionary representing a single element, and when it receives a list (sequence), it fails to iterate and apply the handler to elements within the list, that would be the bug.
+
+Since I must provide a patch, and the problem is about URI conversion in SQ elements, I will modify `from_json` to handle the case where `value` is a list (sequence) and ensure that the handler is used for each item in the list, assuming `DataElement.from_json` needs to be called for each item if it's a sequence.
+
+If `value` is a list, it represents a sequence. We should iterate and call `DataElement.from_json` for each item in the list, potentially creating multiple `DataElement` objects for the sequence, or modifying the structure passed to `DataElement.from_json` if it supports sequences internally.
+
+Given the structure:
+```python
+            if len(unique_value_keys) == 0:
+                value_key = None
+                value = ['']
+            else:
+                value_key = unique_value_keys[0]
+                value = mapping[value_key]
+            data_element = DataElement.from_json(
+                cls, tag, vr, value, value_key, bulk_data_uri_handler
+            )
+            dataset.add(data_element)
+```
+If `value` is a list, `DataElement.from_json` must handle it. If it doesn't, we must handle it here.
+
+If `value` is a list, we should probably create a sequence of `DataElement`s.
+
+```python
+--- a/pydicom/dataset.py
++++ b/pydicom/dataset.py
+@@ -21,14 +21,21 @@
+         if not isinstance(json_dataset, dict):
+             json_dataset = json.loads(json_dataset)
+         dataset = cls()
++        sequence_elements = []
+         for tag, mapping in json_dataset.items():
+             vr = mapping['vr']
+             unique_value_keys = tuple(
+                 set(mapping.keys()) & set(jsonrep.JSON_VALUE_KEYS)
+             )
+             if len(unique_value_keys) == 0:
+                 value_key = None
+                 value = ['']
+             else:
+                 value_key = unique_value_keys[0]
+                 value = mapping[value_key]
+-            data_element = DataElement.from_json(
+-                cls, tag, vr, value, value_key, bulk_data_uri_handler
+-            )
+-            dataset.add(data_

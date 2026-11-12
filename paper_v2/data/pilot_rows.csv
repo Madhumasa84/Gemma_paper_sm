@@ -1,0 +1,13 @@
+instance_id,condition,applied,tested,resolved
+marshmallow-code__marshmallow-1343,W,True,True,False
+marshmallow-code__marshmallow-1343,A,True,True,False
+marshmallow-code__marshmallow-1343,B,True,True,False
+marshmallow-code__marshmallow-1343,C,False,False,False
+pvlib__pvlib-python-1072,W,False,False,False
+pvlib__pvlib-python-1072,A,True,True,False
+pvlib__pvlib-python-1072,B,False,False,False
+pvlib__pvlib-python-1072,C,True,True,False
+pydicom__pydicom-1139,W,True,True,False
+pydicom__pydicom-1139,A,False,False,False
+pydicom__pydicom-1139,B,True,True,False
+pydicom__pydicom-1139,C,False,False,False

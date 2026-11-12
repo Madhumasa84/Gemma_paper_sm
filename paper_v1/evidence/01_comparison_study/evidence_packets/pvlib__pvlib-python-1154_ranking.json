@@ -1,0 +1,57 @@
+{
+  "task_id": "pvlib__pvlib-python-1154",
+  "indexed_file_count": 54,
+  "ranked_entities_count": 699,
+  "top_10": [
+    {
+      "name": "ineichen",
+      "file_path": "pvlib/clearsky.py",
+      "type": "function"
+    },
+    {
+      "name": "reindl",
+      "file_path": "pvlib/irradiance.py",
+      "type": "function"
+    },
+    {
+      "name": "perez",
+      "file_path": "pvlib/irradiance.py",
+      "type": "function"
+    },
+    {
+      "name": "pvlib/iam.py",
+      "file_path": "pvlib/iam.py",
+      "type": "file"
+    },
+    {
+      "name": "pvlib/shading.py",
+      "file_path": "pvlib/shading.py",
+      "type": "file"
+    },
+    {
+      "name": "pvlib/clearsky.py",
+      "file_path": "pvlib/clearsky.py",
+      "type": "file"
+    },
+    {
+      "name": "dni",
+      "file_path": "pvlib/irradiance.py",
+      "type": "function"
+    },
+    {
+      "name": "pvlib/irradiance.py",
+      "file_path": "pvlib/irradiance.py",
+      "type": "file"
+    },
+    {
+      "name": "dirindex",
+      "file_path": "pvlib/irradiance.py",
+      "type": "function"
+    },
+    {
+      "name": "simplified_solis",
+      "file_path": "pvlib/clearsky.py",
+      "type": "function"
+    }
+  ]
+}

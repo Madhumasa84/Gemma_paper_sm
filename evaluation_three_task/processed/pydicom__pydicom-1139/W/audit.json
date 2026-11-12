@@ -1,0 +1,32 @@
+{
+  "instance_id": "pydicom__pydicom-1139",
+  "condition": "W",
+  "attempt": 1,
+  "prompt_hash": "47d8388e9d9fbd4158dc7b4ecebab52783b06acd9a7134b19701d68e5d685f79",
+  "config_hash": "0d94c473014df36032494da359ab2f34ef2335b996e7928d743d8afde70dc30e",
+  "model_id": "google/gemma-4-E4B-it",
+  "model_revision": "4ecc2ba63bcac23ba4a767fc87025b1450f84c9c",
+  "generation_status": "COMPLETED",
+  "finish_reason": "stop",
+  "token_counts": {
+    "input_tokens": 4330,
+    "generated_tokens": 125,
+    "total_tokens": 4455
+  },
+  "execution_mode": "production_gpu",
+  "is_mock": false,
+  "source_checkpoint": "evaluation_three_task/source_archive/checkpoints/pydicom__pydicom-1139__W__a1__47d8388e__0d94c473.json",
+  "source_checkpoint_sha256": "bb2676eb8da7619d6bfca2235c69304dbaac62ce74e80e9e2a38fdd5b45d2a6c",
+  "raw_generation_sha256": "9ee93ad51faa906a8ded6b10873f7cbc3b0c5492c66115a1545836808d94fe77",
+  "base_commit": "b9fb05c177b685bf683f7f57b2d57374eb7d882d",
+  "processing_rule": "last_labelled_diff_block_plus_recount_v3",
+  "diff_blocks_found": 1,
+  "extracted_patch_sha256": "986020a479b0ca451f20440d11210a93e6e6518b2f47b822f2e569f34705d71a",
+  "normalized_patch_sha256": "3048a66ff8bd50d7013a34fe09107e38cf08eaa836b66cf07a7eab22c2375da9",
+  "application_outcome": "APPLIED_NORMALIZED",
+  "extraction_outcome": "SUCCESS",
+  "normalized_prediction_path": "evaluation_three_task/processed/pydicom__pydicom-1139/W/predictions.jsonl",
+  "normalized_prediction_sha256": "24233f43636f3dd09216e0de5d29404e297545bc6c6ad895963d1bdeea04c859",
+  "recount_check_passed": true,
+  "processing_log_path": "evaluation_three_task/processed/pydicom__pydicom-1139/W/processing_commands.json"
+}

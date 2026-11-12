@@ -1,0 +1,38 @@
+diff --git a/pvlib/clearsky.py b/pvlib/clearsky.py
+index 857c5dd..44884f0 100644
+--- a/pvlib/clearsky.py
++++ b/pvlib/clearsky.py
+@@ -95,6 +95,10 @@ def ineichen(apparent_zenith, airmass_absolute, linke_turbidity,
+     # is accomplished by judicious use and placement of np.maximum,
+     # np.minimum, and np.fmax
+ 
++    # Handle GHI=0 case to prevent division by zero in term3 calculation later.
++    # If GHI is zero, DHI should be zero, and we set the intermediate term to 0.
++    ghi_safe = np.where(ghi == 0, 1e-15, ghi)
++
+     # use max so that nighttime values will result in 0s instead of
+     # negatives. propagates nans.
+     cos_zenith = np.maximum(tools.cosd(apparent_zenith), 0)
+@@ -112,8 +116,7 @@ def ineichen(apparent_zenith, airmass_absolute, linke_turbidity,
+     if perez_enhancement:
+         ghi *= np.exp(0.01*airmass_absolute**1.8)
+ 
+-    # use fmax to map airmass nans to 0s. multiply and divide by tl to
+-    # reinsert tl nans
++    # Use fmax to map airmass nans to 0s, ensuring GHI is non-negative.
+     ghi = cg1 * dni_extra * cos_zenith * tl / tl * np.fmax(ghi, 0)
+ 
+     # From [1] (Following [2] leads to 0.664 + 0.16268 / fh1)
+@@ -124,9 +127,9 @@ def ineichen(apparent_zenith, airmass_absolute, linke_turbidity,
+     bnci = dni_extra * np.fmax(bnci, 0)
+ 
+     # "empirical correction" SE 73, 157 & SE 73, 312.
+-    bnci_2 = ((1 - (0.1 - 0.2*np.exp(-tl))/(0.1 + 0.882/fh1)) /
+-              cos_zenith)
+-    bnci_2 = ghi * np.fmin(np.fmax(bnci_2, 0), 1e20)
++    # Use ghi_safe to prevent division by zero when GHI is zero.
++    bnci_2 = ((1 - (0.1 - 0.2*np.exp(-tl))/(0.1 + 0.882/fh1)) / cos_zenith)
++    bnci_2 = ghi_safe * np.fmin(np.fmax(bnci_2, 0), 1e20)
+ 
+     dni = np.minimum(bnci, bnci_2)
+ 

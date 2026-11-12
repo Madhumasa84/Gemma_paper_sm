@@ -1,0 +1,54 @@
+The issue arises because `DateTime._bind_to_schema` attempts to access `schema.opts` to retrieve `datetimeformat`, but when `DateTime` is used as an inner field of `List` or `Tuple`, the `schema` passed to `_bind_to_schema` is the container field (`List` or `Tuple`), which does not have an `opts` attribute in the way a `Schema` does.
+
+The fix is to check if the `schema` object has an `opts` attribute before accessing it in `DateTime._bind_to_schema`. If it doesn't, we should fall back to using the default format or handle it gracefully, as the container field won't have schema options in this context.
+
+In `src/marshmallow/fields.py`, inside `DateTime._bind_to_schema`:
+
+```python
+    def _bind_to_schema(self, field_name, schema):
+        super()._bind_to_schema(field_name, schema)
+        self.format = (
+            self.format
+            or getattr(schema.opts, self.SCHEMA_OPTS_VAR_NAME)
+            or self.DEFAULT_FORMAT
+        )
+```
+
+We need to change this to check if `schema` is a `Schema` instance or has `opts`. Since `List` and `Tuple` fields are not schemas, they won't have `opts`.
+
+A safer way is to check if `schema` has `opts` and if it's an object that supports attribute access for options.
+
+```python
+    def _bind_to_schema(self, field_name, schema):
+        super()._bind_to_schema(field_name, schema)
+        opts = getattr(schema, "opts", None)
+        self.format = (
+            self.format
+            or getattr(opts, self.SCHEMA_OPTS_VAR_NAME, None)
+            or self.DEFAULT_FORMAT
+        )
+```
+This handles the case where `schema` is not a schema (like `List` or `Tuple`) by setting `opts` to `None`, and then `getattr(None, ...)` will safely return `None`, leading to the fallback `self.DEFAULT_FORMAT`.
+
+```diff
+--- a/src/marshmallow/fields.py
++++ b/src/marshmallow/fields.py
+@@ -1067,10 +1067,11 @@
+ 
+     def _bind_to_schema(self, field_name, schema):
+         super()._bind_to_schema(field_name, schema)
+-        self.format = (
+-            self.format
+-            or getattr(schema.opts, self.SCHEMA_OPTS_VAR_NAME)
+-            or self.DEFAULT_FORMAT
+-        )
++        opts = getattr(schema, "opts", None)
++        self.format = (
++            self.format
++            or getattr(opts, self.SCHEMA_OPTS_VAR_NAME, None)
++            or self.DEFAULT_FORMAT
++        )
+ 
+     def _serialize(self, value, attr, obj, **kwargs):
+         if value is None:
+```<turn|>

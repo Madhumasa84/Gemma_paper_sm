@@ -1,0 +1,57 @@
+{
+  "task_id": "pvlib__pvlib-python-1854",
+  "indexed_file_count": 60,
+  "ranked_entities_count": 679,
+  "top_10": [
+    {
+      "name": "__init__",
+      "file_path": "pvlib/pvsystem.py",
+      "type": "function"
+    },
+    {
+      "name": "PVSystem",
+      "file_path": "pvlib/pvsystem.py",
+      "type": "class"
+    },
+    {
+      "name": "Array",
+      "file_path": "pvlib/pvsystem.py",
+      "type": "class"
+    },
+    {
+      "name": "pvlib/pvsystem.py",
+      "file_path": "pvlib/pvsystem.py",
+      "type": "file"
+    },
+    {
+      "name": "pvlib/modelchain.py",
+      "file_path": "pvlib/modelchain.py",
+      "type": "file"
+    },
+    {
+      "name": "ModelChain",
+      "file_path": "pvlib/modelchain.py",
+      "type": "class"
+    },
+    {
+      "name": "pvlib/iotools/pvgis.py",
+      "file_path": "pvlib/iotools/pvgis.py",
+      "type": "file"
+    },
+    {
+      "name": "setup.py",
+      "file_path": "setup.py",
+      "type": "file"
+    },
+    {
+      "name": "get_ac",
+      "file_path": "pvlib/pvsystem.py",
+      "type": "function"
+    },
+    {
+      "name": "pvlib/location.py",
+      "file_path": "pvlib/location.py",
+      "type": "file"
+    }
+  ]
+}

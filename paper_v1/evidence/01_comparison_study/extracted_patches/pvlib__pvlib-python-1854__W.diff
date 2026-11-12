@@ -1,0 +1,13 @@
+--- a/pvlib/pvsystem.py
++++ b/pvlib/pvsystem.py
+@@ -249,6 +249,10 @@
+             ),)
+ --> 253         elif len(arrays) == 0:
+     254             raise ValueError("PVSystem must have at least one Array. "
+-    255                              "If you want to create a PVSystem instance "
++                              "If you want to create a PVSystem instance, "
++                              "pass arrays as an iterable (e.g., a list of Arrays).")
++        elif isinstance(arrays, pvlib.pvsystem.Array):
++            arrays = [arrays]
++        elif not hasattr(arrays, '__iter__'):
++            raise TypeError("arrays must be an iterable of Array objects or a single Array object.")

@@ -1,0 +1,818 @@
+{
+  "created_at": "2026-11-06T10:06:44.381318+00:00",
+  "instance_id": "marshmallow-code__marshmallow-1343",
+  "dataset": {
+    "dataset_name": "princeton-nlp/SWE-bench_Lite",
+    "split": "dev",
+    "revision": "6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2",
+    "fingerprint": "8dd9ba440fb35178",
+    "rows": 23,
+    "columns": [
+      "repo",
+      "instance_id",
+      "base_commit",
+      "patch",
+      "test_patch",
+      "problem_statement",
+      "hints_text",
+      "created_at",
+      "version",
+      "FAIL_TO_PASS",
+      "PASS_TO_PASS",
+      "environment_setup_commit"
+    ],
+    "base_commit": "2be2d83a1a9a6d3d9b85804f3ab545cecc409bb0",
+    "reference_sha256": "fb93d3650801b4da32dce01c6f7cc72194236aa7445189dd5edfb9d5081d3ecf",
+    "python": "3.10.16",
+    "architecture": "x86_64",
+    "swebench": "5.0.1",
+    "fail_to_pass": "[\"tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_nested_type_with_validates_method\"]",
+    "pass_to_pass": "[\"tests/test_marshalling.py::test_missing_is_falsy\", \"tests/test_marshalling.py::TestMarshaller::test_prefix\", \"tests/test_marshalling.py::TestMarshaller::test_marshalling_generator\", \"tests/test_marshalling.py::TestMarshaller::test_default_to_missing\", \"tests/test_marshalling.py::TestMarshaller::test_serialize_fields_with_load_only_param\", \"tests/test_marshalling.py::TestMarshaller::test_missing_data_are_skipped\", \"tests/test_marshalling.py::TestMarshaller::test_serialize_with_load_only_doesnt_validate\", \"tests/test_marshalling.py::TestMarshaller::test_serialize_fields_with_dump_to_param\", \"tests/test_marshalling.py::TestMarshaller::test_serialize_fields_with_dump_to_and_prefix_params\", \"tests/test_marshalling.py::TestMarshaller::test_stores_indices_of_errors_when_many_equals_true\", \"tests/test_marshalling.py::TestMarshaller::test_doesnt_store_errors_when_index_errors_equals_false\", \"tests/test_marshalling.py::TestUnmarshaller::test_extra_data_is_ignored\", \"tests/test_marshalling.py::TestUnmarshaller::test_stores_errors\", \"tests/test_marshalling.py::TestUnmarshaller::test_stores_indices_of_errors_when_many_equals_true\", \"tests/test_marshalling.py::TestUnmarshaller::test_doesnt_store_errors_when_index_errors_equals_false\", \"tests/test_marshalling.py::TestUnmarshaller::test_deserialize\", \"tests/test_marshalling.py::TestUnmarshaller::test_extra_fields\", \"tests/test_marshalling.py::TestUnmarshaller::test_deserialize_many\", \"tests/test_marshalling.py::TestUnmarshaller::test_deserialize_stores_errors\", \"tests/test_marshalling.py::TestUnmarshaller::test_deserialize_fields_with_attribute_param\", \"tests/test_marshalling.py::TestUnmarshaller::test_deserialize_fields_with_load_from_param\", \"tests/test_marshalling.py::TestUnmarshaller::test_deserialize_fields_with_dump_only_param\", \"tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_type_root_data\", \"tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_type_nested_data\"]"
+  },
+  "requested_harness_version": "5.0.1",
+  "actual_harness_version": "4.1.0",
+  "harness_version_discrepancy": "5.0.1 installs, but is incompatible with this dataset schema: make_test_spec raises KeyError: 'image'; official 4.1.0 used in separate isolated environment.",
+  "dependency_versions": {
+    "unidiff": "1.0.1",
+    "dill": "0.4.1",
+    "chardet": "7.7.0",
+    "aiosignal": "1.4.0",
+    "rich": "15.0.0",
+    "python-dateutil": "3.0.0",
+    "anyio": "4.16.0",
+    "pre_commit": "4.6.2",
+    "fsspec": "2026.7.0",
+    "PyYAML": "6.0.3",
+    "distlib": "0.4.4",
+    "fasttransport": "0.0.4",
+    "ghapi": "2.1.5",
+    "async-timeout": "5.0.1",
+    "python-discovery": "1.9.4",
+    "cbor2": "6.2.0.post2",
+    "hyperframe": "6.1.0",
+    "setuptools": "65.5.0",
+    "markdown-it-py": "4.2.0",
+    "httpcore2": "2.14.0",
+    "xxhash": "4.0.2",
+    "httpx2": "2.14.0",
+    "filelock": "4.1.0",
+    "huggingface_hub": "2.4.0",
+    "watchfiles": "1.3.0",
+    "tenacity": "9.2.1",
+    "pip": "23.0.1",
+    "hpack": "4.2.0",
+    "h2": "4.4.1",
+    "protobuf": "7.36.2",
+    "idna": "3.20",
+    "exceptiongroup": "1.3.1",
+    "numpy": "2.2.6",
+    "frozenlist": "1.8.0",
+    "truststore": "0.10.5",
+    "beautifulsoup4": "4.15.0",
+    "packaging": "26.3",
+    "pyarrow": "25.0.1",
+    "urllib3": "2.8.0",
+    "certifi": "2026.10.23",
+    "swebench": "4.1.0",
+    "docker": "7.2.0",
+    "cfgv": "3.5.0",
+    "attrs": "26.1.0",
+    "multiprocess": "0.70.19",
+    "gitdb": "4.0.12",
+    "modal": "1.6.3",
+    "six": "1.17.0",
+    "pandas": "2.3.3",
+    "synchronicity": "0.12.7",
+    "grpclib": "0.4.9",
+    "datasets": "5.1.0",
+    "GitPython": "3.2.1",
+    "Pygments": "2.21.0",
+    "h11": "0.16.0",
+    "fastcore": "2.2.39",
+    "python-dotenv": "1.2.4",
+    "types-toml": "0.10.8.20260518",
+    "click": "8.5.0",
+    "requests": "2.34.2",
+    "multidict": "7.1.0",
+    "platformdirs": "4.12.4",
+    "toml": "0.10.2",
+    "hf-xet": "1.8.0",
+    "aiohappyeyeballs": "2.7.1",
+    "virtualenv": "21.15.5",
+    "yarl": "1.25.1",
+    "charset-normalizer": "3.5.2",
+    "smmap": "5.0.3",
+    "aiohttp": "3.14.5",
+    "pytz": "2026.6",
+    "tqdm": "4.70.1",
+    "mdurl": "0.1.2",
+    "propcache": "0.5.4",
+    "soupsieve": "2.10",
+    "identify": "2.6.20",
+    "nodeenv": "1.12.0",
+    "tomli": "2.5.0",
+    "types-certifi": "2021.10.8.3",
+    "tzdata": "2026.6",
+    "typing_extensions": "4.16.0",
+    "fastspec": "0.2.7"
+  },
+  "archive_audit": "evaluation/archive_audit.json",
+  "input_inventory": "evaluation/input_inventory.json",
+  "originals_unchanged": true,
+  "preflight_passed": true,
+  "preflight": [
+    {
+      "condition": "BASE",
+      "patch_applied": false,
+      "tests_executed": true,
+      "resolved": false,
+      "fail_to_pass": {
+        "passed": 0,
+        "failed": 1,
+        "total": 1,
+        "success": [],
+        "failure": [
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_nested_type_with_validates_method"
+        ]
+      },
+      "pass_to_pass": {
+        "passed": 24,
+        "failed": 0,
+        "total": 24,
+        "success": [
+          "tests/test_marshalling.py::test_missing_is_falsy",
+          "tests/test_marshalling.py::TestMarshaller::test_prefix",
+          "tests/test_marshalling.py::TestMarshaller::test_marshalling_generator",
+          "tests/test_marshalling.py::TestMarshaller::test_default_to_missing",
+          "tests/test_marshalling.py::TestMarshaller::test_serialize_fields_with_load_only_param",
+          "tests/test_marshalling.py::TestMarshaller::test_missing_data_are_skipped",
+          "tests/test_marshalling.py::TestMarshaller::test_serialize_with_load_only_doesnt_validate",
+          "tests/test_marshalling.py::TestMarshaller::test_serialize_fields_with_dump_to_param",
+          "tests/test_marshalling.py::TestMarshaller::test_serialize_fields_with_dump_to_and_prefix_params",
+          "tests/test_marshalling.py::TestMarshaller::test_stores_indices_of_errors_when_many_equals_true",
+          "tests/test_marshalling.py::TestMarshaller::test_doesnt_store_errors_when_index_errors_equals_false",
+          "tests/test_marshalling.py::TestUnmarshaller::test_extra_data_is_ignored",
+          "tests/test_marshalling.py::TestUnmarshaller::test_stores_errors",
+          "tests/test_marshalling.py::TestUnmarshaller::test_stores_indices_of_errors_when_many_equals_true",
+          "tests/test_marshalling.py::TestUnmarshaller::test_doesnt_store_errors_when_index_errors_equals_false",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize",
+          "tests/test_marshalling.py::TestUnmarshaller::test_extra_fields",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_many",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_stores_errors",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_fields_with_attribute_param",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_fields_with_load_from_param",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_fields_with_dump_only_param",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_type_root_data",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_type_nested_data"
+        ],
+        "failure": []
+      },
+      "error_category": null,
+      "paths": {
+        "report": "logs/evaluation/pilot_preflight_base_tree_2be2d83a1a9a/unmodified_base/marshmallow-code__marshmallow-1343/report.json",
+        "test_output": "logs/evaluation/pilot_preflight_base_tree_2be2d83a1a9a/unmodified_base/marshmallow-code__marshmallow-1343/test_output.txt",
+        "harness_log": "logs/evaluation/pilot_preflight_base_tree_2be2d83a1a9a/unmodified_base/marshmallow-code__marshmallow-1343/run_instance.log",
+        "evaluation_script": "logs/evaluation/pilot_preflight_base_tree_2be2d83a1a9a/unmodified_base/marshmallow-code__marshmallow-1343/eval.sh"
+      },
+      "observed_regression_status": {
+        "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_nested_type_with_validates_method": "FAILED"
+      }
+    },
+    {
+      "condition": "REFERENCE",
+      "patch_applied": true,
+      "tests_executed": true,
+      "resolved": true,
+      "fail_to_pass": {
+        "passed": 1,
+        "failed": 0,
+        "total": 1,
+        "success": [
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_nested_type_with_validates_method"
+        ],
+        "failure": []
+      },
+      "pass_to_pass": {
+        "passed": 24,
+        "failed": 0,
+        "total": 24,
+        "success": [
+          "tests/test_marshalling.py::test_missing_is_falsy",
+          "tests/test_marshalling.py::TestMarshaller::test_prefix",
+          "tests/test_marshalling.py::TestMarshaller::test_marshalling_generator",
+          "tests/test_marshalling.py::TestMarshaller::test_default_to_missing",
+          "tests/test_marshalling.py::TestMarshaller::test_serialize_fields_with_load_only_param",
+          "tests/test_marshalling.py::TestMarshaller::test_missing_data_are_skipped",
+          "tests/test_marshalling.py::TestMarshaller::test_serialize_with_load_only_doesnt_validate",
+          "tests/test_marshalling.py::TestMarshaller::test_serialize_fields_with_dump_to_param",
+          "tests/test_marshalling.py::TestMarshaller::test_serialize_fields_with_dump_to_and_prefix_params",
+          "tests/test_marshalling.py::TestMarshaller::test_stores_indices_of_errors_when_many_equals_true",
+          "tests/test_marshalling.py::TestMarshaller::test_doesnt_store_errors_when_index_errors_equals_false",
+          "tests/test_marshalling.py::TestUnmarshaller::test_extra_data_is_ignored",
+          "tests/test_marshalling.py::TestUnmarshaller::test_stores_errors",
+          "tests/test_marshalling.py::TestUnmarshaller::test_stores_indices_of_errors_when_many_equals_true",
+          "tests/test_marshalling.py::TestUnmarshaller::test_doesnt_store_errors_when_index_errors_equals_false",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize",
+          "tests/test_marshalling.py::TestUnmarshaller::test_extra_fields",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_many",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_stores_errors",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_fields_with_attribute_param",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_fields_with_load_from_param",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_fields_with_dump_only_param",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_type_root_data",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_type_nested_data"
+        ],
+        "failure": []
+      },
+      "error_category": null,
+      "paths": {
+        "report": "logs/run_evaluation/pilot_preflight_reference_fb93d3650801/reference_evaluator_only/marshmallow-code__marshmallow-1343/report.json",
+        "test_output": "logs/run_evaluation/pilot_preflight_reference_fb93d3650801/reference_evaluator_only/marshmallow-code__marshmallow-1343/test_output.txt",
+        "harness_log": "logs/run_evaluation/pilot_preflight_reference_fb93d3650801/reference_evaluator_only/marshmallow-code__marshmallow-1343/run_instance.log",
+        "evaluation_script": "logs/run_evaluation/pilot_preflight_reference_fb93d3650801/reference_evaluator_only/marshmallow-code__marshmallow-1343/eval.sh"
+      },
+      "observed_regression_status": {
+        "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_nested_type_with_validates_method": "PASSED"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "condition": "W",
+      "patch_applied": true,
+      "tests_executed": true,
+      "resolved": false,
+      "fail_to_pass": {
+        "passed": 0,
+        "failed": 1,
+        "total": 1,
+        "success": [],
+        "failure": [
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_nested_type_with_validates_method"
+        ]
+      },
+      "pass_to_pass": {
+        "passed": 24,
+        "failed": 0,
+        "total": 24,
+        "success": [
+          "tests/test_marshalling.py::test_missing_is_falsy",
+          "tests/test_marshalling.py::TestMarshaller::test_prefix",
+          "tests/test_marshalling.py::TestMarshaller::test_marshalling_generator",
+          "tests/test_marshalling.py::TestMarshaller::test_default_to_missing",
+          "tests/test_marshalling.py::TestMarshaller::test_serialize_fields_with_load_only_param",
+          "tests/test_marshalling.py::TestMarshaller::test_missing_data_are_skipped",
+          "tests/test_marshalling.py::TestMarshaller::test_serialize_with_load_only_doesnt_validate",
+          "tests/test_marshalling.py::TestMarshaller::test_serialize_fields_with_dump_to_param",
+          "tests/test_marshalling.py::TestMarshaller::test_serialize_fields_with_dump_to_and_prefix_params",
+          "tests/test_marshalling.py::TestMarshaller::test_stores_indices_of_errors_when_many_equals_true",
+          "tests/test_marshalling.py::TestMarshaller::test_doesnt_store_errors_when_index_errors_equals_false",
+          "tests/test_marshalling.py::TestUnmarshaller::test_extra_data_is_ignored",
+          "tests/test_marshalling.py::TestUnmarshaller::test_stores_errors",
+          "tests/test_marshalling.py::TestUnmarshaller::test_stores_indices_of_errors_when_many_equals_true",
+          "tests/test_marshalling.py::TestUnmarshaller::test_doesnt_store_errors_when_index_errors_equals_false",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize",
+          "tests/test_marshalling.py::TestUnmarshaller::test_extra_fields",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_many",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_stores_errors",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_fields_with_attribute_param",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_fields_with_load_from_param",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_fields_with_dump_only_param",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_type_root_data",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_type_nested_data"
+        ],
+        "failure": []
+      },
+      "error_category": "UNRESOLVED",
+      "paths": {
+        "report": "logs/run_evaluation/gemma_pilot_W_de99f2cb2f6c47e6/google__gemma-4-E4B-it/marshmallow-code__marshmallow-1343/report.json",
+        "test_output": "logs/run_evaluation/gemma_pilot_W_de99f2cb2f6c47e6/google__gemma-4-E4B-it/marshmallow-code__marshmallow-1343/test_output.txt",
+        "harness_log": "logs/run_evaluation/gemma_pilot_W_de99f2cb2f6c47e6/google__gemma-4-E4B-it/marshmallow-code__marshmallow-1343/run_instance.log",
+        "evaluation_script": "logs/run_evaluation/gemma_pilot_W_de99f2cb2f6c47e6/google__gemma-4-E4B-it/marshmallow-code__marshmallow-1343/eval.sh",
+        "run_summary": "google__gemma-4-E4B-it.gemma_pilot_W_de99f2cb2f6c47e6.json"
+      },
+      "observed_regression_status": {
+        "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_nested_type_with_validates_method": "FAILED"
+      },
+      "run_summary": {
+        "total_instances": 1,
+        "submitted_instances": 1,
+        "completed_instances": 1,
+        "resolved_instances": 0,
+        "unresolved_instances": 1,
+        "empty_patch_instances": 0,
+        "error_instances": 0,
+        "completed_ids": [
+          "marshmallow-code__marshmallow-1343"
+        ],
+        "incomplete_ids": [],
+        "empty_patch_ids": [],
+        "submitted_ids": [
+          "marshmallow-code__marshmallow-1343"
+        ],
+        "resolved_ids": [],
+        "unresolved_ids": [
+          "marshmallow-code__marshmallow-1343"
+        ],
+        "error_ids": [],
+        "schema_version": 2
+      },
+      "command": {
+        "condition": "W",
+        "run_id": "gemma_pilot_W_de99f2cb2f6c47e6",
+        "argv": [
+          "/home/masa84/gemma-pilot-evaluation/evaluation/.venv-legacy/bin/python",
+          "-m",
+          "swebench.harness.run_evaluation",
+          "--dataset_name",
+          "princeton-nlp/SWE-bench_Lite",
+          "--split",
+          "dev",
+          "--instance_ids",
+          "marshmallow-code__marshmallow-1343",
+          "--max_workers",
+          "1",
+          "--predictions_path",
+          "marshmallow_evaluation_bundle/predictions_W.jsonl",
+          "--run_id",
+          "gemma_pilot_W_de99f2cb2f6c47e6",
+          "--cache_level",
+          "instance",
+          "--timeout",
+          "1800",
+          "--report_dir",
+          "evaluation/summary_reports"
+        ],
+        "command": "/home/masa84/gemma-pilot-evaluation/evaluation/.venv-legacy/bin/python -m swebench.harness.run_evaluation --dataset_name princeton-nlp/SWE-bench_Lite --split dev --instance_ids marshmallow-code__marshmallow-1343 --max_workers 1 --predictions_path marshmallow_evaluation_bundle/predictions_W.jsonl --run_id gemma_pilot_W_de99f2cb2f6c47e6 --cache_level instance --timeout 1800 --report_dir evaluation/summary_reports",
+        "stdout_stderr": "evaluation/logs/gemma_pilot_W_de99f2cb2f6c47e6.log",
+        "process_exit_code": 0
+      },
+      "prediction": {
+        "file": "marshmallow_evaluation_bundle/predictions_W.jsonl",
+        "sha256": "de99f2cb2f6c47e61d03511ae7474054e6f4b52a67325102a7d3cddb76eaf978",
+        "patch_sha256": "dd58c6e798efb7023fd40d634fdb9bee85131823efa6b8b8418f31a522578430",
+        "patch_bytes": 1388,
+        "model_name_or_path": "google/gemma-4-E4B-it"
+      }
+    },
+    {
+      "condition": "A",
+      "patch_applied": true,
+      "tests_executed": true,
+      "resolved": false,
+      "fail_to_pass": {
+        "passed": 0,
+        "failed": 1,
+        "total": 1,
+        "success": [],
+        "failure": [
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_nested_type_with_validates_method"
+        ]
+      },
+      "pass_to_pass": {
+        "passed": 24,
+        "failed": 0,
+        "total": 24,
+        "success": [
+          "tests/test_marshalling.py::test_missing_is_falsy",
+          "tests/test_marshalling.py::TestMarshaller::test_prefix",
+          "tests/test_marshalling.py::TestMarshaller::test_marshalling_generator",
+          "tests/test_marshalling.py::TestMarshaller::test_default_to_missing",
+          "tests/test_marshalling.py::TestMarshaller::test_serialize_fields_with_load_only_param",
+          "tests/test_marshalling.py::TestMarshaller::test_missing_data_are_skipped",
+          "tests/test_marshalling.py::TestMarshaller::test_serialize_with_load_only_doesnt_validate",
+          "tests/test_marshalling.py::TestMarshaller::test_serialize_fields_with_dump_to_param",
+          "tests/test_marshalling.py::TestMarshaller::test_serialize_fields_with_dump_to_and_prefix_params",
+          "tests/test_marshalling.py::TestMarshaller::test_stores_indices_of_errors_when_many_equals_true",
+          "tests/test_marshalling.py::TestMarshaller::test_doesnt_store_errors_when_index_errors_equals_false",
+          "tests/test_marshalling.py::TestUnmarshaller::test_extra_data_is_ignored",
+          "tests/test_marshalling.py::TestUnmarshaller::test_stores_errors",
+          "tests/test_marshalling.py::TestUnmarshaller::test_stores_indices_of_errors_when_many_equals_true",
+          "tests/test_marshalling.py::TestUnmarshaller::test_doesnt_store_errors_when_index_errors_equals_false",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize",
+          "tests/test_marshalling.py::TestUnmarshaller::test_extra_fields",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_many",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_stores_errors",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_fields_with_attribute_param",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_fields_with_load_from_param",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_fields_with_dump_only_param",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_type_root_data",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_type_nested_data"
+        ],
+        "failure": []
+      },
+      "error_category": "UNRESOLVED",
+      "paths": {
+        "report": "logs/run_evaluation/gemma_pilot_A_585e64ea6b265e86/google__gemma-4-E4B-it/marshmallow-code__marshmallow-1343/report.json",
+        "test_output": "logs/run_evaluation/gemma_pilot_A_585e64ea6b265e86/google__gemma-4-E4B-it/marshmallow-code__marshmallow-1343/test_output.txt",
+        "harness_log": "logs/run_evaluation/gemma_pilot_A_585e64ea6b265e86/google__gemma-4-E4B-it/marshmallow-code__marshmallow-1343/run_instance.log",
+        "evaluation_script": "logs/run_evaluation/gemma_pilot_A_585e64ea6b265e86/google__gemma-4-E4B-it/marshmallow-code__marshmallow-1343/eval.sh",
+        "run_summary": "google__gemma-4-E4B-it.gemma_pilot_A_585e64ea6b265e86.json"
+      },
+      "observed_regression_status": {
+        "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_nested_type_with_validates_method": "FAILED"
+      },
+      "run_summary": {
+        "total_instances": 1,
+        "submitted_instances": 1,
+        "completed_instances": 1,
+        "resolved_instances": 0,
+        "unresolved_instances": 1,
+        "empty_patch_instances": 0,
+        "error_instances": 0,
+        "completed_ids": [
+          "marshmallow-code__marshmallow-1343"
+        ],
+        "incomplete_ids": [],
+        "empty_patch_ids": [],
+        "submitted_ids": [
+          "marshmallow-code__marshmallow-1343"
+        ],
+        "resolved_ids": [],
+        "unresolved_ids": [
+          "marshmallow-code__marshmallow-1343"
+        ],
+        "error_ids": [],
+        "schema_version": 2
+      },
+      "command": {
+        "condition": "A",
+        "run_id": "gemma_pilot_A_585e64ea6b265e86",
+        "argv": [
+          "/home/masa84/gemma-pilot-evaluation/evaluation/.venv-legacy/bin/python",
+          "-m",
+          "swebench.harness.run_evaluation",
+          "--dataset_name",
+          "princeton-nlp/SWE-bench_Lite",
+          "--split",
+          "dev",
+          "--instance_ids",
+          "marshmallow-code__marshmallow-1343",
+          "--max_workers",
+          "1",
+          "--predictions_path",
+          "marshmallow_evaluation_bundle/predictions_A.jsonl",
+          "--run_id",
+          "gemma_pilot_A_585e64ea6b265e86",
+          "--cache_level",
+          "instance",
+          "--timeout",
+          "1800",
+          "--report_dir",
+          "evaluation/summary_reports"
+        ],
+        "command": "/home/masa84/gemma-pilot-evaluation/evaluation/.venv-legacy/bin/python -m swebench.harness.run_evaluation --dataset_name princeton-nlp/SWE-bench_Lite --split dev --instance_ids marshmallow-code__marshmallow-1343 --max_workers 1 --predictions_path marshmallow_evaluation_bundle/predictions_A.jsonl --run_id gemma_pilot_A_585e64ea6b265e86 --cache_level instance --timeout 1800 --report_dir evaluation/summary_reports",
+        "stdout_stderr": "evaluation/logs/gemma_pilot_A_585e64ea6b265e86.log",
+        "process_exit_code": 0
+      },
+      "prediction": {
+        "file": "marshmallow_evaluation_bundle/predictions_A.jsonl",
+        "sha256": "585e64ea6b265e8672377dabb9c6ca475eff059afb613b1572105ca840588bbe",
+        "patch_sha256": "825bfcdface79474e1d06e398b86abe1f14f4e77bd691d71ef5ecbeddbe95bff",
+        "patch_bytes": 544,
+        "model_name_or_path": "google/gemma-4-E4B-it"
+      }
+    },
+    {
+      "condition": "B",
+      "patch_applied": true,
+      "tests_executed": true,
+      "resolved": false,
+      "fail_to_pass": {
+        "passed": 0,
+        "failed": 1,
+        "total": 1,
+        "success": [],
+        "failure": [
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_nested_type_with_validates_method"
+        ]
+      },
+      "pass_to_pass": {
+        "passed": 24,
+        "failed": 0,
+        "total": 24,
+        "success": [
+          "tests/test_marshalling.py::test_missing_is_falsy",
+          "tests/test_marshalling.py::TestMarshaller::test_prefix",
+          "tests/test_marshalling.py::TestMarshaller::test_marshalling_generator",
+          "tests/test_marshalling.py::TestMarshaller::test_default_to_missing",
+          "tests/test_marshalling.py::TestMarshaller::test_serialize_fields_with_load_only_param",
+          "tests/test_marshalling.py::TestMarshaller::test_missing_data_are_skipped",
+          "tests/test_marshalling.py::TestMarshaller::test_serialize_with_load_only_doesnt_validate",
+          "tests/test_marshalling.py::TestMarshaller::test_serialize_fields_with_dump_to_param",
+          "tests/test_marshalling.py::TestMarshaller::test_serialize_fields_with_dump_to_and_prefix_params",
+          "tests/test_marshalling.py::TestMarshaller::test_stores_indices_of_errors_when_many_equals_true",
+          "tests/test_marshalling.py::TestMarshaller::test_doesnt_store_errors_when_index_errors_equals_false",
+          "tests/test_marshalling.py::TestUnmarshaller::test_extra_data_is_ignored",
+          "tests/test_marshalling.py::TestUnmarshaller::test_stores_errors",
+          "tests/test_marshalling.py::TestUnmarshaller::test_stores_indices_of_errors_when_many_equals_true",
+          "tests/test_marshalling.py::TestUnmarshaller::test_doesnt_store_errors_when_index_errors_equals_false",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize",
+          "tests/test_marshalling.py::TestUnmarshaller::test_extra_fields",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_many",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_stores_errors",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_fields_with_attribute_param",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_fields_with_load_from_param",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_fields_with_dump_only_param",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_type_root_data",
+          "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_type_nested_data"
+        ],
+        "failure": []
+      },
+      "error_category": "UNRESOLVED",
+      "paths": {
+        "report": "logs/run_evaluation/gemma_pilot_B_242a56b1fdf5ea53/google__gemma-4-E4B-it/marshmallow-code__marshmallow-1343/report.json",
+        "test_output": "logs/run_evaluation/gemma_pilot_B_242a56b1fdf5ea53/google__gemma-4-E4B-it/marshmallow-code__marshmallow-1343/test_output.txt",
+        "harness_log": "logs/run_evaluation/gemma_pilot_B_242a56b1fdf5ea53/google__gemma-4-E4B-it/marshmallow-code__marshmallow-1343/run_instance.log",
+        "evaluation_script": "logs/run_evaluation/gemma_pilot_B_242a56b1fdf5ea53/google__gemma-4-E4B-it/marshmallow-code__marshmallow-1343/eval.sh",
+        "run_summary": "google__gemma-4-E4B-it.gemma_pilot_B_242a56b1fdf5ea53.json"
+      },
+      "observed_regression_status": {
+        "tests/test_marshalling.py::TestUnmarshaller::test_deserialize_wrong_nested_type_with_validates_method": "FAILED"
+      },
+      "run_summary": {
+        "total_instances": 1,
+        "submitted_instances": 1,
+        "completed_instances": 1,
+        "resolved_instances": 0,
+        "unresolved_instances": 1,
+        "empty_patch_instances": 0,
+        "error_instances": 0,
+        "completed_ids": [
+          "marshmallow-code__marshmallow-1343"
+        ],
+        "incomplete_ids": [],
+        "empty_patch_ids": [],
+        "submitted_ids": [
+          "marshmallow-code__marshmallow-1343"
+        ],
+        "resolved_ids": [],
+        "unresolved_ids": [
+          "marshmallow-code__marshmallow-1343"
+        ],
+        "error_ids": [],
+        "schema_version": 2
+      },
+      "command": {
+        "condition": "B",
+        "run_id": "gemma_pilot_B_242a56b1fdf5ea53",
+        "argv": [
+          "/home/masa84/gemma-pilot-evaluation/evaluation/.venv-legacy/bin/python",
+          "-m",
+          "swebench.harness.run_evaluation",
+          "--dataset_name",
+          "princeton-nlp/SWE-bench_Lite",
+          "--split",
+          "dev",
+          "--instance_ids",
+          "marshmallow-code__marshmallow-1343",
+          "--max_workers",
+          "1",
+          "--predictions_path",
+          "marshmallow_evaluation_bundle/predictions_B.jsonl",
+          "--run_id",
+          "gemma_pilot_B_242a56b1fdf5ea53",
+          "--cache_level",
+          "instance",
+          "--timeout",
+          "1800",
+          "--report_dir",
+          "evaluation/summary_reports"
+        ],
+        "command": "/home/masa84/gemma-pilot-evaluation/evaluation/.venv-legacy/bin/python -m swebench.harness.run_evaluation --dataset_name princeton-nlp/SWE-bench_Lite --split dev --instance_ids marshmallow-code__marshmallow-1343 --max_workers 1 --predictions_path marshmallow_evaluation_bundle/predictions_B.jsonl --run_id gemma_pilot_B_242a56b1fdf5ea53 --cache_level instance --timeout 1800 --report_dir evaluation/summary_reports",
+        "stdout_stderr": "evaluation/logs/gemma_pilot_B_242a56b1fdf5ea53.log",
+        "process_exit_code": 0
+      },
+      "prediction": {
+        "file": "marshmallow_evaluation_bundle/predictions_B.jsonl",
+        "sha256": "242a56b1fdf5ea5328a6cbf9c60ace89e61c60af4f9aa2a71d63b4a384f71b9d",
+        "patch_sha256": "4f1ed52390aa283c673cd2fde8487f8e7b0923c16f98351dc5603f1b6ab78ee2",
+        "patch_bytes": 567,
+        "model_name_or_path": "google/gemma-4-E4B-it"
+      }
+    },
+    {
+      "condition": "C",
+      "patch_applied": false,
+      "tests_executed": false,
+      "resolved": null,
+      "fail_to_pass": null,
+      "pass_to_pass": null,
+      "error_category": "PATCH_NOT_APPLICABLE",
+      "paths": {},
+      "prediction": {
+        "file": "marshmallow_evaluation_bundle/predictions_C.jsonl",
+        "sha256": "94fcb04a73372a3dde6b72eaa6fe287a2d969d1e277a57a4418fd45a962e15e7",
+        "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "patch_bytes": 0,
+        "model_name_or_path": "google/gemma-4-E4B-it"
+      }
+    }
+  ],
+  "commands": [
+    {
+      "condition": "W",
+      "run_id": "gemma_pilot_W_de99f2cb2f6c47e6",
+      "argv": [
+        "/home/masa84/gemma-pilot-evaluation/evaluation/.venv-legacy/bin/python",
+        "-m",
+        "swebench.harness.run_evaluation",
+        "--dataset_name",
+        "princeton-nlp/SWE-bench_Lite",
+        "--split",
+        "dev",
+        "--instance_ids",
+        "marshmallow-code__marshmallow-1343",
+        "--max_workers",
+        "1",
+        "--predictions_path",
+        "marshmallow_evaluation_bundle/predictions_W.jsonl",
+        "--run_id",
+        "gemma_pilot_W_de99f2cb2f6c47e6",
+        "--cache_level",
+        "instance",
+        "--timeout",
+        "1800",
+        "--report_dir",
+        "evaluation/summary_reports"
+      ],
+      "command": "/home/masa84/gemma-pilot-evaluation/evaluation/.venv-legacy/bin/python -m swebench.harness.run_evaluation --dataset_name princeton-nlp/SWE-bench_Lite --split dev --instance_ids marshmallow-code__marshmallow-1343 --max_workers 1 --predictions_path marshmallow_evaluation_bundle/predictions_W.jsonl --run_id gemma_pilot_W_de99f2cb2f6c47e6 --cache_level instance --timeout 1800 --report_dir evaluation/summary_reports",
+      "stdout_stderr": "evaluation/logs/gemma_pilot_W_de99f2cb2f6c47e6.log",
+      "process_exit_code": 0
+    },
+    {
+      "condition": "A",
+      "run_id": "gemma_pilot_A_585e64ea6b265e86",
+      "argv": [
+        "/home/masa84/gemma-pilot-evaluation/evaluation/.venv-legacy/bin/python",
+        "-m",
+        "swebench.harness.run_evaluation",
+        "--dataset_name",
+        "princeton-nlp/SWE-bench_Lite",
+        "--split",
+        "dev",
+        "--instance_ids",
+        "marshmallow-code__marshmallow-1343",
+        "--max_workers",
+        "1",
+        "--predictions_path",
+        "marshmallow_evaluation_bundle/predictions_A.jsonl",
+        "--run_id",
+        "gemma_pilot_A_585e64ea6b265e86",
+        "--cache_level",
+        "instance",
+        "--timeout",
+        "1800",
+        "--report_dir",
+        "evaluation/summary_reports"
+      ],
+      "command": "/home/masa84/gemma-pilot-evaluation/evaluation/.venv-legacy/bin/python -m swebench.harness.run_evaluation --dataset_name princeton-nlp/SWE-bench_Lite --split dev --instance_ids marshmallow-code__marshmallow-1343 --max_workers 1 --predictions_path marshmallow_evaluation_bundle/predictions_A.jsonl --run_id gemma_pilot_A_585e64ea6b265e86 --cache_level instance --timeout 1800 --report_dir evaluation/summary_reports",
+      "stdout_stderr": "evaluation/logs/gemma_pilot_A_585e64ea6b265e86.log",
+      "process_exit_code": 0
+    },
+    {
+      "condition": "B",
+      "run_id": "gemma_pilot_B_242a56b1fdf5ea53",
+      "argv": [
+        "/home/masa84/gemma-pilot-evaluation/evaluation/.venv-legacy/bin/python",
+        "-m",
+        "swebench.harness.run_evaluation",
+        "--dataset_name",
+        "princeton-nlp/SWE-bench_Lite",
+        "--split",
+        "dev",
+        "--instance_ids",
+        "marshmallow-code__marshmallow-1343",
+        "--max_workers",
+        "1",
+        "--predictions_path",
+        "marshmallow_evaluation_bundle/predictions_B.jsonl",
+        "--run_id",
+        "gemma_pilot_B_242a56b1fdf5ea53",
+        "--cache_level",
+        "instance",
+        "--timeout",
+        "1800",
+        "--report_dir",
+        "evaluation/summary_reports"
+      ],
+      "command": "/home/masa84/gemma-pilot-evaluation/evaluation/.venv-legacy/bin/python -m swebench.harness.run_evaluation --dataset_name princeton-nlp/SWE-bench_Lite --split dev --instance_ids marshmallow-code__marshmallow-1343 --max_workers 1 --predictions_path marshmallow_evaluation_bundle/predictions_B.jsonl --run_id gemma_pilot_B_242a56b1fdf5ea53 --cache_level instance --timeout 1800 --report_dir evaluation/summary_reports",
+      "stdout_stderr": "evaluation/logs/gemma_pilot_B_242a56b1fdf5ea53.log",
+      "process_exit_code": 0
+    }
+  ],
+  "setup_logs": {
+    "final-verification.log": "evaluation/logs/final-verification.log",
+    "pip-index.log": "evaluation/logs/pip-index.log",
+    "container-dependencies.txt": "evaluation/logs/container-dependencies.txt",
+    "image-inspect-error.log": "evaluation/logs/image-inspect-error.log",
+    "preflight-initial-head-check.log": "evaluation/logs/preflight-initial-head-check.log",
+    "install-legacy.log": "evaluation/logs/install-legacy.log",
+    "preflight.log": "evaluation/logs/preflight.log",
+    "docker-info.txt": "evaluation/logs/docker-info.txt",
+    "docker-images.txt": "evaluation/logs/docker-images.txt",
+    "gemma_pilot_W_de99f2cb2f6c47e6.log": "evaluation/logs/gemma_pilot_W_de99f2cb2f6c47e6.log",
+    "jev.json": "evaluation/logs/jev.json",
+    "docker-version.txt": "evaluation/logs/docker-version.txt",
+    "docker-disk.txt": "evaluation/logs/docker-disk.txt",
+    "pip-check-legacy.log": "evaluation/logs/pip-check-legacy.log",
+    "final-image-digest.json": "evaluation/logs/final-image-digest.json",
+    "pip-check.log": "evaluation/logs/pip-check.log",
+    "processes.txt": "evaluation/logs/processes.txt",
+    "image-inspect.json": "evaluation/logs/image-inspect.json",
+    "harness-help-legacy.txt": "evaluation/logs/harness-help-legacy.txt",
+    "gemma_pilot_A_585e64ea6b265e86.log": "evaluation/logs/gemma_pilot_A_585e64ea6b265e86.log",
+    "dependencies-legacy.txt": "evaluation/logs/dependencies-legacy.txt",
+    "image-pull.log": "evaluation/logs/image-pull.log",
+    "docker-containers.txt": "evaluation/logs/docker-containers.txt",
+    "dependencies.txt": "evaluation/logs/dependencies.txt",
+    "image-base-investigation.txt": "evaluation/logs/image-base-investigation.txt",
+    "official-evaluation-docs.html": "evaluation/logs/official-evaluation-docs.html",
+    "harness-help.txt": "evaluation/logs/harness-help.txt",
+    "results-generation.log": "evaluation/logs/results-generation.log",
+    "preflight-log-path-check.log": "evaluation/logs/preflight-log-path-check.log",
+    "evaluation-scripts.diff": "evaluation/logs/evaluation-scripts.diff",
+    "jev-error.log": "evaluation/logs/jev-error.log",
+    "preflight-verify.log": "evaluation/logs/preflight-verify.log",
+    "gemma_pilot_B_242a56b1fdf5ea53.log": "evaluation/logs/gemma_pilot_B_242a56b1fdf5ea53.log",
+    "prepare.log": "evaluation/logs/prepare.log",
+    "environment.txt": "evaluation/logs/environment.txt",
+    "swebench-version.txt": "evaluation/logs/swebench-version.txt",
+    "install.log": "evaluation/logs/install.log",
+    "prediction-runs.log": "evaluation/logs/prediction-runs.log",
+    "final-running-containers.txt": "evaluation/logs/final-running-containers.txt",
+    "base-equivalence.log": "evaluation/logs/base-equivalence.log"
+  },
+  "image_metadata": [
+    {
+      "Id": "sha256:a61197e0b29461e34010cd83570424eb91a7f265574a81c82ff79e55c6c10f29",
+      "RepoTags": [
+        "swebench/sweb.eval.x86_64.marshmallow-code_1776_marshmallow-1343:latest"
+      ],
+      "RepoDigests": [
+        "swebench/sweb.eval.x86_64.marshmallow-code_1776_marshmallow-1343@sha256:a61197e0b29461e34010cd83570424eb91a7f265574a81c82ff79e55c6c10f29"
+      ],
+      "Created": "2025-05-06T23:07:22.727847879Z",
+      "Config": {
+        "Env": [
+          "PATH=/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "TZ=Etc/UTC"
+        ],
+        "Cmd": [
+          "/bin/bash"
+        ],
+        "WorkingDir": "/testbed",
+        "Labels": {
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "22.04"
+        }
+      },
+      "Architecture": "amd64",
+      "Os": "linux",
+      "Size": 3569450459,
+      "RootFS": {
+        "Type": "layers",
+        "Layers": [
+          "sha256:270a1170e7e398434ff1b31e17e233f7d7b71aa99a40473615860068e86720af",
+          "sha256:19a4d2f856e78f04553c6b694c49ad06f099a12feff6aa310c29b9829919ea15",
+          "sha256:204d3aea13f935e6a5dcd306cfc96e90ca3b08c968d6c00e97ace1fd337b52f0",
+          "sha256:7dd377bf7d9b8847c7f1e2077479fbc4693999063ab3c1a258bb749399080775",
+          "sha256:c4435ce7c254e80c46372735bb182e9b323024d7c81e56f2c83df68242ef02cb",
+          "sha256:58bc823e8f358658604b06af8d570cdeeeb8f6381ce3ddebf61b9f20fc9fd2f6",
+          "sha256:33ffd1665771db79dd71815ca3f0401d1648c190872bae18d780a32afb70604f",
+          "sha256:33ffd1665771db79dd71815ca3f0401d1648c190872bae18d780a32afb70604f",
+          "sha256:2779a069900b4a002e325098d302117c4d905a5670ca6e93275621ba70fcbe45",
+          "sha256:c4b4adb0ab948959dfc35580577952688b9ca4f83cb6e214073cd5c37fc068e2",
+          "sha256:26e7564a25bd9d51bda1d4a189cff0d553c697b41374a6f2f475b575d8581ee9",
+          "sha256:84a998a1f4d68cd4fca0f3adc1939cf1088eadc7fadbb4249a98e1973ef35b70",
+          "sha256:c4606af36790ac57084831c4fb0a1e2436884362b7b5dfb22f84728f2228acf1",
+          "sha256:3e394385046b97aecdbfc00e18b49ef8b97c977121704db036b0da313fb66454",
+          "sha256:a137192a21c43101a4d7b0e79d2923e8cca175e96371dc124bfbf37cb1036602"
+        ]
+      },
+      "Metadata": {
+        "LastTagTime": "2026-11-06T09:59:55.56235077Z"
+      },
+      "Descriptor": {
+        "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+        "digest": "sha256:a61197e0b29461e34010cd83570424eb91a7f265574a81c82ff79e55c6c10f29",
+        "size": 3452
+      },
+      "Identity": {
+        "Pull": [
+          {
+            "Repository": "docker.io/swebench/sweb.eval.x86_64.marshmallow-code_1776_marshmallow-1343"
+          }
+        ]
+      }
+    }
+  ],
+  "base_verification": {
+    "expected_base_commit": "2be2d83a1a9a6d3d9b85804f3ab545cecc409bb0",
+    "image_head": "d4f98233971ee3e73bba47026cd77b4ba69a25bb",
+    "base_tree": "a38157586804d01a22947322408a8a2a09b39bce",
+    "image_tree": "a38157586804d01a22947322408a8a2a09b39bce",
+    "tracked_tree_identical": true,
+    "clean_worktree": true
+  }
+}

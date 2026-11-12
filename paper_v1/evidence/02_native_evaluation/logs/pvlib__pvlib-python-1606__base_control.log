@@ -1,0 +1,154 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.23, pytest-8.4.1, pluggy-1.6.0
+rootdir: /content/native_evaluation/eval_repos/pvlib__pvlib-python-1606
+configfile: pyproject.toml
+collected 11 items
+
+pvlib/tests/test_tools.py ........F..                                    [100%]
+
+=================================== FAILURES ===================================
+______________________ test__golden_sect_DataFrame_vector ______________________
+
+    def test__golden_sect_DataFrame_vector():
+        params = {'c': np.array([1., 2.]), 'n': np.array([1., 1.])}
+        lower = np.array([0., 0.001])
+        upper = np.array([1.1, 1.2])
+        expected = np.array([0.5, 0.25])
+        v, x = tools._golden_sect_DataFrame(params, lower, upper,
+                                            _obj_test_golden_sect)
+        assert np.allclose(x, expected, atol=1e-8)
+        # some upper and lower bounds equal
+        params = {'c': np.array([1., 2., 1.]), 'n': np.array([1., 1., 1.])}
+        lower = np.array([0., 0.001, 1.])
+        upper = np.array([1., 1.2, 1.])
+        expected = np.array([0.5, 0.25, 1.0])  # x values for maxima
+        v, x = tools._golden_sect_DataFrame(params, lower, upper,
+                                            _obj_test_golden_sect)
+        assert np.allclose(x, expected, atol=1e-8)
+        # all upper and lower bounds equal, arrays of length 1
+        params = {'c': np.array([1.]), 'n': np.array([1.])}
+        lower = np.array([1.])
+        upper = np.array([1.])
+        expected = np.array([1.])  # x values for maxima
+>       v, x = tools._golden_sect_DataFrame(params, lower, upper,
+                                            _obj_test_golden_sect)
+
+pvlib/tests/test_tools.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+params = {'VH': array([1.]), 'VL': array([1.]), 'c': array([1.]), 'n': array([1.])}
+lower = array([1.]), upper = array([1.])
+func = <function _obj_test_golden_sect at 0x7d41b65ae940>, atol = 1e-08
+
+    def _golden_sect_DataFrame(params, lower, upper, func, atol=1e-8):
+        """
+        Vectorized golden section search for finding maximum of a function of a
+        single variable.
+    
+        Parameters
+        ----------
+        params : dict of numeric
+            Parameters to be passed to `func`. Each entry must be of the same
+            length.
+    
+        lower: numeric
+            Lower bound for the optimization. Must be the same length as each
+            entry of params.
+    
+        upper: numeric
+            Upper bound for the optimization. Must be the same length as each
+            entry of params.
+    
+        func: function
+            Function to be optimized. Must be in the form
+            result = f(dict or DataFrame, str), where result is a dict or DataFrame
+            that also contains the function output, and str is the key
+            corresponding to the function's input variable.
+    
+        Returns
+        -------
+        numeric
+            function evaluated at the optimal points
+    
+        numeric
+            optimal points
+    
+        Notes
+        -----
+        This function will find the points where the function is maximized.
+        Returns nan where lower or upper is nan, or where func evaluates to nan.
+    
+        See also
+        --------
+        pvlib.singlediode._pwr_optfcn
+        """
+    
+        phim1 = (np.sqrt(5) - 1) / 2
+    
+        df = params
+        df['VH'] = upper
+        df['VL'] = lower
+    
+        converged = False
+        iterations = 0
+    
+        # handle all NaN case gracefully
+        with warnings.catch_warnings():
+            warnings.filterwarnings(action='ignore',
+                                    message='All-NaN slice encountered')
+            iterlimit = 1 + np.nanmax(
+                np.trunc(np.log(atol / (df['VH'] - df['VL'])) / np.log(phim1)))
+    
+        while not converged and (iterations <= iterlimit):
+    
+            phi = phim1 * (df['VH'] - df['VL'])
+            df['V1'] = df['VL'] + phi
+            df['V2'] = df['VH'] - phi
+    
+            df['f1'] = func(df, 'V1')
+            df['f2'] = func(df, 'V2')
+            df['SW_Flag'] = df['f1'] > df['f2']
+    
+            df['VL'] = df['V2']*df['SW_Flag'] + df['VL']*(~df['SW_Flag'])
+            df['VH'] = df['V1']*~df['SW_Flag'] + df['VH']*(df['SW_Flag'])
+    
+            err = abs(df['V2'] - df['V1'])
+    
+            # works with single value because err is np.float64
+            converged = (err[~np.isnan(err)] < atol).all()
+            # err will be less than atol before iterations hit the limit
+            # but just to be safe
+            iterations += 1
+    
+        if iterations > iterlimit:
+>           raise Exception("Iterations exceeded maximum. Check that func",
+                            " is not NaN in (lower, upper)")  # pragma: no cover
+E           Exception: ('Iterations exceeded maximum. Check that func', ' is not NaN in (lower, upper)')
+
+pvlib/tools.py:383: Exception
+=============================== warnings summary ===============================
+pvlib/tests/conftest.py:7
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1606/pvlib/tests/conftest.py:7: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+    from pkg_resources import parse_version
+
+pvlib/tests/test_tools.py::test__golden_sect_DataFrame_vector
+pvlib/tests/test_tools.py::test__golden_sect_DataFrame_vector
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1606/pvlib/tools.py:359: RuntimeWarning: divide by zero encountered in divide
+    np.trunc(np.log(atol / (df['VH'] - df['VL'])) / np.log(phim1)))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED pvlib/tests/test_tools.py::test_build_kwargs[keys0-input_dict0-expected0]
+PASSED pvlib/tests/test_tools.py::test_build_kwargs[keys1-input_dict1-expected1]
+PASSED pvlib/tests/test_tools.py::test_build_kwargs[keys2-input_dict2-expected2]
+PASSED pvlib/tests/test_tools.py::test_build_kwargs[keys3-input_dict3-expected3]
+PASSED pvlib/tests/test_tools.py::test__golden_sect_DataFrame[params0-0.0-1.0-0.5-_obj_test_golden_sect]
+PASSED pvlib/tests/test_tools.py::test__golden_sect_DataFrame[params1-0.0-1.0-0.07230200263994839-_obj_test_golden_sect]
+PASSED pvlib/tests/test_tools.py::test__golden_sect_DataFrame[params2-0.0-100.0-89.14332727531685-_obj_test_golden_sect]
+PASSED pvlib/tests/test_tools.py::test__golden_sect_DataFrame_atol
+PASSED pvlib/tests/test_tools.py::test__golden_sect_DataFrame_nans
+PASSED pvlib/tests/test_tools.py::test_degrees_to_index_1
+FAILED pvlib/tests/test_tools.py::test__golden_sect_DataFrame_vector - Except...
+=================== 1 failed, 10 passed, 3 warnings in 0.45s ===================
+

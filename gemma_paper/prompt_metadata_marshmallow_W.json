@@ -1,0 +1,15 @@
+{
+  "task_id": "marshmallow-code__marshmallow-1343",
+  "condition": "W",
+  "tokenizer_model_id": "google/gemma-4-E4B-it",
+  "tokenizer_revision": "4ecc2ba63bcac23ba4a767fc87025b1450f84c9c",
+  "evidence_sha256": "e1a42d2b12ca9881f15c52557c05839a12d06a1fff314b2d0ec57ea075e5ce4e",
+  "prompt_sha256": "9df41f58c40d96a5786e0bfa10ddb3f4c7c19ab7bd27abb01ddc339f1a91187e",
+  "configuration_sha256": "66a43fc8af2fdbda75bdc300b11cfd3748eebb112baf0557dd13f274116e94ec",
+  "isolated_token_counts": {
+    "evidence_tokens": 3936,
+    "problem_statement_tokens": 754,
+    "template_and_instructions_tokens": 120
+  },
+  "actual_tensor_input_tokens_passed_to_generate": 4810
+}

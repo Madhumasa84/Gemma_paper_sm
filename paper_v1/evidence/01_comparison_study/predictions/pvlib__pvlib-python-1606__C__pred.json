@@ -1,0 +1,6 @@
+{
+  "model_name_or_path": "google/gemma-4-E4B-it_int8",
+  "instance_id": "pvlib__pvlib-python-1606",
+  "condition": "C",
+  "model_patch": "--- a/pvlib/tools.py\n+++ b/pvlib/tools.py\n@@ -360,7 +360,10 @@\n     \"\"\"\n     Vectorized golden section search for finding maximum of a function of a\n     single variable.\n-\n+    \n+    Note: This function relies on the assumption that the function being maximized\n+    is unimodal within the interval [lower, upper].\n+    \n     Parameters\n     ----------\n     params : dict of numeric\n@@ -371,6 +374,10 @@\n     atol : float, optional\n         Absolute tolerance of the search. Default is 1e-8.\n \n+    Raises\n+    ------\n+    Exception\n+        If iterations exceed maximum or if the function value is NaN at bounds.\n     \"\"\"\n     if lower >= upper:\n         raise Exception(\"Iterations exceeded maximum. Check that func is not NaN in (lower, upper)\")\n"
+}

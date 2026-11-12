@@ -1,0 +1,14 @@
+```diff
+--- a/pvlib/iam.py
++++ b/pvlib/iam.py
+@@ -91,6 +91,10 @@
+     aoi : numeric
+         The angle of incidence between the module normal vector and the
+ 
++    If aoi > 90 and n=1, the result should be 0, not nan.
++    This is a specific fix for the regression issue.
++
+     Parameters
+     ----------
+     aoi : numeric
+```

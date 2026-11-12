@@ -1,0 +1,94 @@
+The issue states that `pvlib.irradiance.reindl()` generates NaNs or Infs when GHI = 0 because "term3" has a quotient that divides by GHI.
+
+Looking at `reindl` in `pvlib/irradiance.py`:
+```python
+    # these are the () and [] sub-terms of the second term of eqn 8
+    term1 = 1 - AI
+    term2 = 0.5 * (1 + tools.cosd(surface_tilt))
+    term3 = 1 + np.sqrt(HB / ghi) * (tools.sind(0.5 * surface_tilt) ** 3)
+
+    sky_diffuse = dhi * (AI * Rb + term1 * term2 * term3)
+```
+`term3` involves `np.sqrt(HB / ghi)`. If `ghi` is 0, this results in division by zero, leading to `Inf` or `NaN` depending on `HB`.
+
+The expected behavior is that the sky diffuse component should be zero when GHI is zero.
+
+If GHI is zero, it implies no solar radiation is hitting the horizontal surface. If $GHI=0$, then $HB = DNI \cos(\theta_z)$ must also be zero (since $DNI \le GHI$). If $HB=0$ and $GHI=0$, the term $\sqrt{HB/GHI}$ is $0/0$, which is NaN.
+
+We need to handle the case where `ghi` is zero before calculating `term3`.
+
+If $GHI=0$, then $HB$ must be 0 (since $HB \le GHI$). If $HB=0$ and $GHI=0$, we should treat $\sqrt{HB/GHI}$ as 0 to ensure `term3` is 1, and thus `sky_diffuse` is 0 (since $DHI$ is likely 0 or small when $GHI=0$).
+
+We can use `np.where` to check for `ghi == 0`.
+
+If `ghi == 0`:
+1. $HB$ must be 0 (or very close to 0).
+2. $\sqrt{HB/GHI}$ should be treated as 0.
+3. $term3 = 1 + 0 \times (\dots) = 1$.
+4. $sky\_diffuse = dhi \times (AI \times Rb + term1 \times term2 \times 1)$.
+
+However, if $GHI=0$, then $DHI$ must also be 0 (since $DHI = GHI - DNI \cos(\theta_z)$ and $DNI \cos(\theta_z) \le GHI$). If $DHI=0$, then $sky\_diffuse$ will be 0 regardless of $term3$.
+
+Let's check the relationship: $DHI = GHI - DNI \cos(\theta_z)$. If $GHI=0$, then $DHI = -DNI \cos(\theta_z)$. Since $DNI \ge 0$ and $\cos(\theta_z) \ge 0$, $DHI$ must be $\le 0$. Since $DHI$ is irradiance, it should be $\ge 0$. This implies $DNI=0$ when $GHI=0$. If $DNI=0$, then $HB=0$.
+
+If $GHI=0$, then $DHI$ should be 0 (or very close to 0 if $DNI$ is slightly positive due to numerical errors, but ideally $DHI=0$). If $DHI=0$, then $sky\_diffuse = 0$.
+
+If we ensure $DHI$ is non-negative (which it should be, as it's an irradiance component), and if $GHI=0$, then $DHI$ should be 0.
+
+The calculation of $sky\_diffuse$ is:
+$$I_{d} = DHI \left( AI R_b + (1 - AI) \frac{1 + \cos\beta}{2} \left(1 + \sqrt{\frac{HB}{GHI}} \sin^3(\beta/2)\right) \right)$$
+
+If $GHI=0$, we must ensure the term $\sqrt{HB/GHI}$ is handled.
+
+If $GHI=0$, then $HB$ must be 0. We can replace $\sqrt{HB/GHI}$ with 0 when $GHI=0$.
+
+```python
+    # ...
+    # Anisotropy Index
+    AI = dni / dni_extra
+
+    # DNI projected onto horizontal
+    HB = dni * cos_solar_zenith
+    HB = np.maximum(HB, 0)
+
+    # Handle GHI = 0 case to prevent division by zero in term3
+    sqrt_ratio = np.zeros_like(ghi)
+    non_zero_ghi = ghi > 0
+    sqrt_ratio[non_zero_ghi] = np.sqrt(HB[non_zero_ghi] / ghi[non_zero_ghi])
+
+    # these are the () and [] sub-terms of the second term of eqn 8
+    term1 = 1 - AI
+    term2 = 0.5 * (1 + tools.cosd(surface_tilt))
+    term3 = 1 + sqrt_ratio * (tools.sind(0.5 * surface_tilt) ** 3)
+
+    sky_diffuse = dhi * (AI * Rb + term1 * term2 * term3)
+    # ...
+```
+This seems like the correct fix to prevent division by zero while maintaining the mathematical intent (if $GHI=0$, the ratio term should effectively be 0).
+
+Let's apply this to `pvlib/irradiance.py`.
+
+```diff
+--- a/pvlib/irradiance.py
++++ b/pvlib/irradiance.py
+@@ -70,13 +70,18 @@
+     # DNI projected onto horizontal
+     HB = dni * cos_solar_zenith
+     HB = np.maximum(HB, 0)
+ 
+-    # these are the () and [] sub-terms of the second term of eqn 8
++    # Handle GHI = 0 case to prevent division by zero in term3
++    sqrt_ratio = np.zeros_like(ghi)
++    non_zero_ghi = ghi > 0
++    sqrt_ratio[non_zero_ghi] = np.sqrt(HB[non_zero_ghi] / ghi[non_zero_ghi])
++
++    # these are the () and [] sub-terms of the second term of eqn 8
+     term1 = 1 - AI
+     term2 = 0.5 * (1 + tools.cosd(surface_tilt))
+-    term3 = 1 + np.sqrt(HB / ghi) * (tools.sind(0.5 * surface_tilt) ** 3)
++    term3 = 1 + sqrt_ratio * (tools.sind(0.5 * surface_tilt) ** 3)
+ 
+     sky_diffuse = dhi * (AI * Rb + term1 * term2 * term3)
+     sky_diffuse = np.maximum(sky_diffuse, 0)
+ 
+```

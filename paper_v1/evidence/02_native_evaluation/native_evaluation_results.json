@@ -1,0 +1,360 @@
+[
+  {
+    "instance_id": "pvlib__pvlib-python-1154",
+    "repo": "pvlib/pvlib-python",
+    "base_commit": "0b8f24c265d76320067a5ee908a57d475cd1bb24",
+    "control_passed": true,
+    "base_regression_failed": true,
+    "ref_passed": true,
+    "conditions": {
+      "W": {
+        "status": "EVALUATED",
+        "resolution": "UNRESOLVED",
+        "f2p_all_passed": false,
+        "p2p_any_failed": false,
+        "strict_applicable": true,
+        "recount_applicable": true,
+        "generated_tokens": 257
+      },
+      "A": {
+        "status": "EVALUATED",
+        "resolution": "UNRESOLVED",
+        "f2p_all_passed": true,
+        "p2p_any_failed": true,
+        "strict_applicable": false,
+        "recount_applicable": true,
+        "generated_tokens": 1640
+      },
+      "B": {
+        "status": "NOT_APPLICABLE",
+        "resolution": "UNRESOLVED",
+        "reason": "Failed git apply --recount check",
+        "strict_applicable": false,
+        "recount_applicable": false,
+        "generated_tokens": 1856
+      },
+      "C": {
+        "status": "EVALUATED",
+        "resolution": "UNRESOLVED",
+        "f2p_all_passed": false,
+        "p2p_any_failed": false,
+        "strict_applicable": false,
+        "recount_applicable": true,
+        "generated_tokens": 797
+      }
+    }
+  },
+  {
+    "instance_id": "pvlib__pvlib-python-1606",
+    "repo": "pvlib/pvlib-python",
+    "base_commit": "c78b50f4337ecbe536a961336ca91a1176efc0e8",
+    "control_passed": true,
+    "base_regression_failed": true,
+    "ref_passed": true,
+    "conditions": {
+      "W": {
+        "status": "NOT_APPLICABLE",
+        "resolution": "UNRESOLVED",
+        "reason": "Failed git apply --recount check",
+        "strict_applicable": false,
+        "recount_applicable": false,
+        "generated_tokens": 234
+      },
+      "A": {
+        "status": "EVALUATED",
+        "resolution": "UNRESOLVED",
+        "f2p_all_passed": false,
+        "p2p_any_failed": false,
+        "strict_applicable": true,
+        "recount_applicable": true,
+        "generated_tokens": 289
+      },
+      "B": {
+        "status": "NOT_APPLICABLE",
+        "resolution": "UNRESOLVED",
+        "reason": "Failed git apply --recount check",
+        "strict_applicable": false,
+        "recount_applicable": false,
+        "generated_tokens": 554
+      },
+      "C": {
+        "status": "NOT_APPLICABLE",
+        "resolution": "UNRESOLVED",
+        "reason": "Failed git apply --recount check",
+        "strict_applicable": false,
+        "recount_applicable": false,
+        "generated_tokens": 216
+      }
+    }
+  },
+  {
+    "instance_id": "pvlib__pvlib-python-1707",
+    "repo": "pvlib/pvlib-python",
+    "base_commit": "40e9e978c170bdde4eeee1547729417665dbc34c",
+    "control_passed": true,
+    "base_regression_failed": true,
+    "ref_passed": true,
+    "conditions": {
+      "W": {
+        "status": "NOT_APPLICABLE",
+        "resolution": "UNRESOLVED",
+        "reason": "Failed git apply --recount check",
+        "strict_applicable": false,
+        "recount_applicable": false,
+        "generated_tokens": 1510
+      },
+      "A": {
+        "status": "EVALUATED",
+        "resolution": "UNRESOLVED",
+        "f2p_all_passed": false,
+        "p2p_any_failed": false,
+        "strict_applicable": false,
+        "recount_applicable": true,
+        "generated_tokens": 147
+      },
+      "B": {
+        "status": "NOT_APPLICABLE",
+        "resolution": "UNRESOLVED",
+        "reason": "Failed git apply --recount check",
+        "strict_applicable": false,
+        "recount_applicable": false,
+        "generated_tokens": 112
+      },
+      "C": {
+        "status": "EVALUATED",
+        "resolution": "UNRESOLVED",
+        "f2p_all_passed": false,
+        "p2p_any_failed": true,
+        "strict_applicable": false,
+        "recount_applicable": true,
+        "generated_tokens": 139
+      }
+    }
+  },
+  {
+    "instance_id": "pvlib__pvlib-python-1854",
+    "repo": "pvlib/pvlib-python",
+    "base_commit": "27a3a07ebc84b11014d3753e4923902adf9a38c0",
+    "control_passed": true,
+    "base_regression_failed": true,
+    "ref_passed": true,
+    "conditions": {
+      "W": {
+        "status": "NOT_APPLICABLE",
+        "resolution": "UNRESOLVED",
+        "reason": "Failed git apply --recount check",
+        "strict_applicable": false,
+        "recount_applicable": false,
+        "generated_tokens": 192
+      },
+      "A": {
+        "status": "EVALUATED",
+        "resolution": "UNRESOLVED",
+        "f2p_all_passed": false,
+        "p2p_any_failed": false,
+        "strict_applicable": false,
+        "recount_applicable": true,
+        "generated_tokens": 240
+      },
+      "B": {
+        "status": "NOT_APPLICABLE",
+        "resolution": "UNRESOLVED",
+        "reason": "Failed git apply --recount check",
+        "strict_applicable": false,
+        "recount_applicable": false,
+        "generated_tokens": 127
+      },
+      "C": {
+        "status": "EVALUATED",
+        "resolution": "UNRESOLVED",
+        "f2p_all_passed": false,
+        "p2p_any_failed": false,
+        "strict_applicable": false,
+        "recount_applicable": true,
+        "generated_tokens": 186
+      }
+    }
+  },
+  {
+    "instance_id": "pydicom__pydicom-1256",
+    "repo": "pydicom/pydicom",
+    "base_commit": "49a3da4a3d9c24d7e8427a25048a1c7d5c4f7724",
+    "control_passed": true,
+    "base_regression_failed": true,
+    "ref_passed": true,
+    "conditions": {
+      "W": {
+        "status": "EVALUATED",
+        "resolution": "UNRESOLVED",
+        "f2p_all_passed": false,
+        "p2p_any_failed": false,
+        "strict_applicable": false,
+        "recount_applicable": true,
+        "generated_tokens": 1651
+      },
+      "A": {
+        "status": "NOT_APPLICABLE",
+        "resolution": "UNRESOLVED",
+        "reason": "Failed git apply --recount check",
+        "strict_applicable": false,
+        "recount_applicable": false,
+        "generated_tokens": 2048
+      },
+      "B": {
+        "status": "EVALUATED",
+        "resolution": "UNRESOLVED",
+        "f2p_all_passed": false,
+        "p2p_any_failed": false,
+        "strict_applicable": false,
+        "recount_applicable": true,
+        "generated_tokens": 120
+      },
+      "C": {
+        "status": "NOT_APPLICABLE",
+        "resolution": "UNRESOLVED",
+        "reason": "Failed git apply --recount check",
+        "strict_applicable": false,
+        "recount_applicable": false,
+        "generated_tokens": 2048
+      }
+    }
+  },
+  {
+    "instance_id": "pydicom__pydicom-1413",
+    "repo": "pydicom/pydicom",
+    "base_commit": "f909c76e31f759246cec3708dadd173c5d6e84b1",
+    "control_passed": true,
+    "base_regression_failed": true,
+    "ref_passed": true,
+    "conditions": {
+      "W": {
+        "status": "GENERATION_PENDING",
+        "resolution": "PENDING_GENERATION"
+      },
+      "A": {
+        "status": "NOT_APPLICABLE",
+        "resolution": "UNRESOLVED",
+        "reason": "Failed git apply --recount check",
+        "strict_applicable": false,
+        "recount_applicable": false,
+        "generated_tokens": 2048
+      },
+      "B": {
+        "status": "NOT_APPLICABLE",
+        "resolution": "UNRESOLVED",
+        "reason": "Failed git apply --recount check",
+        "strict_applicable": false,
+        "recount_applicable": false,
+        "generated_tokens": 2048
+      },
+      "C": {
+        "status": "GENERATION_PENDING",
+        "resolution": "PENDING_GENERATION"
+      }
+    }
+  },
+  {
+    "instance_id": "pydicom__pydicom-1694",
+    "repo": "pydicom/pydicom",
+    "base_commit": "f8cf45b6c121e5a4bf4a43f71aba3bc64af3db9c",
+    "control_passed": true,
+    "base_regression_failed": true,
+    "ref_passed": true,
+    "conditions": {
+      "W": {
+        "status": "GENERATION_PENDING",
+        "resolution": "PENDING_GENERATION"
+      },
+      "A": {
+        "status": "GENERATION_PENDING",
+        "resolution": "PENDING_GENERATION"
+      },
+      "B": {
+        "status": "GENERATION_PENDING",
+        "resolution": "PENDING_GENERATION"
+      },
+      "C": {
+        "status": "GENERATION_PENDING",
+        "resolution": "PENDING_GENERATION"
+      }
+    }
+  },
+  {
+    "instance_id": "pydicom__pydicom-901",
+    "repo": "pydicom/pydicom",
+    "base_commit": "3746878d8edf1cbda6fbcf35eec69f9ba79301ca",
+    "control_passed": true,
+    "base_regression_failed": true,
+    "ref_passed": true,
+    "conditions": {
+      "W": {
+        "status": "GENERATION_PENDING",
+        "resolution": "PENDING_GENERATION"
+      },
+      "A": {
+        "status": "GENERATION_PENDING",
+        "resolution": "PENDING_GENERATION"
+      },
+      "B": {
+        "status": "GENERATION_PENDING",
+        "resolution": "PENDING_GENERATION"
+      },
+      "C": {
+        "status": "GENERATION_PENDING",
+        "resolution": "PENDING_GENERATION"
+      }
+    }
+  },
+  {
+    "instance_id": "pylint-dev__astroid-1196",
+    "repo": "pylint-dev/astroid",
+    "base_commit": "39c2a9805970ca57093d32bbaf0e6a63e05041d8",
+    "control_passed": true,
+    "base_regression_failed": true,
+    "ref_passed": true,
+    "conditions": {
+      "W": {
+        "status": "GENERATION_PENDING",
+        "resolution": "PENDING_GENERATION"
+      },
+      "A": {
+        "status": "GENERATION_PENDING",
+        "resolution": "PENDING_GENERATION"
+      },
+      "B": {
+        "status": "GENERATION_PENDING",
+        "resolution": "PENDING_GENERATION"
+      },
+      "C": {
+        "status": "GENERATION_PENDING",
+        "resolution": "PENDING_GENERATION"
+      }
+    }
+  },
+  {
+    "instance_id": "pylint-dev__astroid-1268",
+    "repo": "pylint-dev/astroid",
+    "base_commit": "ce5cbce5ba11cdc2f8139ade66feea1e181a7944",
+    "control_passed": true,
+    "base_regression_failed": true,
+    "ref_passed": true,
+    "conditions": {
+      "W": {
+        "status": "GENERATION_PENDING",
+        "resolution": "PENDING_GENERATION"
+      },
+      "A": {
+        "status": "GENERATION_PENDING",
+        "resolution": "PENDING_GENERATION"
+      },
+      "B": {
+        "status": "GENERATION_PENDING",
+        "resolution": "PENDING_GENERATION"
+      },
+      "C": {
+        "status": "GENERATION_PENDING",
+        "resolution": "PENDING_GENERATION"
+      }
+    }
+  }
+]

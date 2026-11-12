@@ -1,0 +1,114 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.23, pytest-7.4.4, pluggy-1.6.0
+rootdir: /content/native_evaluation/eval_repos/pylint-dev__astroid-1196
+configfile: setup.cfg
+collected 26 items
+
+tests/unittest_python3.py ....................FF....                     [100%]
+
+=================================== FAILURES ===================================
+_____________ Python3TC.test_unpacking_in_dict_getitem_uninferable _____________
+
+    @staticmethod
+    def test_unpacking_in_dict_getitem_uninferable() -> None:
+        node = extract_node("{**a, 2: 3}")
+        assert isinstance(node, nodes.Dict)
+    
+        with pytest.raises(exceptions.AstroidIndexError):
+>           node.getitem(nodes.Const(1))
+
+tests/unittest_python3.py:311: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Dict.dict l.1 at 0x77fcad4c7fa0>
+index = <Const.int l.None at 0x77fcad491100>, context = None
+
+    def getitem(self, index, context=None):
+        """Get an item from this node.
+    
+        :param index: The node to use as a subscript index.
+        :type index: Const or Slice
+    
+        :raises AstroidTypeError: When the given index cannot be used as a
+            subscript index, or if this node is not subscriptable.
+        :raises AstroidIndexError: If the given index does not exist in the
+            dictionary.
+        """
+        for key, value in self.items:
+            # TODO(cpopa): no support for overriding yet, {1:2, **{1: 3}}.
+            if isinstance(key, DictUnpack):
+                try:
+>                   return value.getitem(index, context)
+E                   AttributeError: 'Name' object has no attribute 'getitem'
+
+astroid/nodes/node_classes.py:2364: AttributeError
+______________ Python3TC.test_unpacking_in_dict_getitem_with_ref _______________
+
+    @staticmethod
+    def test_unpacking_in_dict_getitem_with_ref() -> None:
+        node = extract_node(
+            """
+        a = {1: 2}
+        {**a, 2: 3}  #@
+        """
+        )
+        assert isinstance(node, nodes.Dict)
+    
+        for key, expected in ((1, 2), (2, 3)):
+>           value = node.getitem(nodes.Const(key))
+
+tests/unittest_python3.py:301: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Dict.dict l.3 at 0x77fcad5d1b50>
+index = <Const.int l.None at 0x77fcad585ee0>, context = None
+
+    def getitem(self, index, context=None):
+        """Get an item from this node.
+    
+        :param index: The node to use as a subscript index.
+        :type index: Const or Slice
+    
+        :raises AstroidTypeError: When the given index cannot be used as a
+            subscript index, or if this node is not subscriptable.
+        :raises AstroidIndexError: If the given index does not exist in the
+            dictionary.
+        """
+        for key, value in self.items:
+            # TODO(cpopa): no support for overriding yet, {1:2, **{1: 3}}.
+            if isinstance(key, DictUnpack):
+                try:
+>                   return value.getitem(index, context)
+E                   AttributeError: 'Name' object has no attribute 'getitem'
+
+astroid/nodes/node_classes.py:2364: AttributeError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/unittest_python3.py::Python3TC::test_annotation_as_string
+PASSED tests/unittest_python3.py::Python3TC::test_annotation_support
+PASSED tests/unittest_python3.py::Python3TC::test_as_string
+PASSED tests/unittest_python3.py::Python3TC::test_async_comprehensions
+PASSED tests/unittest_python3.py::Python3TC::test_async_comprehensions_as_string
+PASSED tests/unittest_python3.py::Python3TC::test_async_comprehensions_outside_coroutine
+PASSED tests/unittest_python3.py::Python3TC::test_format_string
+PASSED tests/unittest_python3.py::Python3TC::test_kwonlyargs_annotations_supper
+PASSED tests/unittest_python3.py::Python3TC::test_metaclass_ancestors
+PASSED tests/unittest_python3.py::Python3TC::test_metaclass_error
+PASSED tests/unittest_python3.py::Python3TC::test_metaclass_imported
+PASSED tests/unittest_python3.py::Python3TC::test_metaclass_multiple_keywords
+PASSED tests/unittest_python3.py::Python3TC::test_metaclass_yes_leak
+PASSED tests/unittest_python3.py::Python3TC::test_nested_unpacking_in_dicts
+PASSED tests/unittest_python3.py::Python3TC::test_old_syntax_works
+PASSED tests/unittest_python3.py::Python3TC::test_parent_metaclass
+PASSED tests/unittest_python3.py::Python3TC::test_simple_metaclass
+PASSED tests/unittest_python3.py::Python3TC::test_starred_notation
+PASSED tests/unittest_python3.py::Python3TC::test_underscores_in_numeral_literal
+PASSED tests/unittest_python3.py::Python3TC::test_unpacking_in_dict_getitem
+PASSED tests/unittest_python3.py::Python3TC::test_unpacking_in_dicts
+PASSED tests/unittest_python3.py::Python3TC::test_yield_from
+PASSED tests/unittest_python3.py::Python3TC::test_yield_from_as_string
+PASSED tests/unittest_python3.py::Python3TC::test_yield_from_is_generator
+FAILED tests/unittest_python3.py::Python3TC::test_unpacking_in_dict_getitem_uninferable
+FAILED tests/unittest_python3.py::Python3TC::test_unpacking_in_dict_getitem_with_ref
+========================= 2 failed, 24 passed in 1.39s =========================
+

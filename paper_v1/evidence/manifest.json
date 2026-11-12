@@ -1,0 +1,1557 @@
+[
+  {
+    "path": "README.md",
+    "bytes": 10473,
+    "sha256": "66efcc019c1a7afdbe2948ae096fdecb8cf151a250b851277cfba65d88855bc5"
+  },
+  {
+    "path": "inventory.csv",
+    "bytes": 13501,
+    "sha256": "d54a3f4d5c9d78b1adaa7f536b8ed312df9e5ff547d1f2493d8d0b79e216edd4"
+  },
+  {
+    "path": "06_wsl_handoff/comparison_evaluator_handoff.tar.gz",
+    "bytes": 9026,
+    "sha256": "e6cbee4926c6dbcaeba2e478cc90239ba98069125ffef066d2e4cf555b3a3b98"
+  },
+  {
+    "path": "06_wsl_handoff/unpacked_handoff/all_predictions.jsonl",
+    "bytes": 22503,
+    "sha256": "d4d61b0cecc2baecc76c3311003f440990a481156a75d944effc7f8f366a7992"
+  },
+  {
+    "path": "06_wsl_handoff/unpacked_handoff/evaluator_manifest.json",
+    "bytes": 871,
+    "sha256": "1ed3a2508b87c0b509483e340129b7081ac2653f0948fd69e61861e4d5528cad"
+  },
+  {
+    "path": "06_wsl_handoff/unpacked_handoff/predictions_A.jsonl",
+    "bytes": 3815,
+    "sha256": "ded3f72dd1dd85abe9c153f1fef2462eaf06787d9dcf94dbc8e1134615b66f38"
+  },
+  {
+    "path": "06_wsl_handoff/unpacked_handoff/predictions_B.jsonl",
+    "bytes": 10652,
+    "sha256": "1dab08ee57c766c7f3bfcca5f419b1a3ce2588cf37d33be5c90d42728a26a180"
+  },
+  {
+    "path": "06_wsl_handoff/unpacked_handoff/predictions_C.jsonl",
+    "bytes": 5129,
+    "sha256": "1c87efdccf3ecc889b9d80ffc55f3970e4f8fced0167b51c3f571bb44c44d317"
+  },
+  {
+    "path": "06_wsl_handoff/unpacked_handoff/predictions_W.jsonl",
+    "bytes": 2907,
+    "sha256": "79b2efde6fe265d5dc4c511c6cb076df15c37990f95c7a1eed0db0c24ae2757d"
+  },
+  {
+    "path": "06_wsl_handoff/unpacked_handoff/run_evaluator_wsl.sh",
+    "bytes": 1054,
+    "sha256": "a5c295bc7c7f98e0135fc9c2d6a15a53564cfbea4f250f942739f32c43660d82"
+  },
+  {
+    "path": "05_old_protocol_colab_rerun/checkpoints/marshmallow-code__marshmallow-1343__W__a1__9df41f58__66a43fc8.json",
+    "bytes": 9652,
+    "sha256": "919043a8ffd5a74dc9023ab6588015d0c2df3fc691964cfc507c381befe43a72"
+  },
+  {
+    "path": "05_old_protocol_colab_rerun/predictions/marshmallow-code__marshmallow-1343__W__a1__9df41f58__66a43fc8.json",
+    "bytes": 921,
+    "sha256": "04fd7fc6b4500f72eb428c8a0a4dcb11b520a5bc71c4fb04f31dd3baa161478e"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/gemma_development_20261108T142140Z_07484dcb.zip",
+    "bytes": 104470,
+    "sha256": "b02c2dfb7e56de0b0b81958f3ae18e293dcf898673bcbfaf4782e84b6cea421c"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/gemma_fresh_development_instrumented_colab_v2.ipynb",
+    "bytes": 55718,
+    "sha256": "e7cb7eaa8a0cf5015ebb6d5c435ac36f93bf27947121f3036f02c59e8b764595"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/actual_generation_input_manifest.json",
+    "bytes": 624,
+    "sha256": "77ba991fb139c7dcb37a15a7fbd6fdf3ba7a9449913754c64c88bcc3c83ed8c6"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/actual_generation_inputs.pt",
+    "bytes": 116602,
+    "sha256": "16e692f13f997528ff878d70e20a3a4e0ac0847063d9837495eb18b38d51f76c"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/artifact_manifest.json",
+    "bytes": 5590,
+    "sha256": "67eda556b08cc05f28427bbd897f9ff34ad666a189ff1ccd256320947b37ce9b"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/base_commands.json",
+    "bytes": 1323,
+    "sha256": "042045ccf3a64ab154173564b97272febe2fa2bca9082d8c91601a64b60f47bf"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/chat_template.jinja",
+    "bytes": 18569,
+    "sha256": "0a2c8073c878ab1da004bee933a998606537bbb62016310352c7285c3f01c5b5"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/checkpoint.json",
+    "bytes": 1082,
+    "sha256": "17f80278e1fede225cba72fec479368ed3ddf363da93cffbc596ce72b342bb4f"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/decoded_input_with_special_tokens.txt",
+    "bytes": 17890,
+    "sha256": "7c337695c1fde31799c5d87c628d5d85f1644a8cba1887d6899815d16e02ea94"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/effective_generation_config.json",
+    "bytes": 2043,
+    "sha256": "3dbb8549268b32d0b0b6708374e10b8ae05b7036bce46eb0f89290b5c007f116"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/evidence.txt",
+    "bytes": 15367,
+    "sha256": "739b3ee069de9b9d484423fe11c4d62f1ffd9c749483b2eee1fd45a8de65f3d7"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/frozen_packet.json",
+    "bytes": 21285,
+    "sha256": "82973ee640f516d2faf22bde6e318d4fdaa6c27666e529c8022729469218a087"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/generation_call.json",
+    "bytes": 347,
+    "sha256": "1fd5f20dd2d624c8c4d27a63587f62de0a8c0d951b759776096e52d88d8a4eaa"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/generation_started.json",
+    "bytes": 81,
+    "sha256": "d3426fa9b75c945f4f7cc802ea3157393ee3962983cbb126816787523f88fb60"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/input_ids.json",
+    "bytes": 49881,
+    "sha256": "78f69a9178309d0a944951347a7b2520f5db7ae748eae68783629c459be92580"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/issue.txt",
+    "bytes": 1748,
+    "sha256": "e4caac19c9afeacc3d0660b41106012bca605a2f90ebb4756e7cc3be9b15b062"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/loaded_model_config.json",
+    "bytes": 6734,
+    "sha256": "3527e84a5a63e639c4f03cb8c4e98d6106a4ea3003d84319c330fc8e7bc484d9"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/loaded_snapshot.json",
+    "bytes": 604,
+    "sha256": "ee134c8c956858505caaa95ac877768c0afd603d85b5d3af7ead90dd3d133016"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/memory_after_generation.json",
+    "bytes": 264,
+    "sha256": "0285d26cd37075bebe58db9e190c6e86b70a9752200a18df781e745359d6a26b"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/memory_after_model_load.json",
+    "bytes": 264,
+    "sha256": "24127a5b92e8850ab31ecc01b7b5d3dcbe78b6fd33c11469b0ba8fd988898604"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/memory_before_generation.json",
+    "bytes": 264,
+    "sha256": "95f89dd09f93ab7dc3a676c74729d0c49712cbce72816c79ce15555966bf6a36"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/memory_before_model_load.json",
+    "bytes": 225,
+    "sha256": "d706142e2bb30f80bec344fb7a2399bcef8fdad2dde24d288b74a4536474a9b8"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/messages.json",
+    "bytes": 18521,
+    "sha256": "30b16bca1f0130a8d7dcc27b07d5cec5341a0ad015bd3e8e2fae670fd717bfe2"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/model_load_settings.json",
+    "bytes": 701,
+    "sha256": "551381608d8f4a6f5eec24e0e52bab3bdbd9f4fa6fff3fb7ef62973a4d38af67"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/output_sequences.pt",
+    "bytes": 45352,
+    "sha256": "9f472905af69269789a7ee69477ce0e7873f0130e8ebc57425a4918037015857"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/output_token_ids.json",
+    "bytes": 5996,
+    "sha256": "0453495f9a3eadd93b98f6a260704bfa28c6efa967b222fbbe4f682577f779f0"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/package_versions.json",
+    "bytes": 18948,
+    "sha256": "8a882a1dae2ac6b32c75f3cae4d8ff10a003ef77caa2b312546a7f315d0a41a8"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/processor_inputs.pt",
+    "bytes": 116466,
+    "sha256": "940f972ba2322ddbc6dc9a75b9a8a5efab1097ee88a0a8f3830cae5d8a6dbb9c"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/prompt.txt",
+    "bytes": 17853,
+    "sha256": "12baf5b17100bb56053e889fa056fa356f8a1a4c12776c55032650698e0f6530"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/protocol_v2_manifest.json",
+    "bytes": 752,
+    "sha256": "31ce9301c24a7734d99da8974a836597456e7f0b1e0fa7461606d1f85abca603"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/quantization_and_placement.json",
+    "bytes": 538140,
+    "sha256": "a787ca1959f94a6c1330b2cc80c79cf86eccbde45e5c5095c3b6e3987e9b1592"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/raw_output.txt",
+    "bytes": 2408,
+    "sha256": "352fd80dc2a1b6f80ab698c2b97cf2948345d011fec1016115dfb2eeff08e368"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/raw_output_with_special_tokens.txt",
+    "bytes": 2415,
+    "sha256": "dc363ca537639d7e8c5c540df8b66d1efdfa33e4a6095be54e197e6413cd05b5"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/rendered_prompt.txt",
+    "bytes": 17890,
+    "sha256": "7c337695c1fde31799c5d87c628d5d85f1644a8cba1887d6899815d16e02ea94"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/rendered_with_thinking_true_control.txt",
+    "bytes": 17922,
+    "sha256": "1e1dd5168af75ca0290932ded543c3190f0ca695710a467eefb490409607390e"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/run_state.json",
+    "bytes": 97,
+    "sha256": "5e46d678b2d034eed7dcff3a6d03d6e69209ab3001bd29f749f27caf3e6e016b"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/runtime.json",
+    "bytes": 282,
+    "sha256": "a20f9fba51db6bb22b027d5cdee347a82cd134cf99762c64df4c3a16c331d3b8"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/selection.json",
+    "bytes": 3067,
+    "sha256": "8dfca0d478a6e956ff5692174ff9e3a800aae36d41112ba0e429fd31285e2d59"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/source_validation.json",
+    "bytes": 1748,
+    "sha256": "a7bca11599760107559cb23edd8f49b782d642a11e64a16a70502ad8cecb5933"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/template_and_inputs.json",
+    "bytes": 1411,
+    "sha256": "da4b12495ba148dd9575dd1c9ddc43132b1d15722cf1a223833f94e07b140cd2"
+  },
+  {
+    "path": "03_development_run_marshmallow_1359/unpacked_execution_bundle/validation_passed.json",
+    "bytes": 284,
+    "sha256": "1a8fe86f3881452452346568ea960109112d758ad63003b1053fc0120d7eb645"
+  },
+  {
+    "path": "04_prior_three_task_pilot/combined_results.json",
+    "bytes": 119874,
+    "sha256": "5eb168d16b3cc4f437ffbfb014988a363934457ded1aeec89dbdcd2c30ff319b"
+  },
+  {
+    "path": "04_prior_three_task_pilot/combined_results.md",
+    "bytes": 31816,
+    "sha256": "c71ad2abbb9e08a97a70dfe469d9e3cc37cf4b328456cc47c7bd28fb33ab6383"
+  },
+  {
+    "path": "04_prior_three_task_pilot/evaluation_evidence.zip",
+    "bytes": 630991,
+    "sha256": "8b8da0d97ada264cbac6c26a3ba382e4c825c57753ba049bff64bfa04323d6fc"
+  },
+  {
+    "path": "04_prior_three_task_pilot/gemma_evidence_pilot.ipynb",
+    "bytes": 38698,
+    "sha256": "d0690005ca8a8a10898b4d5e6672634234d37e87261fcf16a28d0b11c38a1a3a"
+  },
+  {
+    "path": "04_prior_three_task_pilot/gemma_paper_handoff.zip",
+    "bytes": 115254,
+    "sha256": "a1ec19f266da51894872e81d0c491fa7bd27c8b4b6bd125ffbb3767311a5e5ec"
+  },
+  {
+    "path": "04_prior_three_task_pilot/kaggle_gemma_pilot.ipynb",
+    "bytes": 7608,
+    "sha256": "3ecb28e4031deb5a67ddfa6edc584b6b1980747fc5e4d02358f52c0de7d88529"
+  },
+  {
+    "path": "04_prior_three_task_pilot/marshmallow_evaluation_bundle.zip",
+    "bytes": 15700,
+    "sha256": "bf24e1c392f3c7185adf98154f4b0fbe70ebcc72a34a19f0a54a2cf5c2a656b0"
+  },
+  {
+    "path": "04_prior_three_task_pilot/results.json",
+    "bytes": 41374,
+    "sha256": "fe7bc7e1dd7be55143d2097af9f252da6e1e0f0150cd46ae38a8bb69305a33f5"
+  },
+  {
+    "path": "04_prior_three_task_pilot/results.md",
+    "bytes": 11311,
+    "sha256": "8f83fe48b6c2846ab1927dc93943f77ed1b0ec5a0880a108a52606005868ea0d"
+  },
+  {
+    "path": "04_prior_three_task_pilot/three_task_pilot_generations.zip",
+    "bytes": 26896,
+    "sha256": "1c52bcd34a153188435b9638d22d4f3581df41c05828175e9d86b6e435561c9c"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/processing_audit_v3/A.json",
+    "bytes": 681,
+    "sha256": "0e8e9319f0a63f7910d3bdfcbe5482fe726c7e7c0f70d9aad05ab39d1b88cceb"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/processing_audit_v3/B.json",
+    "bytes": 770,
+    "sha256": "465f43eed4f2189cb23bb20048f0b72047236581669bec22840c3a365d321b35"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/processing_audit_v3/C.json",
+    "bytes": 836,
+    "sha256": "e8b8045ac26b3868ee0be3be4c0cda0175e0a1b4f6282efe755f7a93e189e985"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/processing_audit_v3/W.json",
+    "bytes": 1578,
+    "sha256": "be7acbffc91755331de892a80b2e0fd17793ac46b308b7e1df5e8dd8f27f6207"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/checkpoints/marshmallow-code__marshmallow-1343__A__a1__25e8db93__0d94c473.json",
+    "bytes": 1891,
+    "sha256": "89e56540ce51cff561d787285487cd6d8a834d7907f92825cb54bbe004df05b1"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/checkpoints/marshmallow-code__marshmallow-1343__B__a1__3f933535__0d94c473.json",
+    "bytes": 2034,
+    "sha256": "d77b4d6c1c8d0d619b7616991b083aae8c6a2fd74cf7c88d6dd29eeb1ac5c195"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/checkpoints/marshmallow-code__marshmallow-1343__C__a1__fe45737d__0d94c473.json",
+    "bytes": 9517,
+    "sha256": "336b3a4b2511b4a7167261e869366d47d402d28563de56cc36a3c3c3cde28e47"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/checkpoints/marshmallow-code__marshmallow-1343__W__a1__aa52258f__0d94c473.json",
+    "bytes": 3722,
+    "sha256": "c8b38c20eaf3fb7e1aca0be9cdaa02fa9340573c68badd1cac8598f162ba5e9c"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/checkpoints/pvlib__pvlib-python-1072__A__a1__7d8940ea__0d94c473.json",
+    "bytes": 2890,
+    "sha256": "890a416f2c36adb4ac8294ae23dea7eb7b4839e1976c31684a82946d7f8e340d"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/checkpoints/pvlib__pvlib-python-1072__B__a1__4a106365__0d94c473.json",
+    "bytes": 6400,
+    "sha256": "9294fce657c0ec4576b1006afb933c7eb3af5cebf16eec3ceb2ba9c931a80e17"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/checkpoints/pvlib__pvlib-python-1072__C__a1__00e324d9__0d94c473.json",
+    "bytes": 2825,
+    "sha256": "03ce3132f0907edad042c64113b7a8508c7125f52b54ef633fcb1155d0962056"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/checkpoints/pvlib__pvlib-python-1072__W__a1__eb5e55b8__0d94c473.json",
+    "bytes": 2306,
+    "sha256": "a38681ad04043293f74848ec48d38a7605d0c6af7fa4987bf25537ad2dc09628"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/checkpoints/pydicom__pydicom-1139__A__a1__e2c04977__0d94c473.json",
+    "bytes": 2172,
+    "sha256": "cd4f1e45fc8e3343ada915c440ef95e2563bb05701e7868d709a0e71b8e52604"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/checkpoints/pydicom__pydicom-1139__B__a1__7ba62b02__0d94c473.json",
+    "bytes": 2202,
+    "sha256": "49a320fca62384100d2c0f44cd41945a1893fa5c60a7977b01a4c160513ed171"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/checkpoints/pydicom__pydicom-1139__C__a1__77c52864__0d94c473.json",
+    "bytes": 2719,
+    "sha256": "10d98928db278c8310f47f2f47adc5ad252c5d91260c1cfdc4713ee666bb0b1d"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/checkpoints/pydicom__pydicom-1139__W__a1__47d8388e__0d94c473.json",
+    "bytes": 1818,
+    "sha256": "bb2676eb8da7619d6bfca2235c69304dbaac62ce74e80e9e2a38fdd5b45d2a6c"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/predictions/marshmallow-code__marshmallow-1343__A__a1__25e8db93__0d94c473.json",
+    "bytes": 492,
+    "sha256": "5d9652cafdb56eba8c802ec937eefe56b1c283de08b7d198721567ffecdf26d7"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/predictions/marshmallow-code__marshmallow-1343__B__a1__3f933535__0d94c473.json",
+    "bytes": 581,
+    "sha256": "f24ed416b864546dfc3333d3415964f269c4bf5d29c12c66305bf19c8e814fb7"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/predictions/marshmallow-code__marshmallow-1343__C__a1__fe45737d__0d94c473.json",
+    "bytes": 2628,
+    "sha256": "6230f4ae6fecf1fec4d21a967eb3a3a2485ff41152b0c27f9ac7edc96d5bae86"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/predictions/marshmallow-code__marshmallow-1343__W__a1__aa52258f__0d94c473.json",
+    "bytes": 1389,
+    "sha256": "2469683e9c5f5d4cab2d5b3511d7fd1e0108ebed51de1e0d0b589f0017c683ac"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/predictions/pvlib__pvlib-python-1072__A__a1__7d8940ea__0d94c473.json",
+    "bytes": 991,
+    "sha256": "36df23af184de7cd1838fc991d276ca3085c8ba41e679368a0caf332c970f53f"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/predictions/pvlib__pvlib-python-1072__B__a1__4a106365__0d94c473.json",
+    "bytes": 2746,
+    "sha256": "3b2a2aa3584b0a3e54d9f3a057da35dc704467fd186604898a0ba2af0d28ea5c"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/predictions/pvlib__pvlib-python-1072__C__a1__00e324d9__0d94c473.json",
+    "bytes": 959,
+    "sha256": "899f021a5757e9ee708f8e69dc52502864490b548d1a7ce382536576eedc4093"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/predictions/pvlib__pvlib-python-1072__W__a1__eb5e55b8__0d94c473.json",
+    "bytes": 699,
+    "sha256": "86d4d5af405fab4a50edf375299d3bda869779bcbcf5e55b673b66eb1b8e8bb3"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/predictions/pydicom__pydicom-1139__A__a1__e2c04977__0d94c473.json",
+    "bytes": 602,
+    "sha256": "10af0f5cc108cead45065bd97ad4f2a30e5d639fba2d97371e1ac2881e120400"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/predictions/pydicom__pydicom-1139__B__a1__7ba62b02__0d94c473.json",
+    "bytes": 665,
+    "sha256": "25f13e097c626316fbf6f50fb6b8472d62672903fdedb990704b3349d77661b4"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/predictions/pydicom__pydicom-1139__C__a1__77c52864__0d94c473.json",
+    "bytes": 906,
+    "sha256": "96e24aacc6409748664f50ee574b10c1443f7df73a186205160464de768537bc"
+  },
+  {
+    "path": "04_prior_three_task_pilot/unpacked_pilot_generations/predictions/pydicom__pydicom-1139__W__a1__47d8388e__0d94c473.json",
+    "bytes": 473,
+    "sha256": "5d08bbbc4768e56ccff383bf0b73b51d12f44f61c6bc46de68e9bb5280b3091f"
+  },
+  {
+    "path": "02_native_evaluation/evaluate_and_compile.py",
+    "bytes": 13015,
+    "sha256": "6dd61f9db5bc41e2c5bdd0497f44727d1e5c23ef0d109198aa2b124b19b01810"
+  },
+  {
+    "path": "02_native_evaluation/native_evaluation_results.json",
+    "bytes": 10156,
+    "sha256": "1be99ccfbc22716ae5d159ca83993a29fcc7e947e8868b9e3c40d9e0ff8e8719"
+  },
+  {
+    "path": "02_native_evaluation/run_native_evaluation.py",
+    "bytes": 13107,
+    "sha256": "55fe4ab4c9131419928df54dbc6375af01f6f4ed4cd7f2c8ebd76fb96d3a42ba"
+  },
+  {
+    "path": "02_native_evaluation/watch_and_evaluate.py",
+    "bytes": 1311,
+    "sha256": "5daf4b7daa15dc928e794549fa929d4e052d8e2d75e6c623473d16cc1830ce03"
+  },
+  {
+    "path": "02_native_evaluation/logs/pvlib__pvlib-python-1154__A__eval.log",
+    "bytes": 19591,
+    "sha256": "a86c90c9b01d4d0a397a2d404bfd0e6266489bd2060f0a49f47e19bed29bddcf"
+  },
+  {
+    "path": "02_native_evaluation/logs/pvlib__pvlib-python-1154__C__eval.log",
+    "bytes": 11649,
+    "sha256": "804cba7fc0229b369ecba6072761e53add22513c708661283c3737241ca02bf5"
+  },
+  {
+    "path": "02_native_evaluation/logs/pvlib__pvlib-python-1154__W__eval.log",
+    "bytes": 11649,
+    "sha256": "dae36b86be6e42bf76ca483560cb3f8b4fa6d418973085c949ad36ffefa70902"
+  },
+  {
+    "path": "02_native_evaluation/logs/pvlib__pvlib-python-1154__base_control.log",
+    "bytes": 11649,
+    "sha256": "5575bd71e979359f52f38e3b5c279be031253c1863b4f7e9c802f4b72ffa9a44"
+  },
+  {
+    "path": "02_native_evaluation/logs/pvlib__pvlib-python-1154__ref_control.log",
+    "bytes": 9629,
+    "sha256": "3275973ac6868815b03b30b3873ac2171f661fde6568a0014062cd61de4aff4e"
+  },
+  {
+    "path": "02_native_evaluation/logs/pvlib__pvlib-python-1606__A__eval.log",
+    "bytes": 4282,
+    "sha256": "34cd576fb39db28a7cd536222a0823a4574f3c088102daa914fae49354f04d5c"
+  },
+  {
+    "path": "02_native_evaluation/logs/pvlib__pvlib-python-1606__base_control.log",
+    "bytes": 7124,
+    "sha256": "e991e063af1bc7957ca0d16a1f40120fdbb82ea0aef76c15e0699dc33d9be68c"
+  },
+  {
+    "path": "02_native_evaluation/logs/pvlib__pvlib-python-1606__ref_control.log",
+    "bytes": 2075,
+    "sha256": "bd8b3f303c136637651013479457585adb0df240c302c11ce9420ec121f84114"
+  },
+  {
+    "path": "02_native_evaluation/logs/pvlib__pvlib-python-1707__A__eval.log",
+    "bytes": 6332,
+    "sha256": "9779d0d5bdcbf3404b2c1f178293a7f9017dd00c01c2ea807cae631b5f2023e4"
+  },
+  {
+    "path": "02_native_evaluation/logs/pvlib__pvlib-python-1707__C__eval.log",
+    "bytes": 7682,
+    "sha256": "68172405032c2ff5393d9af84414af9e201bccf3f79cc56009c39283c387b58f"
+  },
+  {
+    "path": "02_native_evaluation/logs/pvlib__pvlib-python-1707__base_control.log",
+    "bytes": 6332,
+    "sha256": "a1cdf4d01a39b7cc3df0a6ecc79a2f63fe094f52b01709aaf2180df9b7352f06"
+  },
+  {
+    "path": "02_native_evaluation/logs/pvlib__pvlib-python-1707__ref_control.log",
+    "bytes": 4110,
+    "sha256": "f18d1f2f07c4cd432d8ff5ffe016805ee896248dbc0adb2a4fb3aa194888e11d"
+  },
+  {
+    "path": "02_native_evaluation/logs/pvlib__pvlib-python-1854__A__eval.log",
+    "bytes": 75529,
+    "sha256": "65fb486e83726ea73ade1a79587d6fdb8348d0f7c70890ebad119dc127133d14"
+  },
+  {
+    "path": "02_native_evaluation/logs/pvlib__pvlib-python-1854__C__eval.log",
+    "bytes": 75529,
+    "sha256": "d2e2ce197a96e597d81e90ff92b3057134cb83c903de05ced1d2b88d7a754eec"
+  },
+  {
+    "path": "02_native_evaluation/logs/pvlib__pvlib-python-1854__base_control.log",
+    "bytes": 75529,
+    "sha256": "3843cbaf2788f195346a01e719a7f733dbbefec81d7c2cfdbb85680d1f5a280f"
+  },
+  {
+    "path": "02_native_evaluation/logs/pvlib__pvlib-python-1854__ref_control.log",
+    "bytes": 73030,
+    "sha256": "923ccf0ed5d665921995c1100123e1ba015b0d5d2ffda37ce3287fa83be0fc34"
+  },
+  {
+    "path": "02_native_evaluation/logs/pydicom__pydicom-1256__B__eval.log",
+    "bytes": 4151,
+    "sha256": "4465836f6c10672265f2ac830bba679e3d38516c5bb22d2b6a4924e740a68fc9"
+  },
+  {
+    "path": "02_native_evaluation/logs/pydicom__pydicom-1256__W__eval.log",
+    "bytes": 4151,
+    "sha256": "54f8cc437d6d3ea0e235f2f1d76ce30ecca5d1633c3ffe83c26577000eac3517"
+  },
+  {
+    "path": "02_native_evaluation/logs/pydicom__pydicom-1256__base_control.log",
+    "bytes": 4151,
+    "sha256": "1ce9c6af308060bd3e56980dcba7b215f66cfbf93a228521032690576ad05704"
+  },
+  {
+    "path": "02_native_evaluation/logs/pydicom__pydicom-1256__ref_control.log",
+    "bytes": 2814,
+    "sha256": "e586dabb31010c7d485a3c120bbdad50362e0674bac4a610751b3db08531079a"
+  },
+  {
+    "path": "02_native_evaluation/logs/pydicom__pydicom-1413__base_control.log",
+    "bytes": 30670,
+    "sha256": "b425c8e904dfe9cee4a17f39d35ae530eed7b103ff155c4ac1fd648f7f88d993"
+  },
+  {
+    "path": "02_native_evaluation/logs/pydicom__pydicom-1413__ref_control.log",
+    "bytes": 27790,
+    "sha256": "c567fd8ddb884c5ed5fb2e88a24d13233521c48231e5f1895cf8499b37c135d5"
+  },
+  {
+    "path": "02_native_evaluation/logs/pydicom__pydicom-1694__base_control.log",
+    "bytes": 6228,
+    "sha256": "352127b9f5a8ca8781598d75a7a1cdb85411ae586a2104d090d0121e95191152"
+  },
+  {
+    "path": "02_native_evaluation/logs/pydicom__pydicom-1694__ref_control.log",
+    "bytes": 3698,
+    "sha256": "b50c388cf0229cf90207371fe9d67623accf75939ebeeda44926988c2fd22505"
+  },
+  {
+    "path": "02_native_evaluation/logs/pydicom__pydicom-901__base_control.log",
+    "bytes": 3559,
+    "sha256": "beca7bece5886ade7f67c56c51ec3aa894f1063e7b5dc1089465e94c7d0c448b"
+  },
+  {
+    "path": "02_native_evaluation/logs/pydicom__pydicom-901__ref_control.log",
+    "bytes": 157606,
+    "sha256": "cfacabe5420c7e2fc970b440683c30c6247b95f40977a8961cc142f3e473b826"
+  },
+  {
+    "path": "02_native_evaluation/logs/pylint-dev__astroid-1196__base_control.log",
+    "bytes": 5366,
+    "sha256": "29c53116f29f05898e328254ec1b01eda0352d70343534add96130875bc71032"
+  },
+  {
+    "path": "02_native_evaluation/logs/pylint-dev__astroid-1196__ref_control.log",
+    "bytes": 2466,
+    "sha256": "a5c039c3148b9000c1d525ddd4462e9be38f78821717a7e45e8cfcaf20e6333b"
+  },
+  {
+    "path": "02_native_evaluation/logs/pylint-dev__astroid-1268__base_control.log",
+    "bytes": 8818,
+    "sha256": "645376ef51034ce0d70d0a6f7c85141d2202b386b41f512ed2a6e9ce722b70bf"
+  },
+  {
+    "path": "02_native_evaluation/logs/pylint-dev__astroid-1268__ref_control.log",
+    "bytes": 7728,
+    "sha256": "b4feeff6f44e807b7294befff9a20d020cf20ffecb4c3453b21ca094d8d391c7"
+  },
+  {
+    "path": "02_native_evaluation/env_audits/pvlib__pvlib-python-1154__audit.json",
+    "bytes": 488,
+    "sha256": "ba9e61666fd9de68705fe6f3258c43bf69c854782008cb58a65d832c17bb3c12"
+  },
+  {
+    "path": "02_native_evaluation/env_audits/pvlib__pvlib-python-1606__audit.json",
+    "bytes": 488,
+    "sha256": "b0b0ed0222adbac7275b9d8621c128ed797b89497a5b30cff6c9701990c0d361"
+  },
+  {
+    "path": "02_native_evaluation/env_audits/pvlib__pvlib-python-1707__audit.json",
+    "bytes": 488,
+    "sha256": "ce83da3fc4c90a79c779202873cfe187be43984cfbf2c59935f02744495af42e"
+  },
+  {
+    "path": "02_native_evaluation/env_audits/pvlib__pvlib-python-1854__audit.json",
+    "bytes": 488,
+    "sha256": "e2c813ba2f16841e6f75a7f3319b86562f7bf9297fa5a93ab95b3ee87217629c"
+  },
+  {
+    "path": "02_native_evaluation/env_audits/pydicom__pydicom-1256__audit.json",
+    "bytes": 482,
+    "sha256": "8662f09193c817dcdf90ab1a9ce644684feb6e1dfbe7f8eeb9026e8bb152571c"
+  },
+  {
+    "path": "02_native_evaluation/env_audits/pydicom__pydicom-1413__audit.json",
+    "bytes": 482,
+    "sha256": "a272d9075ad7cda9aeb2f8d131e6703d7d096fa670028456feece993eb788e14"
+  },
+  {
+    "path": "02_native_evaluation/env_audits/pydicom__pydicom-1694__audit.json",
+    "bytes": 482,
+    "sha256": "1576351eb254ec8a56690e777a0aedf5331f88018177803d161143835fb56da2"
+  },
+  {
+    "path": "02_native_evaluation/env_audits/pydicom__pydicom-901__audit.json",
+    "bytes": 481,
+    "sha256": "330b7c9a7e79b7d07123d246d73e138d4b787fa09a3685c221081d3b9225a44a"
+  },
+  {
+    "path": "02_native_evaluation/env_audits/pylint-dev__astroid-1196__audit.json",
+    "bytes": 488,
+    "sha256": "e25864923734b194f759cf2351e662c11cc6bb2ad2cc0cc3ac3495659fe84651"
+  },
+  {
+    "path": "02_native_evaluation/env_audits/pylint-dev__astroid-1268__audit.json",
+    "bytes": 488,
+    "sha256": "45114d4ebb1b2c61f19148a6262a3475fd377407d886e1a5354298a525bc3246"
+  },
+  {
+    "path": "01_comparison_study/build_comparison_packets.py",
+    "bytes": 4560,
+    "sha256": "293f07987a2b88d33b5f15a539ecfe34993269229f65479f9ad643735b7ec492"
+  },
+  {
+    "path": "01_comparison_study/comparison_runner.py",
+    "bytes": 11206,
+    "sha256": "4c2f18a5672e5291a4c7f7e78ac803f30cac629f10988cbbf0f154f53d400b4c"
+  },
+  {
+    "path": "01_comparison_study/evaluator_handoff_discrepancy.md",
+    "bytes": 1088,
+    "sha256": "db14395e008ac9908287e4fdde2bbab4482eb9874b223249656c644a4ded161f"
+  },
+  {
+    "path": "01_comparison_study/export_study_bundle.py",
+    "bytes": 9305,
+    "sha256": "1deec24a41380cb485cc7c4f39976e705b4cbe21ae3798bc9e849605df78ece8"
+  },
+  {
+    "path": "01_comparison_study/prepare_evaluator_handoff.py",
+    "bytes": 3876,
+    "sha256": "68d4fcf24b9f7f194687e9c163ea183aee75df685ad4fdff11fe0e6a4622761e"
+  },
+  {
+    "path": "01_comparison_study/protocol.md",
+    "bytes": 4515,
+    "sha256": "67fe966b9df16d016c8a1e6297b792fd040179d2e1a45b49b63dbd70532230ce"
+  },
+  {
+    "path": "01_comparison_study/recovery_status.md",
+    "bytes": 7879,
+    "sha256": "94b7114c945eb2a91d3537a3a18be4ed28c9bb608582e7192c78eefb707bc2cc"
+  },
+  {
+    "path": "01_comparison_study/results.csv",
+    "bytes": 2105,
+    "sha256": "ca11179b881e3ac591c207924aef6c2b633db6349edcaa9238e41ea4ec9e18df"
+  },
+  {
+    "path": "01_comparison_study/results.json",
+    "bytes": 23351,
+    "sha256": "b50d24f9acb05961c4ba489549b6f8273e1b09f03ad4417e004231a5c19db543"
+  },
+  {
+    "path": "01_comparison_study/results.md",
+    "bytes": 7112,
+    "sha256": "24b81b00eeba927789f5dfffbefb529805c86556cf5b844bfb735060d161338b"
+  },
+  {
+    "path": "01_comparison_study/resume_comparison_study.ipynb",
+    "bytes": 3294,
+    "sha256": "ede344132e8713dc7e701d23a1fed98434a4e3faca69e955a2a2e1ca25b8b82a"
+  },
+  {
+    "path": "01_comparison_study/resume_comparison_study.py",
+    "bytes": 13192,
+    "sha256": "55a979e4cad7cb5aa4ce5d753b35088dd3d41bffe610572d0d9caceda08ca387"
+  },
+  {
+    "path": "01_comparison_study/resume_manifest.json",
+    "bytes": 22946,
+    "sha256": "7bf246b281bf6d455efef82e32f585febc06977aadb3576b0d5fe7a8fcb73597"
+  },
+  {
+    "path": "01_comparison_study/task_manifest.json",
+    "bytes": 21778,
+    "sha256": "d60de4a9d9c388d54c3561a90304dd38894d1042ff50c2e6bb2c12aa55c90a98"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/all_packets_manifest.json",
+    "bytes": 6370,
+    "sha256": "8be1fdc1ff6cc12f01a0b7c3039ad95235320d81d1d40fd72b98e0654d4df836"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pvlib__pvlib-python-1154__A__packet.json",
+    "bytes": 42698,
+    "sha256": "312e9e23300f59ae27455ed451fe4d2386add95d10d94210e4eed18c96715dfa"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pvlib__pvlib-python-1154__B__packet.json",
+    "bytes": 50121,
+    "sha256": "75eb8ba5e82c6d0fb6030516ddcf1878f8b0baacac20402e2927ca8589f06a89"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pvlib__pvlib-python-1154__C__packet.json",
+    "bytes": 43667,
+    "sha256": "667da4658a6648a055f2e84bce7ee008de9d1a5e8b18f2901bd142ee20888dc9"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pvlib__pvlib-python-1154__W__packet.json",
+    "bytes": 41759,
+    "sha256": "3f50a8972bdc5710843266a8fbff6e02ec8d5286b935a90445c9efa78aefd5ff"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pvlib__pvlib-python-1154_ranking.json",
+    "bytes": 1179,
+    "sha256": "c50284ee6904afb3e37262b2a516f434fa07801790ffbdfd864a953f5f101a06"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pvlib__pvlib-python-1606__A__packet.json",
+    "bytes": 56865,
+    "sha256": "8138f27a6d7602644d4a7be84c9a225d54c5cc59e3f6335d00ce2175ad25cfd8"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pvlib__pvlib-python-1606__B__packet.json",
+    "bytes": 62095,
+    "sha256": "7897deb6842d430765a6c7e5045f2bb7554973592ed604e80757e3eab6aecd2d"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pvlib__pvlib-python-1606__C__packet.json",
+    "bytes": 58931,
+    "sha256": "cde2acadb17c0f32ff8b6f3f6e856135a4999f94ffe19dd46eb0afb884330e19"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pvlib__pvlib-python-1606__W__packet.json",
+    "bytes": 59391,
+    "sha256": "4b9d78a1b55efc4dcf653c01c23793e883ec39ffeae205a493cc3779fe2ac9be"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pvlib__pvlib-python-1606_ranking.json",
+    "bytes": 1226,
+    "sha256": "8af8e044da656b1de6c43bdbd68184647ada133e8d024ef096b79c3eb26d4b99"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pvlib__pvlib-python-1707__A__packet.json",
+    "bytes": 45304,
+    "sha256": "92a158e33f51b329ab2ba8cd399135305b4041c5344b610ee12314d67a0a6e99"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pvlib__pvlib-python-1707__B__packet.json",
+    "bytes": 50140,
+    "sha256": "7eaa517970e62f1376e32e9ec3d1c90ab5557ab454bb51db29cc5253989e8920"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pvlib__pvlib-python-1707__C__packet.json",
+    "bytes": 46118,
+    "sha256": "80c8a62ed2105f949ea70d6658e08cc9a1eb99ec576f1b4715e9215d3ec76224"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pvlib__pvlib-python-1707__W__packet.json",
+    "bytes": 41604,
+    "sha256": "2bb86028c93bec3700d0bf98086640062d5223cfc97513d05d777697c244ce77"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pvlib__pvlib-python-1707_ranking.json",
+    "bytes": 1151,
+    "sha256": "67e9cf66fb0aa9511a57f9a79bd8ac4ad05eb2c109c5e3f7f6c148948bfa662e"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pvlib__pvlib-python-1854__A__packet.json",
+    "bytes": 52073,
+    "sha256": "613816ce8dead81b65424b2fc36304c4826b54b413f5d3564cd2733ede86ef61"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pvlib__pvlib-python-1854__B__packet.json",
+    "bytes": 53856,
+    "sha256": "fff375967a3534aff37cebe8b7e809cb505ce1523ec939b86ec3c86b4e257b92"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pvlib__pvlib-python-1854__C__packet.json",
+    "bytes": 51899,
+    "sha256": "68c35ca6cf4bbef2f0003b6ef3c08af66a92cb5dc644543dc5b895ee03181e0e"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pvlib__pvlib-python-1854__W__packet.json",
+    "bytes": 48191,
+    "sha256": "b10c9835d579f23b336c9be678dbb8bb31aaa990ee7e82180aac952300b30ee1"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pvlib__pvlib-python-1854_ranking.json",
+    "bytes": 1172,
+    "sha256": "c50f7d8ea603188cd49edc6ff4715efcae6521a0713e27cf663dfe0efc094f3c"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pydicom__pydicom-1256__A__packet.json",
+    "bytes": 48810,
+    "sha256": "9ca24ff3a96b0604bb5c4614da1120b09a39e73606e561a27a7859386b7e58ae"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pydicom__pydicom-1256__B__packet.json",
+    "bytes": 46444,
+    "sha256": "3e369819c153ed3a02b5f2c286296caffe59969fb16987e62ea23f2dd90e29f1"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pydicom__pydicom-1256__C__packet.json",
+    "bytes": 46344,
+    "sha256": "7d898be4f0f4adad85211edc62fbfdd31b07bf86d0a2d55038c100973fc5fb69"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pydicom__pydicom-1256__W__packet.json",
+    "bytes": 47306,
+    "sha256": "f029b8f51b50163d67264f4d508496599e4f66cf342be0ee57e023d1ce5c473c"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pydicom__pydicom-1256_ranking.json",
+    "bytes": 1375,
+    "sha256": "6a3954e6a8a8333c5ccf3e1a84a770273afdb61bf4b3bb72e3183b736fb5db65"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pydicom__pydicom-1413__A__packet.json",
+    "bytes": 42397,
+    "sha256": "4dd3fb934a5f978e88f95dbd609977edafca272dd70d0356ffc58088511d65bd"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pydicom__pydicom-1413__B__packet.json",
+    "bytes": 46244,
+    "sha256": "e52fa83c3f7e59facb5d558f417441b58b08acadee44add4c239a3fbf0e390d5"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pydicom__pydicom-1413__C__packet.json",
+    "bytes": 45436,
+    "sha256": "ddd0abedf1259899ae04a0468c8eb027d62f0b9fb3effd64f1d20d32a63543b9"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pydicom__pydicom-1413__W__packet.json",
+    "bytes": 49497,
+    "sha256": "3bb6d0c36b4fb2d2a0843b61fe8afd51298323a849ebb8bdc95691382f7328d3"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pydicom__pydicom-1413_ranking.json",
+    "bytes": 1284,
+    "sha256": "a1f0425d20babe638b25084aa270e7b52b205d557d0883920bf99010dfadc97e"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pydicom__pydicom-1694__A__packet.json",
+    "bytes": 48906,
+    "sha256": "e8ca1861eec7c3f474bcbff0568bb654185a82a0e374ebb569715daa3f1b3d1d"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pydicom__pydicom-1694__B__packet.json",
+    "bytes": 49791,
+    "sha256": "1acfebaaaa077cd5e7178a51614b791f36a7f0af400c9fa8d8fb648da064ea1d"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pydicom__pydicom-1694__C__packet.json",
+    "bytes": 46916,
+    "sha256": "5a1258f00920512ca126cb2d5070fe7c16a8507ebe5a750d6603b53b9ba9755c"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pydicom__pydicom-1694__W__packet.json",
+    "bytes": 52034,
+    "sha256": "024c6b8b9e2b935d6f5eaf93994e112c35b2ea946d1c9f5c670b4ecafac99b67"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pydicom__pydicom-1694_ranking.json",
+    "bytes": 1225,
+    "sha256": "51bcdd2fa564eef16884b011dacc9ec3a931d1e8191d0f03af34219e8bc6839a"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pydicom__pydicom-901__A__packet.json",
+    "bytes": 51959,
+    "sha256": "97a54a3cf23eaf1f6ca5adec819fa740883a27909949986bca357d6dd88d1bcb"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pydicom__pydicom-901__B__packet.json",
+    "bytes": 50613,
+    "sha256": "d5a08877dd2c30340ec7988b2f80f5f9dee9432b4969f16c06cc2c4ace09b92f"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pydicom__pydicom-901__C__packet.json",
+    "bytes": 49069,
+    "sha256": "cc9823dfd2e8e8a8d69933cb13bd3320c52835fcdf3f5e32fca8e6d3ac5b5b3b"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pydicom__pydicom-901__W__packet.json",
+    "bytes": 48536,
+    "sha256": "40ab8db77a28ae114816bb9172c626c369a0da19935b8e0b114c0df75b560930"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pydicom__pydicom-901_ranking.json",
+    "bytes": 1469,
+    "sha256": "701f544748ea4203c7645e78fc894ee50f860dcd048143027a0aef471cdfc148"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pylint-dev__astroid-1196__A__packet.json",
+    "bytes": 57815,
+    "sha256": "604eb610bb493ad2a11f35c5b937caef133eff412829794638f92cf1a713c9bf"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pylint-dev__astroid-1196__B__packet.json",
+    "bytes": 49166,
+    "sha256": "22c21e741fb3283c4f7f65fa634d85a9475e51fbd7b217b8eadf487f4435be27"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pylint-dev__astroid-1196__C__packet.json",
+    "bytes": 55670,
+    "sha256": "d53a1ea5bee9348ef3c199f9489d1a73d5597d51a731098f0ef6e7c2eb35d78b"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pylint-dev__astroid-1196__W__packet.json",
+    "bytes": 57346,
+    "sha256": "b14ff4ae28292a4c636c28458d3deee9568a9757adf47986954d7a341bfc61d2"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pylint-dev__astroid-1196_ranking.json",
+    "bytes": 1296,
+    "sha256": "d73cc26057fa0e3b66b35ef553fb623788e8f7aeda3ca3f3c9b9d3414b7e5ba5"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pylint-dev__astroid-1268__A__packet.json",
+    "bytes": 53459,
+    "sha256": "6dc6e5f9a6a7ce04f496e5e80648b03eb2bebe99834f619e71b63b051d276efc"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pylint-dev__astroid-1268__B__packet.json",
+    "bytes": 48953,
+    "sha256": "0631ed43924ac9f40344446ad474180aab4bcc6748cd65f1b30266ae35a22add"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pylint-dev__astroid-1268__C__packet.json",
+    "bytes": 46764,
+    "sha256": "2a458315a6dbe0ab2ee9faa86f565c4a56e8d606ea596e0e020786194fb70f35"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pylint-dev__astroid-1268__W__packet.json",
+    "bytes": 45881,
+    "sha256": "8781fc63788a495f20420b8e2b1efd75325751a0bd1eea07509581158ece6b0d"
+  },
+  {
+    "path": "01_comparison_study/evidence_packets/pylint-dev__astroid-1268_ranking.json",
+    "bytes": 1306,
+    "sha256": "f08f7f1f626b99642dd6b606955802f2ea8e0ed1d992d13f95c7731f32340b73"
+  },
+  {
+    "path": "01_comparison_study/evaluator_handoff_drive/all_predictions.jsonl",
+    "bytes": 22503,
+    "sha256": "d4d61b0cecc2baecc76c3311003f440990a481156a75d944effc7f8f366a7992"
+  },
+  {
+    "path": "01_comparison_study/evaluator_handoff_drive/evaluator_manifest.json",
+    "bytes": 871,
+    "sha256": "1ed3a2508b87c0b509483e340129b7081ac2653f0948fd69e61861e4d5528cad"
+  },
+  {
+    "path": "01_comparison_study/evaluator_handoff_drive/predictions_A.jsonl",
+    "bytes": 3815,
+    "sha256": "ded3f72dd1dd85abe9c153f1fef2462eaf06787d9dcf94dbc8e1134615b66f38"
+  },
+  {
+    "path": "01_comparison_study/evaluator_handoff_drive/predictions_B.jsonl",
+    "bytes": 10652,
+    "sha256": "1dab08ee57c766c7f3bfcca5f419b1a3ce2588cf37d33be5c90d42728a26a180"
+  },
+  {
+    "path": "01_comparison_study/evaluator_handoff_drive/predictions_C.jsonl",
+    "bytes": 5129,
+    "sha256": "1c87efdccf3ecc889b9d80ffc55f3970e4f8fced0167b51c3f571bb44c44d317"
+  },
+  {
+    "path": "01_comparison_study/evaluator_handoff_drive/predictions_W.jsonl",
+    "bytes": 2907,
+    "sha256": "79b2efde6fe265d5dc4c511c6cb076df15c37990f95c7a1eed0db0c24ae2757d"
+  },
+  {
+    "path": "01_comparison_study/evaluator_handoff_drive/run_evaluator_wsl.sh",
+    "bytes": 1054,
+    "sha256": "a5c295bc7c7f98e0135fc9c2d6a15a53564cfbea4f250f942739f32c43660d82"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1154__A.diff",
+    "bytes": 841,
+    "sha256": "ef11b8a464b251dbfc874739a34cf1fc3d0e61b657605081ec5eb1fd4bbf266d"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1154__A__canonical.diff",
+    "bytes": 888,
+    "sha256": "675f974b68391b689d51d5b90323510322bbdcc09b45bb27f5f79d7c3b26d855"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1154__B.diff",
+    "bytes": 6373,
+    "sha256": "a38e0e7a4957b073144274d0e30aaaf2bfab8f04afbcb106ec2bc706ffdea6db"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1154__C.diff",
+    "bytes": 1912,
+    "sha256": "07447bd7ae6a5937eeebcbb4ba147aa49888e263aad49e813e108b8249ab3bf7"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1154__C__canonical.diff",
+    "bytes": 1730,
+    "sha256": "6a6ade34b3804bcb407d493e7bd0195ef710507ab3c7bb271b55fe3398321107"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1154__W.diff",
+    "bytes": 647,
+    "sha256": "6186ed3aa9f8819db9a1944e66015ff9accad722715ac95c6164c884e9498eab"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1154__W__canonical.diff",
+    "bytes": 772,
+    "sha256": "35e546bf6d4429e23c9a0dbab8ecbd2c08b91915070bcc0a5adf3692d09399cb"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1606__A.diff",
+    "bytes": 304,
+    "sha256": "be57d8389999a6661c0dcb8ce0cc2a8a581782d72f8bf9548485a5596f0c81d3"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1606__A__canonical.diff",
+    "bytes": 448,
+    "sha256": "05fdaf68ab56f21d437c89dcb60a51d0efbdae3eca2ee0f1ae6607326f0b12bc"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1606__B.diff",
+    "bytes": 2061,
+    "sha256": "dffa49c3435976bec9ca1d38d77ce5289bbc5bd26c725497d452e8c8b4ed8fee"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1606__C.diff",
+    "bytes": 750,
+    "sha256": "beed4c21e0354270e6dfab6eb9798a50eefdc1ec5f87a0e7b0e7386cd40b2e40"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1606__W.diff",
+    "bytes": 554,
+    "sha256": "f6453dcb0f6c9d51662063fe7a8ff6a6e94573c42d476aa016f537d2c1094fa6"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1707__A.diff",
+    "bytes": 275,
+    "sha256": "8dc2e5c6a7af3cdf6ca109dab6c4b2556637478f5df85e2f95e2131ffc74dc77"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1707__A__canonical.diff",
+    "bytes": 397,
+    "sha256": "ba11d469959df7996428f544e9a984e18259c240f7689a5fe2344887289bdeca"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1707__B.diff",
+    "bytes": 317,
+    "sha256": "ec8f3c994c6ae74d31bae24b7b1f5d86342c05c4dfe14146aa687f8696d6227f"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1707__C.diff",
+    "bytes": 257,
+    "sha256": "aaa26681e808076381c800fe9a74b4f5cbc98f95ae474a8d86aa02a3ca201c21"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1707__C__canonical.diff",
+    "bytes": 379,
+    "sha256": "06401ebc8698da97371aa25255c8273343a151e2f3a55eced35d9ba22519e6cb"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1707__W.diff",
+    "bytes": 258,
+    "sha256": "9d78a8883fbdd0e42eb6e6446fbb3aa70ff82eaf46ee45ec5232a0a05d1eb4f4"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1854__A.diff",
+    "bytes": 919,
+    "sha256": "4a80dcb79ed09327673f3be4c42ff4eca96ce342e6a01c1327ea61671abe91b7"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1854__A__canonical.diff",
+    "bytes": 1017,
+    "sha256": "51926cff08b83ae410cf282b109bdd0b70721c6cd912e4fec8578c34c01a6550"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1854__B.diff",
+    "bytes": 443,
+    "sha256": "7f40d6f0ffb07e89b0252d4979b8c0aa63ea709bb7026588c05273267f1cf699"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1854__C.diff",
+    "bytes": 685,
+    "sha256": "6d6bb4bf81ba996bac9a2c8721678489daf39a3f15baa37570ed19bc8516e13a"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1854__C__canonical.diff",
+    "bytes": 781,
+    "sha256": "f2dbc708f5cebc4be79e88b25626c63738187ff429ed9be455f126eee225b6f1"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pvlib__pvlib-python-1854__W.diff",
+    "bytes": 689,
+    "sha256": "82853139cc49368bf348e209e0b1872d294dbedd3cf25a4938b2652dd2252f44"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pydicom__pydicom-1256__A.diff",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pydicom__pydicom-1256__B.diff",
+    "bytes": 357,
+    "sha256": "5137321beac64c28c89ce2b122698a51449c351723f7138459f3c2c6e9c175b3"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pydicom__pydicom-1256__B__canonical.diff",
+    "bytes": 505,
+    "sha256": "67e2f37208e8af6c9da93617b63382f09ba95c09d5175ccaad293fed268d314e"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pydicom__pydicom-1256__C.diff",
+    "bytes": 781,
+    "sha256": "69afd7d6fcb21408b779f1cb567b4650ed973b21eaf305f7620fe361dc9e7c76"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pydicom__pydicom-1256__W.diff",
+    "bytes": 290,
+    "sha256": "950981968e88a4cfd6fa3ca15b2294a104ad833521265708376b402719b743ce"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pydicom__pydicom-1413__A.diff",
+    "bytes": 284,
+    "sha256": "b4895893d5be38b6dcae21541b3495f342cb80ca6224628be909b27cfb1635f5"
+  },
+  {
+    "path": "01_comparison_study/extracted_patches/pydicom__pydicom-1413__B.diff",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pvlib__pvlib-python-1154__A__checkpoint.json",
+    "bytes": 964,
+    "sha256": "94079bea073e184704f17d38481ecc6cda99d3fd4268772317e447063d25970c"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pvlib__pvlib-python-1154__B__checkpoint.json",
+    "bytes": 1061,
+    "sha256": "d7f5bcf65959747e298005a5384d96a5bc3ac9a4085a2b28e2fe1fbf307b0ec2"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pvlib__pvlib-python-1154__C__checkpoint.json",
+    "bytes": 959,
+    "sha256": "1330a5aa9a1c98d0af56227c6f6a773c6cf2382794982e614e970fb503971869"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pvlib__pvlib-python-1154__W__checkpoint.json",
+    "bytes": 962,
+    "sha256": "b48f357f167fbb3c58084f41085d0bc03493626e44efc9728de495fe40521deb"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pvlib__pvlib-python-1606__A__checkpoint.json",
+    "bytes": 961,
+    "sha256": "e387116b399b58d8fd71498457f74d976ce085160e71f3328d5ad83c14860748"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pvlib__pvlib-python-1606__B__checkpoint.json",
+    "bytes": 1050,
+    "sha256": "e12d392de3e5fb8191e065e3f1f5ef645fe0e57ba684fb21a614a068e1af9f36"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pvlib__pvlib-python-1606__C__checkpoint.json",
+    "bytes": 1050,
+    "sha256": "6e951139bfe230c81bec41b279ad0d05f36b896fe46a8453f11d5f9a2193a63f"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pvlib__pvlib-python-1606__W__checkpoint.json",
+    "bytes": 1048,
+    "sha256": "3f8a5c1425e9fa21eee5db1ed93978a2fd1974daefe2ef36901f004317d966ef"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pvlib__pvlib-python-1707__A__checkpoint.json",
+    "bytes": 962,
+    "sha256": "00afdcfa05da52fd53de11b814f552611b6bf537be50ad0f75b98e5e55c3adc6"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pvlib__pvlib-python-1707__B__checkpoint.json",
+    "bytes": 1044,
+    "sha256": "c494c4305428c329b3eb3aa358293fe022bd28af54cb6df9bed1ba8c6a44a6ef"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pvlib__pvlib-python-1707__C__checkpoint.json",
+    "bytes": 964,
+    "sha256": "71b4167af9242c6a860d272122cb63eb925d075f7f748dad20ea2a06999bbba5"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pvlib__pvlib-python-1707__W__checkpoint.json",
+    "bytes": 1043,
+    "sha256": "c8047f054a5de97e915b8aeeac28365c58349c78318e5c45fc5b5a78a3aa44e9"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pvlib__pvlib-python-1854__A__checkpoint.json",
+    "bytes": 962,
+    "sha256": "501f76925d65ad9f7a1a5a80b704a46eef1a177819ddbd8acf402fa3c73a1291"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pvlib__pvlib-python-1854__B__checkpoint.json",
+    "bytes": 1055,
+    "sha256": "7abfa46c4202477316fc112e5bc500b8095f5eb6b02168615401ea021a1d67bd"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pvlib__pvlib-python-1854__C__checkpoint.json",
+    "bytes": 963,
+    "sha256": "a18d97d78f04a18068a58ca6c91b6bac03321b1b48a07176b91d48292c0b9328"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pvlib__pvlib-python-1854__W__checkpoint.json",
+    "bytes": 1054,
+    "sha256": "68b945779e680d8de5ce8fa3b53aef1cf0cd166170e5e24fecf6aab4e5bf20b5"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pydicom__pydicom-1256__A__checkpoint.json",
+    "bytes": 991,
+    "sha256": "07974d2da1c665fe7a98a8b1dd49fff445f14cd0c1b37edfcde9a84995874ff0"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pydicom__pydicom-1256__B__checkpoint.json",
+    "bytes": 962,
+    "sha256": "5405b9a0ef0c8ba8ce99acf4b4bf742632f2321a225c9abda5e47e249c9aefc1"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pydicom__pydicom-1256__C__checkpoint.json",
+    "bytes": 1064,
+    "sha256": "8587389738c838a2f37c3a38ef5acb2626147e0a3fcfee5f592f323b079870bb"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pydicom__pydicom-1256__W__checkpoint.json",
+    "bytes": 961,
+    "sha256": "190a22c8778acd72968be38f278e7131cf4daa2c55568e65f3531621cd88ea01"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pydicom__pydicom-1413__A__checkpoint.json",
+    "bytes": 1001,
+    "sha256": "9be72fb724227ca259e0ccf08d641f1401481d40afc72ab72905f550578ade12"
+  },
+  {
+    "path": "01_comparison_study/checkpoints/pydicom__pydicom-1413__B__checkpoint.json",
+    "bytes": 992,
+    "sha256": "2e07f8e9fe5084146ff45dec66854b93e14bdd263d0745af42389cdf7fb843f0"
+  },
+  {
+    "path": "01_comparison_study/evaluator_handoff_bundle/all_predictions.jsonl",
+    "bytes": 22391,
+    "sha256": "49dc4b4d142e4aaac700ea06cfab43cf545bf3cf24990efdddf398c265cb57fd"
+  },
+  {
+    "path": "01_comparison_study/evaluator_handoff_bundle/evaluator_manifest.json",
+    "bytes": 871,
+    "sha256": "d674299fd6b6d0493b700d1f249c3988d98125350fc9aa05aaf8cc84303dd6d9"
+  },
+  {
+    "path": "01_comparison_study/evaluator_handoff_bundle/predictions_A.jsonl",
+    "bytes": 3815,
+    "sha256": "ded3f72dd1dd85abe9c153f1fef2462eaf06787d9dcf94dbc8e1134615b66f38"
+  },
+  {
+    "path": "01_comparison_study/evaluator_handoff_bundle/predictions_B.jsonl",
+    "bytes": 10540,
+    "sha256": "84d2e12eb6c187a7850755681632affc4a11ddb3b64c5b337920a6c6f78e65e7"
+  },
+  {
+    "path": "01_comparison_study/evaluator_handoff_bundle/predictions_C.jsonl",
+    "bytes": 5129,
+    "sha256": "1c87efdccf3ecc889b9d80ffc55f3970e4f8fced0167b51c3f571bb44c44d317"
+  },
+  {
+    "path": "01_comparison_study/evaluator_handoff_bundle/predictions_W.jsonl",
+    "bytes": 2907,
+    "sha256": "79b2efde6fe265d5dc4c511c6cb076df15c37990f95c7a1eed0db0c24ae2757d"
+  },
+  {
+    "path": "01_comparison_study/evaluator_handoff_bundle/run_evaluator_wsl.sh",
+    "bytes": 1054,
+    "sha256": "a5c295bc7c7f98e0135fc9c2d6a15a53564cfbea4f250f942739f32c43660d82"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pvlib__pvlib-python-1154__A__raw.txt",
+    "bytes": 4278,
+    "sha256": "f7d721e90aac3ffe19a4a332f9c1efac5c031b78a227b7b25f49e18a37693bd1"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pvlib__pvlib-python-1154__B__raw.txt",
+    "bytes": 6384,
+    "sha256": "cd2575649eac6ea7b09df5fbee337a431019daf2e83bd9a18459ecb5c55c656e"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pvlib__pvlib-python-1154__C__raw.txt",
+    "bytes": 1923,
+    "sha256": "9e67bc5728981a841d47361ff691289d91edf762fe9fe7eb174377dca5b503db"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pvlib__pvlib-python-1154__W__raw.txt",
+    "bytes": 658,
+    "sha256": "5eee605022e3b7a0260b28e2ea01a0c890f06b952a04aa36f491ee748202bdb1"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pvlib__pvlib-python-1606__A__raw.txt",
+    "bytes": 998,
+    "sha256": "afb1acc2e0faa50c4bf58a510c6ca6a2ed3bdc38af67360f1db8074092557605"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pvlib__pvlib-python-1606__B__raw.txt",
+    "bytes": 2072,
+    "sha256": "3b9b5dad402e6dbf17c2918680701b88637223e1a3f2d54954a6b7979e81593e"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pvlib__pvlib-python-1606__C__raw.txt",
+    "bytes": 761,
+    "sha256": "a8fc3b79917ed10cc0bc9b8790d3499032b4250f587a2547903bb96c0ed6c3c0"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pvlib__pvlib-python-1606__W__raw.txt",
+    "bytes": 565,
+    "sha256": "5b555c1b4f4ea6ac9a5f41d6e3de428b98ab2e0c09676f8a70d056a5b07772ec"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pvlib__pvlib-python-1707__A__raw.txt",
+    "bytes": 286,
+    "sha256": "189188716bcba2dac8a00d968a00f670ab2b99c651234777c50ef36987e46e3a"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pvlib__pvlib-python-1707__B__raw.txt",
+    "bytes": 328,
+    "sha256": "9a7872fb673e9cd15978814daf2ece2ac10eb4cd1fa406dc423139843320dc93"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pvlib__pvlib-python-1707__C__raw.txt",
+    "bytes": 268,
+    "sha256": "578c4dadd60f9ee2367a52f13f3e612079c8271a6b8a64e67925125b82a75f31"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pvlib__pvlib-python-1707__W__raw.txt",
+    "bytes": 5367,
+    "sha256": "7964c42550376edd0e396779b582a67fc05101e5b26276d09a6b7404a34726f0"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pvlib__pvlib-python-1854__A__raw.txt",
+    "bytes": 930,
+    "sha256": "4ecf2cd3d25d5e6742ae957445921502ddc10c64dbe60258aca7969d474a7451"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pvlib__pvlib-python-1854__B__raw.txt",
+    "bytes": 454,
+    "sha256": "b0c8f86495d1753a47f16ea35683b4010ba8dbedf0ebae41687c6ba6073aff62"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pvlib__pvlib-python-1854__C__raw.txt",
+    "bytes": 696,
+    "sha256": "f13be8d07862f57c073ff7589e7a17419feeae5d8c17906a13ee7da8dcd563e4"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pvlib__pvlib-python-1854__W__raw.txt",
+    "bytes": 700,
+    "sha256": "96a6ace44662fa24a1b3789a01e3e31aa310e0e5c5cb60199f59df7f316625fd"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pydicom__pydicom-1256__A__raw.txt",
+    "bytes": 8303,
+    "sha256": "5bfff89297061897a5c4752e5bee4209777722595cd143457b57d0985b457d53"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pydicom__pydicom-1256__B__raw.txt",
+    "bytes": 368,
+    "sha256": "a35d3b3b84f31ddcb6fc3d60eb4b22b97a2adf04d990982c0d6541f3f36eb840"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pydicom__pydicom-1256__C__raw.txt",
+    "bytes": 8074,
+    "sha256": "12a3d652f083525c604fe45ff7c22955eba34b8a2fbcdd2771009101997b938a"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pydicom__pydicom-1256__W__raw.txt",
+    "bytes": 7298,
+    "sha256": "abc26a16b01a5b7f76c7521fa475ddfb369ba4f7561b1e7e38d2933a83bbafa7"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pydicom__pydicom-1413__A__raw.txt",
+    "bytes": 7914,
+    "sha256": "42f84299faf92f11902124c82fbebde23d763bf1fc30bff583ec3df17b45ba20"
+  },
+  {
+    "path": "01_comparison_study/raw_outputs/pydicom__pydicom-1413__B__raw.txt",
+    "bytes": 8033,
+    "sha256": "ea5b85c47a3951d47e7859f9bc10689af55c0e34d605ea1d25963a85ebb4054c"
+  },
+  {
+    "path": "01_comparison_study/predictions/pvlib__pvlib-python-1154__A__pred.json",
+    "bytes": 1051,
+    "sha256": "29a41380f1b21263aa690d344433d709637059de26b46907b402f366bd07c056"
+  },
+  {
+    "path": "01_comparison_study/predictions/pvlib__pvlib-python-1154__B__pred.json",
+    "bytes": 6668,
+    "sha256": "ff041f3c369bad09725e5eab3619b8d99e21b30e8669bf42eb7de20c951d5cc1"
+  },
+  {
+    "path": "01_comparison_study/predictions/pvlib__pvlib-python-1154__C__pred.json",
+    "bytes": 1912,
+    "sha256": "54981feeff1b20be3ea76766598b4366d1731a48d935d6c5de3b5b6cde220549"
+  },
+  {
+    "path": "01_comparison_study/predictions/pvlib__pvlib-python-1154__W__pred.json",
+    "bytes": 930,
+    "sha256": "d242c2695f84d4f766c6d1b50acaf9cb533eef693d69309490463c3f008b4154"
+  },
+  {
+    "path": "01_comparison_study/predictions/pvlib__pvlib-python-1606__A__pred.json",
+    "bytes": 605,
+    "sha256": "fe83667466b197328b82eced128335c1a5c470a98746db43bb3a212cd5d26aba"
+  },
+  {
+    "path": "01_comparison_study/predictions/pvlib__pvlib-python-1606__B__pred.json",
+    "bytes": 2280,
+    "sha256": "28f5ef1e914393f12e309e636192b6f97c27b6e0c595893ff5059d4316156e31"
+  },
+  {
+    "path": "01_comparison_study/predictions/pvlib__pvlib-python-1606__C__pred.json",
+    "bytes": 925,
+    "sha256": "9fcd62253adc4514d72ee7674f9ba57722391d3bd8a95d423ca9c578f23e15af"
+  },
+  {
+    "path": "01_comparison_study/predictions/pvlib__pvlib-python-1606__W__pred.json",
+    "bytes": 710,
+    "sha256": "bc39a67042095191c14e0053e8443e0bcb0f2198710cf2f824295112a66a1df8"
+  },
+  {
+    "path": "01_comparison_study/predictions/pvlib__pvlib-python-1707__A__pred.json",
+    "bytes": 555,
+    "sha256": "3c4e288b866637bb90f3ae590878f3989e339123d62add3a4ca1e97a2b86a2db"
+  },
+  {
+    "path": "01_comparison_study/predictions/pvlib__pvlib-python-1707__B__pred.json",
+    "bytes": 471,
+    "sha256": "a98c15e5a34e56efe793e3eab44534c91487e8cc56eddf38e30b94a02ab6163b"
+  },
+  {
+    "path": "01_comparison_study/predictions/pvlib__pvlib-python-1707__C__pred.json",
+    "bytes": 537,
+    "sha256": "a91269df45418b3096b461edbed67b7ce8ab4caa8dc2bd62d7cf6a8912dd7ae1"
+  },
+  {
+    "path": "01_comparison_study/predictions/pvlib__pvlib-python-1707__W__pred.json",
+    "bytes": 409,
+    "sha256": "9fed6af46cb9451d641c28e932fa86f4dc84ca1f0b67c4a518a19dab7af65247"
+  },
+  {
+    "path": "01_comparison_study/predictions/pvlib__pvlib-python-1854__A__pred.json",
+    "bytes": 1194,
+    "sha256": "db0505c0c6922d3d10681ca472fd6745fbae000e31567d037b561c2dd045ab52"
+  },
+  {
+    "path": "01_comparison_study/predictions/pvlib__pvlib-python-1854__B__pred.json",
+    "bytes": 599,
+    "sha256": "5d6dbd591607fb8e065a5bd2b0240a4ab34f7f1eedfd54091af79043f30cd8fb"
+  },
+  {
+    "path": "01_comparison_study/predictions/pvlib__pvlib-python-1854__C__pred.json",
+    "bytes": 952,
+    "sha256": "842abaceb3ca4a1bf72bbe71e247aeec890043474add479e29214ea7797d7622"
+  },
+  {
+    "path": "01_comparison_study/predictions/pvlib__pvlib-python-1854__W__pred.json",
+    "bytes": 854,
+    "sha256": "0c5416838e2e4c07076943dd842c0191f99437d0f8e7d112b391f5ce52479ba4"
+  },
+  {
+    "path": "01_comparison_study/predictions/pydicom__pydicom-1256__A__pred.json",
+    "bytes": 139,
+    "sha256": "f77e2d62f254ce42699c693a95498149896227c407ae6d996d89564e79a14d47"
+  },
+  {
+    "path": "01_comparison_study/predictions/pydicom__pydicom-1256__B__pred.json",
+    "bytes": 657,
+    "sha256": "0ceda0337c162ef4e1861d5e12036a7aff05f1bbe861a54cd1c8394750880d0b"
+  },
+  {
+    "path": "01_comparison_study/predictions/pydicom__pydicom-1256__C__pred.json",
+    "bytes": 938,
+    "sha256": "2ca425f3478495eedd65d9d7e0a65a8ffb998fef4e4aae2fffcb55e963a3ad7a"
+  },
+  {
+    "path": "01_comparison_study/predictions/pydicom__pydicom-1256__W__pred.json",
+    "bytes": 139,
+    "sha256": "39116bc32ad90b1713a15bf90e665fe2be222ca9839ec1e9ece935381e83fbcc"
+  },
+  {
+    "path": "01_comparison_study/predictions/pydicom__pydicom-1413__A__pred.json",
+    "bytes": 433,
+    "sha256": "8af09c4fb9979e709631d8cdab011bedef878f19d63203e78d2f0493a4cdbcbc"
+  },
+  {
+    "path": "01_comparison_study/predictions/pydicom__pydicom-1413__B__pred.json",
+    "bytes": 139,
+    "sha256": "c73fa5ec1e70b0f31bf396092fb6b847f0e7ac6d9b4c09d66c864c1341155330"
+  }
+]

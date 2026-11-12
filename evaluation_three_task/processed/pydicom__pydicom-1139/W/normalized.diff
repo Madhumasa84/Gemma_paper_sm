@@ -1,0 +1,13 @@
+diff --git a/pydicom/util/codify.py b/pydicom/util/codify.py
+index 3557cf2d..38ea30f8 100644
+--- a/pydicom/util/codify.py
++++ b/pydicom/util/codify.py
+@@ -152,7 +152,7 @@ def code_sequence(dataelem,
+     seq_name = dataelem.name
+     seq_item_name = seq_name.replace(' Sequence', '')
+     seq_keyword = dictionary_keyword(dataelem.tag)
+-
++    
+     # Create comment line to document the start of Sequence
+     lines.append('')
+     lines.append("# " + seq_name)

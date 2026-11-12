@@ -1,0 +1,394 @@
+### Entity: SchemaMeta (src/marshmallow/schema.py:84-184)
+```python
+class SchemaMeta(type):
+    """Metaclass for the Schema class. Binds the declared fields to
+    a ``_declared_fields`` attribute, which is a dictionary mapping attribute
+    names to field objects. Also sets the ``opts`` class attribute, which is
+    the Schema class's ``class Meta`` options.
+    """
+
+    def __new__(mcs, name, bases, attrs):
+        meta = attrs.get("Meta")
+        ordered = getattr(meta, "ordered", False)
+        if not ordered:
+            # Inherit 'ordered' option
+            # Warning: We loop through bases instead of MRO because we don't
+            # yet have access to the class object
+            # (i.e. can't call super before we have fields)
+            for base_ in bases:
+                if hasattr(base_, "Meta") and hasattr(base_.Meta, "ordered"):
+                    ordered = base_.Meta.ordered
+                    break
+            else:
+                ordered = False
+        cls_fields = _get_fields(attrs, base.FieldABC, pop=True, ordered=ordered)
+        klass = super().__new__(mcs, name, bases, attrs)
+        inherited_fields = _get_fields_by_mro(klass, base.FieldABC, ordered=ordered)
+
+        meta = klass.Meta
+        # Set klass.opts in __new__ rather than __init__ so that it is accessible in
+        # get_declared_fields
+        klass.opts = klass.OPTIONS_CLASS(meta, ordered=ordered)
+        # Add fields specified in the `include` class Meta option
+        cls_fields += list(klass.opts.include.items())
+
+        dict_cls = OrderedDict if ordered else dict
+        # Assign _declared_fields on class
+        klass._declared_fields = mcs.get_declared_fields(
+            klass=klass,
+            cls_fields=cls_fields,
+            inherited_fields=inherited_fields,
+            dict_cls=dict_cls,
+        )
+        return klass
+
+    @classmethod
+    def get_declared_fields(mcs, klass, cls_fields, inherited_fields, dict_cls):
+        """Returns a dictionary of field_name => `Field` pairs declard on the class.
+        This is exposed mainly so that plugins can add additional fields, e.g. fields
+        computed from class Meta options.
+
+        :param type klass: The class object.
+        :param list cls_fields: The fields declared on the class, including those added
+            by the ``include`` class Meta option.
+        :param list inherited_fields: Inherited fields.
+        :param type dict_class: Either `dict` or `OrderedDict`, depending on the whether
+            the user specified `ordered=True`.
+        """
+        return dict_cls(inherited_fields + cls_fields)
+
+    def __init__(cls, name, bases, attrs):
+        super().__init__(cls, bases, attrs)
+        if name and cls.opts.register:
+            class_registry.register(name, cls)
+        cls._hooks = cls.resolve_hooks()
+
+    def resolve_hooks(cls):
+        """Add in the decorated processors
+
+        By doing this after constructing the class, we let standard inheritance
+        do all the hard work.
+        """
+        mro = inspect.getmro(cls)
+
+        hooks = defaultdict(list)
+
+        for attr_name in dir(cls):
+            # Need to look up the actual descriptor, not whatever might be
+            # bound to the class. This needs to come from the __dict__ of the
+            # declaring class.
+            for parent in mro:
+                try:
+                    attr = parent.__dict__[attr_name]
+                except KeyError:
+                    continue
+                else:
+                    break
+            else:
+                # In case we didn't find the attribute and didn't break above.
+                # We should never hit this - it's just here for completeness
+                # to exclude the possibility of attr being undefined.
+                continue
+
+            try:
+                hook_config = attr.__marshmallow_hook__
+            except AttributeError:
+                pass
+            else:
+                for key in hook_config.keys():
+                    # Use name here so we can get the bound method later, in
+                    # case the processor was a descriptor or something.
+                    hooks[key].append(attr_name)
+
+        return hooks
+
+```
+
+### Entity: List (src/marshmallow/fields.py:598-667)
+```python
+class List(Field):
+    """A list field, composed with another `Field` class or
+    instance.
+
+    Example: ::
+
+        numbers = fields.List(fields.Float())
+
+    :param Field cls_or_instance: A field class or instance.
+    :param bool default: Default value for serialization.
+    :param kwargs: The same keyword arguments that :class:`Field` receives.
+
+    .. versionchanged:: 2.0.0
+        The ``allow_none`` parameter now applies to deserialization and
+        has the same semantics as the other fields.
+
+    .. versionchanged:: 3.0.0rc9
+        Does not serialize scalar values to single-item lists.
+    """
+
+    default_error_messages = {"invalid": "Not a valid list."}
+
+    def __init__(self, cls_or_instance, **kwargs):
+        super().__init__(**kwargs)
+        try:
+            self.inner = resolve_field_instance(cls_or_instance)
+        except FieldInstanceResolutionError as error:
+            raise ValueError(
+                "The list elements must be a subclass or instance of "
+                "marshmallow.base.FieldABC."
+            ) from error
+        if isinstance(self.inner, Nested):
+            self.only = self.inner.only
+            self.exclude = self.inner.exclude
+
+    def _bind_to_schema(self, field_name, schema):
+        super()._bind_to_schema(field_name, schema)
+        self.inner = copy.deepcopy(self.inner)
+        self.inner._bind_to_schema(field_name, self)
+        if isinstance(self.inner, Nested):
+            self.inner.only = self.only
+            self.inner.exclude = self.exclude
+
+    def _serialize(self, value, attr, obj, **kwargs):
+        if value is None:
+            return None
+        # Optimize dumping a list of Nested objects by calling dump(many=True)
+        if isinstance(self.inner, Nested) and not self.inner.many:
+            return self.inner._serialize(value, attr, obj, many=True, **kwargs)
+        return [self.inner._serialize(each, attr, obj, **kwargs) for each in value]
+
+    def _deserialize(self, value, attr, data, **kwargs):
+        if not utils.is_collection(value):
+            raise self.make_error("invalid")
+        # Optimize loading a list of Nested objects by calling load(many=True)
+        if isinstance(self.inner, Nested) and not self.inner.many:
+            return self.inner.deserialize(value, many=True, **kwargs)
+
+        result = []
+        errors = {}
+        for idx, each in enumerate(value):
+            try:
+                result.append(self.inner.deserialize(each, **kwargs))
+            except ValidationError as error:
+                if error.valid_data is not None:
+                    result.append(error.valid_data)
+                errors.update({idx: error.messages})
+        if errors:
+            raise ValidationError(errors, valid_data=result)
+        return result
+
+```
+
+### Entity: Meta (src/marshmallow/schema.py:311-351)
+```python
+    class Meta:
+        """Options object for a Schema.
+
+        Example usage: ::
+
+            class Meta:
+                fields = ("id", "email", "date_created")
+                exclude = ("password", "secret_attribute")
+
+        Available options:
+
+        - ``fields``: Tuple or list of fields to include in the serialized result.
+        - ``additional``: Tuple or list of fields to include *in addition* to the
+            explicitly declared fields. ``additional`` and ``fields`` are
+            mutually-exclusive options.
+        - ``include``: Dictionary of additional fields to include in the schema. It is
+            usually better to define fields as class variables, but you may need to
+            use this option, e.g., if your fields are Python keywords. May be an
+            `OrderedDict`.
+        - ``exclude``: Tuple or list of fields to exclude in the serialized result.
+            Nested fields can be represented with dot delimiters.
+        - ``dateformat``: Default format for `Date <fields.Date>` fields.
+        - ``datetimeformat``: Default format for `DateTime <fields.DateTime>` fields.
+        - ``render_module``: Module to use for `loads <Schema.loads>` and `dumps <Schema.dumps>`.
+            Defaults to `json` from the standard library.
+        - ``ordered``: If `True`, order serialization output according to the
+            order in which fields were declared. Output of `Schema.dump` will be a
+            `collections.OrderedDict`.
+        - ``index_errors``: If `True`, errors dictionaries will include the index
+            of invalid items in a collection.
+        - ``load_only``: Tuple or list of fields to exclude from serialized results.
+        - ``dump_only``: Tuple or list of fields to exclude from deserialization
+        - ``unknown``: Whether to exclude, include, or raise an error for unknown
+            fields in the data. Use `EXCLUDE`, `INCLUDE` or `RAISE`.
+        - ``register``: Whether to register the `Schema` with marshmallow's internal
+            class registry. Must be `True` if you intend to refer to this `Schema`
+            by class name in `Nested` fields. Only set this to `False` when memory
+            usage is critical. Defaults to `True`.
+        """
+
+        pass
+
+```
+
+### Entity: DateTime (src/marshmallow/fields.py:1067-1153)
+```python
+class DateTime(Field):
+    """A formatted datetime string.
+
+    Example: ``'2014-12-22T03:12:58.019077+00:00'``
+
+    :param str format: Either ``"rfc"`` (for RFC822), ``"iso"`` (for ISO8601),
+        or a date format string. If `None`, defaults to "iso".
+    :param kwargs: The same keyword arguments that :class:`Field` receives.
+
+    .. versionchanged:: 3.0.0rc9
+        Does not modify timezone information on (de)serialization.
+    """
+
+    SERIALIZATION_FUNCS = {
+        "iso": utils.isoformat,
+        "iso8601": utils.isoformat,
+        "rfc": utils.rfcformat,
+        "rfc822": utils.rfcformat,
+    }
+
+    DESERIALIZATION_FUNCS = {
+        "iso": utils.from_iso_datetime,
+        "iso8601": utils.from_iso_datetime,
+        "rfc": utils.from_rfc,
+        "rfc822": utils.from_rfc,
+    }
+
+    DEFAULT_FORMAT = "iso"
+
+    OBJ_TYPE = "datetime"
+
+    SCHEMA_OPTS_VAR_NAME = "datetimeformat"
+
+    default_error_messages = {
+        "invalid": "Not a valid {obj_type}.",
+        "invalid_awareness": "Not a valid {awareness} {obj_type}.",
+        "format": '"{input}" cannot be formatted as a {obj_type}.',
+    }
+
+    def __init__(self, format=None, **kwargs):
+        super().__init__(**kwargs)
+        # Allow this to be None. It may be set later in the ``_serialize``
+        # or ``_deserialize`` methods. This allows a Schema to dynamically set the
+        # format, e.g. from a Meta option
+        self.format = format
+
+    def _bind_to_schema(self, field_name, schema):
+        super()._bind_to_schema(field_name, schema)
+        self.format = (
+            self.format
+            or getattr(schema.opts, self.SCHEMA_OPTS_VAR_NAME)
+            or self.DEFAULT_FORMAT
+        )
+
+    def _serialize(self, value, attr, obj, **kwargs):
+        if value is None:
+            return None
+        data_format = self.format or self.DEFAULT_FORMAT
+        format_func = self.SERIALIZATION_FUNCS.get(data_format)
+        if format_func:
+            return format_func(value)
+        else:
+            return value.strftime(data_format)
+
+    def _deserialize(self, value, attr, data, **kwargs):
+        if not value:  # Falsy values, e.g. '', None, [] are not valid
+            raise self.make_error("invalid", input=value, obj_type=self.OBJ_TYPE)
+        data_format = self.format or self.DEFAULT_FORMAT
+        func = self.DESERIALIZATION_FUNCS.get(data_format)
+        if func:
+            try:
+                return func(value)
+            except (TypeError, AttributeError, ValueError) as error:
+                raise self.make_error(
+                    "invalid", input=value, obj_type=self.OBJ_TYPE
+                ) from error
+        else:
+            try:
+                return self._make_object_from_format(value, data_format)
+            except (TypeError, AttributeError, ValueError) as error:
+                raise self.make_error(
+                    "invalid", input=value, obj_type=self.OBJ_TYPE
+                ) from error
+
+    @staticmethod
+    def _make_object_from_format(value, data_format):
+        return dt.datetime.strptime(value, data_format)
+
+```
+
+### Entity: _bind_field (src/marshmallow/schema.py:957-979)
+```python
+    def _bind_field(self, field_name, field_obj):
+        """Bind field to the schema, setting any necessary attributes on the
+        field (e.g. parent and name).
+
+        Also set field load_only and dump_only values if field_name was
+        specified in ``class Meta``.
+        """
+        try:
+            if field_name in self.load_only:
+                field_obj.load_only = True
+            if field_name in self.dump_only:
+                field_obj.dump_only = True
+            field_obj._bind_to_schema(field_name, self)
+            self.on_bind_field(field_name, field_obj)
+        except TypeError as error:
+            # field declared as a class, not an instance
+            if isinstance(field_obj, type) and issubclass(field_obj, base.FieldABC):
+                msg = (
+                    'Field for "{}" must be declared as a '
+                    "Field instance, not a class. "
+                    'Did you mean "fields.{}()"?'.format(field_name, field_obj.__name__)
+                )
+                raise TypeError(msg) from error
+
+```
+
+### Entity: __new__ (src/marshmallow/schema.py:91-124)
+```python
+    def __new__(mcs, name, bases, attrs):
+        meta = attrs.get("Meta")
+        ordered = getattr(meta, "ordered", False)
+        if not ordered:
+            # Inherit 'ordered' option
+            # Warning: We loop through bases instead of MRO because we don't
+            # yet have access to the class object
+            # (i.e. can't call super before we have fields)
+            for base_ in bases:
+                if hasattr(base_, "Meta") and hasattr(base_.Meta, "ordered"):
+                    ordered = base_.Meta.ordered
+                    break
+            else:
+                ordered = False
+        cls_fields = _get_fields(attrs, base.FieldABC, pop=True, ordered=ordered)
+        klass = super().__new__(mcs, name, bases, attrs)
+        inherited_fields = _get_fields_by_mro(klass, base.FieldABC, ordered=ordered)
+
+        meta = klass.Meta
+        # Set klass.opts in __new__ rather than __init__ so that it is accessible in
+        # get_declared_fields
+        klass.opts = klass.OPTIONS_CLASS(meta, ordered=ordered)
+        # Add fields specified in the `include` class Meta option
+        cls_fields += list(klass.opts.include.items())
+
+        dict_cls = OrderedDict if ordered else dict
+        # Assign _declared_fields on class
+        klass._declared_fields = mcs.get_declared_fields(
+            klass=klass,
+            cls_fields=cls_fields,
+            inherited_fields=inherited_fields,
+            dict_cls=dict_cls,
+        )
+        return klass
+
+```
+
+### Entity: Raw (src/marshmallow/fields.py:402-405)
+```python
+class Raw(Field):
+    """Field that applies no formatting or validation."""
+
+    pass
+
+```

@@ -1,0 +1,6 @@
+{
+  "model_name_or_path": "google/gemma-4-E4B-it_int8",
+  "instance_id": "pvlib__pvlib-python-1154",
+  "condition": "A",
+  "model_patch": "diff --git a/pvlib/irradiance.py b/pvlib/irradiance.py\nindex 6580030..4e31033 100644\n--- a/pvlib/irradiance.py\n+++ b/pvlib/irradiance.py\n@@ -883,10 +883,15 @@ def reindl(surface_tilt, surface_azimuth, dhi, dni, ghi, dni_extra,\n     HB = dni * cos_solar_zenith\n     HB = np.maximum(HB, 0)\n \n+    # Handle GHI = 0 case to prevent division by zero in term3\n+    sqrt_ratio = np.zeros_like(ghi)\n+    non_zero_ghi = ghi > 0\n+    sqrt_ratio[non_zero_ghi] = np.sqrt(HB[non_zero_ghi] / ghi[non_zero_ghi])\n+\n     # these are the () and [] sub-terms of the second term of eqn 8\n     term1 = 1 - AI\n     term2 = 0.5 * (1 + tools.cosd(surface_tilt))\n-    term3 = 1 + np.sqrt(HB / ghi) * (tools.sind(0.5 * surface_tilt) ** 3)\n+    term3 = 1 + sqrt_ratio * (tools.sind(0.5 * surface_tilt) ** 3)\n \n     sky_diffuse = dhi * (AI * Rb + term1 * term2 * term3)\n     sky_diffuse = np.maximum(sky_diffuse, 0)\n"
+}

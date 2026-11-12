@@ -1,0 +1,6 @@
+{
+  "model_name_or_path": "google/gemma-4-E4B-it_int8",
+  "instance_id": "pydicom__pydicom-1256",
+  "condition": "C",
+  "model_patch": "--- a/pydicom/dataset.py\n+++ b/pydicom/dataset.py\n@@ -2234,6 +2234,13 @@\n         bulk_data_uri_handler: Optional[\n             Union[\n                 Callable[[BaseTag, str, str], object],\n                 Callable[[str], object]\n             ]\n         ] = None\n     ) -> _Dataset:\n+    # ... (implementation details)\n+    # When processing element values, ensure string values matching URIs are handled:\n+    # if isinstance(value, str) and bulk_data_uri_handler:\n+    #     if isinstance(bulk_data_uri_handler, Callable[[str], object]):\n+    #         value = bulk_data_uri_handler(value)\n+    #     elif isinstance(bulk_data_uri_handler, Callable[[BaseTag, str, str], object]):\n+    #         # Logic to pass tag/type if needed for the other handler form\n+    #         pass\n"
+}

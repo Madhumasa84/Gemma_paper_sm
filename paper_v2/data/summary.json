@@ -1,0 +1,33 @@
+{
+  "snapshot": "2026-11-08T17:38:23Z archive label; internal files extend to 17:46",
+  "pilot": {
+    "completed": 12,
+    "applied": 7,
+    "tested": 7,
+    "resolved": 0
+  },
+  "fresh": {
+    "planned": 40,
+    "completed": 22,
+    "strict": 2,
+    "recount": 10,
+    "tested": 10,
+    "verified_resolved": 0,
+    "eos": 18,
+    "token_limit": 4,
+    "complete_task_sets": 5,
+    "complete_tasks": [
+      "pvlib__pvlib-python-1154",
+      "pvlib__pvlib-python-1606",
+      "pvlib__pvlib-python-1707",
+      "pvlib__pvlib-python-1854",
+      "pydicom__pydicom-1256"
+    ],
+    "controls_verified": 6,
+    "tested_with_verified_controls": 3,
+    "missing_statuses": {
+      "UNSTARTED": 17,
+      "INTERRUPTED": 1
+    }
+  }
+}

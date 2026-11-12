@@ -1,0 +1,518 @@
++ source /opt/miniconda3/bin/activate
+++ _CONDA_ROOT=/opt/miniconda3
+++ . /opt/miniconda3/etc/profile.d/conda.sh
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ '[' -z '' ']'
++++ export CONDA_SHLVL=0
++++ CONDA_SHLVL=0
++++ '[' -n '' ']'
++++++ dirname /opt/miniconda3/bin/conda
+++++ dirname /opt/miniconda3/bin
++++ PATH=/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export PATH
++++ '[' -z '' ']'
++++ PS1=
+++ conda activate
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1=
++++ __conda_exe shell.posix activate
++++ /opt/miniconda3/bin/conda shell.posix activate
+++ ask_conda='PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ eval 'PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++++ PS1='(base) '
++++ export PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export CONDA_PREFIX=/opt/miniconda3
++++ CONDA_PREFIX=/opt/miniconda3
++++ export CONDA_SHLVL=1
++++ CONDA_SHLVL=1
++++ export CONDA_DEFAULT_ENV=base
++++ CONDA_DEFAULT_ENV=base
++++ export 'CONDA_PROMPT_MODIFIER=(base) '
++++ CONDA_PROMPT_MODIFIER='(base) '
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
++ conda activate testbed
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate testbed
++ '[' -n '' ']'
++ local ask_conda
+++ PS1='(base) '
+++ __conda_exe shell.posix activate testbed
+++ /opt/miniconda3/bin/conda shell.posix activate testbed
++ ask_conda='PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_1='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++ eval 'PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_1='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ PS1='(testbed) '
+++ export PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ export CONDA_SHLVL=2
+++ CONDA_SHLVL=2
+++ export CONDA_DEFAULT_ENV=testbed
+++ CONDA_DEFAULT_ENV=testbed
+++ export 'CONDA_PROMPT_MODIFIER=(testbed) '
+++ CONDA_PROMPT_MODIFIER='(testbed) '
+++ export CONDA_PREFIX_1=/opt/miniconda3
+++ CONDA_PREFIX_1=/opt/miniconda3
+++ export CONDA_EXE=/opt/miniconda3/bin/conda
+++ CONDA_EXE=/opt/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ cd /testbed
++ git config --global --add safe.directory /testbed
++ cd /testbed
++ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   pydicom/dataelem.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
++ git show
+commit f9e2ab42f2d6b48bdf117931b14cdb834f7384a9
+Author: SWE-bench <setup@swebench.config>
+Date:   Tue May 6 23:49:55 2025 +0000
+
+    SWE-bench
++ git -c core.fileMode=false diff b9fb05c177b685bf683f7f57b2d57374eb7d882d
+diff --git a/pydicom/dataelem.py b/pydicom/dataelem.py
+index ceeaca628..6cb996aec 100644
+--- a/pydicom/dataelem.py
++++ b/pydicom/dataelem.py
+@@ -97,6 +97,10 @@ class DataElement:
+     While its possible to create a new :class:`DataElement` directly and add
+     it to a :class:`~pydicom.dataset.Dataset`:
+ 
++    # For PN elements, we want to allow string operations like 'in'
++    # even though the underlying type is not a standard string.
++    # This allows users to treat PN values like strings when appropriate.
++
+     >>> from pydicom import Dataset
+     >>> elem = DataElement(0x00100010, 'PN', 'CITIZEN^Joan')
+     >>> ds = Dataset()
++ source /opt/miniconda3/bin/activate
+++ _CONDA_ROOT=/opt/miniconda3
+++ . /opt/miniconda3/etc/profile.d/conda.sh
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ '[' -z x ']'
+++ conda activate
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1='(testbed) '
++++ __conda_exe shell.posix activate
++++ /opt/miniconda3/bin/conda shell.posix activate
+++ ask_conda='PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_2='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ eval 'PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_2='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++++ PS1='(base) '
++++ export PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export CONDA_PREFIX=/opt/miniconda3
++++ CONDA_PREFIX=/opt/miniconda3
++++ export CONDA_SHLVL=3
++++ CONDA_SHLVL=3
++++ export CONDA_DEFAULT_ENV=base
++++ CONDA_DEFAULT_ENV=base
++++ export 'CONDA_PROMPT_MODIFIER=(base) '
++++ CONDA_PROMPT_MODIFIER='(base) '
++++ export CONDA_PREFIX_2=/opt/miniconda3/envs/testbed
++++ CONDA_PREFIX_2=/opt/miniconda3/envs/testbed
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
++ conda activate testbed
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate testbed
++ '[' -n '' ']'
++ local ask_conda
+++ PS1='(base) '
+++ __conda_exe shell.posix activate testbed
+++ /opt/miniconda3/bin/conda shell.posix activate testbed
++ ask_conda='PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_3='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++ eval 'PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_3='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ PS1='(testbed) '
+++ export PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ export CONDA_SHLVL=4
+++ CONDA_SHLVL=4
+++ export CONDA_DEFAULT_ENV=testbed
+++ CONDA_DEFAULT_ENV=testbed
+++ export 'CONDA_PROMPT_MODIFIER=(testbed) '
+++ CONDA_PROMPT_MODIFIER='(testbed) '
+++ export CONDA_PREFIX_3=/opt/miniconda3
+++ CONDA_PREFIX_3=/opt/miniconda3
+++ export CONDA_EXE=/opt/miniconda3/bin/conda
+++ CONDA_EXE=/opt/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ python -m pip install -e .
+Obtaining file:///testbed
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Installing collected packages: pydicom
+  Attempting uninstall: pydicom
+    Found existing installation: pydicom 2.1.0.dev0
+    Uninstalling pydicom-2.1.0.dev0:
+      Successfully uninstalled pydicom-2.1.0.dev0
+  DEPRECATION: Legacy editable install of pydicom==2.1.0.dev0 from file:///testbed (setup.py develop) is deprecated. pip 25.0 will enforce this behaviour change. A possible replacement is to add a pyproject.toml or enable --use-pep517, and use setuptools >= 64. If the resulting installation is not behaving as expected, try using --config-settings editable_mode=compat. Please consult the setuptools documentation for more information. Discussion can be found at https://github.com/pypa/pip/issues/11457
+  Running setup.py develop for pydicom
+Successfully installed pydicom
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ git checkout b9fb05c177b685bf683f7f57b2d57374eb7d882d pydicom/tests/test_valuerep.py
+Updated 0 paths from 5569920b8
++ git apply -v -
+<stdin>:49: trailing whitespace.
+        
+Checking patch pydicom/tests/test_valuerep.py...
+Applied patch pydicom/tests/test_valuerep.py cleanly.
+warning: 1 line adds whitespace errors.
++ : '>>>>> Start Test Output'
++ pytest -rA pydicom/tests/test_valuerep.py
+============================= test session starts ==============================
+platform linux -- Python 3.8.20, pytest-7.4.4, pluggy-1.5.0
+rootdir: /testbed
+collected 41 items
+
+pydicom/tests/test_valuerep.py ...................................FFF... [100%]
+
+=================================== FAILURES ===================================
+___________________________ TestPersonName.test_next ___________________________
+
+self = <pydicom.tests.test_valuerep.TestPersonName object at 0x78a0f538a1f0>
+
+    def test_next(self):
+        """Test that the next function works on it's own"""
+        # Test getting the first character
+        pn1 = PersonName("John^Doe^^Dr", encodings=default_encoding)
+>       pn1_itr = iter(pn1)
+E       TypeError: 'PersonName' object is not iterable
+
+pydicom/tests/test_valuerep.py:434: TypeError
+_________________________ TestPersonName.test_iterator _________________________
+
+self = <pydicom.tests.test_valuerep.TestPersonName object at 0x78a0f5388790>
+
+    def test_iterator(self):
+        """Test that iterators can be corretly constructed"""
+        name_str = "John^Doe^^Dr"
+        pn1 = PersonName(name_str)
+    
+>       for i, c in enumerate(pn1):
+E       TypeError: 'PersonName' object is not iterable
+
+pydicom/tests/test_valuerep.py:472: TypeError
+_________________________ TestPersonName.test_contains _________________________
+
+self = <pydicom.tests.test_valuerep.TestPersonName object at 0x78a0f516da30>
+
+    def test_contains(self):
+        """Test that characters can be check if they are within the name"""
+        pn1 = PersonName("John^Doe")
+>       assert ("J" in pn1) == True
+E       TypeError: argument of type 'PersonName' is not iterable
+
+pydicom/tests/test_valuerep.py:482: TypeError
+=============================== warnings summary ===============================
+pydicom/tests/test_valuerep.py::TestBadValueRead::test_read_bad_value_in_VR_default
+  /opt/miniconda3/envs/testbed/lib/python3.8/site-packages/_pytest/fixtures.py:895: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  pydicom/tests/test_valuerep.py::TestBadValueRead::test_read_bad_value_in_VR_default is using nose-specific method: `setup(self)`
+  To remove this warning, rename it to `setup_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    fixture_result = next(generator)
+
+pydicom/tests/test_valuerep.py::TestBadValueRead::test_read_bad_value_in_VR_default
+  /opt/miniconda3/envs/testbed/lib/python3.8/site-packages/_pytest/fixtures.py:911: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  pydicom/tests/test_valuerep.py::TestBadValueRead::test_read_bad_value_in_VR_default is using nose-specific method: `teardown(self)`
+  To remove this warning, rename it to `teardown_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    next(it)
+
+pydicom/tests/test_valuerep.py::TestBadValueRead::test_read_bad_value_in_VR_enforce_valid_value
+  /opt/miniconda3/envs/testbed/lib/python3.8/site-packages/_pytest/fixtures.py:895: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  pydicom/tests/test_valuerep.py::TestBadValueRead::test_read_bad_value_in_VR_enforce_valid_value is using nose-specific method: `setup(self)`
+  To remove this warning, rename it to `setup_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    fixture_result = next(generator)
+
+pydicom/tests/test_valuerep.py::TestBadValueRead::test_read_bad_value_in_VR_enforce_valid_value
+  /opt/miniconda3/envs/testbed/lib/python3.8/site-packages/_pytest/fixtures.py:911: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  pydicom/tests/test_valuerep.py::TestBadValueRead::test_read_bad_value_in_VR_enforce_valid_value is using nose-specific method: `teardown(self)`
+  To remove this warning, rename it to `teardown_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    next(it)
+
+pydicom/tests/test_valuerep.py::TestDecimalString::test_DS_decimal_set
+  /opt/miniconda3/envs/testbed/lib/python3.8/site-packages/_pytest/fixtures.py:895: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  pydicom/tests/test_valuerep.py::TestDecimalString::test_DS_decimal_set is using nose-specific method: `setup(self)`
+  To remove this warning, rename it to `setup_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    fixture_result = next(generator)
+
+pydicom/tests/test_valuerep.py::TestDecimalString::test_DS_decimal_set
+  /opt/miniconda3/envs/testbed/lib/python3.8/site-packages/_pytest/fixtures.py:911: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  pydicom/tests/test_valuerep.py::TestDecimalString::test_DS_decimal_set is using nose-specific method: `teardown(self)`
+  To remove this warning, rename it to `teardown_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    next(it)
+
+pydicom/tests/test_valuerep.py::TestDecimalString::test_valid_decimal_strings
+  /opt/miniconda3/envs/testbed/lib/python3.8/site-packages/_pytest/fixtures.py:895: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  pydicom/tests/test_valuerep.py::TestDecimalString::test_valid_decimal_strings is using nose-specific method: `setup(self)`
+  To remove this warning, rename it to `setup_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    fixture_result = next(generator)
+
+pydicom/tests/test_valuerep.py::TestDecimalString::test_valid_decimal_strings
+  /opt/miniconda3/envs/testbed/lib/python3.8/site-packages/_pytest/fixtures.py:911: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  pydicom/tests/test_valuerep.py::TestDecimalString::test_valid_decimal_strings is using nose-specific method: `teardown(self)`
+  To remove this warning, rename it to `teardown_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    next(it)
+
+pydicom/tests/test_valuerep.py::TestDecimalString::test_invalid_decimal_strings
+  /opt/miniconda3/envs/testbed/lib/python3.8/site-packages/_pytest/fixtures.py:895: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  pydicom/tests/test_valuerep.py::TestDecimalString::test_invalid_decimal_strings is using nose-specific method: `setup(self)`
+  To remove this warning, rename it to `setup_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    fixture_result = next(generator)
+
+pydicom/tests/test_valuerep.py::TestDecimalString::test_invalid_decimal_strings
+  /opt/miniconda3/envs/testbed/lib/python3.8/site-packages/_pytest/fixtures.py:911: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  pydicom/tests/test_valuerep.py::TestDecimalString::test_invalid_decimal_strings is using nose-specific method: `teardown(self)`
+  To remove this warning, rename it to `teardown_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    next(it)
+
+pydicom/tests/test_valuerep.py::TestDateTime::test_date
+  /opt/miniconda3/envs/testbed/lib/python3.8/site-packages/_pytest/fixtures.py:895: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  pydicom/tests/test_valuerep.py::TestDateTime::test_date is using nose-specific method: `setup(self)`
+  To remove this warning, rename it to `setup_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    fixture_result = next(generator)
+
+pydicom/tests/test_valuerep.py::TestDateTime::test_date
+  /opt/miniconda3/envs/testbed/lib/python3.8/site-packages/_pytest/fixtures.py:911: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  pydicom/tests/test_valuerep.py::TestDateTime::test_date is using nose-specific method: `teardown(self)`
+  To remove this warning, rename it to `teardown_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    next(it)
+
+pydicom/tests/test_valuerep.py::TestDateTime::test_date_time
+  /opt/miniconda3/envs/testbed/lib/python3.8/site-packages/_pytest/fixtures.py:895: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  pydicom/tests/test_valuerep.py::TestDateTime::test_date_time is using nose-specific method: `setup(self)`
+  To remove this warning, rename it to `setup_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    fixture_result = next(generator)
+
+pydicom/tests/test_valuerep.py::TestDateTime::test_date_time
+  /opt/miniconda3/envs/testbed/lib/python3.8/site-packages/_pytest/fixtures.py:911: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  pydicom/tests/test_valuerep.py::TestDateTime::test_date_time is using nose-specific method: `teardown(self)`
+  To remove this warning, rename it to `teardown_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    next(it)
+
+pydicom/tests/test_valuerep.py::TestDateTime::test_time
+  /opt/miniconda3/envs/testbed/lib/python3.8/site-packages/_pytest/fixtures.py:895: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  pydicom/tests/test_valuerep.py::TestDateTime::test_time is using nose-specific method: `setup(self)`
+  To remove this warning, rename it to `setup_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    fixture_result = next(generator)
+
+pydicom/tests/test_valuerep.py::TestDateTime::test_time
+  /opt/miniconda3/envs/testbed/lib/python3.8/site-packages/_pytest/fixtures.py:911: PytestRemovedIn8Warning: Support for nose tests is deprecated and will be removed in a future release.
+  pydicom/tests/test_valuerep.py::TestDateTime::test_time is using nose-specific method: `teardown(self)`
+  To remove this warning, rename it to `teardown_method(self)`
+  See docs: https://docs.pytest.org/en/stable/deprecations.html#support-for-tests-written-for-nose
+    next(it)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+______________ TestBadValueRead.test_read_bad_value_in_VR_default ______________
+------------------------------ Captured log call -------------------------------
+WARNING  pydicom:values.py:333 Expected length to be even multiple of number size
+WARNING  pydicom:values.py:333 Expected length to be even multiple of number size
+=========================== short test summary info ============================
+PASSED pydicom/tests/test_valuerep.py::TestTM::test_pickling
+PASSED pydicom/tests/test_valuerep.py::TestDT::test_pickling
+PASSED pydicom/tests/test_valuerep.py::TestDA::test_pickling
+PASSED pydicom/tests/test_valuerep.py::TestDS::test_empty_value
+PASSED pydicom/tests/test_valuerep.py::TestDS::test_float_values
+PASSED pydicom/tests/test_valuerep.py::TestDSfloat::test_pickling
+PASSED pydicom/tests/test_valuerep.py::TestDSfloat::test_str
+PASSED pydicom/tests/test_valuerep.py::TestDSfloat::test_repr
+PASSED pydicom/tests/test_valuerep.py::TestDSdecimal::test_pickling
+PASSED pydicom/tests/test_valuerep.py::TestDSdecimal::test_float_value
+PASSED pydicom/tests/test_valuerep.py::TestIS::test_empty_value
+PASSED pydicom/tests/test_valuerep.py::TestIS::test_valid_value
+PASSED pydicom/tests/test_valuerep.py::TestIS::test_invalid_value
+PASSED pydicom/tests/test_valuerep.py::TestIS::test_pickling
+PASSED pydicom/tests/test_valuerep.py::TestIS::test_longint
+PASSED pydicom/tests/test_valuerep.py::TestIS::test_overflow
+PASSED pydicom/tests/test_valuerep.py::TestIS::test_str
+PASSED pydicom/tests/test_valuerep.py::TestIS::test_repr
+PASSED pydicom/tests/test_valuerep.py::TestBadValueRead::test_read_bad_value_in_VR_default
+PASSED pydicom/tests/test_valuerep.py::TestBadValueRead::test_read_bad_value_in_VR_enforce_valid_value
+PASSED pydicom/tests/test_valuerep.py::TestDecimalString::test_DS_decimal_set
+PASSED pydicom/tests/test_valuerep.py::TestDecimalString::test_valid_decimal_strings
+PASSED pydicom/tests/test_valuerep.py::TestDecimalString::test_invalid_decimal_strings
+PASSED pydicom/tests/test_valuerep.py::TestPersonName::test_last_first
+PASSED pydicom/tests/test_valuerep.py::TestPersonName::test_copy
+PASSED pydicom/tests/test_valuerep.py::TestPersonName::test_three_component
+PASSED pydicom/tests/test_valuerep.py::TestPersonName::test_formatting
+PASSED pydicom/tests/test_valuerep.py::TestPersonName::test_unicode_kr
+PASSED pydicom/tests/test_valuerep.py::TestPersonName::test_unicode_jp_from_bytes
+PASSED pydicom/tests/test_valuerep.py::TestPersonName::test_unicode_jp_from_bytes_comp_delimiter
+PASSED pydicom/tests/test_valuerep.py::TestPersonName::test_unicode_jp_from_bytes_caret_delimiter
+PASSED pydicom/tests/test_valuerep.py::TestPersonName::test_unicode_jp_from_unicode
+PASSED pydicom/tests/test_valuerep.py::TestPersonName::test_not_equal
+PASSED pydicom/tests/test_valuerep.py::TestPersonName::test_encoding_carried
+PASSED pydicom/tests/test_valuerep.py::TestPersonName::test_hash
+PASSED pydicom/tests/test_valuerep.py::TestDateTime::test_date
+PASSED pydicom/tests/test_valuerep.py::TestDateTime::test_date_time
+PASSED pydicom/tests/test_valuerep.py::TestDateTime::test_time
+FAILED pydicom/tests/test_valuerep.py::TestPersonName::test_next - TypeError:...
+FAILED pydicom/tests/test_valuerep.py::TestPersonName::test_iterator - TypeEr...
+FAILED pydicom/tests/test_valuerep.py::TestPersonName::test_contains - TypeEr...
+================== 3 failed, 38 passed, 16 warnings in 0.80s ===================
++ : '>>>>> End Test Output'
++ git checkout b9fb05c177b685bf683f7f57b2d57374eb7d882d pydicom/tests/test_valuerep.py
+Updated 1 path from 5569920b8

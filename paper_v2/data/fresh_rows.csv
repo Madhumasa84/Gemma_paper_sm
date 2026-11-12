@@ -1,0 +1,50 @@
+instance_id,condition,generation_status,completed,strict_applicable,recount_applicable,tested,verified_controls,required_regression_passed,required_regression_failed,required_preservation_failed,required_preservation_error,required_unconfirmed,verified_resolved,evidence_tokens,input_tokens,generated_tokens,hit_token_cap,apply_error
+pvlib__pvlib-python-1154,W,COMPLETED,True,True,True,True,False,0,1,0,0,10,False,3980,4345,257,False,
+pvlib__pvlib-python-1154,A,COMPLETED,True,False,True,True,False,1,0,2,0,10,False,3978,4343,1640,False,
+pvlib__pvlib-python-1154,B,COMPLETED,True,False,False,False,False,0,0,0,0,97,False,3990,4355,1856,False,"error: patch failed: pvlib/irradiance.py:793
+error: pvlib/irradiance.py: patch does not apply"
+pvlib__pvlib-python-1154,C,COMPLETED,True,False,True,True,False,0,1,0,0,10,False,3994,4359,797,False,
+pvlib__pvlib-python-1606,W,COMPLETED,True,False,False,False,True,0,0,0,0,10,False,3993,6364,234,False,"error: patch failed: pvlib/tools.py:161
+error: pvlib/tools.py: patch does not apply"
+pvlib__pvlib-python-1606,A,COMPLETED,True,True,True,True,True,0,1,0,0,0,False,3996,6367,289,False,
+pvlib__pvlib-python-1606,B,COMPLETED,True,False,False,False,True,0,0,0,0,10,False,4000,6371,554,False,"error: patch failed: pvlib/tools.py:359
+error: pvlib/tools.py: patch does not apply"
+pvlib__pvlib-python-1606,C,COMPLETED,True,False,False,False,True,0,0,0,0,10,False,3970,6341,216,False,"error: patch failed: pvlib/tools.py:371
+error: pvlib/tools.py: patch does not apply"
+pvlib__pvlib-python-1707,W,COMPLETED,True,False,False,False,False,0,0,0,0,30,False,3998,4365,1510,False,"error: patch failed: pvlib/iam.py:1
+error: pvlib/iam.py: patch does not apply"
+pvlib__pvlib-python-1707,A,COMPLETED,True,False,True,True,False,0,1,0,1,0,False,3983,4350,147,False,
+pvlib__pvlib-python-1707,B,COMPLETED,True,False,False,False,False,0,0,0,0,30,False,3999,4366,112,False,"error: patch failed: pvlib/iam.py:91
+error: pvlib/iam.py: patch does not apply"
+pvlib__pvlib-python-1707,C,COMPLETED,True,False,True,True,False,0,1,1,1,0,False,3978,4345,139,False,
+pvlib__pvlib-python-1854,W,COMPLETED,True,False,False,False,False,0,0,0,0,281,False,3999,4762,192,False,"error: patch failed: pvlib/pvsystem.py:249
+error: pvlib/pvsystem.py: patch does not apply"
+pvlib__pvlib-python-1854,A,COMPLETED,True,False,True,True,False,0,1,0,37,0,False,4000,4763,240,False,
+pvlib__pvlib-python-1854,B,COMPLETED,True,False,False,False,False,0,0,0,0,281,False,4000,4763,127,False,"error: patch failed: pvlib/pvsystem.py:250
+error: pvlib/pvsystem.py: patch does not apply"
+pvlib__pvlib-python-1854,C,COMPLETED,True,False,True,True,False,0,1,0,37,0,False,3991,4754,186,False,
+pydicom__pydicom-1256,W,COMPLETED,True,False,True,True,True,0,1,0,0,0,False,3997,4531,1651,False,
+pydicom__pydicom-1256,A,COMPLETED_TRUNCATED,True,False,False,False,True,0,0,0,0,22,False,3988,4522,2048,True,No patch block found
+pydicom__pydicom-1256,B,COMPLETED,True,False,True,True,True,0,1,0,0,0,False,3988,4522,120,False,
+pydicom__pydicom-1256,C,COMPLETED_TRUNCATED,True,False,False,False,True,0,0,0,0,22,False,3995,4529,2048,True,"error: patch failed: pydicom/dataset.py:2234
+error: pydicom/dataset.py: patch does not apply"
+pydicom__pydicom-1413,W,UNSTARTED,False,,,False,False,0,0,0,0,,False,3991,,,,
+pydicom__pydicom-1413,A,COMPLETED_TRUNCATED,True,False,False,False,False,0,0,0,0,301,False,3960,4392,2048,True,error: corrupt patch at line 3
+pydicom__pydicom-1413,B,COMPLETED_TRUNCATED,True,False,False,False,False,0,0,0,0,301,False,3974,4406,2048,True,No patch block found
+pydicom__pydicom-1413,C,INTERRUPTED,False,,,False,False,0,0,0,0,,False,3997,,,,
+pydicom__pydicom-1694,W,UNSTARTED,False,,,False,True,0,0,0,0,,False,3993,,,,
+pydicom__pydicom-1694,A,UNSTARTED,False,,,False,True,0,0,0,0,,False,3963,,,,
+pydicom__pydicom-1694,B,UNSTARTED,False,,,False,True,0,0,0,0,,False,3993,,,,
+pydicom__pydicom-1694,C,UNSTARTED,False,,,False,True,0,0,0,0,,False,3997,,,,
+pydicom__pydicom-901,W,UNSTARTED,False,,,False,True,0,0,0,0,,False,4000,,,,
+pydicom__pydicom-901,A,UNSTARTED,False,,,False,True,0,0,0,0,,False,3997,,,,
+pydicom__pydicom-901,B,UNSTARTED,False,,,False,True,0,0,0,0,,False,4000,,,,
+pydicom__pydicom-901,C,UNSTARTED,False,,,False,True,0,0,0,0,,False,3983,,,,
+pylint-dev__astroid-1196,W,UNSTARTED,False,,,False,True,0,0,0,0,,False,3999,,,,
+pylint-dev__astroid-1196,A,UNSTARTED,False,,,False,True,0,0,0,0,,False,3971,,,,
+pylint-dev__astroid-1196,B,UNSTARTED,False,,,False,True,0,0,0,0,,False,4000,,,,
+pylint-dev__astroid-1196,C,UNSTARTED,False,,,False,True,0,0,0,0,,False,3998,,,,
+pylint-dev__astroid-1268,W,UNSTARTED,False,,,False,True,0,0,0,0,,False,3977,,,,
+pylint-dev__astroid-1268,A,UNSTARTED,False,,,False,True,0,0,0,0,,False,3977,,,,
+pylint-dev__astroid-1268,B,UNSTARTED,False,,,False,True,0,0,0,0,,False,4000,,,,
+pylint-dev__astroid-1268,C,UNSTARTED,False,,,False,True,0,0,0,0,,False,3983,,,,

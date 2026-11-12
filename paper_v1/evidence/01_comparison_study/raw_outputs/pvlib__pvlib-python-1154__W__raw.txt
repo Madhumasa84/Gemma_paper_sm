@@ -1,0 +1,16 @@
+```diff
+--- a/pvlib/shading.py
++++ b/pvlib/shading.py
+@@ -100,7 +100,10 @@
+     beta = np.radians(np.array(surface_tilt))
+     sin_b = np.sin(beta)
+     cos_b = np.cos(beta)
+-    X = 1/gcr
++    # Handle gcr=0 case to prevent division by zero when calculating X
++    # If gcr is zero, X is effectively infinite, which should lead to 0 diffuse
++    # as the masking angle approaches 0 (or the limit of the formula).
++    X = np.divide(1.0, gcr, out=np.full_like(gcr, np.inf, dtype=float), where=gcr!=0)
+ 
+     with np.errstate(divide='ignore', invalid='ignore'):  # ignore beta=0
+         term1 = -X * sin_b * np.log(np.abs(2 * X * cos_b - (X**2 + 1))) / 2
+```

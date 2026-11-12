@@ -1,0 +1,37 @@
+{
+  "checkpoint_key": "pydicom__pydicom-1139__C__a1__77c52864__0d94c473",
+  "execution_mode": "production_gpu",
+  "is_mock": false,
+  "instance_id": "pydicom__pydicom-1139",
+  "condition": "C",
+  "attempt": 1,
+  "prompt_hash": "77c52864747d5114e90eef30d57dec0dbbc29bff80cbe69cbe156906d3d8ab4f",
+  "config_hash": "0d94c473014df36032494da359ab2f34ef2335b996e7928d743d8afde70dc30e",
+  "model_id": "google/gemma-4-E4B-it",
+  "model_revision": "4ecc2ba63bcac23ba4a767fc87025b1450f84c9c",
+  "raw_generation": "```diff\n--- a/pydicom/dataelem.py\n+++ b/pydicom/dataelem.py\n@@ -154,6 +154,10 @@\n                  value,\n                  file_value_tell=None,\n                  is_undefined_length=False,\n                  already_converted=False):\n         \"\"\"Create a new :class:`DataElement`.\n \n         Parameters\n         ----------\n         tag : tuple or str\n@@ -161,6 +165,10 @@\n         \"\"\"\n+        if self.VR == 'PN' and isinstance(value, str):\n+            # Allow string representation of PersonName3 to be iterable if needed,\n+            # although typically it's treated as a single string value.\n+            # For compatibility with string methods, we keep it as string.\n+            pass\n         self.tag = tag\n         self.VR = VR\n         self.value = value\n```",
+  "model_patch": "--- a/pydicom/dataelem.py\n+++ b/pydicom/dataelem.py\n@@ -154,6 +154,10 @@\n                  value,\n                  file_value_tell=None,\n                  is_undefined_length=False,\n                  already_converted=False):\n         \"\"\"Create a new :class:`DataElement`.\n \n         Parameters\n         ----------\n         tag : tuple or str\n@@ -161,6 +165,10 @@\n         \"\"\"\n+        if self.VR == 'PN' and isinstance(value, str):\n+            # Allow string representation of PersonName3 to be iterable if needed,\n+            # although typically it's treated as a single string value.\n+            # For compatibility with string methods, we keep it as string.\n+            pass\n         self.tag = tag\n         self.VR = VR\n         self.value = value\n```\n",
+  "generation_status": "COMPLETED",
+  "conversion_status": "SUCCESS",
+  "patch_applicability": "GIT_APPLY_REJECTED: error: corrupt patch at line 13",
+  "test_resolution": "PENDING_SWE_BENCH_EVALUATOR",
+  "token_counts": {
+    "input_tokens": 4307,
+    "generated_tokens": 215,
+    "total_tokens": 4522
+  },
+  "finish_reason": "stop",
+  "elapsed_seconds": 72.18,
+  "memory_measurements": {
+    "before": {
+      "allocated_mb": 0.0,
+      "reserved_mb": 4.0
+    },
+    "after": {
+      "allocated_mb": 0.07,
+      "reserved_mb": 4.0,
+      "peak_mb": 2.71
+    }
+  },
+  "timestamp": 1793960774.935858
+}

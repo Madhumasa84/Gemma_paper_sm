@@ -1,0 +1,62 @@
+{
+  "base_commit": "b40a0f4e33823e6d0f341f7e8684e359a99060d1",
+  "verified_spans": [
+    {
+      "name": "SchemaMeta",
+      "path": "src/marshmallow/schema.py",
+      "start": 84,
+      "end": 184,
+      "source_sha256": "1ea7ded7c9cd0ee87364492e7eabcb24afce583c85616ba7ed3d99517eac71ea",
+      "verified": true
+    },
+    {
+      "name": "List",
+      "path": "src/marshmallow/fields.py",
+      "start": 598,
+      "end": 667,
+      "source_sha256": "9ee64cdcce6294228adb9801b41eddf6f2826d9d30292dbb885ba20107e4cfc1",
+      "verified": true
+    },
+    {
+      "name": "Meta",
+      "path": "src/marshmallow/schema.py",
+      "start": 311,
+      "end": 351,
+      "source_sha256": "4fe6f9de66a569ea81326f5464b84e9d406bc687f9e2421d104c7206a1bd88c1",
+      "verified": true
+    },
+    {
+      "name": "DateTime",
+      "path": "src/marshmallow/fields.py",
+      "start": 1067,
+      "end": 1153,
+      "source_sha256": "429f0d294b55e4180f1e809e5fb7c7e8e70b30c9364a4985e786c8d79ee4cfc8",
+      "verified": true
+    },
+    {
+      "name": "_bind_field",
+      "path": "src/marshmallow/schema.py",
+      "start": 957,
+      "end": 979,
+      "source_sha256": "bf9d6fb6bbd5c3b34e262b349cd8496513927ff0854adcfd7f9e8ffaa0001480",
+      "verified": true
+    },
+    {
+      "name": "__new__",
+      "path": "src/marshmallow/schema.py",
+      "start": 91,
+      "end": 124,
+      "source_sha256": "f1e9243a05e87159553d429e669943cef6333ab9c1b00b841b7472518a8f0673",
+      "verified": true
+    },
+    {
+      "name": "Raw",
+      "path": "src/marshmallow/fields.py",
+      "start": 402,
+      "end": 405,
+      "source_sha256": "47e40a08c05f32aa281ca11edb6e4de0ff3192a032c3efae7d4600897870208a",
+      "verified": true
+    }
+  ],
+  "retrieval_changed": false
+}

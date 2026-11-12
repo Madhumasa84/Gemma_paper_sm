@@ -1,0 +1,12 @@
+```diff
+--- a/pvlib/iam.py
++++ b/pvlib/iam.py
+@@ -33,7 +33,7 @@
+     """
+     iam = 1 - (1 - cosd(aoi)) ** 5
+-    iam = np.where(np.abs(aoi) >= 90.0, 0.0, iam)
++    iam = np.where(np.abs(aoi) >= 90.0, 0.0, np.maximum(0.0, iam))
+ 
+     # preserve input type
+     if np.isscalar(aoi):
+```

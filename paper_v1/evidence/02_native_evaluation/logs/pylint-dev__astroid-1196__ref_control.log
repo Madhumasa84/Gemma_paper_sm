@@ -1,0 +1,38 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.23, pytest-7.4.4, pluggy-1.6.0
+rootdir: /content/native_evaluation/eval_repos/pylint-dev__astroid-1196
+configfile: setup.cfg
+collected 26 items
+
+tests/unittest_python3.py ..........................                     [100%]
+
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/unittest_python3.py::Python3TC::test_annotation_as_string
+PASSED tests/unittest_python3.py::Python3TC::test_annotation_support
+PASSED tests/unittest_python3.py::Python3TC::test_as_string
+PASSED tests/unittest_python3.py::Python3TC::test_async_comprehensions
+PASSED tests/unittest_python3.py::Python3TC::test_async_comprehensions_as_string
+PASSED tests/unittest_python3.py::Python3TC::test_async_comprehensions_outside_coroutine
+PASSED tests/unittest_python3.py::Python3TC::test_format_string
+PASSED tests/unittest_python3.py::Python3TC::test_kwonlyargs_annotations_supper
+PASSED tests/unittest_python3.py::Python3TC::test_metaclass_ancestors
+PASSED tests/unittest_python3.py::Python3TC::test_metaclass_error
+PASSED tests/unittest_python3.py::Python3TC::test_metaclass_imported
+PASSED tests/unittest_python3.py::Python3TC::test_metaclass_multiple_keywords
+PASSED tests/unittest_python3.py::Python3TC::test_metaclass_yes_leak
+PASSED tests/unittest_python3.py::Python3TC::test_nested_unpacking_in_dicts
+PASSED tests/unittest_python3.py::Python3TC::test_old_syntax_works
+PASSED tests/unittest_python3.py::Python3TC::test_parent_metaclass
+PASSED tests/unittest_python3.py::Python3TC::test_simple_metaclass
+PASSED tests/unittest_python3.py::Python3TC::test_starred_notation
+PASSED tests/unittest_python3.py::Python3TC::test_underscores_in_numeral_literal
+PASSED tests/unittest_python3.py::Python3TC::test_unpacking_in_dict_getitem
+PASSED tests/unittest_python3.py::Python3TC::test_unpacking_in_dict_getitem_uninferable
+PASSED tests/unittest_python3.py::Python3TC::test_unpacking_in_dict_getitem_with_ref
+PASSED tests/unittest_python3.py::Python3TC::test_unpacking_in_dicts
+PASSED tests/unittest_python3.py::Python3TC::test_yield_from
+PASSED tests/unittest_python3.py::Python3TC::test_yield_from_as_string
+PASSED tests/unittest_python3.py::Python3TC::test_yield_from_is_generator
+============================== 26 passed in 0.49s ==============================
+

@@ -1,0 +1,37 @@
+{
+  "checkpoint_key": "pydicom__pydicom-1139__A__a1__e2c04977__0d94c473",
+  "execution_mode": "production_gpu",
+  "is_mock": false,
+  "instance_id": "pydicom__pydicom-1139",
+  "condition": "A",
+  "attempt": 1,
+  "prompt_hash": "e2c0497783cf56cb03fb845658dc1ab9b4541a7bc5d7f70c814f676a463bc8f6",
+  "config_hash": "0d94c473014df36032494da359ab2f34ef2335b996e7928d743d8afde70dc30e",
+  "model_id": "google/gemma-4-E4B-it",
+  "model_revision": "4ecc2ba63bcac23ba4a767fc87025b1450f84c9c",
+  "raw_generation": "```diff\n--- a/pydicom/dataset.py\n+++ b/pydicom/dataset.py\n@@ -101,7 +101,10 @@\n     def __contains__(self, item):\n         \"\"\"Check if an item is present in the dataset.\"\"\"\n         if isinstance(item, tuple):\n-            return item in self.keys()\n+            # Allow checking for (tag, vr) or just tag\n+            if len(item) == 2:\n+                return item in self.keys()\n+            return False\n         return item in self.keys()\n \n     def __iter__(self):\n```",
+  "model_patch": "--- a/pydicom/dataset.py\n+++ b/pydicom/dataset.py\n@@ -101,7 +101,10 @@\n     def __contains__(self, item):\n         \"\"\"Check if an item is present in the dataset.\"\"\"\n         if isinstance(item, tuple):\n-            return item in self.keys()\n+            # Allow checking for (tag, vr) or just tag\n+            if len(item) == 2:\n+                return item in self.keys()\n+            return False\n         return item in self.keys()\n \n     def __iter__(self):\n```\n",
+  "generation_status": "COMPLETED",
+  "conversion_status": "SUCCESS",
+  "patch_applicability": "GIT_APPLY_REJECTED: error: patch failed: pydicom/dataset.py:101\nerror: pydicom/dataset.py: patch does not apply",
+  "test_resolution": "PENDING_SWE_BENCH_EVALUATOR",
+  "token_counts": {
+    "input_tokens": 4329,
+    "generated_tokens": 146,
+    "total_tokens": 4475
+  },
+  "finish_reason": "stop",
+  "elapsed_seconds": 50.2,
+  "memory_measurements": {
+    "before": {
+      "allocated_mb": 0.0,
+      "reserved_mb": 4.0
+    },
+    "after": {
+      "allocated_mb": 0.07,
+      "reserved_mb": 4.0,
+      "peak_mb": 2.71
+    }
+  },
+  "timestamp": 1793960643.2996194
+}

@@ -1,0 +1,57 @@
+{
+  "task_id": "pvlib__pvlib-python-1606",
+  "indexed_file_count": 59,
+  "ranked_entities_count": 735,
+  "top_10": [
+    {
+      "name": "pvlib/modelchain.py",
+      "file_path": "pvlib/modelchain.py",
+      "type": "file"
+    },
+    {
+      "name": "ModelChain",
+      "file_path": "pvlib/modelchain.py",
+      "type": "class"
+    },
+    {
+      "name": "pvlib/tools.py",
+      "file_path": "pvlib/tools.py",
+      "type": "file"
+    },
+    {
+      "name": "pvlib/iotools/pvgis.py",
+      "file_path": "pvlib/iotools/pvgis.py",
+      "type": "file"
+    },
+    {
+      "name": "pvlib/pvsystem.py",
+      "file_path": "pvlib/pvsystem.py",
+      "type": "file"
+    },
+    {
+      "name": "_golden_sect_DataFrame",
+      "file_path": "pvlib/tools.py",
+      "type": "function"
+    },
+    {
+      "name": "pvlib/iotools/psm3.py",
+      "file_path": "pvlib/iotools/psm3.py",
+      "type": "file"
+    },
+    {
+      "name": "PVSystem",
+      "file_path": "pvlib/pvsystem.py",
+      "type": "class"
+    },
+    {
+      "name": "retrieve_sam",
+      "file_path": "pvlib/pvsystem.py",
+      "type": "function"
+    },
+    {
+      "name": "pvlib/iotools/epw.py",
+      "file_path": "pvlib/iotools/epw.py",
+      "type": "file"
+    }
+  ]
+}

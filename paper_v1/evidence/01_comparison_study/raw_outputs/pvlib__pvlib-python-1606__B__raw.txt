@@ -1,0 +1,67 @@
+```diff
+--- a/pvlib/tools.py
++++ b/pvlib/tools.py
+@@ -359,7 +359,10 @@
+     """
+     Vectorized golden section search for finding maximum of a function of a
+     single variable.
+ 
+     Parameters
+     ----------
+     params : dict of numeric
+         Parameters to be passed to `func`. Each entry must be of the same
+         length.
+ 
+     lower: numeric
+         Lower bound for the optimization. Must be the same length as each
+         entry of params.
+ 
+     upper: numeric
+         Upper bound for the optimization. Must be the same length as each
+         entry of params.
+ 
+     func : callable
+         The function to maximize. It must accept the parameters in `params`
+         as keyword arguments.
+ 
+     atol : float, optional
+         Absolute tolerance. Default is 1e-8.
+ 
+     maxiter : int, optional
+         Maximum number of iterations. Default is 100.
+ 
+     Returns
+     -------
+     tuple of numeric
+         The optimal parameters found.
+ 
+     Raises
+     ------
+     Exception
+         If the search fails to converge or if bounds are invalid.
+ 
+     Notes
+     -----
+     This function performs a golden section search to find the maximum of a
+     unimodal function.
+ 
+     See also
+     --------
+     :func:`_golden_sect_DataFrame`
+ 
+     Examples
+     --------
+     >>> # Example usage (not runnable without a proper function)
+     >>> # params = {'x': np.array([1, 2])}
+     >>> # func = lambda x: x[0]**2 + x[1]
+     >>> # result = _golden_sect_DataFrame(params, 0, 10, func)
+     """
+-    if lower.shape != upper.shape or lower.shape != params[list(params.keys())[0]].shape:
+-        raise ValueError("Lower and upper bounds must have the same shape as parameters.")
++    if lower.shape != upper.shape or lower.shape != params[list(params.keys())[0]].shape:
++        raise ValueError("Lower and upper bounds must have the same shape as parameters.")
++    if (lower == upper).any():
++        raise Exception("Iterations exceeded maximum. Check that func is not NaN in (lower, upper)")
+ 
+     # ... (rest of the function implementation)
+```

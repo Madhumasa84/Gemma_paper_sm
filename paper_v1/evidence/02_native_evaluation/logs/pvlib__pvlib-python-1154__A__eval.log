@@ -1,0 +1,378 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.23, pytest-8.4.1, pluggy-1.6.0
+rootdir: /content/native_evaluation/eval_repos/pvlib__pvlib-python-1154
+configfile: setup.cfg
+collected 98 items
+
+pvlib/tests/test_irradiance.py ...........................sssssssss.s... [ 41%]
+.................F........F..............................                [100%]
+
+=================================== FAILURES ===================================
+_________________ test_sky_diffuse_zenith_close_to_90[reindl] __________________
+
+model = 'reindl'
+
+    @pytest.mark.parametrize('model', ['isotropic', 'klucher', 'haydavies',
+                                       'reindl', 'king', 'perez'])
+    def test_sky_diffuse_zenith_close_to_90(model):
+        # GH 432
+>       sky_diffuse = irradiance.get_sky_diffuse(
+            30, 180, 89.999, 230,
+            dni=10, ghi=51, dhi=50, dni_extra=1360, airmass=12, model=model)
+
+pvlib/tests/test_irradiance.py:278: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+pvlib/irradiance.py:427: in get_sky_diffuse
+    sky = reindl(surface_tilt, surface_azimuth, dhi, dni, ghi, dni_extra,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+surface_tilt = 30, surface_azimuth = 180, dhi = 50, dni = 10, ghi = 51
+dni_extra = 1360, solar_zenith = 89.999, solar_azimuth = 230
+
+    def reindl(surface_tilt, surface_azimuth, dhi, dni, ghi, dni_extra,
+               solar_zenith, solar_azimuth):
+        r'''
+        Determine diffuse irradiance from the sky on a tilted surface using
+        Reindl's 1990 model
+    
+        .. math::
+    
+           I_{d} = DHI (A R_b + (1 - A) (\frac{1 + \cos\beta}{2})
+           (1 + \sqrt{\frac{I_{hb}}{I_h}} \sin^3(\beta/2)) )
+    
+        Reindl's 1990 model determines the diffuse irradiance from the sky
+        (ground reflected irradiance is not included in this algorithm) on a
+        tilted surface using the surface tilt angle, surface azimuth angle,
+        diffuse horizontal irradiance, direct normal irradiance, global
+        horizontal irradiance, extraterrestrial irradiance, sun zenith
+        angle, and sun azimuth angle.
+    
+        Parameters
+        ----------
+        surface_tilt : numeric
+            Surface tilt angles in decimal degrees. The tilt angle is
+            defined as degrees from horizontal (e.g. surface facing up = 0,
+            surface facing horizon = 90)
+    
+        surface_azimuth : numeric
+            Surface azimuth angles in decimal degrees. The azimuth
+            convention is defined as degrees east of north (e.g. North = 0,
+            South=180 East = 90, West = 270).
+    
+        dhi : numeric
+            diffuse horizontal irradiance in W/m^2.
+    
+        dni : numeric
+            direct normal irradiance in W/m^2.
+    
+        ghi: numeric
+            Global irradiance in W/m^2.
+    
+        dni_extra : numeric
+            Extraterrestrial normal irradiance in W/m^2.
+    
+        solar_zenith : numeric
+            Apparent (refraction-corrected) zenith angles in decimal degrees.
+    
+        solar_azimuth : numeric
+            Sun azimuth angles in decimal degrees. The azimuth convention is
+            defined as degrees east of north (e.g. North = 0, East = 90,
+            West = 270).
+    
+        Returns
+        -------
+        poa_sky_diffuse : numeric
+            The sky diffuse component of the solar radiation.
+    
+        Notes
+        -----
+        The poa_sky_diffuse calculation is generated from the Loutzenhiser et al.
+        (2007) paper, equation 8. Note that I have removed the beam and ground
+        reflectance portion of the equation and this generates ONLY the diffuse
+        radiation from the sky and circumsolar, so the form of the equation
+        varies slightly from equation 8.
+    
+        References
+        ----------
+        .. [1] Loutzenhiser P.G. et. al. "Empirical validation of models to
+           compute solar irradiance on inclined surfaces for building energy
+           simulation" 2007, Solar Energy vol. 81. pp. 254-267
+    
+        .. [2] Reindl, D.T., Beckmann, W.A., Duffie, J.A., 1990a. Diffuse
+           fraction correlations. Solar Energy 45(1), 1-7.
+    
+        .. [3] Reindl, D.T., Beckmann, W.A., Duffie, J.A., 1990b. Evaluation of
+           hourly tilted surface radiation models. Solar Energy 45(1), 9-17.
+        '''
+    
+        cos_tt = aoi_projection(surface_tilt, surface_azimuth,
+                                solar_zenith, solar_azimuth)
+        cos_tt = np.maximum(cos_tt, 0)  # GH 526
+    
+        # do not apply cos(zen) limit here (needed for HB below)
+        cos_solar_zenith = tools.cosd(solar_zenith)
+    
+        # ratio of titled and horizontal beam irradiance
+        Rb = cos_tt / np.maximum(cos_solar_zenith, 0.01745)  # GH 432
+    
+        # Anisotropy Index
+        AI = dni / dni_extra
+    
+        # DNI projected onto horizontal
+        HB = dni * cos_solar_zenith
+        HB = np.maximum(HB, 0)
+    
+        # Handle GHI = 0 case to prevent division by zero in term3
+        sqrt_ratio = np.zeros_like(ghi)
+        non_zero_ghi = ghi > 0
+>       sqrt_ratio[non_zero_ghi] = np.sqrt(HB[non_zero_ghi] / ghi[non_zero_ghi])
+E       TypeError: 'int' object is not subscriptable
+
+pvlib/irradiance.py:889: TypeError
+__________________ test_get_total_irradiance_scalars[reindl] ___________________
+
+model = 'reindl'
+
+    @pytest.mark.parametrize('model', ['isotropic', 'klucher',
+                                       'haydavies', 'reindl', 'king', 'perez'])
+    def test_get_total_irradiance_scalars(model):
+>       total = irradiance.get_total_irradiance(
+            32, 180,
+            10, 180,
+            dni=1000, ghi=1100,
+            dhi=100,
+            dni_extra=1400, airmass=1,
+            model=model,
+            surface_type='urban')
+
+pvlib/tests/test_irradiance.py:324: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+pvlib/irradiance.py:358: in get_total_irradiance
+    poa_sky_diffuse = get_sky_diffuse(
+pvlib/irradiance.py:427: in get_sky_diffuse
+    sky = reindl(surface_tilt, surface_azimuth, dhi, dni, ghi, dni_extra,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+surface_tilt = 32, surface_azimuth = 180, dhi = 100, dni = 1000, ghi = 1100
+dni_extra = 1400, solar_zenith = 10, solar_azimuth = 180
+
+    def reindl(surface_tilt, surface_azimuth, dhi, dni, ghi, dni_extra,
+               solar_zenith, solar_azimuth):
+        r'''
+        Determine diffuse irradiance from the sky on a tilted surface using
+        Reindl's 1990 model
+    
+        .. math::
+    
+           I_{d} = DHI (A R_b + (1 - A) (\frac{1 + \cos\beta}{2})
+           (1 + \sqrt{\frac{I_{hb}}{I_h}} \sin^3(\beta/2)) )
+    
+        Reindl's 1990 model determines the diffuse irradiance from the sky
+        (ground reflected irradiance is not included in this algorithm) on a
+        tilted surface using the surface tilt angle, surface azimuth angle,
+        diffuse horizontal irradiance, direct normal irradiance, global
+        horizontal irradiance, extraterrestrial irradiance, sun zenith
+        angle, and sun azimuth angle.
+    
+        Parameters
+        ----------
+        surface_tilt : numeric
+            Surface tilt angles in decimal degrees. The tilt angle is
+            defined as degrees from horizontal (e.g. surface facing up = 0,
+            surface facing horizon = 90)
+    
+        surface_azimuth : numeric
+            Surface azimuth angles in decimal degrees. The azimuth
+            convention is defined as degrees east of north (e.g. North = 0,
+            South=180 East = 90, West = 270).
+    
+        dhi : numeric
+            diffuse horizontal irradiance in W/m^2.
+    
+        dni : numeric
+            direct normal irradiance in W/m^2.
+    
+        ghi: numeric
+            Global irradiance in W/m^2.
+    
+        dni_extra : numeric
+            Extraterrestrial normal irradiance in W/m^2.
+    
+        solar_zenith : numeric
+            Apparent (refraction-corrected) zenith angles in decimal degrees.
+    
+        solar_azimuth : numeric
+            Sun azimuth angles in decimal degrees. The azimuth convention is
+            defined as degrees east of north (e.g. North = 0, East = 90,
+            West = 270).
+    
+        Returns
+        -------
+        poa_sky_diffuse : numeric
+            The sky diffuse component of the solar radiation.
+    
+        Notes
+        -----
+        The poa_sky_diffuse calculation is generated from the Loutzenhiser et al.
+        (2007) paper, equation 8. Note that I have removed the beam and ground
+        reflectance portion of the equation and this generates ONLY the diffuse
+        radiation from the sky and circumsolar, so the form of the equation
+        varies slightly from equation 8.
+    
+        References
+        ----------
+        .. [1] Loutzenhiser P.G. et. al. "Empirical validation of models to
+           compute solar irradiance on inclined surfaces for building energy
+           simulation" 2007, Solar Energy vol. 81. pp. 254-267
+    
+        .. [2] Reindl, D.T., Beckmann, W.A., Duffie, J.A., 1990a. Diffuse
+           fraction correlations. Solar Energy 45(1), 1-7.
+    
+        .. [3] Reindl, D.T., Beckmann, W.A., Duffie, J.A., 1990b. Evaluation of
+           hourly tilted surface radiation models. Solar Energy 45(1), 9-17.
+        '''
+    
+        cos_tt = aoi_projection(surface_tilt, surface_azimuth,
+                                solar_zenith, solar_azimuth)
+        cos_tt = np.maximum(cos_tt, 0)  # GH 526
+    
+        # do not apply cos(zen) limit here (needed for HB below)
+        cos_solar_zenith = tools.cosd(solar_zenith)
+    
+        # ratio of titled and horizontal beam irradiance
+        Rb = cos_tt / np.maximum(cos_solar_zenith, 0.01745)  # GH 432
+    
+        # Anisotropy Index
+        AI = dni / dni_extra
+    
+        # DNI projected onto horizontal
+        HB = dni * cos_solar_zenith
+        HB = np.maximum(HB, 0)
+    
+        # Handle GHI = 0 case to prevent division by zero in term3
+        sqrt_ratio = np.zeros_like(ghi)
+        non_zero_ghi = ghi > 0
+>       sqrt_ratio[non_zero_ghi] = np.sqrt(HB[non_zero_ghi] / ghi[non_zero_ghi])
+E       TypeError: 'int' object is not subscriptable
+
+pvlib/irradiance.py:889: TypeError
+=============================== warnings summary ===============================
+pvlib/tests/conftest.py:6
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1154/pvlib/tests/conftest.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+    from pkg_resources import parse_version
+
+pvlib/tests/test_irradiance.py: 15 warnings
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1154/pvlib/tests/test_irradiance.py:30: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    return pd.date_range(start='20140624', freq='6H', periods=4,
+
+pvlib/tests/test_irradiance.py::test_dirint_nans
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1154/pvlib/tests/test_irradiance.py:476: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    times = pd.date_range(start='2014-06-24T12-0700', periods=5, freq='6H')
+
+pvlib/tests/test_irradiance.py::test_clearsky_index
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1154/pvlib/tests/test_irradiance.py:838: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    times = pd.date_range(start='20180601', periods=2, freq='12H')
+
+pvlib/tests/test_irradiance.py::test_clearness_index
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1154/pvlib/tests/test_irradiance.py:894: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    times = pd.date_range(start='20180601', periods=2, freq='12H')
+
+pvlib/tests/test_irradiance.py::test_clearness_index_zenith_independent
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1154/pvlib/tests/test_irradiance.py:928: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    times = pd.date_range(start='20180601', periods=2, freq='12H')
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[asce-300-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[asce-300.0-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[asce-testval2-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[asce-testval3-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[asce-testval4-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[asce-testval5-expected5]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[asce-testval6-expected6]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[asce-testval7-expected7]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[asce-testval8-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[spencer-300-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[spencer-300.0-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[spencer-testval2-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[spencer-testval3-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[spencer-testval4-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[spencer-testval5-expected5]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[spencer-testval6-expected6]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[spencer-testval7-expected7]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[spencer-testval8-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[nrel-300-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[nrel-300.0-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[nrel-testval2-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[nrel-testval3-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[nrel-testval4-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[nrel-testval5-expected5]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[nrel-testval6-expected6]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[nrel-testval7-expected7]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[nrel-testval8-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation_epoch_year
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation_invalid
+PASSED pvlib/tests/test_irradiance.py::test_grounddiffuse_simple_float
+PASSED pvlib/tests/test_irradiance.py::test_grounddiffuse_simple_series
+PASSED pvlib/tests/test_irradiance.py::test_grounddiffuse_albedo_0
+PASSED pvlib/tests/test_irradiance.py::test_grounddiffuse_albedo_invalid_surface
+PASSED pvlib/tests/test_irradiance.py::test_grounddiffuse_albedo_surface
+PASSED pvlib/tests/test_irradiance.py::test_isotropic_float
+PASSED pvlib/tests/test_irradiance.py::test_isotropic_series
+PASSED pvlib/tests/test_irradiance.py::test_klucher_series_float
+PASSED pvlib/tests/test_irradiance.py::test_klucher_series
+PASSED pvlib/tests/test_irradiance.py::test_haydavies
+PASSED pvlib/tests/test_irradiance.py::test_reindl
+PASSED pvlib/tests/test_irradiance.py::test_king
+PASSED pvlib/tests/test_irradiance.py::test_perez
+PASSED pvlib/tests/test_irradiance.py::test_perez_components
+PASSED pvlib/tests/test_irradiance.py::test_perez_arrays
+PASSED pvlib/tests/test_irradiance.py::test_perez_scalar
+PASSED pvlib/tests/test_irradiance.py::test_sky_diffuse_zenith_close_to_90[isotropic]
+PASSED pvlib/tests/test_irradiance.py::test_sky_diffuse_zenith_close_to_90[klucher]
+PASSED pvlib/tests/test_irradiance.py::test_sky_diffuse_zenith_close_to_90[haydavies]
+PASSED pvlib/tests/test_irradiance.py::test_sky_diffuse_zenith_close_to_90[king]
+PASSED pvlib/tests/test_irradiance.py::test_sky_diffuse_zenith_close_to_90[perez]
+PASSED pvlib/tests/test_irradiance.py::test_get_sky_diffuse_invalid
+PASSED pvlib/tests/test_irradiance.py::test_campbell_norman
+PASSED pvlib/tests/test_irradiance.py::test_get_total_irradiance
+PASSED pvlib/tests/test_irradiance.py::test_get_total_irradiance_scalars[isotropic]
+PASSED pvlib/tests/test_irradiance.py::test_get_total_irradiance_scalars[klucher]
+PASSED pvlib/tests/test_irradiance.py::test_get_total_irradiance_scalars[haydavies]
+PASSED pvlib/tests/test_irradiance.py::test_get_total_irradiance_scalars[king]
+PASSED pvlib/tests/test_irradiance.py::test_get_total_irradiance_scalars[perez]
+PASSED pvlib/tests/test_irradiance.py::test_poa_components
+PASSED pvlib/tests/test_irradiance.py::test_disc_value[93193-expected0]
+PASSED pvlib/tests/test_irradiance.py::test_disc_value[None-expected1]
+PASSED pvlib/tests/test_irradiance.py::test_disc_value[101325-expected2]
+PASSED pvlib/tests/test_irradiance.py::test_disc_overirradiance
+PASSED pvlib/tests/test_irradiance.py::test_disc_min_cos_zenith_max_zenith
+PASSED pvlib/tests/test_irradiance.py::test_dirint_value
+PASSED pvlib/tests/test_irradiance.py::test_dirint_nans
+PASSED pvlib/tests/test_irradiance.py::test_dirint_tdew
+PASSED pvlib/tests/test_irradiance.py::test_dirint_no_delta_kt
+PASSED pvlib/tests/test_irradiance.py::test_dirint_coeffs
+PASSED pvlib/tests/test_irradiance.py::test_dirint_min_cos_zenith_max_zenith
+PASSED pvlib/tests/test_irradiance.py::test_gti_dirint
+PASSED pvlib/tests/test_irradiance.py::test_erbs
+PASSED pvlib/tests/test_irradiance.py::test_erbs_min_cos_zenith_max_zenith
+PASSED pvlib/tests/test_irradiance.py::test_erbs_all_scalar
+PASSED pvlib/tests/test_irradiance.py::test_dirindex
+PASSED pvlib/tests/test_irradiance.py::test_dirindex_min_cos_zenith_max_zenith
+PASSED pvlib/tests/test_irradiance.py::test_dni
+PASSED pvlib/tests/test_irradiance.py::test_aoi_and_aoi_projection[0-0-0-0-0-1]
+PASSED pvlib/tests/test_irradiance.py::test_aoi_and_aoi_projection[30-180-30-180-0-1]
+PASSED pvlib/tests/test_irradiance.py::test_aoi_and_aoi_projection[30-180-150-0-180--1]
+PASSED pvlib/tests/test_irradiance.py::test_aoi_and_aoi_projection[90-0-30-60-75.5224878-0.25]
+PASSED pvlib/tests/test_irradiance.py::test_aoi_and_aoi_projection[90-0-30-170-119.4987042--0.4924038]
+PASSED pvlib/tests/test_irradiance.py::test_kt_kt_prime_factor
+PASSED pvlib/tests/test_irradiance.py::test_clearsky_index
+PASSED pvlib/tests/test_irradiance.py::test_clearness_index
+PASSED pvlib/tests/test_irradiance.py::test_clearness_index_zenith_independent
+SKIPPED [9] pvlib/tests/test_irradiance.py:82: requires ephem
+SKIPPED [1] pvlib/tests/test_irradiance.py:105: requires numba
+FAILED pvlib/tests/test_irradiance.py::test_sky_diffuse_zenith_close_to_90[reindl]
+FAILED pvlib/tests/test_irradiance.py::test_get_total_irradiance_scalars[reindl]
+============ 2 failed, 86 passed, 10 skipped, 20 warnings in 6.56s =============
+

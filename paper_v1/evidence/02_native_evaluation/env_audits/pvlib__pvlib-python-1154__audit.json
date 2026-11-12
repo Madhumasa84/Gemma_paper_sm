@@ -1,0 +1,18 @@
+{
+  "instance_id": "pvlib__pvlib-python-1154",
+  "repo": "pvlib/pvlib-python",
+  "docker_spec": {
+    "python": "3.9",
+    "test_cmd": "pytest -rA"
+  },
+  "native_colab_env": {
+    "python": "Python 3.9.23",
+    "pytest": "pytest 8.4.1"
+  },
+  "env_differences": [
+    "Native environment uses isolated conda-forge Python 3.9 virtual environment",
+    "Installed numpy==1.26.4 (NumPy 1.x) to preserve legacy API compatibility",
+    "pytest 8.4.1"
+  ],
+  "status": "ENVIRONMENT_VERIFIED"
+}

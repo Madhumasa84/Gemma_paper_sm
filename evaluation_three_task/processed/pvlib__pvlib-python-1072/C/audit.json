@@ -1,0 +1,32 @@
+{
+  "instance_id": "pvlib__pvlib-python-1072",
+  "condition": "C",
+  "attempt": 1,
+  "prompt_hash": "00e324d9b5d6d8ab63b29baf48a82f26d08ca1d238f4fd3a2c6a601b03bf0e95",
+  "config_hash": "0d94c473014df36032494da359ab2f34ef2335b996e7928d743d8afde70dc30e",
+  "model_id": "google/gemma-4-E4B-it",
+  "model_revision": "4ecc2ba63bcac23ba4a767fc87025b1450f84c9c",
+  "generation_status": "COMPLETED",
+  "finish_reason": "stop",
+  "token_counts": {
+    "input_tokens": 5056,
+    "generated_tokens": 287,
+    "total_tokens": 5343
+  },
+  "execution_mode": "production_gpu",
+  "is_mock": false,
+  "source_checkpoint": "evaluation_three_task/source_archive/checkpoints/pvlib__pvlib-python-1072__C__a1__00e324d9__0d94c473.json",
+  "source_checkpoint_sha256": "03ce3132f0907edad042c64113b7a8508c7125f52b54ef633fcb1155d0962056",
+  "raw_generation_sha256": "b9a8652cf5dc74ebd83c5a9ffdedd9b98042450ea32f55095ea2f1bdeb3db23a",
+  "base_commit": "04a523fafbd61bc2e49420963b84ed8e2bd1b3cf",
+  "processing_rule": "last_labelled_diff_block_plus_recount_v3",
+  "diff_blocks_found": 1,
+  "extracted_patch_sha256": "7b556eb05707d8807c36f47a45400629d22e313971b392dfbf616ce45f50715b",
+  "normalized_patch_sha256": "21bce54cfd3f1a4332203527edafd1fcf1085ffe4e50f939b36be05b57aea030",
+  "application_outcome": "APPLIED_NORMALIZED",
+  "extraction_outcome": "SUCCESS",
+  "normalized_prediction_path": "evaluation_three_task/processed/pvlib__pvlib-python-1072/C/predictions.jsonl",
+  "normalized_prediction_sha256": "5f2f5b655335b57f44b59abedd2663675cf762e9660bc30f5e54d1b29e2db7a6",
+  "recount_check_passed": true,
+  "processing_log_path": "evaluation_three_task/processed/pvlib__pvlib-python-1072/C/processing_commands.json"
+}

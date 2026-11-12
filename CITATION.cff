@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying manuscript when using this research artifact."
+type: software
+license: MIT
+repository-code: "https://github.com/Madhumasa84/Gemma_paper_sm"
+title: "Reference-Code Visibility and Patch Applicability in Budgeted Code Repair: A Gemma Pilot Study"
+authors:
+  - name: "Madhusudhanan G"
+abstract: "Code, frozen experimental evidence, and reproducible analysis for four deterministic code packaging policies under a 4,000-token evidence budget."
+keywords:
+  - code repair
+  - SWE-bench Lite
+  - Gemma
+  - reproducibility

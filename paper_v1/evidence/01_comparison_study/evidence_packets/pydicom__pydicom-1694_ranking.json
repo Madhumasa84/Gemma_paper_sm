@@ -1,0 +1,57 @@
+{
+  "task_id": "pydicom__pydicom-1694",
+  "indexed_file_count": 100,
+  "ranked_entities_count": 1011,
+  "top_10": [
+    {
+      "name": "Dataset",
+      "file_path": "pydicom/dataset.py",
+      "type": "class"
+    },
+    {
+      "name": "pydicom/dataset.py",
+      "file_path": "pydicom/dataset.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/values.py",
+      "file_path": "pydicom/values.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/config.py",
+      "file_path": "pydicom/config.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/dataelem.py",
+      "file_path": "pydicom/dataelem.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/filereader.py",
+      "file_path": "pydicom/filereader.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/filewriter.py",
+      "file_path": "pydicom/filewriter.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/charset.py",
+      "file_path": "pydicom/charset.py",
+      "type": "file"
+    },
+    {
+      "name": "convert_value",
+      "file_path": "pydicom/values.py",
+      "type": "function"
+    },
+    {
+      "name": "__getitem__",
+      "file_path": "pydicom/dataset.py",
+      "type": "function"
+    }
+  ]
+}

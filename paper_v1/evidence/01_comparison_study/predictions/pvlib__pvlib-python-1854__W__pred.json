@@ -1,0 +1,6 @@
+{
+  "model_name_or_path": "google/gemma-4-E4B-it_int8",
+  "instance_id": "pvlib__pvlib-python-1854",
+  "condition": "W",
+  "model_patch": "--- a/pvlib/pvsystem.py\n+++ b/pvlib/pvsystem.py\n@@ -249,6 +249,10 @@\n             ),)\n --> 253         elif len(arrays) == 0:\n     254             raise ValueError(\"PVSystem must have at least one Array. \"\n-    255                              \"If you want to create a PVSystem instance \"\n+                              \"If you want to create a PVSystem instance, \"\n+                              \"pass arrays as an iterable (e.g., a list of Arrays).\")\n+        elif isinstance(arrays, pvlib.pvsystem.Array):\n+            arrays = [arrays]\n+        elif not hasattr(arrays, '__iter__'):\n+            raise TypeError(\"arrays must be an iterable of Array objects or a single Array object.\")\n"
+}

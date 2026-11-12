@@ -1,0 +1,17 @@
+{
+  "python": "3.13.16",
+  "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+  "torch": "2.14.1+cu130",
+  "cuda": "13.0",
+  "gpus": [
+    {
+      "index": 0,
+      "name": "Tesla T4",
+      "capability": [
+        7,
+        5
+      ],
+      "total_bytes": 15637086208
+    }
+  ]
+}

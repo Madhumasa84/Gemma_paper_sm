@@ -1,0 +1,37 @@
+{
+  "checkpoint_key": "pydicom__pydicom-1139__B__a1__7ba62b02__0d94c473",
+  "execution_mode": "production_gpu",
+  "is_mock": false,
+  "instance_id": "pydicom__pydicom-1139",
+  "condition": "B",
+  "attempt": 1,
+  "prompt_hash": "7ba62b024c3b63396f3a7ac0bc787663addccc476ade4eb010f724e8548fe613",
+  "config_hash": "0d94c473014df36032494da359ab2f34ef2335b996e7928d743d8afde70dc30e",
+  "model_id": "google/gemma-4-E4B-it",
+  "model_revision": "4ecc2ba63bcac23ba4a767fc87025b1450f84c9c",
+  "raw_generation": "```diff\n--- a/pydicom/dataelem.py\n+++ b/pydicom/dataelem.py\n@@ -10,6 +10,10 @@\n     While its possible to create a new :class:`DataElement` directly and add\n     it to a :class:`~pydicom.dataset.Dataset`:\n \n+    # For PN elements, we want to allow string operations like 'in'\n+    # even though the underlying type is not a standard string.\n+    # This allows users to treat PN values like strings when appropriate.\n+\n     >>> from pydicom import Dataset\n     >>> elem = DataElement(0x00100010, 'PN', 'CITIZEN^Joan')\n     >>> ds = Dataset()\n```",
+  "model_patch": "--- a/pydicom/dataelem.py\n+++ b/pydicom/dataelem.py\n@@ -10,6 +10,10 @@\n     While its possible to create a new :class:`DataElement` directly and add\n     it to a :class:`~pydicom.dataset.Dataset`:\n \n+    # For PN elements, we want to allow string operations like 'in'\n+    # even though the underlying type is not a standard string.\n+    # This allows users to treat PN values like strings when appropriate.\n+\n     >>> from pydicom import Dataset\n     >>> elem = DataElement(0x00100010, 'PN', 'CITIZEN^Joan')\n     >>> ds = Dataset()\n```\n",
+  "generation_status": "COMPLETED",
+  "conversion_status": "SUCCESS",
+  "patch_applicability": "APPLIES_CLEANLY",
+  "test_resolution": "PENDING_SWE_BENCH_EVALUATOR",
+  "token_counts": {
+    "input_tokens": 4326,
+    "generated_tokens": 176,
+    "total_tokens": 4502
+  },
+  "finish_reason": "stop",
+  "elapsed_seconds": 59.41,
+  "memory_measurements": {
+    "before": {
+      "allocated_mb": 0.0,
+      "reserved_mb": 4.0
+    },
+    "after": {
+      "allocated_mb": 0.07,
+      "reserved_mb": 4.0,
+      "peak_mb": 2.71
+    }
+  },
+  "timestamp": 1793960702.7392223
+}

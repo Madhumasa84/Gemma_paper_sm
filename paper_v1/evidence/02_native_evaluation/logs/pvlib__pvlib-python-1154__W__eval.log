@@ -1,0 +1,167 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.23, pytest-8.4.1, pluggy-1.6.0
+rootdir: /content/native_evaluation/eval_repos/pvlib__pvlib-python-1154
+configfile: setup.cfg
+collected 98 items
+
+pvlib/tests/test_irradiance.py ...........................sssssssss.s... [ 41%]
+........F................................................                [100%]
+
+=================================== FAILURES ===================================
+_________________________________ test_reindl __________________________________
+
+irrad_data =                                    ghi         dni         dhi
+2014-06-24 00:00:00-07:00     0.000000    0.000000    0...6-24 12:00:00-07:00  1042.480315  939.954699  118.458319
+2014-06-24 18:00:00-07:00   257.207511  646.228860   62.033763
+ephem_data =                            apparent_zenith  ...  equation_of_time
+2014-06-24 00:00:00-07:00       124.039086  ...     ...0.564136  ...         -2.474573
+2014-06-24 18:00:00-07:00        72.416871  ...         -2.528319
+
+[4 rows x 6 columns]
+dni_et = array([1321.16558348, 1321.16558348, 1321.16558348, 1321.16558348])
+
+    def test_reindl(irrad_data, ephem_data, dni_et):
+        result = irradiance.reindl(
+            40, 180, irrad_data['dhi'], irrad_data['dni'], irrad_data['ghi'],
+            dni_et, ephem_data['apparent_zenith'], ephem_data['azimuth'])
+        # values from matlab 1.4 code
+>       assert_allclose(result, [0., 27.9412, 104.1317, 34.1663], atol=1e-4)
+
+pvlib/tests/test_irradiance.py:206: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<function assert_allclose.<locals>.compare at 0x7a02c0f8b3a0>, array([         nan,  27.94116987, 104.13172366,  34.16625815]), array([  0.    ,  27.9412, 104.1317,  34.1663]))
+kwds = {'equal_nan': True, 'err_msg': '', 'header': 'Not equal to tolerance rtol=1e-07, atol=0.0001', 'verbose': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+E           AssertionError: 
+E           Not equal to tolerance rtol=1e-07, atol=0.0001
+E           
+E           x and y nan location mismatch:
+E            x: array([       nan,  27.94117 , 104.131724,  34.166258])
+E            y: array([  0.    ,  27.9412, 104.1317,  34.1663])
+
+/content/py39_eval_env/lib/python3.9/contextlib.py:79: AssertionError
+=============================== warnings summary ===============================
+pvlib/tests/conftest.py:6
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1154/pvlib/tests/conftest.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+    from pkg_resources import parse_version
+
+pvlib/tests/test_irradiance.py: 15 warnings
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1154/pvlib/tests/test_irradiance.py:30: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    return pd.date_range(start='20140624', freq='6H', periods=4,
+
+pvlib/tests/test_irradiance.py::test_dirint_nans
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1154/pvlib/tests/test_irradiance.py:476: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    times = pd.date_range(start='2014-06-24T12-0700', periods=5, freq='6H')
+
+pvlib/tests/test_irradiance.py::test_clearsky_index
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1154/pvlib/tests/test_irradiance.py:838: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    times = pd.date_range(start='20180601', periods=2, freq='12H')
+
+pvlib/tests/test_irradiance.py::test_clearness_index
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1154/pvlib/tests/test_irradiance.py:894: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    times = pd.date_range(start='20180601', periods=2, freq='12H')
+
+pvlib/tests/test_irradiance.py::test_clearness_index_zenith_independent
+  /content/native_evaluation/eval_repos/pvlib__pvlib-python-1154/pvlib/tests/test_irradiance.py:928: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
+    times = pd.date_range(start='20180601', periods=2, freq='12H')
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[asce-300-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[asce-300.0-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[asce-testval2-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[asce-testval3-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[asce-testval4-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[asce-testval5-expected5]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[asce-testval6-expected6]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[asce-testval7-expected7]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[asce-testval8-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[spencer-300-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[spencer-300.0-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[spencer-testval2-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[spencer-testval3-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[spencer-testval4-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[spencer-testval5-expected5]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[spencer-testval6-expected6]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[spencer-testval7-expected7]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[spencer-testval8-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[nrel-300-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[nrel-300.0-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[nrel-testval2-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[nrel-testval3-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[nrel-testval4-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[nrel-testval5-expected5]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[nrel-testval6-expected6]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[nrel-testval7-expected7]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation[nrel-testval8-1383.636203]
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation_epoch_year
+PASSED pvlib/tests/test_irradiance.py::test_get_extra_radiation_invalid
+PASSED pvlib/tests/test_irradiance.py::test_grounddiffuse_simple_float
+PASSED pvlib/tests/test_irradiance.py::test_grounddiffuse_simple_series
+PASSED pvlib/tests/test_irradiance.py::test_grounddiffuse_albedo_0
+PASSED pvlib/tests/test_irradiance.py::test_grounddiffuse_albedo_invalid_surface
+PASSED pvlib/tests/test_irradiance.py::test_grounddiffuse_albedo_surface
+PASSED pvlib/tests/test_irradiance.py::test_isotropic_float
+PASSED pvlib/tests/test_irradiance.py::test_isotropic_series
+PASSED pvlib/tests/test_irradiance.py::test_klucher_series_float
+PASSED pvlib/tests/test_irradiance.py::test_klucher_series
+PASSED pvlib/tests/test_irradiance.py::test_haydavies
+PASSED pvlib/tests/test_irradiance.py::test_king
+PASSED pvlib/tests/test_irradiance.py::test_perez
+PASSED pvlib/tests/test_irradiance.py::test_perez_components
+PASSED pvlib/tests/test_irradiance.py::test_perez_arrays
+PASSED pvlib/tests/test_irradiance.py::test_perez_scalar
+PASSED pvlib/tests/test_irradiance.py::test_sky_diffuse_zenith_close_to_90[isotropic]
+PASSED pvlib/tests/test_irradiance.py::test_sky_diffuse_zenith_close_to_90[klucher]
+PASSED pvlib/tests/test_irradiance.py::test_sky_diffuse_zenith_close_to_90[haydavies]
+PASSED pvlib/tests/test_irradiance.py::test_sky_diffuse_zenith_close_to_90[reindl]
+PASSED pvlib/tests/test_irradiance.py::test_sky_diffuse_zenith_close_to_90[king]
+PASSED pvlib/tests/test_irradiance.py::test_sky_diffuse_zenith_close_to_90[perez]
+PASSED pvlib/tests/test_irradiance.py::test_get_sky_diffuse_invalid
+PASSED pvlib/tests/test_irradiance.py::test_campbell_norman
+PASSED pvlib/tests/test_irradiance.py::test_get_total_irradiance
+PASSED pvlib/tests/test_irradiance.py::test_get_total_irradiance_scalars[isotropic]
+PASSED pvlib/tests/test_irradiance.py::test_get_total_irradiance_scalars[klucher]
+PASSED pvlib/tests/test_irradiance.py::test_get_total_irradiance_scalars[haydavies]
+PASSED pvlib/tests/test_irradiance.py::test_get_total_irradiance_scalars[reindl]
+PASSED pvlib/tests/test_irradiance.py::test_get_total_irradiance_scalars[king]
+PASSED pvlib/tests/test_irradiance.py::test_get_total_irradiance_scalars[perez]
+PASSED pvlib/tests/test_irradiance.py::test_poa_components
+PASSED pvlib/tests/test_irradiance.py::test_disc_value[93193-expected0]
+PASSED pvlib/tests/test_irradiance.py::test_disc_value[None-expected1]
+PASSED pvlib/tests/test_irradiance.py::test_disc_value[101325-expected2]
+PASSED pvlib/tests/test_irradiance.py::test_disc_overirradiance
+PASSED pvlib/tests/test_irradiance.py::test_disc_min_cos_zenith_max_zenith
+PASSED pvlib/tests/test_irradiance.py::test_dirint_value
+PASSED pvlib/tests/test_irradiance.py::test_dirint_nans
+PASSED pvlib/tests/test_irradiance.py::test_dirint_tdew
+PASSED pvlib/tests/test_irradiance.py::test_dirint_no_delta_kt
+PASSED pvlib/tests/test_irradiance.py::test_dirint_coeffs
+PASSED pvlib/tests/test_irradiance.py::test_dirint_min_cos_zenith_max_zenith
+PASSED pvlib/tests/test_irradiance.py::test_gti_dirint
+PASSED pvlib/tests/test_irradiance.py::test_erbs
+PASSED pvlib/tests/test_irradiance.py::test_erbs_min_cos_zenith_max_zenith
+PASSED pvlib/tests/test_irradiance.py::test_erbs_all_scalar
+PASSED pvlib/tests/test_irradiance.py::test_dirindex
+PASSED pvlib/tests/test_irradiance.py::test_dirindex_min_cos_zenith_max_zenith
+PASSED pvlib/tests/test_irradiance.py::test_dni
+PASSED pvlib/tests/test_irradiance.py::test_aoi_and_aoi_projection[0-0-0-0-0-1]
+PASSED pvlib/tests/test_irradiance.py::test_aoi_and_aoi_projection[30-180-30-180-0-1]
+PASSED pvlib/tests/test_irradiance.py::test_aoi_and_aoi_projection[30-180-150-0-180--1]
+PASSED pvlib/tests/test_irradiance.py::test_aoi_and_aoi_projection[90-0-30-60-75.5224878-0.25]
+PASSED pvlib/tests/test_irradiance.py::test_aoi_and_aoi_projection[90-0-30-170-119.4987042--0.4924038]
+PASSED pvlib/tests/test_irradiance.py::test_kt_kt_prime_factor
+PASSED pvlib/tests/test_irradiance.py::test_clearsky_index
+PASSED pvlib/tests/test_irradiance.py::test_clearness_index
+PASSED pvlib/tests/test_irradiance.py::test_clearness_index_zenith_independent
+SKIPPED [9] pvlib/tests/test_irradiance.py:82: requires ephem
+SKIPPED [1] pvlib/tests/test_irradiance.py:105: requires numba
+FAILED pvlib/tests/test_irradiance.py::test_reindl - AssertionError: 
+============ 1 failed, 87 passed, 10 skipped, 20 warnings in 6.82s =============
+

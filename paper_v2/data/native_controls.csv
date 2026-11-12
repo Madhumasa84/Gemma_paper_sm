@@ -1,0 +1,11 @@
+instance_id,required_regression,base_regression_failed,reference_regression_passed,required_preservation,reference_preservation_passed,reference_preservation_failed,reference_preservation_error,reference_preservation_unconfirmed,verified,archived_control_passed
+pvlib__pvlib-python-1154,1,1,1,97,87,0,0,10,False,True
+pvlib__pvlib-python-1606,1,1,1,10,10,0,0,0,True,True
+pvlib__pvlib-python-1707,1,1,1,30,29,0,1,0,False,True
+pvlib__pvlib-python-1854,1,1,1,281,244,0,37,0,False,True
+pydicom__pydicom-1256,1,1,1,22,22,0,0,0,True,True
+pydicom__pydicom-1413,3,3,3,301,299,2,0,0,False,True
+pydicom__pydicom-1694,1,1,1,26,26,0,0,0,True,True
+pydicom__pydicom-901,5,5,5,0,0,0,0,0,True,True
+pylint-dev__astroid-1196,2,2,2,24,24,0,0,0,True,True
+pylint-dev__astroid-1268,1,1,1,91,91,0,0,0,True,True

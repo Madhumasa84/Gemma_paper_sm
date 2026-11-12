@@ -1,0 +1,6 @@
+{
+  "model_name_or_path": "google/gemma-4-E4B-it_int8",
+  "instance_id": "pydicom__pydicom-1413",
+  "condition": "A",
+  "model_patch": "--- a/pydicom/some_file.py\n+++ b/pydicom/some_file.py\n@@ -X,7 +X,7 @@\n data=list(range(1,10))\n data=array.array('H', indexData).tostring()  # to convert to unsigned short\n-lineSeq.add_new(0x00660040, 'OL', data)   \n+lineSeq.add_new(0x00660040, 'OL', [data])   \n ds.save_as(\"mydicom\")\n"
+}

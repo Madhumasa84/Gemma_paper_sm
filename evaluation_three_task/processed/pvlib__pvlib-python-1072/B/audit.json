@@ -1,0 +1,33 @@
+{
+  "instance_id": "pvlib__pvlib-python-1072",
+  "condition": "B",
+  "attempt": 1,
+  "prompt_hash": "4a1063652a60485d71facc5c3082ea522fcb0b1591265a377096cdc3eca0a986",
+  "config_hash": "0d94c473014df36032494da359ab2f34ef2335b996e7928d743d8afde70dc30e",
+  "model_id": "google/gemma-4-E4B-it",
+  "model_revision": "4ecc2ba63bcac23ba4a767fc87025b1450f84c9c",
+  "generation_status": "COMPLETED",
+  "finish_reason": "stop",
+  "token_counts": {
+    "input_tokens": 5054,
+    "generated_tokens": 996,
+    "total_tokens": 6050
+  },
+  "execution_mode": "production_gpu",
+  "is_mock": false,
+  "source_checkpoint": "evaluation_three_task/source_archive/checkpoints/pvlib__pvlib-python-1072__B__a1__4a106365__0d94c473.json",
+  "source_checkpoint_sha256": "9294fce657c0ec4576b1006afb933c7eb3af5cebf16eec3ceb2ba9c931a80e17",
+  "raw_generation_sha256": "2c6b909d4edf428fdf9472f6abb0854d7e2ac73a145e8e8d75cd101391857256",
+  "base_commit": "04a523fafbd61bc2e49420963b84ed8e2bd1b3cf",
+  "processing_rule": "last_labelled_diff_block_plus_recount_v3",
+  "diff_blocks_found": 1,
+  "extracted_patch_sha256": "23ac83fe85fa16064d73508b5261a5c6f918c0595aed100cc675b7fbb4afcbc7",
+  "normalized_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "application_outcome": "PATCH_NOT_APPLICABLE",
+  "extraction_outcome": "SUCCESS",
+  "normalized_prediction_path": "evaluation_three_task/processed/pvlib__pvlib-python-1072/B/predictions.jsonl",
+  "normalized_prediction_sha256": "84f9993fb812aac06af945d0f54f22b2b53d7946ad4a2297e2b258b9146f149c",
+  "recount_check_passed": false,
+  "application_error": "error: patch failed: pvlib/temperature.py:599\nerror: pvlib/temperature.py: patch does not apply\n",
+  "processing_log_path": "evaluation_three_task/processed/pvlib__pvlib-python-1072/B/processing_commands.json"
+}

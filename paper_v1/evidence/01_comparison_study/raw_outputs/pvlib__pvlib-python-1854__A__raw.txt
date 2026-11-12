@@ -1,0 +1,23 @@
+```diff
+--- a/pvlib/pvsystem.py
++++ b/pvlib/pvsystem.py
+@@ -249,6 +249,10 @@
+         elif len(arrays) == 0:
+             raise ValueError("PVSystem must have at least one Array. "
+                              "If you want to create a PVSystem instance "
+-                             "with a single Array pass `arrays=None` and pass "
+-                             "values directly to PVSystem attributes, e.g., "
+-                             "`surface_tilt=30`")
++                             "with a single Array, pass it as a list, e.g., `arrays=[array]`")
+         else:
+-            self.arrays = tuple(arrays)
++            if isinstance(arrays, Array):
++                self.arrays = (arrays,)
++            elif isinstance(arrays, tuple):
++                self.arrays = arrays
++            else:
++                self.arrays = tuple(arrays)
+ 
+         self.inverter = inverter
+         if inverter_parameters is None:
+```

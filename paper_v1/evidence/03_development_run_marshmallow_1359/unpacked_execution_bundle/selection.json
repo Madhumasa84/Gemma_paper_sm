@@ -1,0 +1,37 @@
+{
+  "selection_rule": "Lexicographically smallest instance_id in pinned SWE-bench_Lite dev after excluding exactly the three pilot IDs; only instance_id/repo/base_commit/problem_statement used.",
+  "dataset_revision": "6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2",
+  "excluded": [
+    "marshmallow-code__marshmallow-1343",
+    "pvlib__pvlib-python-1072",
+    "pydicom__pydicom-1139"
+  ],
+  "eligible_ids": [
+    "marshmallow-code__marshmallow-1359",
+    "pvlib__pvlib-python-1154",
+    "pvlib__pvlib-python-1606",
+    "pvlib__pvlib-python-1707",
+    "pvlib__pvlib-python-1854",
+    "pydicom__pydicom-1256",
+    "pydicom__pydicom-1413",
+    "pydicom__pydicom-1694",
+    "pydicom__pydicom-901",
+    "pylint-dev__astroid-1196",
+    "pylint-dev__astroid-1268",
+    "pylint-dev__astroid-1333",
+    "pylint-dev__astroid-1866",
+    "pylint-dev__astroid-1978",
+    "pyvista__pyvista-4315",
+    "sqlfluff__sqlfluff-1517",
+    "sqlfluff__sqlfluff-1625",
+    "sqlfluff__sqlfluff-1733",
+    "sqlfluff__sqlfluff-1763",
+    "sqlfluff__sqlfluff-2419"
+  ],
+  "task": {
+    "instance_id": "marshmallow-code__marshmallow-1359",
+    "repo": "marshmallow-code/marshmallow",
+    "base_commit": "b40a0f4e33823e6d0f341f7e8684e359a99060d1",
+    "problem_statement": "3.0: DateTime fields cannot be used as inner field for List or Tuple fields\nBetween releases 3.0.0rc8 and 3.0.0rc9, `DateTime` fields have started throwing an error when being instantiated as inner fields of container fields like `List` or `Tuple`. The snippet below works in <=3.0.0rc8 and throws the error below in >=3.0.0rc9 (and, worryingly, 3.0.0):\r\n\r\n```python\r\nfrom marshmallow import fields, Schema\r\n\r\nclass MySchema(Schema):\r\n    times = fields.List(fields.DateTime())\r\n\r\ns = MySchema()\r\n```\r\n\r\nTraceback:\r\n```\r\nTraceback (most recent call last):\r\n  File \"test-mm.py\", line 8, in <module>\r\n    s = MySchema()\r\n  File \"/Users/victor/.pyenv/versions/marshmallow/lib/python3.6/site-packages/marshmallow/schema.py\", line 383, in __init__\r\n    self.fields = self._init_fields()\r\n  File \"/Users/victor/.pyenv/versions/marshmallow/lib/python3.6/site-packages/marshmallow/schema.py\", line 913, in _init_fields\r\n    self._bind_field(field_name, field_obj)\r\n  File \"/Users/victor/.pyenv/versions/marshmallow/lib/python3.6/site-packages/marshmallow/schema.py\", line 969, in _bind_field\r\n    field_obj._bind_to_schema(field_name, self)\r\n  File \"/Users/victor/.pyenv/versions/marshmallow/lib/python3.6/site-packages/marshmallow/fields.py\", line 636, in _bind_to_schema\r\n    self.inner._bind_to_schema(field_name, self)\r\n  File \"/Users/victor/.pyenv/versions/marshmallow/lib/python3.6/site-packages/marshmallow/fields.py\", line 1117, in _bind_to_schema\r\n    or getattr(schema.opts, self.SCHEMA_OPTS_VAR_NAME)\r\nAttributeError: 'List' object has no attribute 'opts'\r\n```\r\n\r\nIt seems like it's treating the parent field as a Schema without checking that it is indeed a schema, so the `schema.opts` statement fails as fields don't have an `opts` attribute.\n"
+  }
+}

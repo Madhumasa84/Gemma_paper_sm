@@ -1,0 +1,13 @@
+{
+  "source": true,
+  "budget": true,
+  "template": true,
+  "effective_thinking_false": true,
+  "all_inputs_preserved": true,
+  "actual_int8": true,
+  "model_revision": "4ecc2ba63bcac23ba4a767fc87025b1450f84c9c",
+  "weight_gpus": [
+    0
+  ],
+  "run_id": "20261108T142140Z_07484dcb"
+}

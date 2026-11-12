@@ -1,0 +1,57 @@
+{
+  "task_id": "pydicom__pydicom-1256",
+  "indexed_file_count": 92,
+  "ranked_entities_count": 889,
+  "top_10": [
+    {
+      "name": "pydicom/env_info.py",
+      "file_path": "pydicom/env_info.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/config.py",
+      "file_path": "pydicom/config.py",
+      "type": "file"
+    },
+    {
+      "name": "get_pixeldata",
+      "file_path": "pydicom/pixel_data_handlers/gdcm_handler.py",
+      "type": "function"
+    },
+    {
+      "name": "pydicom/dataset.py",
+      "file_path": "pydicom/dataset.py",
+      "type": "file"
+    },
+    {
+      "name": "Dataset",
+      "file_path": "pydicom/dataset.py",
+      "type": "class"
+    },
+    {
+      "name": "pydicom/pixel_data_handlers/numpy_handler.py",
+      "file_path": "pydicom/pixel_data_handlers/numpy_handler.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/dataelem.py",
+      "file_path": "pydicom/dataelem.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/pixel_data_handlers/util.py",
+      "file_path": "pydicom/pixel_data_handlers/util.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/pixel_data_handlers/gdcm_handler.py",
+      "file_path": "pydicom/pixel_data_handlers/gdcm_handler.py",
+      "type": "file"
+    },
+    {
+      "name": "DataElement",
+      "file_path": "pydicom/dataelem.py",
+      "type": "class"
+    }
+  ]
+}

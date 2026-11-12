@@ -1,0 +1,59 @@
+[
+  {
+    "argv": [
+      "git",
+      "-C",
+      "/tmp/pvlib__pvlib-python-1072-b37vyfx9",
+      "apply",
+      "--recount",
+      "--check",
+      "/home/masa84/gemma-pilot-evaluation/evaluation_three_task/processed/pvlib__pvlib-python-1072/C/extracted.diff"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "/tmp/pvlib__pvlib-python-1072-b37vyfx9",
+      "apply",
+      "--recount",
+      "/home/masa84/gemma-pilot-evaluation/evaluation_three_task/processed/pvlib__pvlib-python-1072/C/extracted.diff"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "/tmp/pvlib__pvlib-python-1072-b37vyfx9",
+      "add",
+      "--all"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "/tmp/pvlib__pvlib-python-1072-b37vyfx9",
+      "-c",
+      "core.abbrev=8",
+      "diff",
+      "--cached",
+      "--binary",
+      "--no-ext-diff",
+      "--no-color",
+      "--no-renames"
+    ],
+    "exit_code": 0,
+    "stdout": "diff --git a/pvlib/temperature.py b/pvlib/temperature.py\nindex 1d98736b..79768b66 100644\n--- a/pvlib/temperature.py\n+++ b/pvlib/temperature.py\n@@ -599,7 +599,12 @@ def fuentes(poa_global, temp_air, wind_speed, noct_installed, module_height=5,\n     # n.b. the way Fuentes calculates the first timedelta makes it seem like\n     # the value doesn't matter -- rather than recreate it here, just assume\n     # it's the same as the second timedelta:\n-    timedelta_hours = np.diff(poa_global.index).astype(float) / 1e9 / 60 / 60\n+    if poa_global.index.tz is not None:\n+        # If tz-aware, we need to calculate the difference in time units\n+        # that np.diff returns (Timedelta) and convert it to hours.\n+        timedelta_hours = np.diff(poa_global.index) / np.timedelta64(1, 'h')\n+    else:\n+        timedelta_hours = np.diff(poa_global.index).astype(float) / 1e9 / 60 / 60\n     timedelta_hours = np.append([timedelta_hours[0]], timedelta_hours)\n \n     tamb_array = temp_air + 273.15\n",
+    "stderr": ""
+  }
+]

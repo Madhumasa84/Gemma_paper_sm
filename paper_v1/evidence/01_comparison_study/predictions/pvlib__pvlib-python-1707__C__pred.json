@@ -1,0 +1,6 @@
+{
+  "model_name_or_path": "google/gemma-4-E4B-it_int8",
+  "instance_id": "pvlib__pvlib-python-1707",
+  "condition": "C",
+  "model_patch": "diff --git a/pvlib/iam.py b/pvlib/iam.py\nindex 3eaa6b4..996b28f 100644\n--- a/pvlib/iam.py\n+++ b/pvlib/iam.py\n@@ -815,7 +815,7 @@ def schlick(aoi):\n     pvlib.iam.schlick_diffuse\n     \"\"\"\n     iam = 1 - (1 - cosd(aoi)) ** 5\n-    iam = np.where(np.abs(aoi) >= 90.0, 0.0, iam)\n+    iam = np.where(np.abs(aoi) > 90.0, 0.0, iam)\n \n     # preserve input type\n     if np.isscalar(aoi):\n"
+}

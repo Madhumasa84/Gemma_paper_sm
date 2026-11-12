@@ -1,0 +1,67 @@
+[
+  {
+    "argv": [
+      "git",
+      "-C",
+      "/content/gemma_base_20261108T142140Z_07484dcb",
+      "init",
+      "--quiet"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "/content/gemma_base_20261108T142140Z_07484dcb",
+      "fetch",
+      "--depth",
+      "1",
+      "https://github.com/marshmallow-code/marshmallow.git",
+      "b40a0f4e33823e6d0f341f7e8684e359a99060d1"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "From https://github.com/marshmallow-code/marshmallow\n * branch            b40a0f4e33823e6d0f341f7e8684e359a99060d1 -> FETCH_HEAD\n"
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "/content/gemma_base_20261108T142140Z_07484dcb",
+      "checkout",
+      "--detach",
+      "--quiet",
+      "FETCH_HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "/content/gemma_base_20261108T142140Z_07484dcb",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "b40a0f4e33823e6d0f341f7e8684e359a99060d1\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "/content/gemma_base_20261108T142140Z_07484dcb",
+      "status",
+      "--porcelain"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

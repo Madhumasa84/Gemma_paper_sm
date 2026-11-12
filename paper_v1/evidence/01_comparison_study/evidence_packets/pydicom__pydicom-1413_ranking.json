@@ -1,0 +1,57 @@
+{
+  "task_id": "pydicom__pydicom-1413",
+  "indexed_file_count": 101,
+  "ranked_entities_count": 982,
+  "top_10": [
+    {
+      "name": "pydicom/util/codify.py",
+      "file_path": "pydicom/util/codify.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/filewriter.py",
+      "file_path": "pydicom/filewriter.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/config.py",
+      "file_path": "pydicom/config.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/dataelem.py",
+      "file_path": "pydicom/dataelem.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/dataset.py",
+      "file_path": "pydicom/dataset.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/filereader.py",
+      "file_path": "pydicom/filereader.py",
+      "type": "file"
+    },
+    {
+      "name": "DataElement",
+      "file_path": "pydicom/dataelem.py",
+      "type": "class"
+    },
+    {
+      "name": "Dataset",
+      "file_path": "pydicom/dataset.py",
+      "type": "class"
+    },
+    {
+      "name": "pydicom/valuerep.py",
+      "file_path": "pydicom/valuerep.py",
+      "type": "file"
+    },
+    {
+      "name": "pydicom/pixel_data_handlers/rle_handler.py",
+      "file_path": "pydicom/pixel_data_handlers/rle_handler.py",
+      "type": "file"
+    }
+  ]
+}

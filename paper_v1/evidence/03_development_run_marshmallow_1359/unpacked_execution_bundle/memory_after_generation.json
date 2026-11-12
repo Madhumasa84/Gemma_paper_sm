@@ -1,0 +1,12 @@
+[
+  {
+    "index": 0,
+    "name": "Tesla T4",
+    "free_bytes": 2820472832,
+    "total_bytes": 15637086208,
+    "allocated_bytes": 11576428544,
+    "reserved_bytes": 12666798080,
+    "peak_allocated_bytes": 12511448064,
+    "peak_reserved_bytes": 12666798080
+  }
+]

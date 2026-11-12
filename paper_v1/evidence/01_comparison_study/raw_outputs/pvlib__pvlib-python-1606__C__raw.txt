@@ -1,0 +1,27 @@
+```diff
+--- a/pvlib/tools.py
++++ b/pvlib/tools.py
+@@ -360,7 +360,10 @@
+     """
+     Vectorized golden section search for finding maximum of a function of a
+     single variable.
+-
++    
++    Note: This function relies on the assumption that the function being maximized
++    is unimodal within the interval [lower, upper].
++    
+     Parameters
+     ----------
+     params : dict of numeric
+@@ -371,6 +374,10 @@
+     atol : float, optional
+         Absolute tolerance of the search. Default is 1e-8.
+ 
++    Raises
++    ------
++    Exception
++        If iterations exceed maximum or if the function value is NaN at bounds.
+     """
+     if lower >= upper:
+         raise Exception("Iterations exceeded maximum. Check that func is not NaN in (lower, upper)")
+```
